@@ -14,7 +14,9 @@
   .wrap { max-width: 880px; margin: 0 auto; }
   .brand { letter-spacing: .25em; font-weight: 800; font-size: 14px; margin: 0 0 24px; }
   h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 12px; }
-  .lede { font-size: 18px; opacity: .9; margin: 0; max-width: 640px; }
+  .lede { font-size: 18px; opacity: .9; margin: 0; max-width: 680px; }
+  .context { font-size: 16.5px; line-height: 1.6; max-width: 680px; margin: 0 0 14px; opacity: .95; }
+  .howto { font-size: 15px; margin: 18px 0 0; color: #9DC3E6; font-weight: 600; }
   main { padding: 32px 16px 56px; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
   a.card { display: block; background: #fff; border-radius: 14px; padding: 24px; text-decoration: none; color: inherit;
@@ -32,21 +34,24 @@
 <body>
 <header><div class="wrap">
   <p class="brand">HEALOGIX</p>
+  <p class="lede" style="margin-bottom:10px">Q4 &middot; November 2026 &middot; Pulse</p>
   <h1>AI and Trust, Part 3: Inside real AI health conversations</h1>
-  <p class="lede">Q4 &middot; November 2026 &middot; Pulse. Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
+  <p class="context">This is the third pulse in our series on AI and trust in health. In Part 1 (August 2026), 65% of the U.S. adults we surveyed had used AI to look up health information, most often about symptoms and possible diagnoses. In Part 2 (September 2026), 39% said AI would be their first stop with a worrying health question, and 64% had used AI for emotional support.</p>
+  <p class="context">Part 3 moves from what people say about AI to what actually happens in the chat. Participants pasted a real AI health conversation, and we coded both sides of it: Part 3A looks at what people asked, and Part 3B at what the AI said back and how people felt afterward.</p>
+  <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
 </div></header>
 <main><div class="wrap">
   <div class="cards">
-    <a class="card" href="part3/">
-      <p class="tag">Part 3</p>
-      <h2>What the AI told people</h2>
-      <p>Referrals, medications and urgent-care advice, and how people felt before and after the chat.</p>
+    <a class="card" href="part3a/">
+      <p class="tag">Part 3A</p>
+      <h2>What did people ask AI?</h2>
+      <p>Who the question was about, which health concerns came up, what people did in their follow-up messages, and how the AI answered.</p>
       <span class="go">Open the interactive slides &rarr;</span>
     </a>
     <a class="card b" href="part3b/">
-      <p class="tag">Part 3b</p>
-      <h2>What people asked the AI</h2>
-      <p>Who the question was about, which health concerns came up, and what people did in their follow-up messages.</p>
+      <p class="tag">Part 3B</p>
+      <h2>What did AI say back to people?</h2>
+      <p>Referrals, medications and urgent-care advice, and how people felt and what they remembered after the chat.</p>
       <span class="go">Open the interactive slides &rarr;</span>
     </a>
   </div>

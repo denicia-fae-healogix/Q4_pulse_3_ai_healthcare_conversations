@@ -1,0 +1,101 @@
+{
+ "N": 50,
+ "n_multi": 30,
+ "about": {
+  "self": 39,
+  "other_person": 5,
+  "general": 6
+ },
+ "asks": {
+  "human_asks_cause": [
+   26,
+   50
+  ],
+  "human_asks_treatment": [
+   16,
+   50
+  ],
+  "human_asks_condition_info": [
+   13,
+   50
+  ],
+  "human_asks_care": [
+   8,
+   50
+  ],
+  "human_asks_med": [
+   6,
+   50
+  ]
+ },
+ "n_more_than_one_kind": 12,
+ "health_area": {
+  "pain_muscles_bones": 10,
+  "other": 9,
+  "skin_allergy": 7,
+  "digestive": 6,
+  "diet_fitness_weight": 6,
+  "mental_health_sleep": 3,
+  "diabetes_hormones": 3,
+  "cold_flu_infection": 3,
+  "eyes": 3
+ },
+ "followup": {
+  "human_followup_adds_detail": [
+   26,
+   30
+  ],
+  "human_followup_new_question": [
+   14,
+   30
+  ],
+  "human_pushback": [
+   4,
+   30
+  ]
+ },
+ "referral_by_asked_cause": {
+  "asked": [
+   26,
+   26
+  ],
+  "did_not_ask": [
+   14,
+   24
+  ]
+ },
+ "ai": {
+  "ai_refers_professional": [
+   40,
+   50
+  ],
+  "ai_urgent_care": [
+   18,
+   50
+  ],
+  "ai_followup_question": [
+   31,
+   50
+  ],
+  "ai_recommends_med": [
+   11,
+   50
+  ],
+  "ai_disclaimer": [
+   5,
+   50
+  ]
+ },
+ "ai_named_med": [
+  20,
+  50
+ ],
+ "referred_without_asking_care": [
+  33,
+  42
+ ],
+ "named_med_not_asked": [
+  14,
+  20
+ ]
+}

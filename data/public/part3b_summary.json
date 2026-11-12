@@ -1,67 +1,109 @@
 {
- "N": 50,
- "n_multi": 30,
- "about": {
-  "self": 39,
-  "other_person": 5,
-  "general": 6
- },
- "asks": {
-  "human_asks_cause": [
-   26,
-   50
+  "ref_na": [
+    [
+      "Referred to a professional (n = 43)",
+      [19.744186, 15.627907]
+    ],
+    [
+      "No referral (n = 11)",
+      [14.363636, 13.727273]
+    ]
   ],
-  "human_asks_treatment": [
-   16,
-   50
+  "urg_na": [
+    [
+      "Mentioned urgent or emergency care (n = 19)",
+      [20.210526, 15]
+    ],
+    [
+      "Did not (n = 35)",
+      [17.8, 15.371429]
+    ]
   ],
-  "human_asks_condition_info": [
-   13,
-   50
+  "pers_na": [
+    [
+      "Shared personal details (n = 41)",
+      [18.707317, 14.390244]
+    ],
+    [
+      "General questions only (n = 7)",
+      [20.714286, 20]
+    ]
   ],
-  "human_asks_care": [
-   8,
-   50
+  "ref_items": [
+    [
+      "Referred to a professional",
+      [-0.55814, -0.209302, -0.744186, -0.186047, -0.116279, -0.418605, -0.232558, -0.674419, -0.534884, -0.44186],
+      ["afraid", "ashamed", "distressed", "guilty", "hostile", "irritable", "jittery", "nervous", "scared", "upset"]
+    ],
+    [
+      "No referral",
+      [-0.090909, -0.090909, 0.090909, -0.090909, 0.272727, 0.181818, -0.545455, -0.363636, 0, 0],
+      ["afraid", "ashamed", "distressed", "guilty", "hostile", "irritable", "jittery", "nervous", "scared", "upset"]
+    ]
   ],
-  "human_asks_med": [
-   6,
-   50
-  ]
- },
- "n_more_than_one_kind": 12,
- "health_area": {
-  "pain_muscles_bones": 10,
-  "other": 9,
-  "skin_allergy": 7,
-  "digestive": 6,
-  "diet_fitness_weight": 6,
-  "mental_health_sleep": 3,
-  "diabetes_hormones": 3,
-  "cold_flu_infection": 3,
-  "eyes": 3
- },
- "followup": {
-  "human_followup_adds_detail": [
-   26,
-   30
+  "ref_items_n": {
+    "ref": 43,
+    "nor": 11
+  },
+  "msg_buckets": [
+    {
+      "bucket": "1",
+      "n": 20,
+      "mean": -0.65,
+      "n_more_positive": 6
+    },
+    {
+      "bucket": "2",
+      "n": 8,
+      "mean": -2.625,
+      "n_more_positive": 2
+    },
+    {
+      "bucket": "3",
+      "n": 9,
+      "mean": -0.333333,
+      "n_more_positive": 4
+    },
+    {
+      "bucket": "4 or more",
+      "n": 11,
+      "mean": 3.272727,
+      "n_more_positive": 9
+    }
   ],
-  "human_followup_new_question": [
-   14,
-   30
+  "msg_test": {
+    "rho": 0.308749,
+    "p": 0.032748,
+    "n": 48
+  },
+  "recall": [
+    {
+      "1|Clear or strong recommendation": 25,
+      "1|Gentle suggestion or options": 14,
+      "1|No action or wait it out": 4,
+      "2|Clear or strong recommendation": 1,
+      "2|Gentle suggestion or options": 8,
+      "2|No action or wait it out": 2
+    },
+    ["AI referred to a professional", "No referral"]
   ],
-  "human_pushback": [
-   4,
-   30
-  ]
- },
- "referral_by_asked_cause": {
-  "asked": [
-   26,
-   26
+  "calm_med": [
+    {
+      "1|About the same": 11,
+      "2|Calmer": 15,
+      "2|About the same": 27,
+      "2|More distressed": 1
+    },
+    ["AI recommended a medication", "Did not recommend one"]
   ],
-  "did_not_ask": [
-   14,
-   24
-  ]
- }
+  "na_all_means": {
+    "pre": 18.473684,
+    "post": 15.22807,
+    "n": 57
+  },
+  "pa_all_means": {
+    "pre": 26.736842,
+    "post": 26.824561,
+    "n": 57
+  }
 }
