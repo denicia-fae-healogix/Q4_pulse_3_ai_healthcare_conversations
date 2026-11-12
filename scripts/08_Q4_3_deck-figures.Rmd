@@ -1,0 +1,459 @@
+---
+title: "Q4 Pulse 3: Deck Figures (Part 3)"
+subtitle: "Recomputes every number in the Part 3 Canva deck and draws a static version of each chart"
+author: "Denicia Aragon Espinosa"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+params:
+  project_root: "C:/path/to/Q4_3_Pulse"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 8, dpi = 110)
+```
+
+```{r packages, include = FALSE}
+# Install any missing packages, then load
+pkgs <- c("dplyr", "tidyr", "readr", "stringr", "ggplot2", "scales", "knitr", "openxlsx")
+to_install <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+```
+
+```{r paths, include = FALSE}
+# ---- Project folder: every path below is built from here ----
+project_root <- params$project_root
+proj <- function(...) file.path(project_root, ...)
+if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+script_name <- "08_Q4_3_deck-figures"
+out_dir <- proj("output", script_name)
+fig_dir <- file.path(out_dir, "figures")
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+
+# ---- Inputs: the same two files the 07 report uses ----
+in_05    <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")        # survey answers + PANAS
+in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded.csv")  # conversation codes
+for (f in c(in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", f)
+```
+
+```{r settings, include = FALSE}
+# Same rules as 07 so the numbers match
+MIN_GROUP_N <- 5     # a comparison is tested only when every group has at least this many people
+CALMER_CUT  <- 5     # a drop of at least this many negative-affect points counts as "calmer"
+
+# Healogix chart colors: as blue as possible; the negative end of a scale may be non-blue
+DARK <- "#0b3d68"; LIGHT <- "#29abe2"; PALE <- "#9DC3E6"; MID <- "#4A86C5"
+NEG  <- "#E3A26F"; BAR  <- "#BDBDBD"; GRID <- "#E6E9EE"; INK <- "#1c2430"; MUTED <- "#5f6b7a"
+
+PA_ITEMS <- c("interested", "excited", "strong", "enthusiastic", "proud",
+              "alert", "inspired", "determined", "attentive", "active")
+NA_ITEMS <- c("distressed", "upset", "guilty", "scared", "hostile",
+              "irritable", "ashamed", "nervous", "jittery", "afraid")
+```
+
+```{r load-and-score, include = FALSE}
+# Clean header names (removes a byte-order mark if the CSV has one) and standardize the pid column
+read_chr <- function(f) {
+  d <- read_csv(f, col_types = cols(.default = col_character()), na = c("", "NA"))
+  names(d) <- trimws(gsub("^\ufeff", "", names(d)))
+  i <- which(tolower(names(d)) == "pid")
+  if (!length(i)) stop("No pid column in ", basename(f))
+  names(d)[i[1]] <- "pid"
+  d |> mutate(pid = trimws(pid))
+}
+d05   <- read_chr(in_05)
+codes <- read_chr(in_codes)
+
+CODE_BIN <- c("convo_usable", "human_mentions_disease", "human_shares_personal", "human_asks_med", "human_multi_turn",
+              "human_1_long", "ai_multi_med", "ai_recommends_med", "ai_refers_professional", "ai_urgent_care",
+              "ai_followup_question", "ai_disclaimer")
+CODE_NUM <- c("ai_n_meds", "human_1_n_words_coded", "n_human_turns", "ai_total_words")
+codes <- codes |> mutate(across(any_of(c(CODE_BIN, CODE_NUM)), as.numeric))
+
+# PANAS answers may export as numbers or as labels; both become 1-5
+PANAS_LABELS <- c("very slightly or not at all" = 1, "a little" = 2, "moderately" = 3, "quite a bit" = 4, "extremely" = 5)
+to_panas <- function(x) {
+  t <- trimws(tolower(as.character(x)))
+  num <- suppressWarnings(as.numeric(str_extract(t, "^[1-5](?![0-9])")))
+  ifelse(!is.na(num), num, unname(PANAS_LABELS[t]))
+}
+# Items 1-5 were exported twice; use the main copy and fill any gaps from the *_dup copy
+panas <- d05 |> select(pid)
+for (wave in c("pre", "post")) for (item in c(PA_ITEMS, NA_ITEMS)) {
+  main <- paste0("panas_", wave, "_", item); dup <- paste0(main, "_dup")
+  v <- to_panas(d05[[main]])
+  if (dup %in% names(d05)) v <- coalesce(v, to_panas(d05[[dup]]))
+  panas[[main]] <- v
+}
+score <- function(wave, items) {
+  m <- as.matrix(panas[paste0("panas_", wave, "_", items)])
+  ifelse(rowSums(is.na(m)) == 0, rowSums(m), NA_real_)   # complete answers only
+}
+panas <- panas |> mutate(pa_pre = score("pre", PA_ITEMS), pa_post = score("post", PA_ITEMS),
+                         na_pre = score("pre", NA_ITEMS), na_post = score("post", NA_ITEMS))
+
+SURVEY_COLS <- c("detail_topic", "detail_duration_self", "detail_duration_other", "detail_prior_knowledge",
+                 "detail_chatbot", "action_ai_rec_self", "action_ai_rec_other")
+dat <- codes |>
+  select(pid, any_of(c(CODE_BIN, CODE_NUM)), any_of("human_first_intent")) |>
+  left_join(d05 |> select(pid, any_of(SURVEY_COLS)), by = "pid") |>
+  left_join(panas |> select(pid, pa_pre, pa_post, na_pre, na_post), by = "pid") |>
+  mutate(na_change = na_post - na_pre, pa_change = pa_post - pa_pre)
+for (col in SURVEY_COLS) if (!col %in% names(dat)) dat[[col]] <- NA_character_
+```
+
+```{r segments, include = FALSE}
+# The same 16 segments as 07. All 16 are needed so the Benjamini-Hochberg correction matches 07 exactly.
+lc <- function(x) trimws(tolower(as.character(x)))
+bin_lab <- function(x, lab1, lab0) factor(ifelse(x == 1, lab1, ifelse(x == 0, lab0, NA)), levels = c(lab1, lab0))
+recode_intent <- function(x) factor(case_when(
+  x == "symptom_interpretation" ~ "Symptom interpretation",
+  x == "self_management" ~ "Self-management",
+  x %in% c("condition_info", "medication_info", "care_decision", "other") ~ "Other questions",
+  TRUE ~ NA_character_), levels = c("Symptom interpretation", "Self-management", "Other questions"))
+recode_topic <- function(x) { t <- lc(x); factor(case_when(
+  t == "3" | str_detect(t, "specific diagnosed") ~ "Diagnosed condition",
+  t == "2" | str_detect(t, "not been diagnosed|symptom") ~ "Undiagnosed symptom",
+  t %in% c("1", "4") | str_detect(t, "general health|wellness|medication or treatment") ~ "General wellness or medication",
+  TRUE ~ NA_character_), levels = c("Diagnosed condition", "Undiagnosed symptom", "General wellness or medication")) }
+recode_duration <- function(x) { t <- lc(x); factor(case_when(
+  t %in% c("1", "2") | str_detect(t, "less than a week|1 to 4 weeks") ~ "Under a month",
+  t %in% c("3", "4", "5", "6") | str_detect(t, "month|year") ~ "A month or longer",
+  TRUE ~ NA_character_), levels = c("Under a month", "A month or longer")) }
+recode_prior <- function(x) { t <- lc(x); factor(case_when(
+  t %in% c("1", "2") | str_detect(t, "nothing at all|^a little") ~ "Nothing or a little",
+  t %in% c("3", "4", "5") | str_detect(t, "moderate|a lot|great deal") ~ "Moderate or more",
+  TRUE ~ NA_character_), levels = c("Nothing or a little", "Moderate or more")) }
+recode_chatbot <- function(x) { t <- lc(x); factor(case_when(
+  t == "1" | str_detect(t, "chatgpt") ~ "ChatGPT",
+  t == "99" | str_detect(t, "remember") ~ NA_character_,
+  !is.na(t) & t != "" ~ "Other chatbot",
+  TRUE ~ NA_character_), levels = c("ChatGPT", "Other chatbot")) }
+intent_col <- if ("human_first_intent" %in% names(dat)) dat$human_first_intent else rep(NA_character_, nrow(dat))
+
+SEGMENTS <- list(
+  "Named a disease"             = bin_lab(dat$human_mentions_disease, "Named a disease", "No disease named"),
+  "Shared personal details"     = bin_lab(dat$human_shares_personal, "Shared personal details", "General questions only"),
+  "Asked about a medication"    = bin_lab(dat$human_asks_med, "Asked about a medication", "Did not ask about one"),
+  "First message intent"        = recode_intent(intent_col),
+  "Number of turns"             = bin_lab(dat$human_multi_turn, "More than one turn", "One turn"),
+  "First message length"        = bin_lab(dat$human_1_long, "Longer first message", "Shorter first message"),
+  "AI medications"              = bin_lab(dat$ai_multi_med, "AI named 2+ medications", "AI named one medication"),
+  "AI recommended a medication" = bin_lab(dat$ai_recommends_med, "AI recommended a medication", "Did not recommend one"),
+  "Referred to a professional"  = bin_lab(dat$ai_refers_professional, "Referred to a professional", "No referral"),
+  "Urgent care advice"          = bin_lab(dat$ai_urgent_care, "Mentioned urgent or emergency care", "Did not"),
+  "Asked a follow-up question"  = bin_lab(dat$ai_followup_question, "AI asked a follow-up question", "No follow-up question"),
+  "Included a disclaimer"       = bin_lab(dat$ai_disclaimer, "Included a disclaimer", "No disclaimer"),
+  "Topic"                       = recode_topic(dat$detail_topic),
+  "Condition duration"          = recode_duration(coalesce(dat$detail_duration_self, dat$detail_duration_other)),
+  "Prior knowledge"             = recode_prior(dat$detail_prior_knowledge),
+  "Chatbot"                     = recode_chatbot(dat$detail_chatbot))
+
+CALMER <- factor(case_when(dat$na_change <= -CALMER_CUT ~ "Calmer",
+                           dat$na_change >= CALMER_CUT ~ "More distressed",
+                           !is.na(dat$na_change) ~ "About the same"),
+                 levels = c("Calmer", "About the same", "More distressed"))
+```
+
+```{r stats, include = FALSE}
+`%||%` <- function(a, b) if (is.null(a)) b else a
+safe <- function(expr) tryCatch(expr, error = function(e) NULL)
+fmt  <- function(x, d = 1) ifelse(is.na(x), "NA", formatC(x, format = "f", digits = d))
+fmts <- function(x, d = 1) ifelse(is.na(x), "NA", sprintf(paste0("%+.", d, "f"), x))
+fmtp <- function(p, d = 3) ifelse(is.na(p), "NA", ifelse(p < .001, "< .001", sub("^0", "", formatC(p, format = "f", digits = d))))
+
+# Negative-affect change by group: Mann-Whitney (2 groups) or Kruskal-Wallis (3), as in 07
+na_test <- function(group) {
+  d <- tibble(group = group, change = dat$na_change) |> filter(!is.na(group), !is.na(change)) |> mutate(group = droplevels(group))
+  n <- table(d$group); if (length(n) < 2 || any(n < MIN_GROUP_N)) return(NA_real_)
+  if (length(n) == 2) safe(wilcox.test(change ~ group, data = d, exact = FALSE)$p.value) %||% NA_real_
+  else safe(kruskal.test(change ~ group, data = d)$p.value) %||% NA_real_
+}
+# Felt calmer (yes / no) by group: Fisher's exact, as in 07
+calmer_test <- function(group) {
+  d <- tibble(group = group, cat = CALMER) |> filter(!is.na(group), !is.na(cat)) |> mutate(group = droplevels(group), cat = droplevels(cat))
+  n <- table(d$group); if (length(n) < 2 || any(n < MIN_GROUP_N) || nlevels(d$cat) < 2) return(NA_real_)
+  tab <- table(d$group, d$cat == "Calmer"); if (ncol(tab) < 2) return(NA_real_)
+  safe(fisher.test(tab)$p.value) %||% NA_real_
+}
+bh <- function(p) { out <- rep(NA_real_, length(p)); ok <- !is.na(p); out[ok] <- p.adjust(p[ok], "BH"); setNames(out, names(p)) }
+
+P_NA     <- vapply(SEGMENTS, na_test, numeric(1));     P_NA_BH     <- bh(P_NA)
+P_CALMER <- vapply(SEGMENTS, calmer_test, numeric(1)); P_CALMER_BH <- bh(P_CALMER)
+
+# ---- Shared chart theme: title states the result, subtitle gives the data details ----
+theme_hx <- function() theme_minimal(base_size = 15) + theme(
+  plot.title = element_text(face = "bold", color = INK, size = 18, margin = margin(b = 6)),
+  plot.subtitle = element_text(color = MUTED, size = 12, margin = margin(b = 14)),
+  plot.caption = element_text(color = MUTED, size = 10, hjust = 0),
+  plot.title.position = "plot", plot.caption.position = "plot",
+  axis.text = element_text(color = INK), axis.title = element_text(color = INK, size = 12),
+  panel.grid.minor = element_blank(), panel.grid.major = element_line(color = GRID),
+  legend.position = "top", legend.justification = "left", legend.title = element_blank(),
+  plot.background = element_rect(fill = "white", color = NA), plot.margin = margin(20, 24, 16, 20))
+save_fig <- function(p, name, w = 10, h = 8) { ggsave(file.path(fig_dir, paste0(name, ".png")), p, width = w, height = h, dpi = 300, bg = "white"); p }
+wrap <- function(x, n = 70) paste(strwrap(x, n), collapse = "\n")
+
+# ---- Collects every number shown in the deck, next to what R gets now ----
+CHECK <- list()
+check <- function(slide, measure, deck, r) CHECK[[length(CHECK) + 1]] <<- tibble(Slide = slide, Measure = measure, Deck = deck, R = r)
+```
+
+This report recomputes every number in **Nov 2026 Pulse - AI and trust part 3** from the same data as the 07 report, and draws a static version of each chart in the Healogix colors. Each chart is saved as a PNG (300 dpi) in `output/`r script_name`/figures/`. The **Check against deck** tab lists each number on the slides next to the value R gets now; any row marked "check" means the slide and the data disagree.
+
+Group splits, the "felt calmer" rule (negative affect fell `r CALMER_CUT`+ points) and the Benjamini-Hochberg correction (across all 16 segments within each outcome) follow 07 exactly.
+
+# Slides {.tabset}
+
+## 3. Big numbers
+
+```{r slide3}
+share <- function(x) { x <- x[!is.na(x)]; c(n = sum(x == 1), N = length(x), pct = 100 * mean(x == 1)) }
+s3 <- tibble(
+  label = c("Shared their own symptoms or situation", "AI pointed them to a doctor or other professional", "AI included a disclaimer"),
+  who = c("participants", "AI replies", "AI replies"),
+  v = list(share(dat$human_shares_personal), share(dat$ai_refers_professional), share(dat$ai_disclaimer))) |>
+  mutate(n = vapply(v, `[`, numeric(1), "n"), N = vapply(v, `[`, numeric(1), "N"), pct = vapply(v, `[`, numeric(1), "pct"),
+         label = factor(label, levels = rev(label)))
+
+check("3", "Shared their own situation", "84% (42 of 50)", paste0(round(s3$pct[1]), "% (", s3$n[1], " of ", s3$N[1], ")"))
+check("3", "AI referred to a professional", "79% (44 of 56)", paste0(round(s3$pct[2]), "% (", s3$n[2], " of ", s3$N[2], ")"))
+check("3", "AI included a disclaimer", "9% (5 of 56)", paste0(round(s3$pct[3]), "% (", s3$n[3], " of ", s3$N[3], ")"))
+
+p3 <- ggplot(s3, aes(y = label)) +
+  geom_col(aes(x = 100), fill = GRID, width = 0.6) +
+  geom_col(aes(x = pct), fill = c(DARK, LIGHT, DARK)[3:1], width = 0.6) +
+  geom_text(aes(x = pct, label = paste0(round(pct), "%  (", n, " of ", N, ")")), hjust = -0.08, color = INK, size = 5, fontface = "bold") +
+  scale_x_continuous(limits = c(0, 115), breaks = seq(0, 100, 25), labels = function(x) paste0(x, "%"), expand = c(0, 0)) +
+  labs(title = wrap(paste0("People bring real worries to AI: ", round(s3$pct[1]), "% shared their own situation, but only ",
+                           round(s3$pct[3]), "% of AI replies included a disclaimer")),
+       subtitle = "Coded from each pasted conversation  |  each bar leaves out conversations missing that code",
+       x = NULL, y = NULL) +
+  theme_hx() + theme(panel.grid.major.y = element_blank())
+save_fig(p3, "slide03_big-numbers", h = 5.5)
+```
+
+## 4. Distress before and after
+
+```{r slide4}
+grp_means <- function(group, label_map = NULL) {
+  tibble(group = group, pre = dat$na_pre, post = dat$na_post) |> filter(!is.na(group), !is.na(pre), !is.na(post)) |>
+    group_by(group) |> summarise(n = n(), pre = mean(pre), post = mean(post), .groups = "drop") |> mutate(group = as.character(group))
+}
+all_row <- dat |> filter(!is.na(na_pre), !is.na(na_post)) |> summarise(n = n(), pre = mean(na_pre), post = mean(na_post)) |>
+  mutate(group = "All participants")
+ref <- grp_means(SEGMENTS[["Referred to a professional"]])
+urg <- grp_means(SEGMENTS[["Urgent care advice"]])
+per <- grp_means(SEGMENTS[["Shared personal details"]])
+relabel <- c("Referred to a professional" = "AI referred them to a professional", "No referral" = "AI did not refer them",
+             "Mentioned urgent or emergency care" = "AI mentioned urgent care or the ER", "Did not" = "AI did not mention urgent care",
+             "Shared personal details" = "They shared their own situation", "General questions only" = "They asked only general questions")
+s4 <- bind_rows(all_row, ref, urg, per) |>
+  mutate(label = ifelse(group %in% names(relabel), relabel[group], group),
+         label = paste0(label, " (n = ", n, ")"))
+s4$label <- factor(s4$label, levels = rev(s4$label))
+
+dk <- tribble(~group, ~deck,
+  "All participants", "n = 57, 18.5 to 15.2", "Referred to a professional", "n = 43, 19.7 to 15.6", "No referral", "n = 11, 14.4 to 13.7",
+  "Mentioned urgent or emergency care", "n = 19, 20.2 to 15.0", "Did not", "n = 35, 17.8 to 15.4",
+  "Shared personal details", "n = 41, 18.7 to 14.4", "General questions only", "n = 7, 20.7 to 20.0")
+for (i in seq_len(nrow(dk))) { r <- s4[s4$group == dk$group[i], ]
+  check("4", paste("Negative affect:", dk$group[i]), dk$deck[i], paste0("n = ", r$n, ", ", fmt(r$pre), " to ", fmt(r$post))) }
+check("4", "Referral vs. no referral: p (BH)", ".02 (.12)", paste0(fmtp(P_NA["Referred to a professional"], 2), " (", fmtp(P_NA_BH["Referred to a professional"], 2), ")"))
+
+long4 <- s4 |> select(label, pre, post) |> pivot_longer(c(pre, post), names_to = "when", values_to = "score") |>
+  mutate(when = factor(when, c("pre", "post"), c("Before the chat", "After the chat")))
+p4 <- ggplot(s4, aes(y = label)) +
+  geom_segment(aes(x = pre, xend = post, yend = label), color = BAR, linewidth = 2.5, lineend = "round") +
+  geom_point(data = long4, aes(x = score, color = when), size = 6) +
+  geom_text(aes(x = pmax(pre, post), label = fmt(pmax(pre, post))), hjust = -0.6, color = MUTED, size = 4) +
+  geom_text(aes(x = pmin(pre, post), label = fmt(pmin(pre, post))), hjust = 1.6, color = MUTED, size = 4) +
+  scale_color_manual(values = c("Before the chat" = LIGHT, "After the chat" = DARK)) +
+  scale_x_continuous(limits = c(floor(min(long4$score) / 2) * 2 - 1, ceiling(max(long4$score) / 2) * 2 + 1), breaks = function(l) seq(ceiling(l[1] / 2) * 2, floor(l[2] / 2) * 2, 2)) +
+  labs(title = wrap("Distress dropped after the chat, most when the AI pointed people to a professional"),
+       subtitle = wrap(paste0("PANAS negative affect (10 items, 10 = none, 50 = extreme)  |  referral vs. no referral: Mann-Whitney p = ",
+                              fmtp(P_NA["Referred to a professional"]), " (BH-adjusted ", fmtp(P_NA_BH["Referred to a professional"]),
+                              ")  |  people the AI referred started out more distressed"), 110),
+       x = "Negative affect score", y = NULL) +
+  theme_hx() + theme(panel.grid.major.y = element_blank())
+save_fig(p4, "slide04_distress-before-after")
+```
+
+## 5. Felt calmer
+
+```{r slide5}
+med <- SEGMENTS[["AI recommended a medication"]]
+d5 <- tibble(group = med, cat = CALMER) |> filter(!is.na(group), !is.na(cat)) |> mutate(group = droplevels(group))
+by5 <- d5 |> group_by(group) |> summarise(n = n(), calm = sum(cat == "Calmer"), .groups = "drop") |> mutate(pct = 100 * calm / n)
+g_rec <- by5[by5$group == "AI recommended a medication", ]; g_not <- by5[by5$group == "Did not recommend one", ]
+check("5", "Felt calmer: AI recommended a medication", "0% (0 of 11)", paste0(round(g_rec$pct), "% (", g_rec$calm, " of ", g_rec$n, ")"))
+check("5", "Felt calmer: AI did not recommend one", "35% (15 of 43)", paste0(round(g_not$pct), "% (", g_not$calm, " of ", g_not$n, ")"))
+check("5", "Felt calmer: p (BH)", ".02 (.38)", paste0(fmtp(P_CALMER["AI recommended a medication"], 2), " (", fmtp(P_CALMER_BH["AI recommended a medication"], 2), ")"))
+
+COLS <- 9
+w5 <- d5 |> arrange(group, cat) |> group_by(group) |> mutate(i = row_number() - 1, col = i %% COLS, row = i %/% COLS) |> ungroup() |>
+  left_join(by5, by = "group") |>
+  mutate(panel = factor(paste0(group, "\n", round(pct), "% calmer (", calm, " of ", n, ")"),
+                        levels = unique(paste0(by5$group, "\n", round(by5$pct), "% calmer (", by5$calm, " of ", by5$n, ")"))))
+p5 <- ggplot(w5, aes(x = col, y = row, fill = cat)) +
+  geom_tile(width = 0.86, height = 0.86) +
+  facet_wrap(~panel) + coord_equal() +
+  scale_fill_manual(values = c("Calmer" = DARK, "About the same" = PALE, "More distressed" = NEG), drop = FALSE) +
+  labs(title = wrap("No one felt calmer after the AI recommended a medication"),
+       subtitle = wrap(paste0("One square per participant  |  calmer = negative affect fell ", CALMER_CUT, "+ points  |  Fisher's exact p = ",
+                              fmtp(P_CALMER["AI recommended a medication"]), " (BH-adjusted ", fmtp(P_CALMER_BH["AI recommended a medication"]),
+                              ")  |  only ", g_rec$n, " conversations included a recommendation, so read this as a direction"), 110),
+       x = NULL, y = NULL) +
+  theme_hx() + theme(axis.text = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                     strip.text = element_text(face = "bold", color = INK, size = 14))
+save_fig(p5, "slide05_felt-calmer", h = 6.5)
+```
+
+## 6. Each negative feeling
+
+```{r slide6}
+ref_g <- SEGMENTS[["Referred to a professional"]]
+s6 <- panas |> mutate(group = ref_g[match(panas$pid, dat$pid)]) |> filter(!is.na(group)) |>
+  select(pid, group, matches(paste0("panas_(pre|post)_(", paste(NA_ITEMS, collapse = "|"), ")$"))) |>
+  pivot_longer(starts_with("panas_"), names_to = c("wave", "item"), names_pattern = "panas_(pre|post)_(.*)") |>
+  pivot_wider(names_from = wave, values_from = value) |> filter(!is.na(pre), !is.na(post)) |>
+  group_by(group, item) |> summarise(n = n(), change = mean(post - pre), .groups = "drop")
+wide6 <- s6 |> select(-n) |> pivot_wider(names_from = group, values_from = change) |>
+  rename(ref = `Referred to a professional`, nor = `No referral`) |> arrange(ref)
+n6 <- s6 |> group_by(group) |> summarise(n = max(n))
+
+deck6 <- c(distressed = "-0.73 vs 0.00", nervous = "-0.64 vs -0.50", afraid = "-0.52 vs -0.08", scared = "-0.50 vs 0.00",
+           upset = "-0.41 vs -0.17", irritable = "-0.41 vs +0.17", jittery = "-0.23 vs -0.50", ashamed = "-0.20 vs -0.09",
+           guilty = "-0.18 vs -0.08", hostile = "-0.11 vs +0.25")
+f2 <- function(x) ifelse(round(x, 2) == 0, "0.00", sprintf("%+.2f", x)) |> sub(pattern = "^\\+0\\.00$", replacement = "0.00")
+for (it in names(deck6)) { r <- wide6[wide6$item == it, ]
+  check("6", paste0("Change in '", it, "': referred vs. not"), sub("^-", "-", deck6[[it]]), paste0(f2(r$ref), " vs ", f2(r$nor))) }
+check("6", "Group sizes on the slide footer", "n = 43 / 11",
+      paste0("n = ", n6$n[n6$group == "Referred to a professional"], " / ", n6$n[n6$group == "No referral"], " (largest per item)"))
+
+wide6 <- wide6 |> mutate(item = factor(str_to_title(item), levels = rev(str_to_title(item))))
+long6 <- wide6 |> pivot_longer(c(ref, nor), names_to = "g", values_to = "change") |>
+  mutate(g = factor(g, c("ref", "nor"), c(paste0("AI referred them (n = ", n6$n[n6$group == "Referred to a professional"], ")"),
+                                          paste0("AI did not refer them (n = ", n6$n[n6$group == "No referral"], ")"))))
+p6 <- ggplot(wide6, aes(y = item)) +
+  geom_vline(xintercept = 0, color = "#9AA3AF", linewidth = 0.8) +
+  geom_segment(aes(x = ref, xend = nor, yend = item), color = BAR, linewidth = 2.5, lineend = "round") +
+  geom_point(data = long6, aes(x = change, color = g), size = 6) +
+  scale_color_manual(values = setNames(c(DARK, LIGHT), levels(long6$g))) +
+  scale_x_continuous(limits = range(c(-0.2, 0.2, long6$change)) + c(-0.1, 0.1), breaks = seq(-2, 2, 0.2), labels = function(x) ifelse(x > 0, paste0("+", x), x)) +
+  labs(title = wrap(paste0("After a referral, feeling ", paste(tolower(levels(wide6$item))[10:8], collapse = ", "), " dropped the most")),
+       subtitle = wrap("Average change in each PANAS negative item (1 to 5 scale, after minus before)  |  left of 0 = felt less  |  descriptive, not tested item by item", 110),
+       x = "Average change", y = NULL) +
+  theme_hx() + theme(panel.grid.major.y = element_blank())
+save_fig(p6, "slide06_negative-items")
+```
+
+## 7. Messages and positive feelings
+
+```{r slide7}
+d7 <- dat |> filter(!is.na(n_human_turns), n_human_turns >= 1, !is.na(pa_change)) |>
+  mutate(bucket = factor(ifelse(n_human_turns >= 4, "4 or more", as.character(n_human_turns)), levels = c("1", "2", "3", "4 or more")))
+by7 <- d7 |> group_by(bucket) |> summarise(n = n(), m = mean(pa_change), .groups = "drop")
+ct7 <- safe(suppressWarnings(cor.test(d7$n_human_turns, d7$pa_change, method = "spearman")))
+d7_all <- dat |> filter(!is.na(n_human_turns), !is.na(pa_change))
+ct7_all <- safe(suppressWarnings(cor.test(d7_all$n_human_turns, d7_all$pa_change, method = "spearman")))
+
+deck7 <- c(`1` = "-0.7 (n = 20)", `2` = "-1.7 (n = 9)", `3` = "0.0 (n = 10)", `4 or more` = "+3.0 (n = 12)")
+for (b in names(deck7)) { r <- by7[by7$bucket == b, ]
+  check("7", paste0("Positive affect change: ", b, ifelse(b == "1", " message", " messages")), deck7[[b]],
+        if (nrow(r)) paste0(ifelse(round(r$m, 1) == 0, "0.0", sprintf("%+.1f", r$m)), " (n = ", r$n, ")") else "no one") }
+check("7", "Spearman rho, p (people with 1+ message)", "rho = .30, p = .03, n = 51",
+      paste0("rho = ", sub("^0", "", fmt(ct7$estimate, 2)), ", p = ", fmtp(ct7$p.value, 2), ", n = ", nrow(d7)))
+check("7", "For reference: rho in the 07 report (everyone with a turn count)", "(not on slide)",
+      paste0("rho = ", fmt(ct7_all$estimate, 2), ", p = ", fmtp(ct7_all$p.value), ", n = ", nrow(d7_all)))
+
+set.seed(3)
+p7 <- ggplot(by7, aes(x = bucket, y = m)) +
+  geom_hline(yintercept = 0, color = "#9AA3AF", linewidth = 0.8) +
+  geom_col(aes(fill = m > 0), width = 0.6) +
+  geom_jitter(data = d7, aes(y = pa_change), width = 0.18, height = 0, color = MUTED, alpha = 0.45, size = 2) +
+  geom_text(aes(label = ifelse(round(m, 1) == 0, "0.0", sprintf("%+.1f", m)), vjust = ifelse(m >= 0, -0.6, 1.6)),
+            color = DARK, fontface = "bold", size = 6) +
+  scale_fill_manual(values = c(`TRUE` = DARK, `FALSE` = LIGHT), guide = "none") +
+  scale_x_discrete(labels = paste0(levels(by7$bucket), ifelse(levels(by7$bucket) == "1", " message", " messages"),
+                                   "\n(n = ", by7$n, ")")) +
+  labs(title = wrap("People who kept the conversation going ended up feeling more positive"),
+       subtitle = wrap(paste0("Bars = average change in PANAS positive affect (after minus before); dots = each participant  |  Spearman rho = ",
+                              fmt(ct7$estimate, 2), ", p = ", fmtp(ct7$p.value), ", n = ", nrow(d7),
+                              " who sent at least one message  |  small groups, read as a pattern"), 110),
+       x = "Messages the participant sent to the AI", y = "Change in positive affect") +
+  theme_hx() + theme(panel.grid.major.x = element_blank())
+save_fig(p7, "slide07_messages-positive-affect")
+```
+
+## 8. What people recalled
+
+```{r slide8}
+recode_e2 <- function(x) { t <- lc(x); factor(case_when(
+  t %in% c("5", "6") | str_detect(t, "clearly recommended|strongly urged") ~ "Clear or strong recommendation",
+  t %in% c("3", "4") | str_detect(t, "gently suggested|possible actions") ~ "Gentle suggestion or options",
+  t %in% c("1", "2") | str_detect(t, "did not recommend|wait it out") ~ "No action or wait it out",
+  TRUE ~ NA_character_), levels = c("Clear or strong recommendation", "Gentle suggestion or options", "No action or wait it out")) }
+d8 <- tibble(group = bin_lab(dat$ai_refers_professional, "AI referred them", "AI did not refer"),
+             cat = recode_e2(coalesce(dat$action_ai_rec_self, dat$action_ai_rec_other))) |> filter(!is.na(group), !is.na(cat))
+by8 <- d8 |> count(group, cat, .drop = FALSE) |> group_by(group) |> mutate(N = sum(n), pct = 100 * n / N) |> ungroup()
+p8_val <- safe(fisher.test(table(d8$group, d8$cat == "Clear or strong recommendation"))$p.value) %||% NA_real_
+
+cnt <- function(g) { r <- by8[by8$group == g, ]; paste0(r$n[1], " of ", r$N[1], " (", round(r$pct[1]), "%), ", r$n[2], ", ", r$n[3]) }
+check("8", "Referred: clear or strong / gentle / none", "25 of 43 (58%), 14, 4", cnt("AI referred them"))
+check("8", "Not referred: clear or strong / gentle / none", "1 of 11 (9%), 8, 2", cnt("AI did not refer"))
+check("8", "Fisher's exact p (clear or strong vs. not)", ".005", fmtp(p8_val))
+
+by8 <- by8 |> mutate(group = factor(paste0(group, "\n(n = ", N, ")"), levels = rev(unique(paste0(by8$group, "\n(n = ", by8$N, ")")))),
+                     cat = factor(cat, levels = rev(levels(d8$cat))))
+p8 <- ggplot(by8, aes(x = pct, y = group, fill = cat)) +
+  geom_col(width = 0.6, color = "white", linewidth = 1) +
+  geom_text(aes(label = ifelse(pct >= 8, paste0(round(pct), "%\n", n, " of ", N), ""),
+                color = cat == "Clear or strong recommendation"),
+            position = position_stack(vjust = 0.5), size = 4.3, lineheight = 0.9, fontface = "bold") +
+  scale_fill_manual(values = c("Clear or strong recommendation" = DARK, "Gentle suggestion or options" = PALE, "No action or wait it out" = NEG),
+                    breaks = levels(d8$cat)) +
+  scale_color_manual(values = c(`TRUE` = "white", `FALSE` = INK), guide = "none") +
+  scale_x_continuous(breaks = seq(0, 100, 25), labels = function(x) paste0(x, "%"), expand = c(0, 0)) +
+  labs(title = wrap("When the AI tells people to see someone, they remember"),
+       subtitle = wrap(paste0("What participants recalled the AI recommending (survey item E2)  |  referral coded from the AI's own text  |  Fisher's exact p = ",
+                              fmtp(p8_val)), 110),
+       x = "Share of participants in each group", y = NULL) +
+  theme_hx() + theme(panel.grid.major.y = element_blank())
+save_fig(p8, "slide08_recall", h = 6)
+```
+
+## 9. Summary numbers
+
+```{r slide9}
+all_n <- dat |> filter(!is.na(na_pre), !is.na(na_post))
+pa_n  <- dat |> filter(!is.na(pa_pre), !is.na(pa_post))
+check("9", "Negative affect, everyone", "18.5 to 15.2", paste0(fmt(mean(all_n$na_pre)), " to ", fmt(mean(all_n$na_post))))
+check("9", "Positive affect, everyone (\"stayed flat\")", "26.7 to 26.8", paste0(fmt(mean(pa_n$pa_pre)), " to ", fmt(mean(pa_n$pa_post))))
+check("9", "Shared their own situation", "84%", paste0(round(s3$pct[1]), "%"))
+check("9", "AI included a disclaimer", "9%", paste0(round(s3$pct[3]), "%"))
+check("9", "Recalled a clear recommendation: referred vs. not", "58% vs. 9%",
+      paste0(round(by8$pct[grepl("^AI referred", by8$group) & by8$cat == "Clear or strong recommendation"]), "% vs. ",
+             round(by8$pct[grepl("^AI did not", by8$group) & by8$cat == "Clear or strong recommendation"]), "%"))
+check("9", "Change for 4 or more messages", "about +3", sprintf("%+.1f", by7$m[by7$bucket == "4 or more"]))
+cat("Slide 9 has no chart. Its numbers are checked in the next tab.")
+```
+
+## Check against deck
+
+```{r check}
+check_tbl <- bind_rows(CHECK) |>
+  mutate(Match = ifelse(Deck == "(not on slide)", "info",
+                        ifelse(gsub("[^0-9.+-]", "", gsub("0\\.", ".", Deck)) == gsub("[^0-9.+-]", "", gsub("0\\.", ".", R)), "yes", "check"))) |>
+  select(Slide, Measure, Deck, R, Match)
+openxlsx::write.xlsx(list(deck_check = check_tbl), file.path(out_dir, "deck-number-check.xlsx"), overwrite = TRUE)
+n_off <- sum(check_tbl$Match == "check")
+cat(if (n_off == 0) "Every number on the slides matches the data.\n\n" else
+  paste0("**", n_off, " number(s) differ from the slides.** These rows are marked \"check\". Update the slide, or look at what changed in the data.\n\n"))
+kable(check_tbl, align = "llllc")
+```
+
+The "Match" column compares the digits only, so formatting differences (for example ".02" vs. "0.02") do not count as a mismatch. This table is also saved as `deck-number-check.xlsx` in the output folder.
