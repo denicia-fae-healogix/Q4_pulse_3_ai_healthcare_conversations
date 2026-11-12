@@ -51,3 +51,4 @@ Set `project_root` (R) or `PROJECT_ROOT` (Python) at the top of each script to y
 ## Team
 
 Behavioral Science at Healogix: Denicia Aragon Espinosa and James Dunlea, Ph.D.
+
