@@ -4,7 +4,7 @@ subtitle: "Codes from the C3 goal question: what people set out to do, how that 
 author: "Denicia Aragon Espinosa"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 params:
-  project_root: "C:/path/to/Q4_3_Pulse"
+  project_root: "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
 output:
   html_document:
     toc: false
@@ -26,6 +26,19 @@ project_root <- params$project_root
 proj <- function(...) file.path(project_root, ...)
 if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
 
+# ---- Find an input file anywhere inside the project folder ----
+# Looks in data/processed first, then searches every subfolder for the same file name,
+# so the script still runs if the data sit in a different folder.
+find_in <- function(name) {
+  first <- proj("data", "processed", name)
+  if (file.exists(first)) return(first)
+  hits <- list.files(project_root, pattern = paste0("^", gsub(".", "\\.", name, fixed = TRUE), "$"),
+                     recursive = TRUE, full.names = TRUE)
+  hits <- hits[!grepl("/output/", hits)]
+  if (length(hits) > 0) return(hits[1])
+  first
+}
+
 script_name <- "09b_Q4_3_goals"
 out_dir <- proj("output", script_name)
 fig_dir <- file.path(out_dir, "figures")
@@ -37,11 +50,11 @@ find_file <- function(name) { c1 <- proj("data", "processed", name); c2 <- proj(
   if (file.exists(c1)) c1 else if (file.exists(c2)) c2 else c1 }
 in_goal_codes <- find_file("09_Q4_3_goals_coded.csv")                            # goal codes, incl. goal met (one row per pid, no text)
 in_goal_text  <- find_file("05_Q4_3_conversations_wide_deid_only_pid_goals.csv")  # pid + C3 goal and D2 goal-met text (hover examples and keyword check)
-in_05    <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")                    # PANAS
-in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v3.csv")           # conversation codes (v1 + v2 + v3; v3 only adds columns)
-in_link  <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv")          # pid -> Prolific ID (read in memory only)
-in_ids   <- proj("data", "processed", "00_Q4_3_renamed.csv")                                     # response_id + Prolific ID
-for (f in c(in_goal_codes, in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", f)
+in_05    <- find_in("05_Q4_3_conversations_wide_deid.csv")                    # PANAS
+in_codes <- find_in("05_Q4_3_conversations_wide_deid_coded_v3.csv")           # conversation codes (v1 + v2 + v3; v3 only adds columns)
+in_link  <- find_in("05_Q4_3_conversations_pid_and_prolific_id.csv")          # pid -> Prolific ID (read in memory only)
+in_ids   <- find_in("00_Q4_3_renamed.csv")                                     # response_id + Prolific ID
+for (f in c(in_goal_codes, in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", basename(f), " (looked in every folder inside ", project_root, ")")
 if (!file.exists(in_goal_text)) in_goal_text <- find_file("09_Q4_3_goals_deid_pid_only.csv")   # the file 09a writes
 HAS_TEXT <- file.exists(in_goal_text)   # without it the report still runs; hovers show numbers only and the keyword check is skipped
 ```

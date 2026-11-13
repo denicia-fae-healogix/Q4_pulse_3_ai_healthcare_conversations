@@ -4,7 +4,7 @@ subtitle: "Recomputes every number in the Part 3A Canva deck and web page, draws
 author: "Denicia Aragon Espinosa"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 params:
-  project_root: "C:/path/to/Q4_3_Pulse"
+  project_root: "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
 output:
   html_document:
     toc: false
