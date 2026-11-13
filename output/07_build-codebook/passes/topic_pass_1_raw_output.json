@@ -1,0 +1,563 @@
+{
+  "codebook": "topic",
+  "pass": 1,
+  "seed": 7101,
+  "n_messages_read": 53,
+  "codes": [
+    {
+      "name": "Bones, joints and muscles",
+      "definition": "Messages about pain, injury, or conditions of the bones, joints, muscles, back, or neck. Includes arthritis, osteoporosis and fracture risk, joint injuries, and back, neck, knee, foot, or hand pain; excludes headaches and nerve pain (see Headaches and nerve pain) and chest or abdominal pain.",
+      "signs": [
+        "named joints or body parts such as knee, back, neck, foot, elbow, hand",
+        "bone conditions such as osteoarthritis, osteoporosis, fractures, DEXA scans",
+        "pain with movement, squatting, walking, or stair climbing",
+        "injury words such as strain, tennis elbow, bossing"
+      ],
+      "closest_other": "Headaches and nerve pain",
+      "how_it_differs": "Headaches and nerve pain covers head pain and nerve damage such as neuropathy; choose Bones, joints and muscles when the pain is located in a joint, bone, back, or neck and is tied to movement or injury.",
+      "examples": [
+        {
+          "chat_id": "69fff128",
+          "quote": "what kind of knee injury does this sound like"
+        },
+        {
+          "chat_id": "663b8ae0",
+          "quote": "symptoms of osteoarthrits"
+        },
+        {
+          "chat_id": "69600cc8",
+          "quote": "Husband's low back started hurting yesterday"
+        }
+      ]
+    },
+    {
+      "name": "Stomach and digestion",
+      "definition": "Messages about the stomach, bowel, and digestive tract, including belly pain and anal conditions. Includes stomach aches, gastritis, abdominal pain, and fistula or other anorectal problems; excludes general infectious illness such as colds or flu, and diet or nutrition goals.",
+      "signs": [
+        "stomach ache, tummy ache, belly pain",
+        "named digestive conditions such as gastritis",
+        "pain around the belly button or when using the bathroom",
+        "anal or perianal terms such as fistula-in-anu"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Infections and acute illness covers sudden whole-body illness or infections in general; choose Stomach and digestion when the subject is located in the gut, abdomen, or anus, even if an infection might be the cause.",
+      "examples": [
+        {
+          "chat_id": "6a10664c",
+          "quote": "Tell me what causes gastritis and how long it can last."
+        },
+        {
+          "chat_id": "697cba85",
+          "quote": "I've been dealing with some bad stomach aches for the past few weeks."
+        },
+        {
+          "chat_id": "6658d49a",
+          "quote": "please list every disease where fistula-in-anu is a symptom"
+        }
+      ]
+    },
+    {
+      "name": "Skin, hair and allergies",
+      "definition": "Messages about the skin, scalp, or hair, or about allergic reactions. Includes eczema, hives, flaking scalp, hair growth, and allergies to medicines or other triggers; excludes infections whose main subject is general illness.",
+      "signs": [
+        "skin conditions such as eczema, hives, dry spots, flaking, scabbing",
+        "scalp or hair growth",
+        "allergy or allergic reaction, including drug allergies"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Infections and acute illness covers infections and feeling sick; choose Skin, hair and allergies when the subject is a visible skin, scalp, or hair change or an allergic reaction.",
+      "examples": [
+        {
+          "chat_id": "6acb95ac",
+          "quote": "What does it mean if I have eczema dry spots on my skin"
+        },
+        {
+          "chat_id": "672c1bfa",
+          "quote": "My scalp is flaking and scabbing…what do I do?"
+        },
+        {
+          "chat_id": "6a21a961",
+          "quote": "Can an allergic reaction appear slowly"
+        }
+      ]
+    },
+    {
+      "name": "Infections and acute illness",
+      "definition": "Messages about infections or sudden short-term illness such as colds, flu, or viral diseases. Includes fever, chills, body aches, named infectious diseases, abscesses, and questions about whether something is an infection; excludes long-lasting conditions of one organ system.",
+      "signs": [
+        "flu-like symptoms such as fever, chills, body aches, congestion",
+        "the words infection, flu, or catch",
+        "named infectious diseases such as hand foot and mouth",
+        "abscess"
+      ],
+      "closest_other": "Stomach and digestion",
+      "how_it_differs": "Stomach and digestion covers problems located in the gut or abdomen; choose Infections and acute illness when the main subject is catching or having an infection or a sudden sick feeling.",
+      "examples": [
+        {
+          "chat_id": "664639e0",
+          "quote": "Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "6a637176",
+          "quote": "What if hand foot and mouth isn't treated"
+        },
+        {
+          "chat_id": "66d8e4c1",
+          "quote": "can infections of some sort smell like onions"
+        }
+      ]
+    },
+    {
+      "name": "Diet, weight and fitness",
+      "definition": "Messages about body weight, nutrition, exercise, or fitness goals. Includes healthy eating, protein and supplements for fitness, fat loss, normal weight, workouts, and weight-loss medicines such as GLP-1 drugs; excludes diabetes and hormone disorders.",
+      "signs": [
+        "weight, fat loss, getting skinny, normal weight for height",
+        "foods, protein, meals, diet",
+        "gym, workouts, muscle gain",
+        "GLP-1 or weight-loss drugs such as Zepbound"
+      ],
+      "closest_other": "Diabetes and hormones",
+      "how_it_differs": "Diabetes and hormones covers blood sugar and hormone disorders; choose Diet, weight and fitness when the subject is weight, eating, or exercise, even if hormones are mentioned as a fitness goal.",
+      "examples": [
+        {
+          "chat_id": "6952e59d",
+          "quote": "What is the normal weight for a male who is 28 and five feet nine inches tall?"
+        },
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals."
+        },
+        {
+          "chat_id": "66c0f464",
+          "quote": "What impact (if any) has taking a GLP-1A medication had on your physical health?"
+        }
+      ]
+    },
+    {
+      "name": "Diabetes and hormones",
+      "definition": "Messages about diabetes, blood sugar, or hormone and metabolic conditions. Includes A1c, diabetes, hormone imbalance, endocrinologists, PCOS, testosterone, and cholesterol; excludes weight and fitness goals that do not centre on a hormone or metabolic condition.",
+      "signs": [
+        "diabetes, A1c, blood sugar",
+        "hormones, endocrinologist",
+        "metabolic conditions such as PCOS or high cholesterol",
+        "testosterone"
+      ],
+      "closest_other": "Diet, weight and fitness",
+      "how_it_differs": "Diet, weight and fitness covers eating, exercise, and weight; choose Diabetes and hormones when the message names a blood sugar, hormone, or metabolic condition or test.",
+      "examples": [
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        },
+        {
+          "chat_id": "6ad69d36",
+          "quote": "what diabetes"
+        }
+      ]
+    },
+    {
+      "name": "Eyes and vision",
+      "definition": "Messages about the eyes and vision. Includes double vision, glasses, retina appointments, and cataract surgery; excludes eye pain that is only one symptom of a headache or other illness.",
+      "signs": [
+        "eyes, vision, seeing double",
+        "glasses or prism glasses",
+        "eye specialists such as retina specialist or eye doctor",
+        "cataract surgery"
+      ],
+      "closest_other": "Headaches and nerve pain",
+      "how_it_differs": "Headaches and nerve pain covers head pain, which can include pain behind the eyes; choose Eyes and vision when the subject is sight or an eye condition itself.",
+      "examples": [
+        {
+          "chat_id": "616f347d",
+          "quote": "Sometimes I'm not seeing double with my glasses on but sometimes I am."
+        },
+        {
+          "chat_id": "6a106089",
+          "quote": "My eye doctor is sending me to a retina specialist"
+        },
+        {
+          "chat_id": "69f441ce",
+          "quote": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one."
+        }
+      ]
+    },
+    {
+      "name": "Sleep and fatigue",
+      "definition": "Messages about sleep problems or tiredness. Includes poor or unrefreshing sleep, night waking, sleep apnea, fatigue, and sleep loss; excludes tiredness that is only one symptom of an acute illness such as flu.",
+      "signs": [
+        "sleep, night waking, falling asleep",
+        "tired, fatigue, not rested",
+        "sleep apnea or not breathing at night",
+        "sleep aids or medicines affecting sleep such as melatonin"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Infections and acute illness covers fatigue that comes with a sudden sickness; choose Sleep and fatigue when the sleep pattern or ongoing tiredness is itself the subject.",
+      "examples": [
+        {
+          "chat_id": "63e55f08",
+          "quote": "I've been feeling unusually tired lately, even after getting a full night's sleep."
+        },
+        {
+          "chat_id": "5f491a49",
+          "quote": "What is sleep apnea? I think I may have it."
+        },
+        {
+          "chat_id": "6144ea17",
+          "quote": "he's been waking a lot in the night and he never used to do that."
+        }
+      ]
+    },
+    {
+      "name": "Headaches and nerve pain",
+      "definition": "Messages about headaches or nerve pain. Includes headaches with or without other symptoms and neuropathy; excludes pain in joints, muscles, back, or neck.",
+      "signs": [
+        "headache",
+        "neuropathy or nerve pain",
+        "pain behind the eyes with headache"
+      ],
+      "closest_other": "Bones, joints and muscles",
+      "how_it_differs": "Bones, joints and muscles covers pain in joints, back, neck, or limbs from injury or wear; choose Headaches and nerve pain when the pain is in the head or is described as nerve pain.",
+      "examples": [
+        {
+          "chat_id": "69fd05bd",
+          "quote": "I have a headache, what should I take?"
+        },
+        {
+          "chat_id": "6a9f047c",
+          "quote": "I have had an headache and vomitting for 2 days and pain behind my eyes"
+        },
+        {
+          "chat_id": "66d9e5be",
+          "quote": "How to heal neuropathy pain in leg"
+        }
+      ]
+    },
+    {
+      "name": "Pregnancy and reproductive health",
+      "definition": "Messages about pregnancy, labor, menstruation, or the female reproductive organs. Includes labor and induction, endometriosis, periods, PCOS, and PMDD; excludes hormone questions not tied to reproduction.",
+      "signs": [
+        "pregnancy, labor, induction, contractions",
+        "period or menstruation",
+        "reproductive conditions such as endometriosis, PCOS, PMDD"
+      ],
+      "closest_other": "Diabetes and hormones",
+      "how_it_differs": "Diabetes and hormones covers blood sugar and general hormone or metabolic conditions; choose Pregnancy and reproductive health when the subject is pregnancy, periods, or reproductive organs.",
+      "examples": [
+        {
+          "chat_id": "69d51123",
+          "quote": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?"
+        },
+        {
+          "chat_id": "69f4ca1a",
+          "quote": "I want to deal with my pcos, anemia, pmdd, and high cholesterol"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "chat_id": "66aafcc3",
+      "primary": "Pregnancy and reproductive health",
+      "secondary": null
+    },
+    {
+      "chat_id": "663b8ae0",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "63e55f08",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "66d9e5be",
+      "primary": "Headaches and nerve pain",
+      "secondary": null
+    },
+    {
+      "chat_id": "66ec5904",
+      "primary": "Diabetes and hormones",
+      "secondary": null
+    },
+    {
+      "chat_id": "6144ea17",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a24b2df",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "66fd6acd",
+      "primary": "Diet, weight and fitness",
+      "secondary": "Sleep and fatigue"
+    },
+    {
+      "chat_id": "5eec8774",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6abae4ea",
+      "primary": "Diabetes and hormones",
+      "secondary": null
+    },
+    {
+      "chat_id": "6ad69d36",
+      "primary": "Diabetes and hormones",
+      "secondary": null
+    },
+    {
+      "chat_id": "69d51123",
+      "primary": "Pregnancy and reproductive health",
+      "secondary": null
+    },
+    {
+      "chat_id": "6712af54",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fff128",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fd05bd",
+      "primary": "Headaches and nerve pain",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fcf529",
+      "primary": "Diet, weight and fitness",
+      "secondary": "Diabetes and hormones"
+    },
+    {
+      "chat_id": "664639e0",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "5f491a49",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a9bb385",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "616f347d",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "672c1bfa",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a638cf5",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "6952e59d",
+      "primary": "Diet, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "primary": "Diet, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a10664c",
+      "primary": "Stomach and digestion",
+      "secondary": null
+    },
+    {
+      "chat_id": "69600cc8",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a9f047c",
+      "primary": "Headaches and nerve pain",
+      "secondary": null
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "primary": "Diabetes and hormones",
+      "secondary": "Pregnancy and reproductive health"
+    },
+    {
+      "chat_id": "6a0206ae",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "6929d658",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "66c0f464",
+      "primary": "Diet, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "5aeeb490",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "69ab73e1",
+      "primary": "Stomach and digestion",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a983ff0",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6658d49a",
+      "primary": "Stomach and digestion",
+      "secondary": null
+    },
+    {
+      "chat_id": "6ae359af",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "69c41892",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "697cba85",
+      "primary": "Stomach and digestion",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "695be8c6",
+      "primary": "Infections and acute illness",
+      "secondary": "Bones, joints and muscles"
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "primary": "Stomach and digestion",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a106089",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a637176",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "5f47f200",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6acb95ac",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "6785ddfb",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a21a961",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "69f441ce",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fe1811",
+      "primary": "Skin, hair and allergies",
+      "secondary": "Diet, weight and fitness"
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "primary": "Infections and acute illness",
+      "secondary": "Stomach and digestion"
+    },
+    {
+      "chat_id": "671a8337",
+      "primary": "NONE",
+      "secondary": null
+    }
+  ],
+  "no_code_chats": [
+    {
+      "chat_id": "6a24b2df",
+      "reason": "Casual exclamation ('we're getting skinny') with no clear health question; weight is hinted at but not asked about."
+    },
+    {
+      "chat_id": "6a9bb385",
+      "reason": "Single word 'nope' replying to earlier conversation; no health subject in the message."
+    },
+    {
+      "chat_id": "6a638cf5",
+      "reason": "Pasted kidney/bladder ultrasound report (kidney stone, kidney cysts, liver echogenicity); kidney and urinary topics appear in only this message."
+    },
+    {
+      "chat_id": "6a0206ae",
+      "reason": "Asks to talk about stress and anxiety; mental health appears in only 2 messages, below the 3-message threshold."
+    },
+    {
+      "chat_id": "6929d658",
+      "reason": "Long personal reflection on family communication and not speaking; emotional/mental wellbeing subject seen in only 2 messages."
+    },
+    {
+      "chat_id": "6ae359af",
+      "reason": "Greeting only ('Hi meta'); no health subject."
+    },
+    {
+      "chat_id": "69c41892",
+      "reason": "Asks to summarize a section on child developmental stages and milestones; child development appears only here."
+    },
+    {
+      "chat_id": "671a8337",
+      "reason": "Chest pain when running; heart/chest topics appear only in this message."
+    }
+  ],
+  "notes": "10 topics resulted; several are small (Eyes and vision, Headaches and nerve pain, Pregnancy and reproductive health each cover exactly 3 chats). Subjects seen in only 1-2 messages and coded NONE: mental health/stress (6a0206ae, 6929d658), kidney/urinary (6a638cf5), chest/heart (671a8337), child development (69c41892). Borderline calls: 6144ea17 (guanfacine dose change and night waking) coded Sleep and fatigue since the question is about sleep; 695be8c6 (feeling unwell after injections for tennis elbow) coded Infections and acute illness with secondary Bones, joints and muscles; 5d7fd2a5 (child's perianal abscess) coded Infections with secondary Stomach and digestion; 69fe1811 (hair growth on Zepbound) coded Skin, hair and allergies with secondary Diet, weight and fitness; 6712af54 (antibiotic allergy rates) coded Skin, hair and allergies as an allergy topic; 69f4ca1a (supplements for PCOS, anemia, PMDD, cholesterol) coded Diabetes and hormones with secondary Pregnancy and reproductive health; 66aafcc3 is a short follow-up only understandable via the context (labor induction). 6a24b2df could alternatively be Diet, weight and fitness. Identifiers: names already replaced; 5d7fd2a5 contains detailed family/custody details and locations (New York, northern VA); 5eec8774 addresses the AI as 'Claude' and gives scan dates."
+}

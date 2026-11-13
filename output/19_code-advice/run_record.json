@@ -1,0 +1,13 @@
+{
+  "frozen_codebook": "advice_frozen_2026-11-09_v1",
+  "n_chats": 52,
+  "coders": 3,
+  "batches_per_coder": 3,
+  "kappa_confirm_threshold": 0.61,
+  "rung_within_one_step": 52,
+  "quotes_checked": 385,
+  "quotes_in_named_turn": 385,
+  "quotes_in_any_ai_turn": 385,
+  "review_flags": 4,
+  "priority_1_flags": 2
+}

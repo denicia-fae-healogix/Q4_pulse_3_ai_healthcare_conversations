@@ -1,0 +1,584 @@
+{
+  "coder": 2,
+  "seed": 16102,
+  "n_chats_coded": 16,
+  "codings": [
+    {
+      "chat_id": "671a8337",
+      "goals": [
+        "A1",
+        "A2",
+        "A4"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "hoped for the AI to at least diagnoses or give me a rough idea of what it really was",
+        "confidence": "medium",
+        "unclear": "unclear because the first clause mixes 'signs and symptoms of chest pain' (A1/A4) with 'when to seek medical attention' (A2); the first-stated rule does not clearly separate them, A2 was considered"
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "i was able to figure out what was wrong with my friend",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": true,
+          "source": "goal_met",
+          "evidence": "i was able to figure out what was wrong with my friend",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "goals": [
+        "A8"
+      ],
+      "main_goal": {
+        "code": "A8",
+        "source": "goal",
+        "evidence": "I wanted to get feedback.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes, the goal was achieved.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "goals": [
+        "A3"
+      ],
+      "main_goal": {
+        "code": "A3",
+        "source": "goal",
+        "evidence": "I personally was trying to achieve a relief of a tummy ache.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "The suggestions given worked and I really enjoyed the conversation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "goals": [
+        "A7",
+        "A3"
+      ],
+      "main_goal": {
+        "code": "A7",
+        "source": "goal",
+        "evidence": "I was trying to make sure my feelings and opinions were valid",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B4",
+        "source": "goal_met",
+        "evidence": "It's a continuing conversation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W4"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "goals": [
+        "A4"
+      ],
+      "main_goal": {
+        "code": "A4",
+        "source": "goal",
+        "evidence": "I wanted to cut down on the leg work required to find answers about the particular medical condition.",
+        "confidence": "medium",
+        "unclear": "unclear because the goal is mostly about effort saved; the topic is a known 'particular medical condition' so A4 fits, A8 was considered"
+      },
+      "goal_met": {
+        "code": "B2",
+        "source": "goal_met",
+        "evidence": "I think it was less fulfilling than I had hoped.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W3"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": true,
+          "source": "goal",
+          "evidence": "I was hoping this would be easier than scanning many different medical sites.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "goals": [
+        "A1"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal_met",
+        "evidence": "When I had asked what the possible reason was for my son's issue with sleeping",
+        "confidence": "medium",
+        "unclear": "unclear because the goal answer is vague (A8 considered); the goal was taken from the goal-met answer under G9"
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes I do.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": true,
+          "source": "goal_met",
+          "evidence": "what the possible reason was for my son's issue with sleeping",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "T-whyAI": {
+          "value": true,
+          "source": "goal",
+          "evidence": "it was faster to search it using ai instead.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "goals": [
+        "A3",
+        "A6"
+      ],
+      "main_goal": {
+        "code": "A3",
+        "source": "goal",
+        "evidence": "I am trying to get an idea for what my alternative osteoporosis medication options are",
+        "confidence": "medium",
+        "unclear": "unclear because this is 'X so that I can prepare' (A3 main, A6 extra), but it could also be read as deciding about a treatment with the clinician (A6)"
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes, as Claude gave me a list of medications",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "goals": [
+        "A5"
+      ],
+      "main_goal": {
+        "code": "A5",
+        "source": "goal",
+        "evidence": "I also wanted a structured plan that'll help me make eating a little easier and healthier",
+        "confidence": "medium",
+        "unclear": "unclear because the first-stated goal 'find credible information quickly' is vague and fits no A code (A8 considered), so the first codable goal A5 was used"
+      },
+      "goal_met": {
+        "code": "B2",
+        "source": "goal_met",
+        "evidence": "My goal was mostly achieved.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W6"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "goals": [
+        "A6"
+      ],
+      "main_goal": {
+        "code": "A6",
+        "source": "goal",
+        "evidence": "Wanted to get an ideal before i go see a Doctor",
+        "confidence": "medium",
+        "unclear": "unclear because 'before I see the doctor' points to A6, but getting 'an idea' could mean finding out what is wrong (A1)"
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes I do because i got the same answer from A,I that I got from a medical Professionl.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "goals": [
+        "A4"
+      ],
+      "main_goal": {
+        "code": "A4",
+        "source": "goal",
+        "evidence": "I wanted to see how exercise would help improve the quality of my sleep.",
+        "confidence": "medium",
+        "unclear": "unclear because general facts about exercise and sleep are A4, but using exercise to feel refreshed could be practical self-care advice (A3)"
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "I believe I was able to find the right information",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "663b8ae0",
+      "goals": [
+        "A1",
+        "A3"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "The initial goal was to confirm a possible condition my mom has.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B2",
+        "source": "goal_met",
+        "evidence": "The goal was achieved in a sense",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W5"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": true,
+          "source": "goal",
+          "evidence": "confirm a possible condition my mom has.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66aafcc3",
+      "goals": [
+        "A1",
+        "A6",
+        "A2"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "I wanted to understand why my contractions had stopped",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B2",
+        "source": "goal_met",
+        "evidence": "Yes, I feel like my goal was mostly achieved",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W5"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "goals": [
+        "A1",
+        "A7",
+        "A3"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "To understand I health concern I've had",
+        "confidence": "medium",
+        "unclear": "unclear because 'understand a health concern' could be A4, but the goal-met answer shows they wanted to confirm a suspected condition (A1)"
+      },
+      "goal_met": {
+        "code": "B2",
+        "source": "goal_met",
+        "evidence": "I would say the goal was achieved partially.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W1"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": true,
+          "source": "goal",
+          "evidence": "without having to go to the doctor which can be expensive",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5f491a49",
+      "goals": [
+        "A4",
+        "A1"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "primarily see if it was something I might be suffering myself.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes I think the goal was definitely achieved.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": true,
+          "source": "goal_met",
+          "evidence": "It also gave me further tips as to scheduling an appointment with a medical professional.",
+          "confidence": "medium",
+          "unclear": "unclear because tips on scheduling an appointment imply but do not explicitly state advice to see a doctor"
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "goals": [
+        "A4",
+        "A6",
+        "A7"
+      ],
+      "main_goal": {
+        "code": "A4",
+        "source": "goal",
+        "evidence": "I wanted to find out more about the condition to prepare her for her appointment",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B1",
+        "source": "goal_met",
+        "evidence": "Yes, I do feel that I achieved the intended goal.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [],
+      "tags": {
+        "T-doctor": {
+          "value": false
+        },
+        "T-other": {
+          "value": true,
+          "source": "goal",
+          "evidence": "to prepare her for her appointment",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "goals": [
+        "A1",
+        "A2"
+      ],
+      "main_goal": {
+        "code": "A1",
+        "source": "goal",
+        "evidence": "I wanted to find out from the AI if it could tell me why I have stomach aches/pains",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "goal_met": {
+        "code": "B3",
+        "source": "goal_met",
+        "evidence": "Not really.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "why_not": [
+        "W1",
+        "W2"
+      ],
+      "tags": {
+        "T-doctor": {
+          "value": true,
+          "source": "goal_met",
+          "evidence": "I was just directed to a medical professional",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "T-other": {
+          "value": false
+        },
+        "T-whyAI": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "A6 vs timing context: 'before I go see a Doctor' (6785ddfb) and 'before taking her to the specialist' (663b8ae0) are hard to separate from A1 context; induction already planned (66aafcc3) fits A6 only loosely. 'Signs and symptoms of X' (671a8337) sits between A1 and A4. 'Find credible information quickly' (69a1ae3c) and 'cut down on leg work' (6658d49a) blur A8 and T-whyAI. W1 vs W2 overlap when the person wonders whether to still see a professional (6acb95ac, 697cba85). T-doctor unclear when the AI gave tips on scheduling an appointment (5f491a49) or when to call the hospital (66aafcc3)."
+}

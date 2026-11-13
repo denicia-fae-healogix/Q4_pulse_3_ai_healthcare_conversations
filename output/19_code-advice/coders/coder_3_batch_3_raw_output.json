@@ -1,0 +1,680 @@
+{
+  "coder": 3,
+  "batch": 3,
+  "seed": 19103,
+  "n_chats_coded": 16,
+  "codings": [
+    {
+      "chat_id": "671a8337",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Stop running for now.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Chest pain that happens during running/exertion needs medical evaluation before you keep training.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6712af54",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Around 90–95% of people who believe they are allergic to penicillin actually are not when formally tested.",
+        "confidence": "medium",
+        "unclear": "unclear because the ai_3 statement that someone with a severe reaction should avoid Bactrim again could be read as 'avoiding a trigger' (L2), but the codebook treats medicines named to warn against as warnings, not ladder advice; considered L2."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "While any new rash during antibiotic treatment should be discussed with a healthcare professional, many are not true allergies.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "they should generally avoid taking it again unless an allergy specialist determines otherwise.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "672c1bfa",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Use an anti-dandruff shampoo 2–3 times a week. Look for one containing: Ketoconazole 1%",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ketoconazole",
+        "selenium sulfide",
+        "zinc pyrithione",
+        "coal tar",
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "You should see a healthcare provider if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "taking in adequate protein through whole foods like beef, chicken, pork, beans, and Greek yogurt means whey protein is indeed unnecessary for you",
+        "confidence": "medium",
+        "unclear": "unclear because this is agreement with the person's diet plan with a reason (L2 close call), but it could also be read as general information (L1)."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "63e55f08",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Feeling unusually tired even after getting a full night's sleep can have several causes.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "it would be worth scheduling a doctor's appointment and discussing some basic bloodwork",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5aeeb490",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_7",
+        "evidence": "Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it, following the package directions.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it, following the package directions.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek emergency care or call 911 if the neck pain occurs with any of the following:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "or ibuprofen if you can safely take it, following the package directions.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fff128",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "temporarily reduce deep knee flexion, heavy squats, lunges, and similar loading.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I'd move this out of the \"probably just irritated, give it a few days\" category and have it evaluated",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "~90% of fistula-in-anu cases are cryptoglandular (idiopathic)",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "616f347d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_2",
+        "evidence": "This is common with dry eyes and can happen even if your eyes don't feel particularly dry.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "please contact your specialist promptly rather than waiting several days without checking in.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "It is generally best to avoid alcohol or keep it to a strict minimum in this situation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "combining them with alcohol can cause severe stomach irritation, internal bleeding, or liver stress.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "OTC options like acetaminophen or ibuprofen can help with the fever and aches",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen",
+        "oseltamivir"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "so if symptoms worsen, see a doctor soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Note: I'm not a doctor",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6952e59d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "a normal or healthy weight ranges from 128 to 168 pounds",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6abae4ea",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "An endocrinologist specializes in the hormone-producing glands throughout your body, not just reproductive hormones.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I think seeing an endocrinologist would be a very reasonable next step for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "I would absolutely make B12 and folate part of the core plan rather than looking for an iron-containing supplement.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I would absolutely make B12 and folate part of the core plan rather than looking for an iron-containing supplement.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "But it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better, or whether restarting Prolia at the $55.43 price makes more sense.",
+        "confidence": "medium",
+        "unclear": "unclear because ai_5 lists how often each option is given ('weekly or daily', 'usually once a year'); the L4 close call keeps this at L4, but L5 was considered."
+      },
+      "medicines_suggested": [
+        "alendronate",
+        "zoledronic acid",
+        "denosumab",
+        "risedronate",
+        "ibandronate",
+        "pamidronate"
+      ],
+      "types_suggested": [
+        "non-drowsy allergy option"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_5",
+          "evidence": "Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Please check these with your doctor, since I can't know what's safe for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Benadryl is sedating and can raise fall risk and affect memory.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a983ff0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "It's a bony bump that forms at the base of the 2nd or 3rd metacarpal (back of the hand).",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "6712af54: unclear whether 'avoid taking [a medicine] again' is avoiding a trigger (L2) or only a warning (S-warning); coded L1 + S-warning. 5eec8774: medicine-option lists with frequencies ('weekly or daily', 'once a year') sit on the L4/L5 border; followed the L4 close call. Also unclear whether 'a pharmacist can suggest a non-drowsy allergy option' replacing the person's own Benadryl counts as an L3 type suggestion; listed it as a type. 69fcf529: agreeing that a supplement (whey) is unnecessary is not covered explicitly; coded L2 as agreement with diet plan. 672c1bfa: unclear whether shampoo ingredients (ketoconazole, selenium sulfide, zinc pyrithione, coal tar) count as medicines; treated them as medicines per the codebook's Ketoconazole 1% example. 6658d49a: generic clinical list ('require evaluation') not addressed to the person; S-doctor coded false."
+}

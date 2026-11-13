@@ -1,0 +1,665 @@
+{
+  "coder": 2,
+  "batch": 3,
+  "seed": 19102,
+  "n_chats_coded": 16,
+  "codings": [
+    {
+      "chat_id": "6144ea17",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Tracking wake-ups for the next 1-2 weeks Noting what time he wakes",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Continue and wait for adjustment, Change the timing, Adjust the dose, or Reintroduce a sleep aid if appropriate",
+          "confidence": "medium",
+          "unclear": "unclear because the sleep aid (melatonin, a supplement) is listed as something the prescriber may advise rather than directly suggested by the AI; considered F-supplement false"
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "that's usually a good time to check in with the prescriber",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Maybe, but I would not change the timing without checking with his prescriber first.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Short-term use of anti-inflammatory medications (like ibuprofen or naproxen) or topical gels (such as Voltaren/diclofenac) can help manage pain and swelling.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "naproxen",
+        "diclofenac"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "topical gels (such as Voltaren/diclofenac) can help manage pain and swelling",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "reach out to a healthcare professional or primary care doctor if you experience any of the following",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Be sure to check with your pharmacist or doctor if you take other medications or have underlying health considerations.",
+          "confidence": "medium",
+          "unclear": "unclear because this is a soft caveat about other medications and health conditions rather than an explicit side effect or interaction; considered S-doctor only"
+        }
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "taking in adequate protein through whole foods like beef, chicken, pork, beans, and Greek yogurt means whey protein is indeed unnecessary for you",
+        "confidence": "medium",
+        "unclear": "unclear because the AI only agrees with the person's diet plan; the agreeing-with-a-reason rule makes it L2 but L1 was close"
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "A perianal abscess usually develops because:      A tiny gland inside the anus becomes blocked.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "At the follow-up, it would be reasonable to ask the surgeon directly:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "616f347d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Your prism glasses bend light so that the images from your eyes line up more closely.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If the double vision is still changing or worsening, contact the specialist's office and let them know.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "For now, continue gently cleaning and thoroughly drying the area",
+        "confidence": "medium",
+        "unclear": "unclear because the clotrimazole advice is the person's own medicine (not a suggestion); L4 was considered and rejected"
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "A low-cost community health center may be able to help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a21a961",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_4",
+        "evidence": "You can ask your doctor or pharmacist if an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate to help with the itching and redness",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "diphenhydramine",
+        "loratadine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Contact your prescribing doctor or pharmacist immediately.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "Do not take any more doses of this medication until a doctor tells you otherwise.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "66d9e5be",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Ibuprofen or acetaminophen may help some underlying pain",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen",
+        "gabapentin",
+        "pregabalin",
+        "duloxetine",
+        "lidocaine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Prescription options such as gabapentin, pregabalin, duloxetine, or certain topical treatments may be considered by a clinician.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Get evaluated by his doctor, particularly if this is new or worsening.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Medications such as duloxetine, gabapentin, pregabalin, or topical lidocaine can be options depending on his health and other medications.",
+          "confidence": "medium",
+          "unclear": "unclear because 'depending on his health and other medications' is an implied caveat ('if you can safely take it') rather than an explicit warning"
+        }
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_2",
+        "evidence": "an over-the-counter medication containing simethicone (Gas-X) may help",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "simethicone"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "an over-the-counter medication containing simethicone (Gas-X) may help",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "please seek urgent medical care",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "But I wouldn't take laxatives or strong pain medications until we have a better idea of what's causing the cramps.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "663b8ae0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Osteoarthritis (OA) is the most common type of arthritis.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Make an appointment with a healthcare professional if joint pain or stiffness persists",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "It is generally best to avoid alcohol or keep it to a strict minimum in this situation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "combining them with alcohol can cause severe stomach irritation, internal bleeding, or liver stress.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Fistula-in-anu (anal fistula) is **most commonly idiopathic** (arising from infected anal glands)",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Overall, this ultrasound is mostly reassuring, with a few findings worth discussing with your doctor.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek urgent care if you develop severe/worsening flank pain, fever/chills, vomiting, difficulty urinating, or blood in the urine",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "63e55f08",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Conditions such as sleep apnea, where breathing repeatedly pauses during sleep, can also leave you feeling exhausted",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "it would be worth scheduling a doctor's appointment and discussing some basic bloodwork",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_7",
+        "evidence": "Aim for 150 minutes of moderate cardio weekly, plus strength training on two days",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Ask your doctor: \"Does this look like a normal anatomical variation, or does it need any follow-up?\"",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Appendicitis: Pain often starts near the belly button and then moves to the lower right side.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek urgent medical care today if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "6144ea17: unclear whether 'reintroduce a sleep aid' listed as a prescriber option counts as the AI suggesting a supplement. 69fcf529: the 'agreeing with the person's diet plan' rule makes a one-sentence agreement L2; boundary with L1 is thin. 66d8e4c1: person's own OTC cream bought themselves, told to keep using per package directions; codebook treats as own medicine but this is close to a suggestion. 6658d49a: generic clinical text ('require evaluation for TB, cancer...') not addressed to the person; unclear whether that counts as S-doctor (coded false). 66d9e5be: 'depending on his health and other medications' as an S-warning caveat is borderline."
+}

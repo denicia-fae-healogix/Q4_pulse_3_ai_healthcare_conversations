@@ -45,6 +45,7 @@ def sbars(rows, prefix, note):
           <span class="sval" style="left:{p:.2f}%">{round(p)}%</span></div></div>"""
     return f'<div class="sbars">{out}</div>'
 
+from prior_pulses import prior_slide
 slides = []
 slides.append(f"""
 <section class="slide s-title" id="s1">
@@ -55,6 +56,8 @@ slides.append(f"""
   <p class="byline">Denicia Aragon Espinosa &amp; James Dunlea, Ph.D.</p>
   <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
 </section>""")
+slides.append(prior_slide("s1b", "Part 3A looks inside real AI health chats, starting with what people asked."))
+
 
 pills = [("#a5306d", "Most people asked about their own health, not general facts", "s4"),
          ("#9b4c96", "Half asked the AI what was causing a symptom", "s5"),
@@ -249,7 +252,7 @@ slides.append("""
 </section>""")
 
 tpl = open(ROOT / "build" / "template.html", encoding="utf-8").read()
-out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3A").replace("%%SLIDES%%", "\n".join(slides)).replace("%%TIPS%%", json.dumps(TIPS))
+out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3A").replace("%%SLIDES%%", "\n".join(slides)).replace("%%TIPS%%", json.dumps(TIPS)).replace("%%NSLIDES%%", str(len(slides)))
 (ROOT / "part3a").mkdir(exist_ok=True)
 open(ROOT / "part3a" / "index.html", "w", encoding="utf-8").write(out)
 print("Wrote part3a/index.html", len(TIPS), "tooltips")

@@ -1,0 +1,11 @@
+{
+  "frozen_codebook": "goal_frozen_2026-11-09_v1",
+  "n_chats": 52,
+  "coders": 3,
+  "kappa_confirm_threshold": 0.61,
+  "quotes_checked": 382,
+  "quotes_in_named_answer": 382,
+  "quotes_in_either_answer": 382,
+  "review_flags": 6,
+  "priority_1_flags": 1
+}

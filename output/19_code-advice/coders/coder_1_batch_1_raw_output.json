@@ -1,0 +1,747 @@
+{
+  "coder": 1,
+  "batch": 1,
+  "seed": 19101,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "6a0206ae",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_13",
+        "evidence": "When 5:00 PM hits you need a strict non-negotiable 30 to 45 minutes to decompress—away from the kids off your phone in a quiet room or taking a walk.",
+        "confidence": "medium",
+        "unclear": "unclear because most of the chat is relationship coaching rather than health advice; coded L2 under 'coping steps for stress', with L1 considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss, particularly before learning, research, writing, or another task requiring new memory formation when a nap isn't practical.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI mainly summarises research; coded L2 as 'applying research to the person's own routine', with L1 considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6952e59d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "a normal or healthy weight ranges from 128 to 168 pounds",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "keep the area gently clean and dry, pat rather than rub, and avoid picking at the crust or adding harsh products.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI also told her to use clotrimazole per package directions; treated as the person's own medicine (she bought it), so not L4."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "it really does need reassessment when you can access care",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_7",
+        "evidence": "Aim for 150 minutes of moderate cardio weekly, plus strength training on two days",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Ask your doctor: \"Does this look like a normal anatomical variation, or does it need any follow-up?\"",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6ad69d36",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Diabetes mellitus is a chronic (long-lasting) health condition that affects how your body turns food into energy.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Headache with eye pain can have sevaral problems including tension,sinus issues,lack of sleep and dehyration",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "if you have fever you should talk to ahealthcare provider",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_2",
+        "evidence": "If you're feeling bloated or gassy, an over-the-counter medication containing simethicone (Gas-X) may help.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "simethicone"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "an over-the-counter medication containing simethicone (Gas-X) may help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "please seek urgent medical care. Severe abdominal pain deserves emergency evaluation",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "But I wouldn't take laxatives or strong pain medications until we have a better idea of what's causing the cramps.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a983ff0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "It's a bony bump that forms at the base of the 2nd or 3rd metacarpal (back of the hand).",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If you're noticing changes, a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6abae4ea",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "An endocrinologist specializes in the hormone-producing glands throughout your body, not just reproductive hormones.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I think seeing an endocrinologist would be a very reasonable next step for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "HRT affects the interpretation of some hormone tests, so make sure the endocrinologist knows you're using estradiol 0.0375 mg and progesterone 100 mg nightly.",
+          "confidence": "medium",
+          "unclear": "unclear because this is a caveat about the person's own medicine affecting test results rather than a side effect or interaction; S-warning covers warnings about own medicine, but the codebook cites this sentence as an 'own' example."
+        }
+      }
+    },
+    {
+      "chat_id": "66d9e5be",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Ibuprofen or acetaminophen may help some underlying pain, but typical OTC pain relievers often aren't very effective for true nerve pain.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen",
+        "gabapentin",
+        "pregabalin",
+        "duloxetine",
+        "lidocaine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Prescription options such as gabapentin, pregabalin, duloxetine, or certain topical treatments may be considered by a clinician.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Get evaluated by his doctor, particularly if this is new or worsening.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Medications such as duloxetine, gabapentin, pregabalin, or topical lidocaine can be options depending on his health and other medications.",
+          "confidence": "medium",
+          "unclear": "unclear because 'depending on his health and other medications' is an implicit safety/interaction caveat rather than an explicit warning."
+        }
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Stop running for now.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Chest pain that happens during running/exertion needs medical evaluation before you keep training.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "rung": {
+        "code": "L3",
+        "turn": "ai_2",
+        "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [
+        "antihistamine"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Since the itching and bumps are all over your body, I'd recommend getting medical advice today",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+          "confidence": "medium",
+          "unclear": "unclear because 'is safe for you' fits the 'if you can safely take it' caveat, but the same sentence is the codebook's L3 example and may be read only as a suggestion."
+        }
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Rest, sip water slowly, avoid greasy, spicy, alcohol, and carbonated drinks for a bit",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "If yours keep coming back, it's a good idea to talk to a doctor or pharmacist",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6712af54",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "A true allergy occurs when the immune system mistakenly identifies the drug as harmful.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "an allergist may sometimes be able to help clarify whether it was truly an allergic reaction before the drug is needed again.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "they should generally avoid taking it again unless an allergy specialist determines otherwise.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "I would recommend getting your flu shot this season",
+          "confidence": "high",
+          "unclear": ""
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Steroid injection (such as Decadron or Kenalog): Sometimes causes fatigue, mood changes, flushing, or a generally off feeling.",
+          "confidence": "medium",
+          "unclear": "unclear because these are possible side effects of the person's own injections, given as explanation; S-warning covers warnings about own medicine."
+        }
+      }
+    },
+    {
+      "chat_id": "672c1bfa",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_4",
+        "evidence": "Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ketoconazole",
+        "selenium sulfide",
+        "zinc pyrithione",
+        "coal tar",
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "ketoconazole 1% (such as Nizoral)",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "You should see a healthcare provider if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "tell me a little more about the pain. I especially want to know where it starts and how long you've had it.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI mainly asked questions and recommended evaluation; L1 per 'questions back to the person', with L0 considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would recommend an in-person medical evaluation soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "Own medicine with self-directed use (66d8e4c1: clotrimazole the person bought herself; AI says use per package directions) is unclear between 'own' and 'suggested'. S-warning vs 'own' example overlaps: the codebook's 'own' example sentence (6abae4ea) also reads as a caveat about own medicine. 'Ask a pharmacist whether X is safe for you' (6785ddfb) could be both L3 and S-warning; a rule is needed. Side effects of the person's own medicine given as explanation (695be8c6) vs warning is not decided. Vague classes like 'certain topical treatments' (66d9e5be) are unclear for the types list. Long relationship-coaching chats (6a0206ae) have thin health content; whether boundary/decompression advice is 'coping steps for stress' could be clarified. Applying research to a 'project' (66fd6acd) is borderline between L1 and L2."
+}

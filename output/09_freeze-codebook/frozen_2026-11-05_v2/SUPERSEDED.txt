@@ -1,0 +1,2 @@
+SUPERSEDED on 2026-11-05 by frozen_2026-11-05_v3/. Do not use this version for coding.
+Reason: the researcher renamed and clarified R3 and R6 around problem vs. goal (step 07 revisions 15-16): 'what should I do' vs. 'recommendations' was confusing, and 'personal' applies to all health advice. The files here are kept unchanged for the record; this note is not part of SHA256SUMS.txt.

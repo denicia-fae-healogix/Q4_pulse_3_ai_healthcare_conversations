@@ -1,0 +1,188 @@
+{
+  "coder": 1,
+  "seed": 12101,
+  "n_chats_coded": 12,
+  "codings": [
+    {
+      "chat_id": "6785ddfb",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "yes I have itching and bumps all over",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "medium",
+        "unclear": "unclear because 'itching and bumps all over' could be read as other symptoms (background), but it appears to describe the main problem (suspected hives) in more detail; considered D2."
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M4",
+        "evidence": "Claude, you are missing a conversation. If the Prolia was truly $55.43, I would get it in a heartbeat, but the person who told me that was incorrect.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "69ab73e1",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "My stomach pain is located middle, feels like cramps, and my other symptoms are none. What should I do?",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "medium",
+        "unclear": "unclear because the participant answered the AI's question about other symptoms with 'none'; location and cramping describe the main problem, so no background was shared, but D2 was considered."
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M6",
+        "evidence": "I connected doing something for myself and my ability to speak to my family because I've noticed that a lot of my struggles in the house recently happen when I take care of something",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "6acb95ac",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Yes they are dry and flaky and are fairly small, usually on my face",
+        "confidence": "high",
+        "unclear": "unclear because the turn begins with 'Convert to PDF', which the codebook lists as thanks-only on its own; here it is followed by real information, so it was treated as the 2nd message."
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "medium",
+        "unclear": "unclear because the first message says the spots last 'a few days or weeks' and then disappear, which could be read as duration (background), but it describes the pattern of the main problem; considered D1."
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "There is no swelling but I do run daily",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_2",
+        "evidence": "I do run daily",
+        "confidence": "medium",
+        "unclear": "unclear because running daily is an activity that may have led up to the problem; the AI asked about how it started and swelling, so it was coded D2 per the 'different, unrequested background' rule; considered D3 or D4."
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "what if i am spitting blood",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D3",
+        "turn": "human_2",
+        "evidence": "what if i am spitting blood",
+        "confidence": "low",
+        "unclear": "unclear because it is phrased as a hypothetical 'what if' question, so it is not clear the participant actually has this other symptom; ai_1 asked no question about them, so D3 rather than D2; considered D4."
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "second_message_turn": "human_4",
+      "column2": {
+        "code": "M1",
+        "evidence": "How do I tell i have cramps",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "6a106089",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "My eye doctor is sending me to a retina specialist",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "second_message_turn": "human_3",
+      "column2": {
+        "code": "M3",
+        "evidence": "im at 350 to start",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_3",
+        "evidence": "im at 350 to start",
+        "confidence": "medium",
+        "unclear": "unclear because the codebook does not list weight explicitly as background; it was treated like age/health history; the AI asked for current weight just before. Considered D4."
+      }
+    },
+    {
+      "chat_id": "5aeeb490",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Back of neck, closer to shoulders",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_4",
+        "evidence": "After sleeping",
+        "confidence": "medium",
+        "unclear": "unclear because 'After sleeping' (how it started) may be a recent event that led up to the problem, or just description of onset; if not background, the first background would be the other symptom 'Headache' in human_7 (also D2)."
+      }
+    },
+    {
+      "chat_id": "66c0f464",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "What impact (if any) has taking a GLP-1A medication had on your mental health?",
+        "confidence": "medium",
+        "unclear": "unclear because the question is posed as a survey-style question to the AI rather than about the participant's own health; it asks about effects (general facts), so M1; considered that it may not be a health question at all."
+      },
+      "column3": null
+    }
+  ],
+  "codebook_feedback": "M3 vs D-groups: the line between 'describing the main problem' and 'other symptoms' is unclear (6785ddfb itching+bumps; 5aeeb490 'Headache'). Onset circumstances ('After sleeping', 'I do run daily') are not clearly listed as background (5aeeb490, 5f47f200). Body weight is not listed as background (6a24b2df). Hypothetical 'what if' symptoms: unclear whether they count as background (671a8337). Duration of episodes vs how long the problem has gone on (6acb95ac). A thanks-only phrase ('Convert to PDF') prefixed to a real message (6acb95ac). No guidance for survey-style questions posed to the AI as if it were a person (66c0f464). M4 with a follow-up request is decided by the close-call rule (5eec8774)."
+}

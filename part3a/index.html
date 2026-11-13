@@ -21,7 +21,7 @@ body { background: var(--page); color: var(--ink); font-family: var(--font); fon
 main { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; counter-reset: slide; }
 .slide { counter-increment: slide; position: relative; background: var(--card); border-radius: 6px; box-shadow: 0 1px 3px rgba(11,51,115,.08);
   padding: clamp(24px, 5vw, 56px) clamp(18px, 5vw, 60px) clamp(28px, 5vw, 52px); display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 16px; }
-.slide::after { content: counter(slide) " / 10"; position: absolute; right: 18px; bottom: 12px; font-size: 12px; color: var(--muted); letter-spacing: .08em; }
+.slide::after { content: counter(slide) " / 12"; position: absolute; right: 18px; bottom: 12px; font-size: 12px; color: var(--muted); letter-spacing: .08em; }
 .s-title { background: var(--navy); color: #fff; }
 .s-title::after { color: #9fb4d6; }
 .brand { font-size: clamp(30px, 6vw, 44px); letter-spacing: .32em; font-weight: 400; text-align: center; margin: 0; }
@@ -128,6 +128,13 @@ h2.white { color: #fff; }
 .waffle.w10 .sq { width: 30px; height: 30px; }
 /* takeaways */
 h2.cyan { font-weight: 700; }
+.prev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 18px; }
+.prev-card { background: #fff; border: 1px solid var(--grid, #e6e9ee); border-top: 6px solid; border-radius: 12px; padding: 16px 18px; }
+.prev-tag { font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 14px; margin: 0; }
+.prev-who { color: var(--muted); font-size: 13px; margin: 2px 0 10px; }
+.prev-card ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45; }
+.prev-next { margin: 18px 0 0; font-size: 17px; font-weight: 700; color: var(--dark, #0b3d68); text-align: center; }
+@media (max-width: 720px) { .prev-grid { grid-template-columns: 1fr; } }
 .tks { display: flex; flex-direction: column; gap: 20px; }
 .tk { display: grid; grid-template-columns: minmax(150px, 30%) 1fr; gap: 18px; align-items: start; }
 .tk-lab { color: #fff; border-radius: 999px; padding: 12px 14px; text-align: center; text-transform: uppercase; font-weight: 700; letter-spacing: .04em; font-size: 14px; margin: 0; }
@@ -185,6 +192,14 @@ html { scroll-behavior: smooth; }
   <p class="lede">The Behavioral Science Team at Healogix looks inside real AI health conversations</p>
   <p class="byline">Denicia Aragon Espinosa &amp; James Dunlea, Ph.D.</p>
   <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
+</section>
+
+<section class="slide" id="s1b">
+  <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
+  <h2>What we found in Parts 1 and 2</h2>
+  <div class="prev-grid"><div class="prev-card" style="border-top-color:#a5306d"><p class="prev-tag" style="color:#a5306d">Part 1 &middot; August 2026</p><p class="prev-who">184 U.S. adults</p><ul><li><b style="color:#a5306d">65%</b> had used AI to look up health information, most often about symptoms and possible diagnoses (81% of those users).</li><li><b style="color:#a5306d">71% vs. 56%</b> Women used AI for health more than men, and more often turned to AI first for emotional support (51% vs. 26%).</li><li><b style="color:#a5306d">59% vs. 47%</b> Men more often told their provider what they had found with AI.</li></ul></div><div class="prev-card" style="border-top-color:#627fcc"><p class="prev-tag" style="color:#627fcc">Part 2 &middot; October 2026</p><p class="prev-who">64 U.S. adults from our August and September pulses</p><ul><li><b style="color:#627fcc">39%</b> would go to an AI chatbot before any person with a worrying health question; 61% had used AI for emotional support.</li><li><b style="color:#627fcc">70% to 53%</b> For a worrying question, asking family fell from 70% to 53% and a close friend from 56% to 44%; AI fell only from 84% to 78%.</li><li><b style="color:#627fcc">58%</b> of those who would go to AI first said the top reason was asking without feeling like a burden. People still rated their own doctor favorably, including on trust (PDRQ-9).</li></ul></div></div>
+  <p class="prev-next">Part 3A looks inside real AI health chats, starting with what people asked.</p>
+  <p class="foot">Online surveys via Prolific. Part 2 re-surveyed people from the earlier pulses.</p>
 </section>
 
 <section class="slide" id="s2"><p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>

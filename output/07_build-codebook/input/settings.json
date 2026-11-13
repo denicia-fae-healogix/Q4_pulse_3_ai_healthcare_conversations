@@ -1,0 +1,22 @@
+{
+  "source": "data/processed/05_Q4_3_conversations_long_deid.csv",
+  "unit": "first participant message (human_1); ai_0 given as context only",
+  "unit_rule_2026_11_05": "first REAL message: a greeting, joke or bare one-word reply with no health content is replaced by the next message with a health statement or question (07_first-message_substitutions.csv); pass inputs unchanged",
+  "n_substituted": 3,
+  "n_chats": 53,
+  "n_with_ai_context": 2,
+  "median_words": 18.0,
+  "pass_seeds": {
+    "topic": {
+      "1": 7101,
+      "2": 7102,
+      "3": 7103
+    },
+    "request": {
+      "1": 7201,
+      "2": 7202,
+      "3": 7203
+    }
+  },
+  "n_redactions": 0
+}

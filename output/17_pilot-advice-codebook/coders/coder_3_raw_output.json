@@ -1,0 +1,681 @@
+{
+  "coder": 3,
+  "seed": 17103,
+  "n_chats_coded": 16,
+  "codings": [
+    {
+      "chat_id": "5eec8774",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+        "confidence": "medium",
+        "unclear": "unclear because ai_5 lists bisphosphonates with how often they are taken ('weekly or daily', 'usually once a year'); I read these as descriptions of how the drug is usually given (L4 close call), not instructions to the person, but L5 was considered."
+      },
+      "medicines_suggested": [
+        "zoledronic acid",
+        "alendronate",
+        "denosumab",
+        "risedronate",
+        "ibandronate",
+        "pamidronate"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_5",
+          "evidence": "Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Please check these with your doctor, since I can't know what's safe for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Humana suggested alendronate, but the pills can irritate the esophagus, which matters with your GERD and your tricky levothyroxine timing.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "I would recommend getting your flu shot this season",
+          "confidence": "high",
+          "unclear": ""
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Steroid injection (such as Decadron or Kenalog): Sometimes causes fatigue, mood changes, flushing, or a generally off feeling.",
+          "confidence": "medium",
+          "unclear": "unclear because the side effects described are of the person's own injections (an 'own' medicine), and S-warning does not say whether side-effect information about an own medicine counts; I considered coding false."
+        }
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss",
+        "confidence": "medium",
+        "unclear": "unclear because the AI summarises a research article into the person's own wellness project rather than directly advising them; L1 (information) was considered."
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_13",
+        "evidence": "When 5:00 PM hits you need a strict non-negotiable 30 to 45 minutes to decompress",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "OTC options like acetaminophen or ibuprofen can help with the fever and aches",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen",
+        "oseltamivir"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "medium",
+          "unclear": "unclear because Tamiflu is offered conditionally (if it is flu and symptoms worsen, see a doctor), so it is close between 'suggested' and 'information'."
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "medium",
+          "unclear": "unclear because Tamiflu is offered conditionally (if it is flu and symptoms worsen, see a doctor), so it is close between 'suggested' and 'information'."
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "so if symptoms worsen, see a doctor soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Note: I'm not a doctor",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "it's usually not possible to know exactly what caused an abscess like this",
+        "confidence": "medium",
+        "unclear": "unclear because the AI repeats the surgeon's sitz-bath advice and lists questions to ask about prevention (hygiene, avoiding prolonged pressure); repeating a doctor's advice stays L1, but L2 was considered."
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "At the follow-up, it would be reasonable to ask the surgeon directly:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Myo-inositol Vitamin D3 Omega-3 Possibly a B-complex, depending on your labs",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",
+          "confidence": "medium",
+          "unclear": "unclear because the warning is about berberine, a supplement, not a medicine, and S-warning is defined for medicines; coded true because it names side effects and interactions."
+        }
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "keep the area gently clean and dry, pat rather than rub, and avoid picking at the crust",
+        "confidence": "medium",
+        "unclear": "unclear because the AI also told her to keep using clotrimazole per package directions; that is her own medicine (not a suggestion, so not L4), but L4 was considered."
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "it would be worth getting assessed rather than relying on antifungal cream alone. A low-cost community health center may be able to help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "rung": {
+        "code": "L3",
+        "turn": "ai_2",
+        "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I'd recommend getting medical advice today, particularly if this is new or getting worse.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+          "confidence": "medium",
+          "unclear": "unclear because 'whether ... is safe for you' is close to the 'if you can safely take it' caveat but is mainly a referral (S-doctor)."
+        }
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Whole food sources provide better micronutrient profiles and satiety anyway.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI only agrees with the person's own diet plan; it gives a reason (whole foods better), which the L2 close-call rule counts, but L1 was considered."
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a983ff0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "It's a bony bump that forms at the base of the 2nd or 3rd metacarpal (back of the hand).",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If you're noticing changes, a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",
+          "confidence": "medium",
+          "unclear": "unclear because the AI lists 'When to get it checked' signs and says a doctor might confirm it, rather than directly telling the person to see a doctor."
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Tracking wake-ups for the next 1-2 weeks Noting what time he wakes",
+        "confidence": "medium",
+        "unclear": "unclear because the only actions are monitoring and waiting on the son's own medicine (guanfacine is 'own', not a suggestion); tracking may be L1 rather than self-care, and 'Reintroduce a sleep aid if appropriate' as a prescriber option was considered for L3."
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Reintroduce a sleep aid if appropriate.",
+          "confidence": "low",
+          "unclear": "unclear because the sleep aid is not named; in context it likely means the melatonin he stopped (a supplement), offered as an option the prescriber could advise, but it could be read as a medicine type (L3)."
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not change the timing without checking with his prescriber first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Looking for other changes from the dose increase (more tired, irritable, emotional, dizzy, headaches)",
+          "confidence": "medium",
+          "unclear": "unclear because these are side effects of the child's own medicine; S-warning does not say whether warnings about an own medicine count."
+        }
+      }
+    },
+    {
+      "chat_id": "69fd05bd",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For a typical headache, acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Get urgent medical help if the headache is sudden and extremely severe",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Stay below 3,000 mg in 24 hours.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "672c1bfa",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_4",
+        "evidence": "Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ketoconazole",
+        "selenium sulfide",
+        "zinc pyrithione",
+        "coal tar",
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "You should see a healthcare provider if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6abae4ea",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "An endocrinologist specializes in the hormone-producing glands throughout your body, not just reproductive hormones.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I think seeing an endocrinologist would be a very reasonable next step for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "L4 vs L5: the close call says describing how a medicine is usually given stays L4, but L5 includes 'told the person how often to use it'; a list of options with frequencies ('weekly or daily', 'usually once a year') was hard to place (5eec8774). Own medicines: S-warning does not say whether side effects of the person's own medicine count (695be8c6, 6144ea17). S-warning is defined for medicines; warnings about supplements (berberine, high-dose folate) are not covered (69f4ca1a). Medicines the person stopped some time ago (Prolia, off for two years) and is offered restarting do not fit 'own' or 'suggested' cleanly (5eec8774). Unnamed options a prescriber might choose ('reintroduce a sleep aid') are ambiguous between supplement tag and L3 (6144ea17). Monitoring/tracking symptoms and 'give it more time' are not listed as L1 or L2 (6144ea17). 'Keep using your own cream per package directions' plus other home care: clear, but worth an example (66d8e4c1). Topical oils/aloe vera (mineral oil, coconut oil, aloe) are not classed as medicine, supplement or self-care (672c1bfa). 'When to get it checked' lists without a direct instruction are borderline for S-doctor (6a983ff0)."
+}

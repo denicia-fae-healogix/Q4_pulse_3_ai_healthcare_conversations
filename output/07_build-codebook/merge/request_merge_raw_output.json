@@ -1,0 +1,293 @@
+{
+  "codebook": "request",
+  "codes": [
+    {
+      "code": "R1",
+      "name": "Ask what is causing symptoms",
+      "definition": "The participant describes their own or someone else's symptoms or health change and asks what could be causing it or what it means. The help wanted is an explanation or likely diagnosis for a specific personal situation.",
+      "signs": [
+        "\"What could be causing this?\" or \"what could be the problem\"",
+        "\"What did I catch?\" or \"what kind of injury does this sound like\"",
+        "\"Could it be X or Y?\" offering candidate causes",
+        "\"Is that typical\" or \"Does that make sense?\" about a described personal symptom",
+        "\"How do I know if I have X\""
+      ],
+      "closest_other": "General health facts",
+      "how_it_differs": "This code needs a personal case described in the message and a question about what is behind it. If the question is about a condition, medicine or procedure in general, use General health facts. A message can carry both (e.g. \"Could it be gastritis? Tell me what causes gastritis\"); code both.",
+      "examples": [
+        {
+          "chat_id": "63e55f08",
+          "quote": "Sometimes I wake up feeling like I haven't rested at all. What could be causing this?"
+        },
+        {
+          "chat_id": "664639e0",
+          "quote": "nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "69fff128",
+          "quote": "what kind of knee injury does this sound like"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Find the cause of symptoms"
+        ],
+        "2": [
+          "Asking what is causing symptoms"
+        ],
+        "3": [
+          "Possible cause of symptoms"
+        ]
+      },
+      "merge_note": "All three passes had this code with near-identical chat sets. Passes 2 and 3 included 'is that typical / does that make sense' questions about a personal symptom here, whereas pass 1 split these off as 'Check if normal or safe' (dropped); the merged definition follows the majority."
+    },
+    {
+      "code": "R2",
+      "name": "Ask what to do for relief",
+      "definition": "The participant asks what they (or the person they care for) can do, take or change to relieve, treat or manage a current health problem. The help wanted is practical self-care or treatment advice.",
+      "signs": [
+        "\"What should I take?\"",
+        "\"What can I do to help/alleviate...\"",
+        "\"How to heal X\"",
+        "\"what do I do?\" after describing a problem",
+        "\"Would switching ... help\" about adjusting a current treatment"
+      ],
+      "closest_other": "Whether to seek medical care",
+      "how_it_differs": "This code asks for self-care, medicine or habit steps to ease a problem. If the only choice being weighed is whether or when to see, call or use a professional or procedure, use Whether to seek medical care. If the request is goal-driven (fitness, nutrition) rather than problem-driven, use Personal plan or recommendations.",
+      "examples": [
+        {
+          "chat_id": "69fd05bd",
+          "quote": "I have a headache, what should I take?"
+        },
+        {
+          "chat_id": "69fb8bf7",
+          "quote": "what can i do to alleviate knee pain and get back to normal?"
+        },
+        {
+          "chat_id": "66d9e5be",
+          "quote": "How to heal neuropathy pain in leg"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Ways to relieve or manage"
+        ],
+        "2": [
+          "Asking what to do for relief"
+        ],
+        "3": [
+          "What to do for relief"
+        ]
+      },
+      "merge_note": "All three passes agreed on this code. Pass 3 also placed 69d51123 (drinking after surgery) here, while passes 1 and 2 treated it as a safety/decision question; the boundary with R4 is noted. 6a0206ae (wanting to talk about stress and what to do) was placed here by all passes."
+    },
+    {
+      "code": "R3",
+      "name": "General health facts",
+      "definition": "The participant asks for general information about a condition, symptom, test, procedure, medicine or health measure, not tied to explaining their own case. This includes definitions, symptom lists, causes, norms, statistics and likely outcomes.",
+      "signs": [
+        "\"What is X?\" or \"symptoms of X\"",
+        "\"Can X ...?\" or \"Does X ...?\" general yes-or-no fact questions",
+        "\"List every ...\" or \"Percentage of people ...\"",
+        "\"What if X isn't treated\" or \"what causes X and how long can it last\"",
+        "\"What will they do\" at a test or appointment"
+      ],
+      "closest_other": "Ask what is causing symptoms",
+      "how_it_differs": "General health facts asks how health works in general; Ask what is causing symptoms asks to explain a specific personal case. Decide by whether the question is about the person's own described symptoms (code R1) or about a named condition or topic in general (code R3); code both if both are asked.",
+      "examples": [
+        {
+          "chat_id": "6a21a961",
+          "quote": "Can an allergic reaction appear slowly"
+        },
+        {
+          "chat_id": "6658d49a",
+          "quote": "please list every disease where fistula-in-anu is a symptom"
+        },
+        {
+          "chat_id": "6952e59d",
+          "quote": "What is the normal weight for a male who is 28 and five feet nine inches tall?"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "General health facts"
+        ],
+        "2": [
+          "General health facts"
+        ],
+        "3": [
+          "General health facts"
+        ]
+      },
+      "merge_note": "Same name and largely the same chats in all passes. Passes 2 and 3 included 'what will they do' at an appointment (6a106089) here; pass 1 put it under medical care. The merged definition follows the majority and includes what to expect from a test or procedure."
+    },
+    {
+      "code": "R4",
+      "name": "Whether to seek medical care",
+      "definition": "The participant asks whether they should see a doctor or specialist, have a procedure, or contact their care team, or when to do so. The help wanted is a judgement on a specific decision about using professional care.",
+      "signs": [
+        "\"Should I see a medical specialist ... or try to wait it out?\"",
+        "\"Would an endocrinologist benefit me\"",
+        "\"Is it a must?\" about a procedure",
+        "Checking when they can or should call the care team"
+      ],
+      "closest_other": "Ask what to do for relief",
+      "how_it_differs": "This code is about a named decision to use (or not use) professional care, or its timing. If the person asks for self-care, medicine or habit steps, use Ask what to do for relief. A general question about what happens at an appointment is General health facts.",
+      "examples": [
+        {
+          "chat_id": "697cba85",
+          "quote": "Should I see a medical specialist about this or try to wait it out?"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        },
+        {
+          "chat_id": "69f441ce",
+          "quote": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one. Is it a must?"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Deciding about medical care"
+        ],
+        "2": [
+          "Advice on whether to act"
+        ],
+        "3": [
+          "Whether to seek medical care"
+        ]
+      },
+      "merge_note": "All three passes had this code. Pass 2's version was broader ('whether to act', including drinking after surgery); passes 1 and 3 focused on professional care, so the merged name follows them. Pass 1 also included appointment expectations, which the majority treated as General health facts."
+    },
+    {
+      "code": "R5",
+      "name": "Personal plan or recommendations",
+      "definition": "The participant states personal wellness or fitness goals and asks for tailored recommendations, such as foods, meal ideas, supplements or a routine. The help wanted is a plan or product suggestion fitted to their goals, not treatment of a problem.",
+      "signs": [
+        "States goals such as fat loss, muscle gain or toning",
+        "Lists current diet, supplements, weight or budget",
+        "\"Please recommend specific foods\" or \"suggest ... ideas\"",
+        "\"Is there a supplement or vitamin that has ...\""
+      ],
+      "closest_other": "Ask what to do for relief",
+      "how_it_differs": "This code is goal-driven planning for diet, supplements or routine. If the focus is easing or treating a current symptom or problem, use Ask what to do for relief.",
+      "examples": [
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals."
+        },
+        {
+          "chat_id": "69fcf529",
+          "quote": "fat loss, muscle gain and increasing testosterone are the main objectives."
+        },
+        {
+          "chat_id": "69f4ca1a",
+          "quote": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Personal diet or supplement plan"
+        ],
+        "2": [
+          "Personal plan or recommendations"
+        ],
+        "3": [
+          "Personal plan or product recommendations"
+        ]
+      },
+      "merge_note": "All three passes agreed on 69a1ae3c, 69fcf529 and 69f4ca1a. Pass 3 also included 66fd6acd (incorporating an article into a wellness project); passes 1 and 2 put it under Help with a text task. Name broadened from pass 1's 'diet or supplement' to cover routines."
+    },
+    {
+      "code": "R6",
+      "name": "Information shared without a question",
+      "definition": "The participant states a symptom, health detail or test result with no explicit question or request, leaving the AI to infer what help is wanted (usually an assessment). This includes bare symptom phrases and pasted reports or lab values.",
+      "signs": [
+        "A short symptom phrase with no question, e.g. \"CHEST PAIN WHEN RUNNING\"",
+        "A statement about someone's symptom or a noticed change, with no request",
+        "Age plus a test value, e.g. \"72 yo woman with 6.0 a1c\"",
+        "A pasted lab or imaging report with no request"
+      ],
+      "closest_other": "Ask what is causing symptoms",
+      "how_it_differs": "Use this code only when no question or request is stated. If the message explicitly asks what is causing it, what it is, or what to do, code that request instead.",
+      "examples": [
+        {
+          "chat_id": "671a8337",
+          "quote": "CHEST PAIN WHEN RUNNING"
+        },
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        },
+        {
+          "chat_id": "69600cc8",
+          "quote": "Husband's low back started hurting yesterday"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Describe symptoms without a question"
+        ],
+        "2": [
+          "Stating a symptom or result only"
+        ],
+        "3": [
+          "Information shared without a question"
+        ]
+      },
+      "merge_note": "All three passes had this code. Passes 2 and 3 included bare test results (66ec5904, 6a638cf5) here, while pass 1 put them in a separate 'Interpret results or numbers' code (dropped). The merged code follows the majority and covers both symptoms and results."
+    },
+    {
+      "code": "R7",
+      "name": "Help with a text task",
+      "definition": "The participant asks the AI to work on a piece of text or project, such as summarizing a section, drafting or reviewing writing, or incorporating an article. The help wanted is a document output rather than a direct health answer.",
+      "signs": [
+        "\"Briefly summarize the section titled ...\"",
+        "A label such as \"email 3 draft\" followed by long pasted writing",
+        "A pasted link with \"Let's incorporate this ...\" into a project"
+      ],
+      "closest_other": "General health facts",
+      "how_it_differs": "This code asks the AI to process or produce text the person supplies or names. If the person asks a health question directly, use General health facts; if they ask for advice on their own goals, use Personal plan or recommendations.",
+      "examples": [
+        {
+          "chat_id": "69c41892",
+          "quote": "Briefly summarize the section titled: Developmental Stages and Milestones of Child Development"
+        },
+        {
+          "chat_id": "66fd6acd",
+          "quote": "Let's incorporate this to improve the health and wellness project moving forward."
+        },
+        {
+          "chat_id": "6929d658",
+          "quote": "email 3 draft I connected doing something for myself and my ability to speak to my family"
+        }
+      ],
+      "source_codes": {
+        "1": [
+          "Help with a writing task"
+        ],
+        "2": [
+          "Help with a text task"
+        ],
+        "3": []
+      },
+      "merge_note": "Found in passes 1 and 2 with identical chats. Pass 3 had no such code: it coded 69c41892 as General health facts, 66fd6acd as Personal plan, and left 6929d658 uncoded."
+    }
+  ],
+  "dropped": [
+    {
+      "pass": 1,
+      "name": "Check if normal or safe",
+      "reason": "Only pass 1 had this code (3 chats). Passes 2 and 3 coded the same messages as Ask what is causing symptoms (616f347d, 6144ea17) or as a medical-care/relief decision (69d51123).",
+      "worth_review": false
+    },
+    {
+      "pass": 1,
+      "name": "Interpret results or numbers",
+      "reason": "Only pass 1 had this code (3 chats). Passes 2 and 3 coded bare results as Information shared without a question; 5eec8774 (DEXA) was coded as relief in all passes. Interpreting one's own test results is a distinct request type that may grow in a larger sample.",
+      "worth_review": true
+    }
+  ],
+  "notes": "Agreement was high: six codes (cause, relief, general facts, medical care, personal plan, information without a question) appeared in all three passes with closely overlapping chats; text tasks appeared in passes 1 and 2. Two pass-1-only codes were dropped. Unclear boundaries for the pilot: (1) R1 vs R3 when a personal symptom is followed by a general question (5f491a49, 6a10664c) - code both; (2) R2 vs R4 for 'should I do X' questions that are not about professional care (69d51123, drinking after surgery); (3) R3 vs R4 for what to expect at an appointment (6a106089); (4) R5 vs R7 for 66fd6acd (incorporate an article into a wellness project); (5) R6 vs a possible results-interpretation code for pasted reports (6a638cf5, 66ec5904). Some first messages appear to continue an earlier exchange (66aafcc3, 67d5d3b7, 6a9bb385); per the dimension rules there is no code for replying to the AI, so code only any request content. Greetings with no request (6ae359af, 6a24b2df, 6a9bb385) should stay uncoded. Emotional support/talking through stress appeared once (6a0206ae) and was coded under R2 by all passes; watch for it in the pilot."
+}

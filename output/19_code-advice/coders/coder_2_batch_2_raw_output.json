@@ -1,0 +1,756 @@
+{
+  "coder": 2,
+  "batch": 2,
+  "seed": 19102,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "69fd05bd",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Get urgent medical help if the headache is sudden and extremely severe",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Stay below 3,000 mg in 24 hours.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "I would absolutely make B12 and folate part of the core plan",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I would absolutely make B12 and folate part of the core plan",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "But it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "alendronate",
+        "zoledronic acid",
+        "denosumab",
+        "risedronate",
+        "ibandronate",
+        "pamidronate"
+      ],
+      "types_suggested": [
+        "non-drowsy allergy medicine"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_5",
+          "evidence": "Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Please check these with your doctor, since I can't know what's safe for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "the pills can irritate the esophagus, which matters with your GERD and your tricky levothyroxine timing",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Avoid aggressive calorie restriction because it can interfere with muscle growth and recovery.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "That can help narrow down what might be going on.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI gave almost no health information beyond recommending evaluation and asking questions; L1 includes questions back to the person, but L0 was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would recommend an in-person medical evaluation soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66c0f464",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Zepbound has helped me control my appetite, eat smaller portions, and manage my weight.",
+        "confidence": "low",
+        "unclear": "unclear because the AI answered in a first-person role-play voice about its own GLP-1 experience; it is health content but not advice to the person, so L0 (writing in a voice) was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Headache with eye pain can have sevaral problems including tension,sinus issues,lack of sleep and dehyration",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "if you have fever you should talk to ahealthcare provider",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "OTC options like acetaminophen or ibuprofen can help with the fever and aches",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen",
+        "oseltamivir"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "so if symptoms worsen, see a doctor soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Note: I'm not a doctor",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "try drinking plenty of fluids, gargling warm salt water, and getting some rest",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "I would recommend getting your flu shot this season",
+          "confidence": "high",
+          "unclear": ""
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Sometimes causes fatigue, mood changes, flushing, or a generally off feeling.",
+          "confidence": "medium",
+          "unclear": "unclear because the side effects described are of the injections the person already received (own medicine); S-warning covers warnings about the person's own medicine, but these read partly as possible causes (information)."
+        }
+      }
+    },
+    {
+      "chat_id": "6952e59d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "a normal or healthy weight ranges from 128 to 168 pounds",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5aeeb490",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_7",
+        "evidence": "Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it, following the package directions.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "I'd recommend being examined today if the headache is unusual for you",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "or ibuprofen if you can safely take it, following the package directions",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_3",
+        "evidence": "Pain around your belly button can have several possible causes, including:",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Please seek an in-person medical evaluation today.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "I can't determine the cause from your answers alone, and I wouldn't want to reassure you incorrectly.",
+          "confidence": "medium",
+          "unclear": "unclear because this is a 'cannot diagnose' caveat, which S-warning lists as a disclaimer, but it is not a stock disclaimer line."
+        }
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5f491a49",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Avoid alcohol close to bedtime.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I'd recommend scheduling an appointment with your primary care physician and specifically requesting an evaluation for sleep apnea.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid sedatives unless prescribed and medically necessary.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_4",
+        "evidence": "Go at a comfortable pace. You can split walks into shorter sessions, and increase gradually when it feels easier.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a983ff0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "It's a bony bump that forms at the base of the 2nd or 3rd metacarpal",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If you're noticing changes, a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a106089",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "bringing sunglasses is a good idea",
+        "confidence": "medium",
+        "unclear": "unclear because the tip (bring sunglasses, have someone drive) is practical visit preparation; L1 covers 'what a visit will be like', but L2 covers things the person can do themselves, so L1 was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "When you arrive, describe it exactly the way you described it to me",
+          "confidence": "medium",
+          "unclear": "unclear because the person already has a referral; the AI encourages telling the specialist details rather than newly saying to see a doctor."
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6abae4ea",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Thyroid imbalances can cause: - Heart palpitations.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI suggests tests to discuss and keeping the gynecologist involved; tests count as information and keeping own HRT is not a suggestion, so L2 was considered but not applied."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "consider an endocrinologist for a broader evaluation",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "5eec8774: unclear whether 'restarting Prolia' counts as suggesting a stopped medicine (coded yes) and how to name an unnamed 'non-drowsy allergy option' type. 695be8c6: side effects of injections already received sit between 'own' warning and 'information'. 6a106089: practical visit-prep tips (sunglasses, driver) fall between L1 'what a visit will be like' and L2 self-care. 66c0f464: no rule for AI role-playing a patient's first-person experience. 67d5d3b7: chats with only triage/questions and S-doctor lie on the L0/L1 border. 6abae4ea: unclear whether 'HRT affects interpretation of tests' counts as an S-warning about own medicine (coded no)."
+}

@@ -1,0 +1,12 @@
+{
+  "sample_seed": 12012,
+  "coder_seeds": {
+    "1": 12101,
+    "2": 12102,
+    "3": 12103
+  },
+  "n_sample": 12,
+  "pool": "52 included chats minus those that stopped after one message",
+  "n_pool": 32,
+  "examples_hidden_because_from_sample": 4
+}

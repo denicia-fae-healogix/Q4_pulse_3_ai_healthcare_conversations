@@ -1,0 +1,141 @@
+{
+  "coder": 1,
+  "seed": 10601,
+  "n_messages_coded": 9,
+  "codings": [
+    {
+      "chat_id": "66ec5904",
+      "request": {
+        "codes": [
+          {
+            "code": "R7",
+            "evidence": "72 yo woman with 6.0 a1c",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "CHEST PAIN WHEN RUNNING",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Husband's low back started hurting yesterday",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "email 3 draft I connected doing something for myself and my ability to speak to my family",
+            "stated_or_implied": "none",
+            "confidence": "low",
+            "unclear": "unclear because the message is a pasted email draft with no stated request (R4 'text pasted for another purpose'), but it describes the writer's own ongoing difficulty speaking to family for a week, which could be read as a personal health change under the implied-request rule (R1); the codebook does not say whether personal behavioural/emotional accounts count as a symptom"
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "baby hair coming in after 3 months on zepbound",
+            "stated_or_implied": "implied",
+            "confidence": "medium",
+            "unclear": "unclear because it is a bare personal health change (R1 implied), but it may be a positive observation rather than a problem; R3 not applicable as no handling is asked"
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "what's stressing me out and why I'm anxious",
+            "stated_or_implied": "stated",
+            "confidence": "medium",
+            "unclear": "unclear because 'why I'm anxious' asks about the cause of a personal state (R1), though no specific symptoms are described; R2 not considered applicable"
+          },
+          {
+            "code": "R3",
+            "evidence": "what I can do to give myself a better quality of life",
+            "stated_or_implied": "stated",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "request": {
+        "codes": [
+          {
+            "code": "R7",
+            "evidence": "0.6 cm shadowing stone in the inferior pole of the right kidney.",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Sometimes it feel like it radiates to my neck Pain that wakes you up at night",
+            "stated_or_implied": "implied",
+            "confidence": "medium",
+            "unclear": "unclear because the message continues an exchange where the AI offered to judge how concerning the back pain is (possible R5), but the message itself only states symptoms, so R1 implied was applied"
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "right side of belly button hurts when using the bathroom",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    }
+  ],
+  "codebook_feedback": "6929d658: unclear whether a long pasted personal/emotional narrative (email draft) with no request counts as a 'personal symptom or health change' (R1 implied) or as text pasted for another purpose (R4). 69fe1811: a bare positive health change (hair regrowth on medication) - R1 implied applied, but the rule frames implied R1 as a symptom/problem. 6a0206ae: R1 needs described symptoms; 'why I'm anxious' with no detail is borderline. 67d5d3b7: no rule on whether AI context asking 'how concerning' should steer toward R5."
+}

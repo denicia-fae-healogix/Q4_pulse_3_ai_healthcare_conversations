@@ -1,0 +1,2 @@
+SUPERSEDED on 2026-11-05 by frozen_2026-11-05_v4/. Do not use this version for coding.
+Reason: the researcher added the first REAL message rule to the unit of analysis (step 07 revisions 17-22): a first message that is only a greeting, a joke or a one-word reply is replaced by the participant's next message with health content. The code definitions did not change. The files here are kept unchanged for the record; this note is not part of SHA256SUMS.txt.

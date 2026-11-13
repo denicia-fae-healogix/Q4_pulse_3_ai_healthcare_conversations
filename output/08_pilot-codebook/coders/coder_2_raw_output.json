@@ -1,0 +1,328 @@
+{
+  "coder": 2,
+  "seed": 8102,
+  "n_messages_coded": 12,
+  "codings": [
+    {
+      "chat_id": "6a0206ae",
+      "topic": {
+        "primary": {
+          "code": "T11",
+          "evidence": "I would like to talk about what's stressing me out and why I'm anxious",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what I can do to give myself a better quality of life",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R1",
+            "evidence": "what's stressing me out and why I'm anxious",
+            "confidence": "medium",
+            "unclear": "unclear because R1 is framed around symptoms or a health change; asking why they are anxious fits 'what could be causing this' but describes no specific symptom, and R2 was considered"
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": "One-word reply ('nope') with no health subject."
+      },
+      "request": {
+        "codes": [],
+        "request_none_reason": "One-word reply with no question or request content."
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "topic": {
+        "primary": {
+          "code": "T7",
+          "evidence": "he's been waking a lot in the night and he never used to do that",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R3",
+            "evidence": "would switching to giving it to him in the morning help instead of taking it at night?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?",
+            "confidence": "medium",
+            "unclear": "unclear because it is a 'should I do X' question not about professional care (general rule says R3), but it is about whether a habit is safe after surgery rather than relieving a current problem; R2 was considered since it is phrased generally ('you')"
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "baby hair coming in after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": {
+          "code": "T2",
+          "evidence": "baby hair coming in after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "baby hair coming in after 3 months on zepbound October 16, 2026",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "topic": {
+        "primary": {
+          "code": "T9",
+          "evidence": "I have had an headache and vomitting for 2 days and pain behind my eyes",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "pain behind my eyes what could be the problem",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "Im feeling very bleh could it be that or flu?",
+          "confidence": "medium",
+          "unclear": "unclear because the visit was for tennis elbow (T1), but the question centres on feeling generally unwell and possible flu; T1 considered as primary"
+        },
+        "secondary": {
+          "code": "T1",
+          "evidence": "went to doctor today with tennis elbow",
+          "confidence": "medium",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Im feeling very bleh could it be that or flu?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "medium",
+          "unclear": "unclear because the subject (kidney stone, kidney cysts, fatty-appearing liver on ultrasound) is health-related but no topic covers kidneys, urinary tract or liver; T3 was considered for the liver but it is not the digestive tract as defined"
+        },
+        "secondary": null,
+        "none_reason": "Pasted kidney/bladder ultrasound report; kidney and urinary topics fit none of T1-T11."
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "0.6 cm shadowing stone in the inferior pole of the right kidney.",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": "unclear because the message lists reproductive conditions (PCOS, PMDD) and a metabolic one (high cholesterol) plus anemia, which has no code; T6 considered as primary, and T2 (supplements) was also close as secondary"
+        },
+        "secondary": {
+          "code": "T6",
+          "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": "unclear because only one secondary is allowed and T2 (supplements to treat a named condition) also qualified as secondary"
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",
+            "confidence": "medium",
+            "unclear": "unclear because it matches the R6 sign 'Is there a supplement or vitamin that has', but the aim is to manage conditions, which points to R3"
+          },
+          {
+            "code": "R3",
+            "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+            "confidence": "medium",
+            "unclear": "unclear because the supplement request is aimed at treating named conditions (R3) while the R6 sign wording also matches"
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f441ce",
+      "topic": {
+        "primary": {
+          "code": "T8",
+          "evidence": "get 2nd eye's cataract surgery after doing the first one",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one.",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R5",
+            "evidence": "Is it a must?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "topic": {
+        "primary": {
+          "code": "T6",
+          "evidence": "72 yo woman with 6.0 a1c",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "72 yo woman with 6.0 a1c",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "please list every disease where fistula-in-anu is a symptom",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "please list every disease where fistula-in-anu is a symptom",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    }
+  ],
+  "codebook_feedback": "No topic covers kidneys, urinary tract or liver (6a638cf5), nor anemia (69f4ca1a). 'Should I do X' about a habit's safety (drinking after surgery, 69d51123) fits R3 only weakly; it is not relief-seeking. R6 sign 'Is there a supplement or vitamin that has' overlaps R3 when supplements target named conditions (69f4ca1a). Messages listing conditions across T10/T6 plus a supplement focus (T2) need more than one secondary (69f4ca1a). Emotional 'why am I anxious' questions are not clearly R1 (6a0206ae). Mixed T1 visit + T5 malaise (695be8c6) has no close-call rule. T7 does not say whether medicine-related sleep issues in a child override medication topics (6144ea17)."
+}

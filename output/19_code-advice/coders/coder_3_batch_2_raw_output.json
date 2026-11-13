@@ -1,0 +1,732 @@
+{
+  "coder": 3,
+  "batch": 2,
+  "seed": 19103,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "6a638cf5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Since yours is sitting in the kidney and isn't causing obstruction, it may simply be monitored unless you're having symptoms.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek urgent care if you develop severe/worsening flank pain, fever/chills, vomiting, difficulty urinating, or blood in the urine",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Short-term use of anti-inflammatory medications (like ibuprofen or naproxen) or topical gels (such as Voltaren/diclofenac) can help manage pain and swelling.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "naproxen",
+        "diclofenac"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "topical gels (such as Voltaren/diclofenac) can help manage pain and swelling.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "reach out to a healthcare professional or primary care doctor if you experience any of the following",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Be sure to check with your pharmacist or doctor if you take other medications or have underlying health considerations.",
+          "confidence": "medium",
+          "unclear": "unclear because the caveat is a general check-with-pharmacist line rather than a named side effect; it fits 'if you can safely take it' under S-warning but could be read as S-doctor only."
+        }
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_13",
+        "evidence": "When 5:00 PM hits you need a strict non-negotiable 30 to 45 minutes to decompress—away from the kids off your phone in a quiet room or taking a walk.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "a reasonable target for someone who strength trains regularly is approximately 105–130 grams of protein per day.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Avoid tight hairstyles, harsh chemical treatments, or excessive heat styling while your new hairs are fragile.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "consider asking your doctor for a simple blood test if you suspect a deficiency",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss, particularly before learning, research, writing, or another task requiring new memory formation",
+        "confidence": "medium",
+        "unclear": "unclear because the AI mainly summarises research (L1) but folds it into the person's own wellness framework; applying research to the person's own routine is listed under L2."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "resting the foot, applying ice wrapped in a towel for 15–20 minutes at a time, loosening your shoe laces, and avoiding hard impact can help reduce strain.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek care right away if you cannot put any weight on your foot",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69f441ce",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "No, it is **not automatically a must** to have cataract surgery on the second eye after the first eye is done.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a106089",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Your vision may be blurry and light-sensitive for several hours afterward, so bringing sunglasses is a good idea.",
+        "confidence": "medium",
+        "unclear": "unclear because bringing sunglasses and having someone drive are practical visit tips; I treated them as 'what a visit will be like' (L1) rather than self-care (L2)."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "When you arrive, describe it exactly the way you described it to me",
+          "confidence": "medium",
+          "unclear": "unclear because the person is already referred; the AI tells them what to tell the specialist rather than to go see one, which I read as 'ask or check with' a professional."
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "keep the area gently clean and dry, pat rather than rub, and avoid picking at the crust or adding harsh products.",
+        "confidence": "medium",
+        "unclear": "unclear because clotrimazole is the person's own product (told to keep using it per package directions), so it was not counted as a suggestion (L4)."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "it would be worth getting assessed rather than relying on antifungal cream alone. A low-cost community health center may be able to help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66aafcc3",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_0",
+        "evidence": "Keep monitoring baby's movement. Rest and drink some fluids.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_0",
+          "evidence": "Call L&D if you still haven't heard from them, especially since they were waiting for a bed.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a21a961",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_4",
+        "evidence": "You can ask your doctor or pharmacist if an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate to help with the itching and redness",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "diphenhydramine",
+        "loratadine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate to help with the itching and redness",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Contact your prescribing doctor or pharmacist immediately.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Do not take the next dose until you have spoken with a healthcare professional.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Appendicitis: Pain often starts near the belly button and then moves to the lower right side.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek urgent medical care today if:  The pain is severe or getting worse.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Headache with eye pain can have sevaral problems including tension,sinus issues,lack of sleep and dehyration",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "if you have fever you should talk to ahealthcare provider",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "663b8ae0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Osteoarthritis (OA) is the most common type of arthritis.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Make an appointment with a healthcare professional if joint pain or stiffness persists, interferes with your daily activities, or keeps getting worse.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_3",
+        "evidence": "For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "I would recommend getting your flu shot this season",
+          "confidence": "high",
+          "unclear": ""
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Steroid injection (such as Decadron or Kenalog): Sometimes causes fatigue, mood changes, flushing, or a generally off feeling.",
+          "confidence": "medium",
+          "unclear": "unclear because the side-effect information is about the person's own injections and is given to explain symptoms; S-warning covers warnings about the person's own medicine, but it could be read as information only."
+        }
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_3",
+        "evidence": "Pain around your belly button can have several possible causes, including:",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Please seek an in-person medical evaluation today.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Tracking wake-ups for the next 1-2 weeks Noting what time he wakes",
+        "confidence": "medium",
+        "unclear": "unclear because the main content is information about the son's own medicine (guanfacine); the tracking tip and reintroducing a sleep aid (melatonin, a supplement) raise it to L2."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Reintroduce a sleep aid if appropriate.",
+          "confidence": "medium",
+          "unclear": "unclear because the sleep aid is unnamed in this line, but the chat shows it is melatonin, which the son stopped; it is offered as an option for the prescriber to consider."
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not change the timing without checking with his prescriber first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "One thing I would not do without talking to his doctor is immediately switch the dose to morning.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "(1) Practical visit tips (sunglasses, having someone drive after dilation) are not clearly L1 'what a visit will be like' or L2 self-care (6a106089). (2) S-doctor when the person already has a referral and the AI only says what to tell the specialist is not covered (6a106089). (3) Whether side-effect explanations of the person's own medicine count as S-warning when used to explain symptoms rather than to warn (695be8c6, 6144ea17). (4) Types list: unclear whether a type should also be listed when specific examples are named with it (e.g. 'anti-inflammatory medications (like ibuprofen...)' 69fb8bf7, 'antihistamine (like Benadryl or Claritin)' 6a21a961); I left types empty in those cases. (5) Nutrient advice ('maintaining healthy levels of iron, zinc, and vitamin D') without explicitly suggesting a supplement; I did not tag F-supplement (69fe1811). (6) Applying research to a personal wellness 'framework' vs general information (66fd6acd)."
+}

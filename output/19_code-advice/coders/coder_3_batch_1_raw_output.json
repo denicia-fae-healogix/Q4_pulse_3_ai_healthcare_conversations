@@ -1,0 +1,738 @@
+{
+  "coder": 3,
+  "batch": 1,
+  "seed": 19103,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "6a24b2df",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_4",
+        "evidence": "Go at a comfortable pace. You can split walks into shorter sessions, and increase gradually when it feels easier.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Use a fragrance-free moisturizer (ideally a thicker cream rather than lotion).  Avoid hot showers.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Consider seeing a dermatologist if they keep recurring.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid applying hydrocortisone or other steroid creams to your face without medical guidance, particularly around your eyes.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "it's usually not possible to know exactly what caused an abscess like this",
+        "confidence": "medium",
+        "unclear": "unclear because the AI repeats the surgeon's sitz-bath advice (L1 close call) and mentions 'avoiding prolonged pressure' only as a question to ask the surgeon; L2 was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "At the follow-up, it would be reasonable to ask the surgeon directly:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Rest, sip water slowly, avoid greasy, spicy, alcohol, and carbonated drinks for a bit",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "If yours keep coming back, it's a good idea to talk to a doctor or pharmacist",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6ad69d36",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Diabetes mellitus is a chronic (long-lasting) health condition that affects how your body turns food into energy.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5f491a49",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Avoid alcohol close to bedtime.  Avoid sedatives unless prescribed and medically necessary.  Try sleeping on your side rather than your back.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I'd recommend scheduling an appointment with your primary care physician and specifically requesting an evaluation for sleep apnea.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid sedatives unless prescribed and medically necessary.",
+          "confidence": "medium",
+          "unclear": "unclear because sedatives are a general medicine class named as a caution rather than a specific medicine; S-warning covers warnings about any medicine, so coded true."
+        }
+      }
+    },
+    {
+      "chat_id": "66c0f464",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "medium",
+        "unclear": "unclear because the AI writes first-person survey answers about Zepbound's effects (health claims in the person's own voice, L0 close call) rather than giving advice; L1 was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Emphasize a balanced diet rich in vegetables, lean proteins, healthy fats, and high-fiber complex carbohydrates",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a637176",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Over-the-counter pain relievers like ibuprofen or acetaminophen can also reduce throat pain enough to allow drinking.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact a healthcare provider immediately if you or your child show signs of dehydration",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66d9e5be",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Pain medications: Ibuprofen or acetaminophen may help some underlying pain",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen",
+        "gabapentin",
+        "pregabalin",
+        "duloxetine",
+        "lidocaine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Prescription options such as gabapentin, pregabalin, duloxetine, or certain topical treatments may be considered by a clinician.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Get evaluated by his doctor, particularly if this is new or worsening.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Medications such as duloxetine, gabapentin, pregabalin, or topical lidocaine can be options depending on his health and other medications.",
+          "confidence": "medium",
+          "unclear": "unclear because 'depending on his health and other medications' is an implied safety/interaction caveat rather than an explicit warning; S-warning false was considered."
+        }
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "tell me a little more about the pain. I especially want to know where it starts and how long you've had it.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI mainly gives see-a-doctor advice and asks questions back, with little explanation; L0 was considered but questions back count as L1."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would recommend an in-person medical evaluation soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_7",
+        "evidence": "Aim for 150 minutes of moderate cardio weekly, plus strength training on two days",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Ask your doctor: \"Does this look like a normal anatomical variation, or does it need any follow-up?\"",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a10664c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "In the meantime, pause creatine and Ultima while symptoms are active, sip water, and avoid strenuous exercise until you're feeling better.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "please arrange an in-person medical assessment",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Temporarily avoid creatine and Ultima while you're symptomatic, especially since you noticed some improvement without creatine.",
+          "confidence": "medium",
+          "unclear": "unclear because this is advice to pause the person's own supplements as a possible trigger rather than an explicit side-effect warning; NSAIDs in ai_1 are named only as information about causes."
+        }
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Heat on the low back — 10–15 minutes. Heat relaxes the erectors and reduces guarding.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "it's important to consult a qualified healthcare professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_2",
+        "evidence": "an over-the-counter medication containing simethicone (Gas-X) may help",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "simethicone"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "an over-the-counter medication containing simethicone (Gas-X) may help",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "please seek urgent medical care. Severe abdominal pain deserves emergency evaluation",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "But I wouldn't take laxatives or strong pain medications until we have a better idea of what's causing the cramps.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "rung": {
+        "code": "L3",
+        "turn": "ai_2",
+        "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [
+        "antihistamine"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I'd recommend getting medical advice today, particularly if this is new or getting worse.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+          "confidence": "medium",
+          "unclear": "unclear because 'whether ... is safe for you' is an implied 'if you can safely take it' caveat; it is also the L3 suggestion itself."
+        }
+      }
+    },
+    {
+      "chat_id": "69fd05bd",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Get urgent medical help if the headache is sudden and extremely severe",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Stay below 3,000 mg in 24 hours.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "(1) 66c0f464: the AI role-plays first-person survey answers about Zepbound; the L0 'person's own voice' close call fits only loosely, so a rule for AI-authored first-person answers would help. (2) 67d5d3b7: a reply with only see-a-doctor advice plus questions back sits between L0 and L1; the codebook lists 'questions back' under L1 but L0 'no health information' could also apply. (3) 6785ddfb: 'Ask a pharmacist whether X is safe for you' is both the L3 suggestion and arguably an S-warning 'if you can safely take it' caveat; clarify whether it double-counts. (4) 6a10664c: advice to pause the person's own supplements (creatine) as a possible trigger is not clearly covered by S-warning; and NSAIDs named as a cause of gastritis (information) also describe a side effect, which overlaps S-warning. (5) 66d9e5be: 'certain topical treatments' is too vague to list as a type; guidance on vague unnamed treatments would help. (6) 5d7fd2a5: repeating the surgeon's sitz-bath advice stays L1, but the AI suggested asking the surgeon about 'avoiding prolonged pressure', which borders on L2."
+}

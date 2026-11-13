@@ -76,6 +76,10 @@ slides.append(("title", """
   <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
 </section>"""))
 
+# ---------- 1b what we found before ----------
+from prior_pulses import prior_slide
+slides.append(("prior", prior_slide("s1b", "Part 3B looks inside real AI health chats at what the AI said back, and how people felt afterward.")))
+
 # ---------- 2 overview ----------
 pills = [("#a5306d", "Distress dropped after the chat, most after a referral to a professional", "s4"),
          ("#9b4c96", "No one felt calmer after the AI recommended a medication", "s5"),
@@ -303,7 +307,7 @@ slides.append(("contact", """
 
 body = "\n".join(s for _, s in slides)
 tpl = open(ROOT / "build" / "template.html", encoding="utf-8").read()
-out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3B").replace("%%SLIDES%%", body).replace("%%TIPS%%", json.dumps(TIPS))
+out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3B").replace("%%SLIDES%%", body).replace("%%TIPS%%", json.dumps(TIPS)).replace("%%NSLIDES%%", str(len(slides)))
 (ROOT / "part3b").mkdir(exist_ok=True)
 open(ROOT / "part3b" / "index.html", "w", encoding="utf-8").write(out)
 print("Wrote part3b/index.html", len(TIPS), "tooltips")

@@ -1,0 +1,13 @@
+{
+  "sample_seed": 16016,
+  "coder_seeds": {
+    "1": 16101,
+    "2": 16102,
+    "3": 16103
+  },
+  "n_sample": 16,
+  "n_pool": 52,
+  "pool": "all 52 included chats",
+  "n_chosen_for_coverage": 9,
+  "examples_hidden_because_from_sample": 10
+}

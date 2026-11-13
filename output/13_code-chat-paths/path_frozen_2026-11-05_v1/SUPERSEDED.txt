@@ -1,0 +1,1 @@
+SUPERSEDED by path_frozen_2026-11-05_v2 (2026-11-05, decision L26: an AI invitation such as 'If you tell me X, I can...' counts as 'the AI asked', D2). The full coding run used this version (v1); the 2 chats affected were recoded D3 -> D2 as analyst recodes in step 13. The files here are unchanged and still match SHA256SUMS.txt.

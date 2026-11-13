@@ -1,0 +1,323 @@
+{
+  "coder": 1,
+  "seed": 8101,
+  "n_messages_coded": 12,
+  "codings": [
+    {
+      "chat_id": "695be8c6",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "Im feeling very bleh could it be that or flu?",
+          "confidence": "medium",
+          "unclear": "unclear because the message centres on feeling generally unwell and possible flu (T5), but it opens with tennis elbow (T1); the rule on adding a secondary only when a second subject is clearly asked about did not clearly decide whether T1 should be secondary, so I left it out."
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Im feeling very bleh could it be that or flu?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "baby hair coming in after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": {
+          "code": "T2",
+          "evidence": "after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "baby hair coming in after 3 months on zepbound October 16, 2026",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "topic": {
+        "primary": {
+          "code": "T11",
+          "evidence": "what's stressing me out and why I'm anxious",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what I can do to give myself a better quality of life",
+            "confidence": "medium",
+            "unclear": "unclear because R3 is framed around relieving a current health problem; here the problem is emotional stress/anxiety, which seems to fit, but it is phrased as a broad wellbeing goal (R6 was considered)."
+          },
+          {
+            "code": "R1",
+            "evidence": "why I'm anxious",
+            "confidence": "low",
+            "unclear": "unclear because R1 is about explaining described symptoms; the person asks why they are anxious but describes no specific symptoms, so it may just be a wish to talk rather than a request for a cause."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "high",
+          "unclear": "unclear because the report is about the kidneys (stone, cysts) and liver echogenicity; no topic covers kidneys, urinary tract or liver, so NONE."
+        },
+        "secondary": null,
+        "none_reason": "The message is a kidney/bladder ultrasound report (kidney stone, renal cysts, liver echogenicity); no topic code covers the kidneys, urinary tract or liver."
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": "unclear because the message lists reproductive conditions (PCOS, PMDD -> T10) and a metabolic condition (high cholesterol -> T6) without clearly centring on one; anemia fits no topic; supplements could also suggest T2 as secondary, but only one secondary is allowed."
+        },
+        "secondary": {
+          "code": "T6",
+          "evidence": "pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": "unclear because T6 vs T10 primary was not decided by the PCOS rule when both kinds of conditions are listed equally; T2 (supplements for a named condition) was also a possible secondary."
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",
+            "confidence": "medium",
+            "unclear": "unclear because the wording matches an R6 sign exactly, but the R6/R3 close call says if the focus is treating a current problem use R3; the aim here is to treat named conditions."
+          },
+          {
+            "code": "R3",
+            "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+            "confidence": "medium",
+            "unclear": "unclear because the supplement is wanted to manage existing conditions (R3), but the request is a product recommendation that matches R6's signs."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "topic": {
+        "primary": {
+          "code": "T6",
+          "evidence": "72 yo woman with 6.0 a1c",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "72 yo woman with 6.0 a1c",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "topic": {
+        "primary": {
+          "code": "T7",
+          "evidence": "he's been waking a lot in the night and he never used to do that",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R3",
+            "evidence": "would switching to giving it to him in the morning help instead of taking it at night?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "please list every disease where fistula-in-anu is a symptom",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "please list every disease where fistula-in-anu is a symptom",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "topic": {
+        "primary": {
+          "code": "T9",
+          "evidence": "I have had an headache and vomitting for 2 days and pain behind my eyes",
+          "confidence": "medium",
+          "unclear": "unclear because headache with vomiting and pain behind the eyes is a listed T9 sign, but vomiting for 2 days could suggest a sudden acute illness (T5); no fever, chills or body aches are mentioned, so T9 was chosen."
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "3 weeks after endometriosis surgery and about to have your period?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "Should you be drinking 3 weeks after endometriosis surgery",
+            "confidence": "medium",
+            "unclear": "unclear because it is a 'should I do X' question not about professional care (R3 per the general rules), but it is phrased with a general 'you' and could be read as a general fact question (R2); it is also not clearly about relieving a problem."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f441ce",
+      "topic": {
+        "primary": {
+          "code": "T8",
+          "evidence": "2nd eye's cataract surgery after doing the first one",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one.",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R5",
+            "evidence": "Is it a must?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": "One-word reply ('nope') with no health subject."
+      },
+      "request": {
+        "codes": [],
+        "request_none_reason": "One-word reply with no request content."
+      }
+    }
+  ],
+  "codebook_feedback": "6a638cf5: no topic for kidneys/urinary tract or liver (a pasted imaging report about kidney stones/cysts) - consider a kidney/urinary or 'other organ' topic. 69f4ca1a: lists PCOS, PMDD, anemia and high cholesterol equally; the T6/T10 rule assumes one centre; anemia (blood) has no topic; only one secondary allowed so T2 (supplements) cannot also be recorded. The R6 sign 'Is there a supplement or vitamin that has ...' conflicts with the R6/R3 close call when the supplement is for named conditions. 695be8c6: unclear whether a condition mentioned as background (tennis elbow) counts as a secondary topic; 'feeling bleh' after injections vs flu - possible medication side effects have no topic. 6a9f047c: headache + vomiting fits a T9 sign but vomiting could suggest acute illness; the T5 rule only lists fever, chills, body aches. 69d51123: 'Should you be drinking...' - general 'you' phrasing makes R3 vs R2 unclear; R3 is defined around relieving a problem, while this is a safety/activity question. 6a0206ae: R1 is framed around physical symptoms; 'why I'm anxious' is ambiguous; no request code for wanting to talk/emotional support."
+}

@@ -1,0 +1,1316 @@
+{
+  "coder": 2,
+  "seed": 10102,
+  "n_messages_coded": 52,
+  "codings": [
+    {
+      "chat_id": "6952e59d",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "What is the normal weight for a male",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "What is the normal weight for a male who is 28 and five feet nine inches tall?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a21a961",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "Can an allergic reaction appear slowly",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Can an allergic reaction appear slowly",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "baby hair coming in after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": {
+          "code": "T2",
+          "evidence": "after 3 months on zepbound",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "baby hair coming in after 3 months on zepbound",
+            "confidence": "medium",
+            "unclear": "unclear because no question is stated so R4 applies, but the intent (whether this is expected, R1) has to be inferred; R1 considered."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "it's in the crease of her buttocks (like placed exactly where a perianal abscess occurs)",
+          "confidence": "medium",
+          "unclear": "unclear because the abscess is an infection (T5) located at the perianal area; the T5 close-call rule says use the body-system code as primary for a perianal abscess, so T3 was chosen with T5 secondary."
+        },
+        "secondary": {
+          "code": "T5",
+          "evidence": "so my daughter has an abscess",
+          "confidence": "medium",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "what do you think is the cause of her abscess",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "616f347d",
+      "topic": {
+        "primary": {
+          "code": "T8",
+          "evidence": "Sometimes I'm not seeing double with my glasses on but sometimes I am.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "5aeeb490",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "i developed a sharp pain in my neck that raidates to my shoulders suddenly",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "can this be a symptom of anything else or did I just get some isolated issue",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "What does it mean if I have eczema dry spots on my skin",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "What does it mean if I have eczema dry spots on my skin",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "663b8ae0",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "symptoms of osteoarthrits",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "symptoms of osteoarthrits",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Why is the top of my foot hurting",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Why is the top of my foot hurting",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Given how porous my bones are (so much so, that it is very difficult to detect hairline fractures on x-rays)",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what can I do to even slightly decrease my risk of new fractures at this point (either spontaneous fractures or from injuries)?",
+            "confidence": "medium",
+            "unclear": "unclear because the request is to lower future fracture risk (prevention) rather than treat a symptom; it starts from an existing condition (porous bones) so R3 rather than R6. R7 considered for the DEXA expectation but no explicit question about what the results mean."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "topic": {
+        "primary": {
+          "code": "T11",
+          "evidence": "I just went a whole week without saying anything to my family.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "I just went a whole week without saying anything to my family.",
+            "confidence": "low",
+            "unclear": "unclear because the message is a long journal-like account of emotional struggles with no explicit question or request; R4 is defined around symptoms or health details, and \"email 3 draft\" may imply a writing request outside the codebook; NONE considered."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Dealing with knee pain after challenging travel with lots of walking and stair climbing",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what can i do to alleviate knee pain and get back to normal?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "fat loss, muscle gain and increasing testosterone are the main objectives.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": {
+          "code": "T6",
+          "evidence": "muscle gain and increasing testosterone",
+          "confidence": "low",
+          "unclear": "unclear because T6 lists testosterone \"as a condition to manage\", but here it is a fitness goal; T2 alone considered."
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "fat loss, muscle gain and increasing testosterone are the main objectives.",
+            "confidence": "medium",
+            "unclear": "unclear because no explicit request is stated (the message continues an exchange), but a goal with diet and supplement background matches the R6 signs; R4 considered."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "Tell me about stomach cramps",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Tell me about stomach cramps",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Sometimes it feel like it radiates to my neck",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "I'm 39 and it's getting a little hard to deal. Sometimes it feel like it radiates to my neck Pain that wakes you up at night",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "topic": {
+        "primary": {
+          "code": "T11",
+          "evidence": "what's stressing me out and why I'm anxious",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what I can do to give myself a better quality of life",
+            "confidence": "medium",
+            "unclear": "unclear because the \"problem\" is emotional rather than a physical symptom; R3 fits asking how to manage a current problem."
+          },
+          {
+            "code": "R1",
+            "evidence": "I would like to talk about what's stressing me out and why I'm anxious",
+            "confidence": "low",
+            "unclear": "unclear because asking \"why I'm anxious\" seeks an explanation for a personal state, but R1 is framed around symptoms; may be just a wish to talk."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals.",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a637176",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "What if hand foot and mouth isn't treated",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "What if hand foot and mouth isn't treated",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fd05bd",
+      "topic": {
+        "primary": {
+          "code": "T9",
+          "evidence": "I have a headache, what should I take?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "I have a headache, what should I take?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Husband's low back started hurting yesterday",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "Husband's low back started hurting yesterday",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "can infections of some sort smell like onions",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "can infections of some sort smell like onions",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": "chest pain"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "CHEST PAIN WHEN RUNNING",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": "unclear because the message lists reproductive (PCOS, PMDD) and metabolic (high cholesterol) conditions plus anemia; T10 chosen as two of four centre on it, T6 secondary."
+        },
+        "secondary": {
+          "code": "T6",
+          "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+          "confidence": "medium",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9f047c",
+      "topic": {
+        "primary": {
+          "code": "T9",
+          "evidence": "I have had an headache and vomitting for 2 days and pain behind my eyes",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "please list every disease where fistula-in-anu is a symptom",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "please list every disease where fistula-in-anu is a symptom",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "Im feeling very bleh could it be that or flu?",
+          "confidence": "medium",
+          "unclear": "unclear because the message also names tennis elbow (T1), but the question centres on feeling unwell and possible flu."
+        },
+        "secondary": {
+          "code": "T1",
+          "evidence": "went to doctor today with tennis elbow",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Im feeling very bleh could it be that or flu?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "help me figure out a weight loss plan rn",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "help me figure out a weight loss plan rn",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6ad69d36",
+      "topic": {
+        "primary": {
+          "code": "T6",
+          "evidence": "what diabetes",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "what diabetes",
+            "confidence": "medium",
+            "unclear": "unclear because the two-word question is ambiguous; read as \"what is diabetes\" (general fact)."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "63e55f08",
+      "topic": {
+        "primary": {
+          "code": "T7",
+          "evidence": "I've been feeling unusually tired lately, even after getting a full night's sleep.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Sometimes I wake up feeling like I haven't rested at all. What could be causing this?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66c0f464",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "What impact (if any) has taking a GLP-1A medication had on your physical health?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "What impact (if any) has taking a GLP-1A medication had on your physical health?",
+            "confidence": "medium",
+            "unclear": "unclear because the question is addressed to the AI as if it had personal experience; read as a general question about GLP-1 effects (R2)."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6712af54",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Generally speaking, can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "topic": {
+        "primary": {
+          "code": "T7",
+          "evidence": "he's been waking a lot in the night and he never used to do that.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R3",
+            "evidence": "If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66fd6acd",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "Let's incorporate this to improve the health and wellness project moving forward.",
+          "confidence": "medium",
+          "unclear": "unclear because the linked article is about a workout (T2) protecting memory after sleep loss (T7); T2 chosen as the action is exercise for a wellness project."
+        },
+        "secondary": {
+          "code": "T7",
+          "evidence": "https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this",
+          "confidence": "medium",
+          "unclear": ""
+        },
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "Let's incorporate this to improve the health and wellness project moving forward.",
+            "confidence": "medium",
+            "unclear": "unclear because it asks to add to an ongoing wellness plan rather than explicitly naming a goal; R6 is the closest fit."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a10664c",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "Could it be gastritis? Tell me what causes gastritis and how long it can last.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "I get this time time. Could it be gastritis?",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R2",
+            "evidence": "Tell me what causes gastritis and how long it can last.",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "i have a really bad tummy ache",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "chat i have a really bad tummy ache, what can i do to help",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "5f491a49",
+      "topic": {
+        "primary": {
+          "code": "T7",
+          "evidence": "What is sleep apnea? I think I may have it.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "What is sleep apnea?",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R1",
+            "evidence": "I think I may have it. I find myself not breathing for periods in the middle of the night",
+            "confidence": "medium",
+            "unclear": "unclear because the person describes a personal symptom and suspects a cause, but does not explicitly ask whether they have it; only R2 is an explicit question."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6abae4ea",
+      "topic": {
+        "primary": {
+          "code": "T6",
+          "evidence": "Would an endocrinologist benefit me from learning why my hormones are our of whack?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R5",
+            "evidence": "Would an endocrinologist benefit me from learning why my hormones are our of whack?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "I've been dealing with some bad stomach aches for the past few weeks.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R5",
+            "evidence": "Should I see a medical specialist about this or try to wait it out?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66aafcc3",
+      "topic": {
+        "primary": {
+          "code": "T10",
+          "evidence": "So about 2 more hours and a half that I can call",
+          "confidence": "medium",
+          "unclear": "unclear because the message itself names no health subject; the AI context shows it is about calling labor and delivery before an induction (T10)."
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R5",
+            "evidence": "So about 2 more hours and a half that I can call",
+            "confidence": "medium",
+            "unclear": "unclear because the message reads as a confirmation rather than a question, but it is checking when they can call the care team."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "topic": {
+        "primary": {
+          "code": "T6",
+          "evidence": "72 yo woman with 6.0 a1c",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "72 yo woman with 6.0 a1c",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "How ndo I know if i have Hives or not",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "How ndo I know if i have Hives or not",
+            "confidence": "medium",
+            "unclear": "unclear because no personal symptoms are described beyond the question; the sign \"How do I know if I have X\" points to R1, R2 considered."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "672c1bfa",
+      "topic": {
+        "primary": {
+          "code": "T4",
+          "evidence": "My scalp is flaking and scabbing",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "My scalp is flaking and scabbing…what do I do?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69fff128",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "what kind of knee injury does this sound like",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "what kind of knee injury does this sound like",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "topic": {
+        "primary": {
+          "code": "T5",
+          "evidence": "fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "nose is congested. What did I catch?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "medium",
+          "unclear": "unclear because the message refers to general test results; context mentions bronchial arteries, liver cysts, spine and coronary arteries, none of which fits one topic code."
+        },
+        "secondary": null,
+        "none_reason": "overall test/imaging results (heart, lung, liver, spine findings)"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R7",
+            "evidence": "So, at a high level what did these tests show?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a983ff0",
+      "topic": {
+        "primary": {
+          "code": "T1",
+          "evidence": "Does metacarpal bossing grow",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Does metacarpal bossing grow",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "69f441ce",
+      "topic": {
+        "primary": {
+          "code": "T8",
+          "evidence": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one.",
+            "confidence": "high",
+            "unclear": ""
+          },
+          {
+            "code": "R5",
+            "evidence": "Is it a must?",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a106089",
+      "topic": {
+        "primary": {
+          "code": "T8",
+          "evidence": "My eye doctor is sending me to a retina specialist",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "the appt is supposed to take 3-4 hours what will they do",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "66d9e5be",
+      "topic": {
+        "primary": {
+          "code": "T9",
+          "evidence": "How to heal neuropathy pain in leg",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "How to heal neuropathy pain in leg",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "right side of belly button hurts when using the bathroom",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "right side of belly button hurts when using the bathroom",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": "kidney ultrasound report (kidney stone and cysts)"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "The right kidney is measured at 12.2 x 6.1 x 5.0 cm.",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    }
+  ],
+  "codebook_feedback": "6929d658: long journal-style emotional narrative with no question; R4 is framed around symptoms/health details, so it is unclear whether such messages are R4 or NONE. 66aafcc3: message names no health subject itself; topic depends on AI context. 6a9bb385 and 6a638cf5: imaging/test results spanning several organs (kidney, lung, liver) have no topic code, so they fall to NONE. 69fcf529: T6 lists testosterone, but here it is a fitness goal, so T2 vs T6 overlaps. 6a0206ae: R1 is defined for symptoms; unclear whether asking 'why I'm anxious' counts. 5eec8774: prevention of future harm from an existing condition (fracture risk) is not explicitly placed in R3 vs R6. 6785ddfb: 'How do I know if I have X' with no personal symptoms described sits between R1 and R2. 66c0f464: question addressed to the AI about its own experience has no clear request code."
+}

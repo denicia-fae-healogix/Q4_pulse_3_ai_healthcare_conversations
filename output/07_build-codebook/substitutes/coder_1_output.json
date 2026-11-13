@@ -1,0 +1,80 @@
+{
+  "coder": 1,
+  "seed": 7401,
+  "n_messages_coded": 3,
+  "codings": [
+    {
+      "chat_id": "6a24b2df",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "help me figure out a weight loss plan rn",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "help me figure out a weight loss plan rn",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "Tell me about stomach cramps",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Tell me about stomach cramps",
+            "confidence": "medium",
+            "unclear": "unclear because the message asks generally about a symptom with no personal case described, which fits R2, but the symptom may be the participant's own; R1 was considered but no personal symptoms are described."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "medium",
+          "unclear": "unclear because the message asks for an overall summary of personal imaging/test results spanning heart, lungs, liver and spine (known only from AI context); no single topic code covers general test results, and T1 was considered for the spine findings."
+        },
+        "secondary": null,
+        "none_reason": "summary of personal imaging/test results (heart, lungs, liver, spine)"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "So, at a high level what did these tests show?",
+            "confidence": "low",
+            "unclear": "unclear because the participant asks what their own test results mean, which is closest to R1 ('what it means' for a personal case), but no symptom is described; R2 and R4 were considered, and no code covers interpreting personal test results or the non-health 'Convert to PDF' request."
+          }
+        ],
+        "request_none_reason": ""
+      }
+    }
+  ],
+  "codebook_feedback": "No code covers asking for an interpretation/summary of one's own test or imaging results (6a9bb385); R1 requires symptoms and R4 requires no question. The topic codebook has no code for general multi-system test results or for heart/lung/liver findings (6a9bb385). R1 vs R2 for a bare 'tell me about [symptom]' is undecided when it is unclear whether the symptom is personal (6ae359af). Non-health requests like 'Convert to PDF' have no guidance (6a9bb385)."
+}

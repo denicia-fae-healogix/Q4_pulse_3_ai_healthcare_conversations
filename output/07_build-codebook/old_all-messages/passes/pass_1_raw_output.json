@@ -1,0 +1,436 @@
+{
+  "pass": 1,
+  "seed": 7001,
+  "n_chats_read": 53,
+  "approaches": [
+    {
+      "name": "Describing symptoms to ask the cause",
+      "definition": "The participant describes a symptom or body change (their own or a family member's) and asks the AI what might be causing it. The aim is an explanation or a list of likely causes rather than a treatment plan.",
+      "signs": [
+        "Lists symptoms, location, duration or timing in the opening message",
+        "Ends with 'what could be the problem', 'why is...', 'what did I catch?' or 'what kind of injury does this sound like'",
+        "Asks how to tell whether a symptom is a particular condition"
+      ],
+      "closest_other": "Checking own hunch with the AI",
+      "how_it_differs": "Here the participant asks open-endedly for possible causes; in the hunch approach they name a specific explanation and ask the AI to confirm or reject it.",
+      "examples": [
+        {
+          "chat_id": "6a9f047c",
+          "quote": "I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem"
+        },
+        {
+          "chat_id": "664639e0",
+          "quote": "Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "63e55f08",
+          "quote": "I've been feeling unusually tired lately, even after getting a full night's sleep."
+        }
+      ],
+      "chat_ids": [
+        "67d5d3b7",
+        "5f47f200",
+        "66d8e4c1",
+        "6a9f047c",
+        "695be8c6",
+        "69fff128",
+        "69600cc8",
+        "5d7fd2a5",
+        "6a21a961",
+        "5aeeb490",
+        "6acb95ac",
+        "664639e0",
+        "6ac2aee8",
+        "6785ddfb",
+        "63e55f08",
+        "671a8337"
+      ],
+      "n_chats": 16
+    },
+    {
+      "name": "Asking for general health facts",
+      "definition": "The participant asks a factual, encyclopedic question about a condition, test, statistic or body process without tying it to their own case. The request reads like a search query or textbook question.",
+      "signs": [
+        "'What is...', 'symptoms of...', 'what causes...', 'list every...' questions",
+        "Asks for percentages, norms or ranges",
+        "Uses impersonal wording ('you', 'people') instead of describing themselves",
+        "Very short keyword-style queries"
+      ],
+      "closest_other": "Describing symptoms to ask the cause",
+      "how_it_differs": "General-fact questions do not describe a current personal symptom; the symptom approach starts from what the participant or a relative is experiencing.",
+      "examples": [
+        {
+          "chat_id": "6658d49a",
+          "quote": "please list every disease where fistula-in-anu is a symptom"
+        },
+        {
+          "chat_id": "6952e59d",
+          "quote": "What is the normal weight for a male who is 28 and five feet nine inches tall?"
+        },
+        {
+          "chat_id": "6a637176",
+          "quote": "What if hand foot and mouth isn't treated"
+        }
+      ],
+      "chat_ids": [
+        "6658d49a",
+        "6712af54",
+        "6ad69d36",
+        "6a21a961",
+        "5f491a49",
+        "672c1bfa",
+        "664639e0",
+        "69f441ce",
+        "6ae359af",
+        "663b8ae0",
+        "6a637176",
+        "6952e59d",
+        "6a983ff0"
+      ],
+      "n_chats": 13
+    },
+    {
+      "name": "Asking what to do or take",
+      "definition": "The participant asks the AI for practical action: what to take, how to relieve a problem, whether a behavior is safe, or a plan to follow. The goal is guidance they can act on themselves.",
+      "signs": [
+        "'What should I take?', 'what can I do to help', 'how to heal...'",
+        "Requests a diet, supplement or weight-loss plan",
+        "Asks whether a specific action (drinking, switching dose timing, a shot, returning to walks) is advisable",
+        "States a decision ('I will use the dandruff shampoo') after advice"
+      ],
+      "closest_other": "Asking about seeing a doctor",
+      "how_it_differs": "This approach seeks self-management steps; the doctor approach asks whether, when or how to involve professional care.",
+      "examples": [
+        {
+          "chat_id": "69fd05bd",
+          "quote": "I have a headache, what should I take?"
+        },
+        {
+          "chat_id": "69fb8bf7",
+          "quote": "what can i do to alleviate knee pain and get back to normal?"
+        },
+        {
+          "chat_id": "6a24b2df",
+          "quote": "help me figure out a weight loss plan rn"
+        }
+      ],
+      "chat_ids": [
+        "6144ea17",
+        "69fd05bd",
+        "69d51123",
+        "695be8c6",
+        "69a1ae3c",
+        "69fb8bf7",
+        "69ab73e1",
+        "69f4ca1a",
+        "672c1bfa",
+        "66d9e5be",
+        "6a24b2df"
+      ],
+      "n_chats": 11
+    },
+    {
+      "name": "Asking about seeing a doctor",
+      "definition": "The participant asks whether they need professional care, which specialist to see, or what will happen at an appointment, test or procedure. The AI is used to plan or prepare for contact with the health system.",
+      "signs": [
+        "'Should I see a specialist or wait it out?'",
+        "Asks what a specialist or appointment will involve, or what tests a doctor can run",
+        "Asks whether a referral or procedure is necessary or beneficial",
+        "Asks about timing of calling the clinic or hospital"
+      ],
+      "closest_other": "Asking what to do or take",
+      "how_it_differs": "This approach is about involving clinicians and navigating care; 'what to do or take' is about actions the participant handles on their own.",
+      "examples": [
+        {
+          "chat_id": "697cba85",
+          "quote": "Should I see a medical specialist about this or try to wait it out?"
+        },
+        {
+          "chat_id": "6a106089",
+          "quote": "My eye doctor is sending me to a retina specialist, the appt is supposed to take 3-4 hours what will they do"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        }
+      ],
+      "chat_ids": [
+        "66aafcc3",
+        "697cba85",
+        "6a10664c",
+        "6a106089",
+        "5f491a49",
+        "69f441ce",
+        "6abae4ea"
+      ],
+      "n_chats": 7
+    },
+    {
+      "name": "Sharing results or materials to interpret",
+      "definition": "The participant pastes or attaches a test report, lab value, product label, article or document and asks the AI to explain or use it. The shared material, not a symptom description, drives the question.",
+      "signs": [
+        "Pastes report text such as 'FINDINGS:' or a lab number",
+        "Mentions an attachment, PDF or link",
+        "Asks 'what did these tests show?' or 'what about this?'"
+      ],
+      "closest_other": "Front-loading personal context",
+      "how_it_differs": "Here the participant hands over an external record to be read; front-loading means writing out their own background in their own words.",
+      "examples": [
+        {
+          "chat_id": "6a638cf5",
+          "quote": "FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm."
+        },
+        {
+          "chat_id": "6a9bb385",
+          "quote": "Convert to PDF So, at a high level what did these tests show?"
+        },
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        }
+      ],
+      "chat_ids": [
+        "6a638cf5",
+        "6a9bb385",
+        "66ec5904",
+        "69f4ca1a",
+        "66fd6acd",
+        "69c41892"
+      ],
+      "n_chats": 6
+    },
+    {
+      "name": "Front-loading personal context",
+      "definition": "The participant opens with a long, detailed account of their (or a relative's) situation, such as age, weight, medicines, history, goals and constraints, before asking. Often several questions or requirements are packed into one message.",
+      "signs": [
+        "States age, weight, medicines, doses or diagnoses unprompted in the first message",
+        "Explains constraints such as budget, insurance or schedule",
+        "Numbers several questions or lists many requirements in one message",
+        "Long narrative backstory before the question"
+      ],
+      "closest_other": "Adding details to narrow the answer",
+      "how_it_differs": "Front-loading puts the context in up front; adding details supplies it piece by piece in follow-ups after the AI replies or asks.",
+      "examples": [
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "I am a 24-year-old woman who weighs around 146 pounds and has recently started going to the gym more consistently."
+        },
+        {
+          "chat_id": "6144ea17",
+          "quote": "My son started taking gaunfacine about a month ago and four days ago, upped the dose to 2mg."
+        },
+        {
+          "chat_id": "69fcf529",
+          "quote": "i currently take vitamin d3, fenugreek and ashwagandha each day"
+        }
+      ],
+      "chat_ids": [
+        "6144ea17",
+        "69a1ae3c",
+        "69fcf529",
+        "5d7fd2a5",
+        "5eec8774",
+        "69f4ca1a"
+      ],
+      "n_chats": 6
+    },
+    {
+      "name": "Adding details to narrow the answer",
+      "definition": "After the AI's reply, the participant supplies more facts about the symptom or person, often answering the AI's questions, so the AI can narrow its answer. Follow-ups are short additions of location, severity, duration, history or new symptoms.",
+      "signs": [
+        "Answers the AI's questions directly (e.g. location, pain rating, multiple-choice letters)",
+        "Adds who the question is about or their age/history in a later message",
+        "Reports a new or changing symptom ('my throat is a little scratchy')",
+        "Gives a short clarification like 'more like physical exhaustion'"
+      ],
+      "closest_other": "Pushing back on the AI's read",
+      "how_it_differs": "Adding details is cooperative filling-in; pushing back explicitly disputes or corrects what the AI concluded or assumed.",
+      "examples": [
+        {
+          "chat_id": "5f47f200",
+          "quote": "There is no swelling but I do run daily"
+        },
+        {
+          "chat_id": "66d9e5be",
+          "quote": "53, left leg, had sciatic and had surgery in April, pain for a few years"
+        },
+        {
+          "chat_id": "6a21a961",
+          "quote": "The redness is starting to spread past my jaw but not yet to my neck. No issues breathing."
+        }
+      ],
+      "chat_ids": [
+        "67d5d3b7",
+        "5f47f200",
+        "66d8e4c1",
+        "695be8c6",
+        "69fff128",
+        "69600cc8",
+        "697cba85",
+        "69fb8bf7",
+        "69ab73e1",
+        "6712af54",
+        "6a10664c",
+        "6a0206ae",
+        "6a106089",
+        "6a21a961",
+        "69fe1811",
+        "616f347d",
+        "5aeeb490",
+        "69f4ca1a",
+        "6acb95ac",
+        "672c1bfa",
+        "671a8337",
+        "664639e0",
+        "66d9e5be",
+        "6a24b2df",
+        "6785ddfb",
+        "63e55f08"
+      ],
+      "n_chats": 26
+    },
+    {
+      "name": "Checking own hunch with the AI",
+      "definition": "The participant proposes their own explanation or expectation and asks the AI to confirm, rule out or weigh it. The question is framed as 'could it be X?' or 'does that make sense?'.",
+      "signs": [
+        "'Could it be X?' or 'is it X or Y?'",
+        "States 'I think...' or 'I expect...' and asks for agreement",
+        "Asks 'still think it's...?' or 'do you see that...?'",
+        "Shares beliefs they hold and invites the AI to react"
+      ],
+      "closest_other": "Describing symptoms to ask the cause",
+      "how_it_differs": "The hunch approach names a candidate answer and seeks a verdict; the symptom approach leaves the cause open.",
+      "examples": [
+        {
+          "chat_id": "6a10664c",
+          "quote": "Could it be gastritis? Tell me what causes gastritis and how long it can last."
+        },
+        {
+          "chat_id": "695be8c6",
+          "quote": "Im feeling very bleh could it be that or flu?"
+        },
+        {
+          "chat_id": "5f491a49",
+          "quote": "I think I may have it. I find myself not breathing for periods in the middle of the night"
+        }
+      ],
+      "chat_ids": [
+        "6144ea17",
+        "695be8c6",
+        "69fcf529",
+        "5d7fd2a5",
+        "6a10664c",
+        "6a0206ae",
+        "5f491a49",
+        "5eec8774",
+        "616f347d",
+        "664639e0",
+        "6abae4ea"
+      ],
+      "n_chats": 11
+    },
+    {
+      "name": "Pushing back on the AI's read",
+      "definition": "The participant disputes, corrects or redirects the AI's interpretation, pointing out a fact it missed or got wrong. The aim is to make the AI revise its answer.",
+      "signs": [
+        "Starts with 'but...', 'OK but keep in mind...' or 'This all sounds good but...'",
+        "Tells the AI it is missing or wrong about something",
+        "Downplays a symptom the AI treated as serious ('what if it isn't really swollen')"
+      ],
+      "closest_other": "Adding details to narrow the answer",
+      "how_it_differs": "Pushing back challenges the AI's conclusion; adding details only supplies new information without disputing the reply.",
+      "examples": [
+        {
+          "chat_id": "69fff128",
+          "quote": "but I can run without pain, I could start and stop with no real problem"
+        },
+        {
+          "chat_id": "6a10664c",
+          "quote": "OK but keep in mind the diarrhea episodes before my vacation and during my vacation"
+        },
+        {
+          "chat_id": "5eec8774",
+          "quote": "Claude, you are missing a conversation. If the Prolia was truly $55.43, I would get it in a heartbeat, but the person who told me that was incorrect."
+        }
+      ],
+      "chat_ids": [
+        "69fff128",
+        "6a10664c",
+        "6a0206ae",
+        "6a21a961",
+        "5eec8774"
+      ],
+      "n_chats": 5
+    },
+    {
+      "name": "Enlisting AI for writing or projects",
+      "definition": "The participant asks the AI to draft, edit, remember or build something for an ongoing task, such as a note for a clinician, an assignment, or a running wellness project. The AI acts as an assistant on a work product rather than an adviser on a symptom.",
+      "signs": [
+        "Pastes a draft and iterates on it",
+        "Asks the AI to draft questions, keep a memory or update a project",
+        "Gives task instructions like 'help me choose' or 'let's incorporate this'"
+      ],
+      "closest_other": "Talking through stress and relationships",
+      "how_it_differs": "This approach is about producing or maintaining an output; talking through stress is about processing feelings and situations in conversation.",
+      "examples": [
+        {
+          "chat_id": "69c41892",
+          "quote": "HELP ME CHOOSE A DEVELOPMENTAL CHANGE TO FOCUS ON"
+        },
+        {
+          "chat_id": "66fd6acd",
+          "quote": "Let's incorporate this to improve the health and wellness project moving forward."
+        },
+        {
+          "chat_id": "5eec8774",
+          "quote": "Yes, I will want you to draft something before I see the doctor, but not tonight."
+        }
+      ],
+      "chat_ids": [
+        "69c41892",
+        "66fd6acd",
+        "5eec8774",
+        "6929d658"
+      ],
+      "n_chats": 4
+    },
+    {
+      "name": "Talking through stress and relationships",
+      "definition": "The participant uses the AI to vent about or reflect on stressful family or relationship situations and their emotional toll. Messages are long personal narratives that seek understanding, validation or advice on handling people.",
+      "signs": [
+        "Long narratives about family members, partners or an ex",
+        "Names their own feelings (stressed, anxious, embarrassed, uncomfortable)",
+        "Asks for the AI's view of other people's behavior or what to do about a relationship"
+      ],
+      "closest_other": "Checking own hunch with the AI",
+      "how_it_differs": "Talking through stress is sustained emotional processing; checking a hunch is a focused request to confirm one specific explanation.",
+      "examples": [
+        {
+          "chat_id": "6a0206ae",
+          "quote": "I would like to talk about what's stressing me out and why I'm anxious and what I can do to give myself a better quality of life."
+        },
+        {
+          "chat_id": "5d7fd2a5",
+          "quote": "i think it's possibly caused by her dad's neglectful care and not eating well"
+        },
+        {
+          "chat_id": "6929d658",
+          "quote": "I just went a whole week without saying anything to my family."
+        }
+      ],
+      "chat_ids": [
+        "6a0206ae",
+        "5d7fd2a5",
+        "6929d658"
+      ],
+      "n_chats": 3
+    }
+  ],
+  "no_approach_chats": [
+    {
+      "chat_id": "66c0f464",
+      "reason": "The participant asks the AI survey-style questions about what impact a GLP-1 medication has had on 'your' health, and the AI answers in the first person; the purpose is unclear (possibly having the AI draft survey answers) and it does not fit any approach."
+    }
+  ],
+  "notes": "Borderline calls: 69d51123 (alcohol after endometriosis surgery) is worded impersonally but coded as 'Asking what to do or take' because it concerns the participant's own decision. 66aafcc3 begins mid-conversation with the AI's reply; coded only as 'Asking about seeing a doctor' (timing of calling labor and delivery). 6929d658 (editing a reflection for a psychologist) is coded under both writing and stress approaches. 5d7fd2a5 mixes a cause question, a hunch and long venting about an ex-spouse. 'Adding details' is very common and overlaps with AI-led question-answer sequences (e.g. 5aeeb490, 697cba85). Patterns seen in fewer chats or folded into other codes: terse keyword-style queries (6ad69d36, 663b8ae0, 66ec5904, 671a8337, 6ac2aee8, 69fe1811) were treated as a style within other codes rather than a separate approach; escalating 'what if' questions (671a8337, 6a21a961); playful/persona banter with the AI (6a24b2df, 69ab73e1, 6ae359af); asking the AI to keep memory across sessions (5eec8774 only); non-health use for a school assignment (69c41892). Personal identifiers noticed: first names Doreen and Jamey plus insurer Humana and specific drug costs (5eec8774); child's first name Claire (6a0206ae); city Abuja (6ae359af); travel from northern Virginia to New York (5d7fd2a5); exact test dates (6a9bb385, 69fe1811); age/weight details in several chats."
+}

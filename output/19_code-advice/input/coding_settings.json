@@ -1,0 +1,10 @@
+{
+  "coder_seeds": {
+    "1": 19101,
+    "2": 19102,
+    "3": 19103
+  },
+  "n_chats": 52,
+  "n_batches_per_coder": 3,
+  "frozen_codebook": "advice_frozen_2026-11-09_v1"
+}

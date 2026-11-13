@@ -1,0 +1,51 @@
+PILOT CODING INPUT, CODER 3: 12 first messages, shuffled with seed 8103.
+Each block is the FIRST message one survey participant wrote to an AI chatbot about health.
+Line breaks were lost in the survey export. Personal names were replaced with [NAME].
+
+=== CHAT 69f441ce ===
+[FIRST MESSAGE]: Percentage of people need to get 2nd eye's cataract surgery after doing the first one. Is it a must?
+=== END CHAT ===
+
+=== CHAT 6144ea17 ===
+[FIRST MESSAGE]: My son started taking gaunfacine about a month ago and four days ago, upped the dose to 2mg. Ive noticed while he falls asleep easier and faster, he's been waking a lot in the night and he never used to do that. 1. Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin? And 2. If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?
+=== END CHAT ===
+
+=== CHAT 69f4ca1a ===
+[FIRST MESSAGE]: Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol? I want to deal with my pcos, anemia, pmdd, and high cholesterol
+=== END CHAT ===
+
+=== CHAT 69fe1811 ===
+[FIRST MESSAGE]: baby hair coming in after 3 months on zepbound October 16, 2026
+=== END CHAT ===
+
+=== CHAT 6a9bb385 ===
+[FIRST MESSAGE]: nope
+=== END CHAT ===
+
+=== CHAT 6a0206ae ===
+[FIRST MESSAGE]: I would like to talk about what's stressing me out and why I'm anxious and what I can do to give myself a better quality of life. I'm here and completely ready to listen.
+=== END CHAT ===
+
+=== CHAT 695be8c6 ===
+[FIRST MESSAGE]: went to doctor today with tennis elbow, injected two shots in my butt. Im feeling very bleh could it be that or flu?
+=== END CHAT ===
+
+=== CHAT 6658d49a ===
+[FIRST MESSAGE]: please list every disease where fistula-in-anu is a symptom
+=== END CHAT ===
+
+=== CHAT 6a9f047c ===
+[FIRST MESSAGE]: I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem
+=== END CHAT ===
+
+=== CHAT 66ec5904 ===
+[FIRST MESSAGE]: 72 yo woman with 6.0 a1c
+=== END CHAT ===
+
+=== CHAT 6a638cf5 ===
+[FIRST MESSAGE]: FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm. The renal cortex is normal in thickness and normal in echogenicity. No hydronephrosis is seen. No dilated ureter is seen. 0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts, the larger is in the superior pole and measures 5.6 x 4.9 x 4.7 cm and the smaller is subcentimeter. The left kidney is measured at 11.4 x 5.5 x 5.6 cm. The renal cortex is normal in thickness and normal in echogenicity. No renal lesion, shadowing stone, or hydronephrosis is seen. No dilated ureter is seen. Images of the urinary bladder demonstrate no abnormalities. The visualized liver is increased in echogenicity.
+=== END CHAT ===
+
+=== CHAT 69d51123 ===
+[FIRST MESSAGE]: Should you be drinking 3 weeks after endometriosis surgery and about to have your period?
+=== END CHAT ===

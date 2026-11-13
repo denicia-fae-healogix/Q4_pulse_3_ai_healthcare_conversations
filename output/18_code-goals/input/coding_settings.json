@@ -1,0 +1,9 @@
+{
+  "coder_seeds": {
+    "1": 18101,
+    "2": 18102,
+    "3": 18103
+  },
+  "n_chats": 52,
+  "frozen_codebook": "goal_frozen_2026-11-09_v1"
+}

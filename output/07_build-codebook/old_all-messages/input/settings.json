@@ -1,0 +1,14 @@
+{
+  "source": "data/processed/05_Q4_3_conversations_long_deid.csv",
+  "n_chats": 53,
+  "n_participant_messages": 147,
+  "pass_seeds": {
+    "1": 7001,
+    "2": 7002,
+    "3": 7003
+  },
+  "ai_full_max_words": 250,
+  "ai_keep_start_words": 150,
+  "ai_keep_end_words": 100,
+  "n_redactions": 0
+}

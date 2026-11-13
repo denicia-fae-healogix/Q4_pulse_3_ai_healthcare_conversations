@@ -1,0 +1,1 @@
+SUPERSEDED by path_frozen_2026-11-09_v3 (2026-11-09, decision L27: column 1 follows request codebook v6, so implied requests and request wording anywhere in the first message count). Columns 2 and 3 are unchanged. The files here are unchanged and still match SHA256SUMS.txt.

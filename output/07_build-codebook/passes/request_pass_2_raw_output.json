@@ -1,0 +1,279 @@
+{
+  "codebook": "request",
+  "pass": 2,
+  "seed": 7202,
+  "n_messages_read": 53,
+  "codes": [
+    {
+      "name": "Asking what is causing symptoms",
+      "definition": "The participant describes their own or someone else's symptoms or experience and asks what could be causing it or what it means. The aim is an explanation or likely diagnosis for a specific personal situation.",
+      "signs": [
+        "\"What could be causing this?\" or \"what could be the problem\"",
+        "\"What did I catch?\" or \"what kind of injury does this sound like\"",
+        "\"Could it be X or Y?\" offering candidate causes",
+        "\"What does it mean if I have...\" about a personal symptom pattern",
+        "\"How do I know if I have...\""
+      ],
+      "closest_other": "General health facts",
+      "how_it_differs": "Asking what is causing symptoms is tied to a personal case described in the message; general health facts asks about a condition, medicine or procedure in general. If the person describes their own (or a relative's) symptoms and wants them explained, use this code.",
+      "examples": [
+        {
+          "chat_id": "63e55f08",
+          "quote": "What could be causing this?"
+        },
+        {
+          "chat_id": "664639e0",
+          "quote": "Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "69fff128",
+          "quote": "what kind of knee injury does this sound like"
+        }
+      ],
+      "chat_ids": [
+        "6144ea17",
+        "664639e0",
+        "63e55f08",
+        "5d7fd2a5",
+        "6a9f047c",
+        "5aeeb490",
+        "69fff128",
+        "695be8c6",
+        "6acb95ac",
+        "6a10664c",
+        "5f47f200",
+        "5f491a49",
+        "6785ddfb",
+        "616f347d"
+      ],
+      "n_chats": 14
+    },
+    {
+      "name": "Stating a symptom or result only",
+      "definition": "The participant states a symptom, health detail or test result with no explicit question, leaving the AI to infer what help is wanted. These are often short phrases or pasted reports.",
+      "signs": [
+        "A short symptom phrase with no question mark, e.g. a body part plus pain",
+        "A bare health fact about a person, e.g. age plus a lab value",
+        "A pasted medical report or findings with no request",
+        "A statement of a change noticed, without asking anything"
+      ],
+      "closest_other": "Asking what is causing symptoms",
+      "how_it_differs": "Use this code only when no question or request is stated; if the message asks why, what it is, or what could be causing it, code Asking what is causing symptoms instead.",
+      "examples": [
+        {
+          "chat_id": "6ac2aee8",
+          "quote": "right side of belly button hurts when using the bathroom"
+        },
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        },
+        {
+          "chat_id": "69600cc8",
+          "quote": "Husband's low back started hurting yesterday"
+        }
+      ],
+      "chat_ids": [
+        "6ac2aee8",
+        "66ec5904",
+        "6a638cf5",
+        "69600cc8",
+        "671a8337",
+        "69fe1811",
+        "67d5d3b7"
+      ],
+      "n_chats": 7
+    },
+    {
+      "name": "Asking what to do for relief",
+      "definition": "The participant asks what they can do, take or change to treat, ease or manage a health problem. The aim is practical action, self-care or treatment advice.",
+      "signs": [
+        "\"What should I take?\"",
+        "\"What can I do to help/alleviate...\"",
+        "\"How to heal/treat...\"",
+        "\"what do I do?\" after describing a problem",
+        "\"would switching... help\" about adjusting a treatment"
+      ],
+      "closest_other": "Advice on whether to act",
+      "how_it_differs": "Asking what to do for relief asks for open-ended ways to treat or manage a problem; advice on whether to act asks for a yes/no judgement on one specific action (see a doctor, drink, have surgery, call). If the person names one option and asks if they should, use Advice on whether to act.",
+      "examples": [
+        {
+          "chat_id": "69fd05bd",
+          "quote": "I have a headache, what should I take?"
+        },
+        {
+          "chat_id": "69ab73e1",
+          "quote": "chat i have a really bad tummy ache, what can i do to help"
+        },
+        {
+          "chat_id": "66d9e5be",
+          "quote": "How to heal neuropathy pain in leg"
+        }
+      ],
+      "chat_ids": [
+        "6144ea17",
+        "672c1bfa",
+        "66d9e5be",
+        "69fd05bd",
+        "69ab73e1",
+        "69fb8bf7",
+        "5eec8774",
+        "6a0206ae"
+      ],
+      "n_chats": 8
+    },
+    {
+      "name": "Advice on whether to act",
+      "definition": "The participant asks whether they should take a specific step, such as seeing a doctor or specialist, having a procedure, drinking alcohol, or calling for care. The aim is a judgement or go-ahead on a particular decision or its timing.",
+      "signs": [
+        "\"Should I see a medical specialist... or try to wait it out?\"",
+        "\"Would an endocrinologist benefit me...\"",
+        "\"Should you be drinking...\"",
+        "\"Is it a must?\" about a procedure",
+        "Checking the timing of when to call or act"
+      ],
+      "closest_other": "Asking what to do for relief",
+      "how_it_differs": "This code covers a named, specific decision the person is weighing; Asking what to do for relief covers open requests for ways to manage a problem.",
+      "examples": [
+        {
+          "chat_id": "697cba85",
+          "quote": "Should I see a medical specialist about this or try to wait it out?"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        },
+        {
+          "chat_id": "69d51123",
+          "quote": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?"
+        }
+      ],
+      "chat_ids": [
+        "697cba85",
+        "6abae4ea",
+        "69d51123",
+        "69f441ce",
+        "66aafcc3"
+      ],
+      "n_chats": 5
+    },
+    {
+      "name": "General health facts",
+      "definition": "The participant asks for factual information about a condition, symptom, medicine, procedure or health measure in general, not tied to diagnosing their own case. Typical forms are what is, what are the symptoms of, what causes, or how often.",
+      "signs": [
+        "\"What is X?\" or \"symptoms of X\"",
+        "\"Can X...?\" or \"Does X...?\" general yes/no fact questions",
+        "\"What causes X and how long can it last\"",
+        "Requests to list conditions, drugs or percentages",
+        "\"what will they do\" at a test or appointment"
+      ],
+      "closest_other": "Asking what is causing symptoms",
+      "how_it_differs": "General health facts asks about how health works in general; Asking what is causing symptoms asks to explain a personal case. A message can carry both, e.g. a personal symptom plus a general question about a named condition.",
+      "examples": [
+        {
+          "chat_id": "6a21a961",
+          "quote": "Can an allergic reaction appear slowly"
+        },
+        {
+          "chat_id": "6658d49a",
+          "quote": "please list every disease where fistula-in-anu is a symptom"
+        },
+        {
+          "chat_id": "6a10664c",
+          "quote": "Tell me what causes gastritis and how long it can last."
+        }
+      ],
+      "chat_ids": [
+        "6a21a961",
+        "6a637176",
+        "6ad69d36",
+        "663b8ae0",
+        "69f441ce",
+        "6a983ff0",
+        "5f491a49",
+        "6712af54",
+        "6952e59d",
+        "6a10664c",
+        "6658d49a",
+        "66d8e4c1",
+        "6a106089",
+        "66c0f464"
+      ],
+      "n_chats": 14
+    },
+    {
+      "name": "Personal plan or recommendations",
+      "definition": "The participant sets out personal goals and current habits and asks for tailored recommendations, such as foods, meal ideas, supplements or a routine. The aim is a plan or product suggestions fitted to their goals rather than treatment of a problem.",
+      "signs": [
+        "Stated goals such as fat loss, muscle gain or toning",
+        "A list of current diet, supplements or routine",
+        "\"Please recommend specific foods\" or \"suggest... ideas\"",
+        "\"Is there a supplement or vitamin that has...\""
+      ],
+      "closest_other": "Asking what to do for relief",
+      "how_it_differs": "Personal plan or recommendations is goal-driven (fitness, nutrition, wellness) and asks for a tailored plan or product; Asking what to do for relief is driven by a current symptom or problem that needs easing.",
+      "examples": [
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals."
+        },
+        {
+          "chat_id": "69fcf529",
+          "quote": "fat loss, muscle gain and increasing testosterone are the main objectives."
+        },
+        {
+          "chat_id": "69f4ca1a",
+          "quote": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?"
+        }
+      ],
+      "chat_ids": [
+        "69a1ae3c",
+        "69fcf529",
+        "69f4ca1a"
+      ],
+      "n_chats": 3
+    },
+    {
+      "name": "Help with a text task",
+      "definition": "The participant asks the AI to work on a piece of text, such as summarizing a section, drafting or reviewing writing, or incorporating an article into a project. The aim is a writing or document output rather than a health answer.",
+      "signs": [
+        "\"Briefly summarize the section titled...\"",
+        "Labels such as \"email 3 draft\" followed by long pasted writing",
+        "A pasted link with \"Let's incorporate this...\""
+      ],
+      "closest_other": "Personal plan or recommendations",
+      "how_it_differs": "Help with a text task asks the AI to process or produce text; Personal plan or recommendations asks the AI to advise on the person's own goals. If the request centres on a document, draft or article, use this code.",
+      "examples": [
+        {
+          "chat_id": "69c41892",
+          "quote": "Briefly summarize the section titled: Developmental Stages and Milestones of Child Development"
+        },
+        {
+          "chat_id": "66fd6acd",
+          "quote": "Let's incorporate this to improve the health and wellness project moving forward."
+        }
+      ],
+      "chat_ids": [
+        "69c41892",
+        "6929d658",
+        "66fd6acd"
+      ],
+      "n_chats": 3
+    }
+  ],
+  "no_code_chats": [
+    {
+      "chat_id": "6a24b2df",
+      "reason": "Greeting/joke with no request."
+    },
+    {
+      "chat_id": "6ae359af",
+      "reason": "Greeting only ('Hi meta')."
+    },
+    {
+      "chat_id": "6a9bb385",
+      "reason": "Single word 'nope' with no request; appears to answer an earlier exchange."
+    }
+  ],
+  "notes": "Borderline calls: 6ad69d36 ('what diabetes') read as asking what diabetes is (General health facts). 66c0f464 asks the AI about its own experience with GLP-1 medication; coded General health facts. 6929d658 is a long reflective 'email 3 draft' with no explicit ask; coded Help with a text task as the likely intent is feedback on a draft. 616f347d ('Does that make sense?') coded as asking to explain own symptoms. 66d8e4c1 (infections smelling like onions) hints at a personal case but is phrased generally; coded General health facts. 66aafcc3 and 67d5d3b7 continue an earlier exchange; 66aafcc3 coded as checking timing of when to call, 67d5d3b7 as a symptom statement. 5d7fd2a5 is a very long message about a child's abscess asking repeatedly what caused it. Emotional support/talking about stress appeared only in 6a0206ae (coded Asking what to do for relief as it asks what they can do); too rare for its own type. Personal identifiers: names were already replaced; 5d7fd2a5 mentions locations (New York, northern Virginia) and family details; 6929d658 has detailed family and religious-congregation details; 5eec8774 addresses the AI as 'Claude' and gives DEXA scan dates."
+}

@@ -1,0 +1,733 @@
+{
+  "coder": 2,
+  "batch": 1,
+  "seed": 19102,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "66aafcc3",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_0",
+        "evidence": "Keep monitoring baby's movement. Rest and drink some fluids.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_0",
+          "evidence": "Call L&D if you still haven't heard from them, especially since they were waiting for a bed.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_13",
+        "evidence": "When 5:00 PM hits you need a strict non-negotiable 30 to 45 minutes to decompress—away from the kids off your phone in a quiet room or taking a walk.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fff128",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "temporarily reduce deep knee flexion, heavy squats, lunges, and similar loading.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "I'd move this out of the \"probably just irritated, give it a few days\" category and have it evaluated",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "rung": {
+        "code": "L3",
+        "turn": "ai_2",
+        "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [
+        "antihistamine"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Since the itching and bumps are all over your body, I'd recommend getting medical advice today",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Ask a pharmacist whether a non-drowsy antihistamine is safe for you.",
+          "confidence": "medium",
+          "unclear": "unclear because 'whether ... is safe for you' resembles the 'if you can safely take it' caveat under S-warning, but it is also simply the suggestion itself plus a referral (S-doctor); no explicit side effect or interaction is given."
+        }
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Stop running for now.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Chest pain that happens during running/exertion needs medical evaluation before you keep training.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Heat on the low back — 10–15 minutes. Heat relaxes the erectors and reduces guarding.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "if [NAME]'s pain becomes severe, spreads down the leg, or doesn't improve, it's important to consult a qualified healthcare professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69f441ce",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "it is **not automatically a must** to have cataract surgery on the second eye after the first eye is done.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "resting the foot, applying ice wrapped in a towel for 15–20 minutes at a time, loosening your shoe laces, and avoiding hard impact can help reduce strain.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek care right away if you cannot put any weight on your foot",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a10664c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "In the meantime, pause creatine and Ultima while symptoms are active, sip water, and avoid strenuous exercise until you're feeling better.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Because your symptoms have persisted for several days this time and recur periodically, please arrange an in-person medical assessment.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Temporarily avoid creatine and Ultima while you're symptomatic, especially since you noticed some improvement without creatine.",
+          "confidence": "medium",
+          "unclear": "unclear because this tells the person to pause their own supplements (S-warning covers warnings about any supplement, including the person's own), but it is framed as a self-care step rather than an explicit side-effect warning; NSAIDs are named only as a cause (information)."
+        }
+      }
+    },
+    {
+      "chat_id": "6712af54",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Around 90–95% of people who believe they are allergic to penicillin actually are not when formally tested.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "While any new rash during antibiotic treatment should be discussed with a healthcare professional, many are not true allergies.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "they should generally avoid taking it again unless an allergy specialist determines otherwise.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a637176",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Over-the-counter pain relievers like ibuprofen or acetaminophen can also reduce throat pain enough to allow drinking.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact a healthcare provider immediately if you or your child show signs of dehydration",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Focus on Protein: Eat enough daily protein to give your body the building blocks it needs for hair structure.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Rest, sip water slowly, avoid greasy, spicy, alcohol, and carbonated drinks for a bit",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "If yours keep coming back, it's a good idea to talk to a doctor or pharmacist",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Use a fragrance-free moisturizer (ideally a thicker cream rather than lotion).",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Consider seeing a dermatologist if they keep recurring.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid applying hydrocortisone or other steroid creams to your face without medical guidance, particularly around your eyes.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "672c1bfa",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Use an anti-dandruff shampoo 2–3 times a week. Look for one containing: Ketoconazole 1% Selenium sulfide Zinc pyrithione Coal tar",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ketoconazole",
+        "selenium sulfide",
+        "zinc pyrithione",
+        "coal tar",
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "You should see a healthcare provider if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6ad69d36",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Diabetes mellitus is a chronic (long-lasting) health condition that affects how your body turns food into energy.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Physical Activity: Incorporate moderate activity—such as daily walking, swimming, light resistance exercise, or balance work— tailored to mobility and comfort.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Review current medications with her primary care provider to ensure none are unintentionally altering blood sugar levels.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "672c1bfa: shampoo active ingredients (ketoconazole, selenium sulfide, zinc pyrithione, coal tar) are not clearly covered as 'medicines' vs topical products; I treated them as OTC medicines and '2–3 times a week' as a frequency (L5). 6785ddfb: unclear whether 'ask a pharmacist whether X is safe for you' also triggers S-warning ('if you can safely take it'). 6a10664c: unclear whether telling the person to pause their own supplements (creatine) counts as S-warning or only self-care. 6a0206ae: AI mentions 'medication management' for a third party (a child) without a type; codebook does not say how to handle advice about someone other than the participant. 69fe1811: mentioning healthy levels of iron/zinc/vitamin D without explicitly suggesting supplements; I did not tag F-supplement."
+}

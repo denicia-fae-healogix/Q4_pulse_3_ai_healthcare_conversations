@@ -1,0 +1,80 @@
+{
+  "coder": 2,
+  "seed": 7402,
+  "n_messages_coded": 3,
+  "codings": [
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "medium",
+          "unclear": "unclear because the message refers to imaging/test results (heart, lungs, liver, spine per context) and no topic covers test results or the heart; T1 was considered for spine changes but the message does not centre on them"
+        },
+        "secondary": null,
+        "none_reason": "overall test/imaging results (coronary and chest scan)"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "So, at a high level what did these tests show?",
+            "confidence": "low",
+            "unclear": "unclear because R1 needs a personal symptom or health change and asks what it means, while R2 covers tests in general; this asks to explain the person's own test results, which neither definition clearly decides. R2 was considered"
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "Tell me about stomach cramps",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Tell me about stomach cramps",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "help me figure out a weight loss plan rn",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "help me figure out a weight loss plan rn",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    }
+  ],
+  "codebook_feedback": "6a9bb385: no request code covers asking to interpret one's own test/imaging results (R1 is framed around symptoms, R2 around general facts); no topic covers heart/cardiovascular or multi-system test results. The leading 'Convert to PDF' fragment is also a non-health request with no code."
+}

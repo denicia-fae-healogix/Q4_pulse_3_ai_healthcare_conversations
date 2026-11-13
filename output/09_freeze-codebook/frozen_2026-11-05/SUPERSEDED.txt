@@ -1,0 +1,2 @@
+SUPERSEDED on 2026-11-05 by frozen_2026-11-05_v2/. Do not use this version for coding.
+Reason: the researcher reverted pilot edit E8 (emotional questions in R1 and coping with stress in R3), because emotion will go into sentiment analysis later. The files here are kept unchanged for the record; this note is not part of SHA256SUMS.txt.

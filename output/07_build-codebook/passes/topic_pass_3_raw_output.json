@@ -1,0 +1,528 @@
+{
+  "codebook": "topic",
+  "pass": 3,
+  "seed": 7103,
+  "n_messages_read": 53,
+  "codes": [
+    {
+      "name": "Bones, joints and muscles",
+      "definition": "Pain, injury, or conditions of the bones, joints, muscles, spine, or limbs. Includes back, neck, knee, foot and elbow pain, arthritis, bone density/osteoporosis, bony lumps, and nerve pain felt in a limb; excludes chest pain and abdominal pain.",
+      "signs": [
+        "named body parts such as back, neck, knee, foot, shoulder",
+        "pain on movement, walking, squatting or climbing stairs",
+        "arthritis, osteoporosis, fractures, DEXA scans",
+        "bone-related medicines such as Prolia or Raloxifene"
+      ],
+      "closest_other": "Digestive and abdominal organs",
+      "how_it_differs": "Digestive and abdominal organs covers pain or problems in the belly, gut, anus or internal organs; code here only when the pain is located in the musculoskeletal frame or limbs.",
+      "examples": [
+        {
+          "chat_id": "69fb8bf7",
+          "quote": "Dealing with knee pain after challenging travel with lots of walking and stair climbing"
+        },
+        {
+          "chat_id": "5aeeb490",
+          "quote": "i developed a sharp pain in my neck that raidates to my shoulders suddenly"
+        },
+        {
+          "chat_id": "663b8ae0",
+          "quote": "symptoms of osteoarthrits"
+        }
+      ]
+    },
+    {
+      "name": "Skin, hair and allergies",
+      "definition": "Conditions of the skin, scalp, or hair, and allergic reactions. Includes flaking scalp, eczema, hives, hair regrowth, and allergies to foods or drugs; excludes abscesses or infections deeper under the skin, which go to infections or the affected organ.",
+      "signs": [
+        "skin, scalp, hair, spots, itching",
+        "eczema, hives, flaking, scabbing",
+        "allergic reaction or allergy to a medicine"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Infections and acute illness covers germs, fevers and sudden whole-body illness; choose skin and allergies when the subject is a skin surface change or an immune/allergic reaction rather than an infection.",
+      "examples": [
+        {
+          "chat_id": "672c1bfa",
+          "quote": "My scalp is flaking and scabbing"
+        },
+        {
+          "chat_id": "6785ddfb",
+          "quote": "How ndo I know if i have Hives or not"
+        },
+        {
+          "chat_id": "6a21a961",
+          "quote": "Can an allergic reaction appear slowly"
+        }
+      ]
+    },
+    {
+      "name": "Digestive and abdominal organs",
+      "definition": "Problems of the stomach, bowel, anus, and other abdominal organs such as the kidneys and liver. Includes stomach aches, gastritis, belly pain, anal fistulas or perianal abscesses, and abdominal imaging results; excludes weight and diet goals.",
+      "signs": [
+        "stomach ache, tummy ache, belly button pain",
+        "gastritis, using the bathroom",
+        "fistula, perianal abscess",
+        "kidney, liver, ultrasound findings"
+      ],
+      "closest_other": "Nutrition, weight and fitness",
+      "how_it_differs": "Nutrition, weight and fitness is about diet, body weight and exercise goals; code digestive when the message describes a symptom, disease or test result in the gut or abdominal organs.",
+      "examples": [
+        {
+          "chat_id": "697cba85",
+          "quote": "I've been dealing with some bad stomach aches for the past few weeks."
+        },
+        {
+          "chat_id": "6a10664c",
+          "quote": "Could it be gastritis? Tell me what causes gastritis and how long it can last."
+        },
+        {
+          "chat_id": "6ac2aee8",
+          "quote": "right side of belly button hurts when using the bathroom"
+        }
+      ]
+    },
+    {
+      "name": "Infections and acute illness",
+      "definition": "Infectious diseases and sudden, short-term illness with general symptoms. Includes flu-like symptoms, fever and chills, viral illnesses such as hand foot and mouth, infections, and acute headache or vomiting; excludes chronic pain in a specific joint or organ.",
+      "signs": [
+        "flu, infection, catching something",
+        "fever, chills, body aches, congestion",
+        "headache, vomiting",
+        "named infectious diseases"
+      ],
+      "closest_other": "Skin, hair and allergies",
+      "how_it_differs": "Skin, hair and allergies covers surface skin changes and allergic reactions; code here when the message is about a germ, an infection, or a sudden feeling of being sick.",
+      "examples": [
+        {
+          "chat_id": "664639e0",
+          "quote": "Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "6a637176",
+          "quote": "What if hand foot and mouth isn't treated"
+        },
+        {
+          "chat_id": "66d8e4c1",
+          "quote": "can infections of some sort smell like onions"
+        }
+      ]
+    },
+    {
+      "name": "Nutrition, weight and fitness",
+      "definition": "Diet, body weight, and physical fitness. Includes healthy eating, protein and supplements for fitness, normal weight, weight-loss medicines such as GLP-1 drugs, and exercise; excludes diabetes and hormone disorders.",
+      "signs": [
+        "food, meals, protein, supplements",
+        "weight, fat loss, getting skinny",
+        "gym, workout, muscle gain",
+        "GLP-1, Zepbound"
+      ],
+      "closest_other": "Hormones and metabolic conditions",
+      "how_it_differs": "Hormones and metabolic conditions covers diagnosed or suspected diseases like diabetes, PCOS or hormone imbalance; code nutrition when the focus is lifestyle, weight or fitness goals.",
+      "examples": [
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals."
+        },
+        {
+          "chat_id": "6952e59d",
+          "quote": "What is the normal weight for a male who is 28 and five feet nine inches tall?"
+        },
+        {
+          "chat_id": "66c0f464",
+          "quote": "What impact (if any) has taking a GLP-1A medication had on your physical health?"
+        }
+      ]
+    },
+    {
+      "name": "Hormones and metabolic conditions",
+      "definition": "Hormone and metabolic disorders such as diabetes, blood sugar, cholesterol, testosterone, or general hormone imbalance. Includes A1c results, endocrinologist questions, and PCOS as a hormonal condition; excludes general diet or weight goals.",
+      "signs": [
+        "diabetes, A1c, blood sugar",
+        "hormones, endocrinologist, testosterone",
+        "cholesterol, PCOS"
+      ],
+      "closest_other": "Nutrition, weight and fitness",
+      "how_it_differs": "Nutrition, weight and fitness covers lifestyle eating and exercise; choose this topic when a hormonal or metabolic condition or test is named.",
+      "examples": [
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        },
+        {
+          "chat_id": "6ad69d36",
+          "quote": "what diabetes"
+        }
+      ]
+    },
+    {
+      "name": "Eyes and vision",
+      "definition": "The eyes and vision. Includes cataracts, retina specialist visits, double vision and glasses; excludes pain behind the eyes that is part of a headache or general illness.",
+      "signs": [
+        "eye, eyes, vision",
+        "cataract, retina",
+        "glasses, double vision"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Eye pain that comes with headache and vomiting belongs to infections and acute illness; code eyes when the eye or vision itself is the subject.",
+      "examples": [
+        {
+          "chat_id": "6a106089",
+          "quote": "My eye doctor is sending me to a retina specialist"
+        },
+        {
+          "chat_id": "69f441ce",
+          "quote": "Percentage of people need to get 2nd eye's cataract surgery after doing the first one."
+        },
+        {
+          "chat_id": "616f347d",
+          "quote": "Sometimes I'm not seeing double with my glasses on but sometimes I am."
+        }
+      ]
+    },
+    {
+      "name": "Sleep and fatigue",
+      "definition": "Sleep problems, sleep quality, and tiredness. Includes sleep apnea, waking at night, unrefreshing sleep, ongoing fatigue and sleep loss; excludes tiredness that is part of a sudden flu-like illness.",
+      "signs": [
+        "sleep, waking in the night, falls asleep",
+        "sleep apnea, not breathing at night",
+        "tired, fatigue, not rested",
+        "melatonin, nap, sleep loss"
+      ],
+      "closest_other": "Infections and acute illness",
+      "how_it_differs": "Fatigue that starts suddenly with fever, aches or congestion goes to infections and acute illness; code sleep and fatigue when tiredness or sleep is the main ongoing subject.",
+      "examples": [
+        {
+          "chat_id": "5f491a49",
+          "quote": "What is sleep apnea? I think I may have it."
+        },
+        {
+          "chat_id": "63e55f08",
+          "quote": "I've been feeling unusually tired lately, even after getting a full night's sleep."
+        },
+        {
+          "chat_id": "6144ea17",
+          "quote": "he's been waking a lot in the night and he never used to do that."
+        }
+      ]
+    },
+    {
+      "name": "Women's reproductive health",
+      "definition": "Female reproductive health, including pregnancy and labor, menstruation, endometriosis, PCOS, and PMDD. Excludes general hormone tests not tied to the reproductive system.",
+      "signs": [
+        "pregnancy, labor, induction, contractions",
+        "period, PMDD",
+        "endometriosis, PCOS"
+      ],
+      "closest_other": "Hormones and metabolic conditions",
+      "how_it_differs": "Hormones and metabolic conditions covers diabetes, cholesterol and general hormone imbalance; code here when the subject is the menstrual cycle, pregnancy or a reproductive organ condition.",
+      "examples": [
+        {
+          "chat_id": "69d51123",
+          "quote": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?"
+        },
+        {
+          "chat_id": "69f4ca1a",
+          "quote": "I want to deal with my pcos, anemia, pmdd, and high cholesterol"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "chat_id": "69600cc8",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a0206ae",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "672c1bfa",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "6144ea17",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "primary": "Nutrition, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "5f491a49",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a106089",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a21a961",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6658d49a",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a637176",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "5aeeb490",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "63e55f08",
+      "primary": "Sleep and fatigue",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fcf529",
+      "primary": "Nutrition, weight and fitness",
+      "secondary": "Hormones and metabolic conditions"
+    },
+    {
+      "chat_id": "69fe1811",
+      "primary": "Skin, hair and allergies",
+      "secondary": "Nutrition, weight and fitness"
+    },
+    {
+      "chat_id": "6a9bb385",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a9f047c",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a983ff0",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "69f441ce",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "69d51123",
+      "primary": "Women's reproductive health",
+      "secondary": null
+    },
+    {
+      "chat_id": "616f347d",
+      "primary": "Eyes and vision",
+      "secondary": null
+    },
+    {
+      "chat_id": "6785ddfb",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "663b8ae0",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "66d9e5be",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "66c0f464",
+      "primary": "Nutrition, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "66ec5904",
+      "primary": "Hormones and metabolic conditions",
+      "secondary": null
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "primary": "Digestive and abdominal organs",
+      "secondary": "Infections and acute illness"
+    },
+    {
+      "chat_id": "5eec8774",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a638cf5",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "5f47f200",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "6acb95ac",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "6ae359af",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "664639e0",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "primary": "Hormones and metabolic conditions",
+      "secondary": "Women's reproductive health"
+    },
+    {
+      "chat_id": "69fd05bd",
+      "primary": "Infections and acute illness",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a10664c",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "66aafcc3",
+      "primary": "Women's reproductive health",
+      "secondary": null
+    },
+    {
+      "chat_id": "6a24b2df",
+      "primary": "Nutrition, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "6ad69d36",
+      "primary": "Hormones and metabolic conditions",
+      "secondary": null
+    },
+    {
+      "chat_id": "69ab73e1",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "6712af54",
+      "primary": "Skin, hair and allergies",
+      "secondary": null
+    },
+    {
+      "chat_id": "695be8c6",
+      "primary": "Infections and acute illness",
+      "secondary": "Bones, joints and muscles"
+    },
+    {
+      "chat_id": "66fd6acd",
+      "primary": "Sleep and fatigue",
+      "secondary": "Nutrition, weight and fitness"
+    },
+    {
+      "chat_id": "6929d658",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "697cba85",
+      "primary": "Digestive and abdominal organs",
+      "secondary": null
+    },
+    {
+      "chat_id": "69c41892",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "6952e59d",
+      "primary": "Nutrition, weight and fitness",
+      "secondary": null
+    },
+    {
+      "chat_id": "69fff128",
+      "primary": "Bones, joints and muscles",
+      "secondary": null
+    },
+    {
+      "chat_id": "671a8337",
+      "primary": "NONE",
+      "secondary": null
+    },
+    {
+      "chat_id": "6abae4ea",
+      "primary": "Hormones and metabolic conditions",
+      "secondary": null
+    }
+  ],
+  "no_code_chats": [
+    {
+      "chat_id": "6a0206ae",
+      "reason": "Subject is stress and anxiety (mental health); only 2 messages in this set were about mental/emotional health, too few for a topic."
+    },
+    {
+      "chat_id": "6929d658",
+      "reason": "Long reflection about family communication, silence and emotional struggles (mental/emotional health); only 2 such messages, too few for a topic."
+    },
+    {
+      "chat_id": "6a9bb385",
+      "reason": "'nope' has no health subject."
+    },
+    {
+      "chat_id": "6ae359af",
+      "reason": "Greeting only ('Hi meta'); no health subject."
+    },
+    {
+      "chat_id": "69c41892",
+      "reason": "Child development stages and milestones; no other message on child development."
+    },
+    {
+      "chat_id": "671a8337",
+      "reason": "Chest pain when running (possible heart/cardiovascular subject); no other cardiovascular messages."
+    }
+  ],
+  "notes": "Borderline calls: 66d9e5be (leg neuropathy pain) placed under Bones, joints and muscles as limb pain though it is nerve-related. Headache messages 6a9f047c and 69fd05bd placed under Infections and acute illness as sudden general symptoms; a separate headache topic would have only 2 messages. 6a638cf5 (kidney/liver ultrasound) placed under Digestive and abdominal organs, which is defined broadly to include kidneys and liver. 6a24b2df ('getting skinny') is very thin and coded Nutrition, weight and fitness on the word 'skinny' only. 66aafcc3 is about labor timing, understood from the AI context line. 6712af54 (antibiotic allergies) coded under Skin, hair and allergies as an allergy question. Topics seen in only 1-2 messages: mental health/stress (6a0206ae, 6929d658), heart/chest pain (671a8337), child development (69c41892). Personal identifiers: names already replaced; 5d7fd2a5 mentions northern VA, New York and family details; 5eec8774 addresses 'Claude' and gives DEXA scan years; 69fe1811 includes a date (October 16, 2026)."
+}

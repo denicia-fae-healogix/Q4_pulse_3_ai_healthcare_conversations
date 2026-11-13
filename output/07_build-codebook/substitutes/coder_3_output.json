@@ -1,0 +1,80 @@
+{
+  "coder": 3,
+  "seed": 7403,
+  "n_messages_coded": 3,
+  "codings": [
+    {
+      "chat_id": "6ae359af",
+      "topic": {
+        "primary": {
+          "code": "T3",
+          "evidence": "Tell me about stomach cramps",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R2",
+            "evidence": "Tell me about stomach cramps",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "topic": {
+        "primary": {
+          "code": "NONE",
+          "evidence": "",
+          "confidence": "medium",
+          "unclear": "unclear because the message only says 'these tests' without naming a body system; the AI context suggests chest/heart imaging (coronary arteries, bronchial arteries) with liver and spine findings, which fits no single topic code; T1 (spine wear-and-tear) was considered but is not the centre of the message"
+        },
+        "secondary": null,
+        "none_reason": "overall results of personal imaging/medical tests (heart and chest scan)"
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "at a high level what did these tests show?",
+            "confidence": "low",
+            "unclear": "unclear because the person asks what their own test results mean, but R1 is defined around symptoms rather than test results; R2 (general facts) does not fit because it is about their own case, and R4 does not apply because a question is asked; 'Convert to PDF' is a formatting request with no code"
+          }
+        ],
+        "request_none_reason": ""
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "topic": {
+        "primary": {
+          "code": "T2",
+          "evidence": "help me figure out a weight loss plan rn",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "secondary": null,
+        "none_reason": ""
+      },
+      "request": {
+        "codes": [
+          {
+            "code": "R6",
+            "evidence": "help me figure out a weight loss plan rn",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ],
+        "request_none_reason": ""
+      }
+    }
+  ],
+  "codebook_feedback": "6a9bb385: no request code clearly covers asking for an interpretation of one's own test/imaging results (R1 is framed around symptoms, R4 only applies without a question); no topic code for heart/chest or general test results. Non-health requests like 'Convert to PDF' have no code."
+}

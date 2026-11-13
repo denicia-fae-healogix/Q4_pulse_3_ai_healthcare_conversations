@@ -1,0 +1,778 @@
+{
+  "coder": 1,
+  "batch": 2,
+  "seed": 19101,
+  "n_chats_coded": 18,
+  "codings": [
+    {
+      "chat_id": "69f441ce",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Studies and real-world data generally show that **70–90% of patients** who undergo cataract surgery in one eye eventually have surgery in the other eye as well.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "resting the foot, applying ice wrapped in a towel for 15–20 minutes at a time, loosening your shoe laces, and avoiding hard impact can help reduce strain.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "63e55f08",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Conditions such as sleep apnea, where breathing repeatedly pauses during sleep, can also leave you feeling exhausted when you wake up.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "it would be worth scheduling a doctor's appointment and discussing some basic bloodwork",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "616f347d",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_2",
+        "evidence": "If that layer becomes unstable, your vision can fluctuate, and blinking may temporarily clear things up.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI explains a tear-film cause but never tells the person to do anything at home; considered L2 but no self-care step was given."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If the double vision is still changing or worsening, contact the specialist's office and let them know.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a10664c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "pause creatine and Ultima while symptoms are active, sip water, and avoid strenuous exercise until you're feeling better.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Because your symptoms have persisted for several days this time and recur periodically, please arrange an in-person medical assessment.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Temporarily avoid creatine and Ultima while you're symptomatic, especially since you noticed some improvement without creatine.",
+          "confidence": "medium",
+          "unclear": "unclear because telling the person to pause their own supplement could be a supplement warning ('who should avoid it') or just self-care; the NSAID lining-damage sentence in ai_1 is listed as 'information' in the codebook, so not used."
+        }
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Use a fragrance-free moisturizer (ideally a thicker cream rather than lotion).",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Consider seeing a dermatologist if they keep recurring.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid applying hydrocortisone or other steroid creams to your face without medical guidance",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fd05bd",
+      "rung": {
+        "code": "L5",
+        "turn": "ai_1",
+        "evidence": "Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For a typical headache, acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Get urgent medical help if the headache is sudden and extremely severe",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Stay below 3,000 mg in 24 hours.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "There are many possible causes, including indigestion, constipation, inflammation of the stomach lining, ulcers, and other digestive conditions.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "My recommendation is to arrange a medical appointment as soon as possible, ideally today or within the next day or two.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "I can't determine the cause from your answers alone, and I wouldn't want to reassure you incorrectly.",
+          "confidence": "medium",
+          "unclear": "unclear because this reads as a 'cannot diagnose' disclaimer but is not a stock line; considered S-warning false."
+        }
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "OTC options like acetaminophen or ibuprofen can help with the fever and aches",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen",
+        "oseltamivir"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",
+          "confidence": "medium",
+          "unclear": "unclear because Tamiflu is given as a conditional option tied to seeing a doctor rather than a direct suggestion; the codebook's conditional-prescription rule supports counting it."
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "so if symptoms worsen, see a doctor soon",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Note: I'm not a doctor",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69f4ca1a",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "But it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5d7fd2a5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "A tiny gland inside the anus becomes blocked.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI discusses the surgeon's sitz baths and mentions 'avoiding prolonged pressure' only as a question to ask the surgeon; repeating a doctor's advice stays L1, but L2 was considered."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "At the follow-up, it would be reasonable to ask the surgeon directly:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Short-term use of anti-inflammatory medications (like ibuprofen or naproxen) or topical gels (such as Voltaren/diclofenac) can help manage pain and swelling.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "naproxen",
+        "diclofenac"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "or topical gels (such as Voltaren/diclofenac) can help manage pain and swelling.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "reach out to a healthcare professional or primary care doctor if you experience any of the following:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "(Be sure to check with your pharmacist or doctor if you take other medications or have underlying health considerations.)",
+          "confidence": "medium",
+          "unclear": "unclear because this is a soft interaction/health-condition caveat rather than an explicit side-effect warning; it also supports S-doctor."
+        }
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better, or whether restarting Prolia at the $55.43 price makes more sense.",
+        "confidence": "medium",
+        "unclear": "unclear because ai_5 lists how often each bisphosphonate is given ('weekly or daily', 'once a year'); the close-call rule keeps this at L4, but L5 was considered."
+      },
+      "medicines_suggested": [
+        "denosumab",
+        "alendronate",
+        "zoledronic acid",
+        "risedronate",
+        "ibandronate",
+        "pamidronate"
+      ],
+      "types_suggested": [
+        "bisphosphonate",
+        "non-drowsy allergy medicine"
+      ],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_5",
+          "evidence": "Alendronate (brand Fosamax), weekly or daily.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Please check these with your doctor, since I can't know what's safe for you.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Benadryl is sedating and can raise fall risk and affect memory.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a638cf5",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "This commonly corresponds to fatty liver (hepatic steatosis), although ultrasound alone doesn't determine the exact cause.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Overall, this ultrasound is mostly reassuring, with a few findings worth discussing with your doctor.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6144ea17",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Tracking wake-ups for the next 1-2 weeks",
+        "confidence": "medium",
+        "unclear": "unclear because tracking is a self-care step (L2), but most of the reply is information about the person's own medicine (L1)."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Reintroduce a sleep aid if appropriate.",
+          "confidence": "medium",
+          "unclear": "unclear because the 'sleep aid' is offered as a prescriber option and the chat shows it was melatonin (a supplement); considered no tag."
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I would not change the timing without checking with his prescriber first.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "One thing I would not do without talking to his doctor is immediately switch the dose to morning.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69fff128",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "temporarily reduce deep knee flexion, heavy squats, lunges, and similar loading.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "a sports-medicine doctor or PT could usually narrow this down pretty quickly from an exam.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "663b8ae0",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Osteoarthritis (OA) is the most common type of arthritis.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Make an appointment with a healthcare professional if joint pain or stiffness persists",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "S-warning: unclear whether telling the person to pause their own supplement (6a10664c, creatine) counts as a supplement warning, and whether non-stock 'I can't determine the cause' statements (697cba85) count as a 'cannot diagnose' disclaimer. L4/L5: frequency given in a list of options for a prescriber discussion (5eec8774) relies on the close-call rule; clearer wording would help. Sleep aid offered as a prescriber option where the chat shows it was melatonin (6144ea17). Repeating a doctor's prescribed self-care (sitz baths, 5d7fd2a5) vs adding a new tip could be clearer. Type vs specific: when a class is named with specific examples (69fb8bf7 'anti-inflammatory medications (like ibuprofen...)'), unclear whether the class also goes in the types list; I listed only the medicines."
+}

@@ -1,0 +1,492 @@
+{
+  "coder": 1,
+  "seed": 13101,
+  "n_chats_coded": 32,
+  "codings": [
+    {
+      "chat_id": "69f4ca1a",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "My anemia is from b12/folate deficiency",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "66c0f464",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "What impact (if any) has taking a GLP-1A medication had on your mental health?",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "5aeeb490",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Back of neck, closer to shoulders",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_4",
+        "evidence": "After sleeping",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "5f47f200",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "There is no swelling but I do run daily",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_2",
+        "evidence": "I do run daily",
+        "confidence": "medium",
+        "unclear": "unclear because the AI asked about onset, swelling, pain quality and triggers but not activity; the D2 close call says unrequested background after an AI question still counts as D2, D3 was considered."
+      }
+    },
+    {
+      "chat_id": "66aafcc3",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "Now how likely will they have a bed at 12",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "6a10664c",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "Help me understand what causes are most consistent and what medical assessment is appropriate",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_3",
+        "evidence": "I do have a lot of cramping and gas between episodes.",
+        "confidence": "medium",
+        "unclear": "unclear because the coded first message 'I get this time time' may mean the problem recurs over time (overall duration, D1), but it is too fragmentary to count; human_2 only describes the main pain's location and pattern."
+      }
+    },
+    {
+      "chat_id": "695be8c6",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "yes it was for pain for the tendinitis",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "went to doctor today with tennis elbow, injected two shots in my butt",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "5eec8774",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M4",
+        "evidence": "Claude, you are missing a conversation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "5f491a49",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "Should I schedule an appointment with a specialist?",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "6785ddfb",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "yes I have itching and bumps all over",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": "Itching and bumps are part of the hives problem asked about [P6]; human_3 is thanks only."
+      }
+    },
+    {
+      "chat_id": "69ab73e1",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "What should I do?",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": "Only location and feel of the main pain plus 'my other symptoms are none' [P4]."
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M2",
+        "evidence": "what if i am spitting blood",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": "'When running' is the activity during which the symptom shows [P3]; spitting blood is a 'what if' [P2]."
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Right now the biggest stressors is my gf's family primarily her disrespectful kids",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_2",
+        "evidence": "I have been with my gf for 2.5 years. I have been dealing with this for most of that.",
+        "confidence": "medium",
+        "unclear": "unclear because it is hard to separate the main complaint (stress and anxiety) from background in a mental-health chat; the overall duration and moving in in January were treated as background answering the AI's question about stressors."
+      }
+    },
+    {
+      "chat_id": "63e55f08",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "more like physical exhaustion",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "medium",
+        "unclear": "unclear because 'lately' in the first message could be read as overall duration (D1), and 'even after getting a full night's sleep' as a sleep habit, but both seem to describe the main problem rather than background."
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Center left and right, but worse on one side",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "Husband's low back started hurting yesterday",
+        "confidence": "medium",
+        "unclear": "unclear because 'started hurting yesterday' is the overall duration of the problem (counts as background [P5]) but is very short and close to the main complaint itself; D4 was considered."
+      }
+    },
+    {
+      "chat_id": "6ae359af",
+      "second_message_turn": "human_4",
+      "column2": {
+        "code": "M1",
+        "evidence": "How do I tell i have cramps",
+        "confidence": "high",
+        "unclear": "human_3 'Nice' is thanks-only and was skipped."
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "69fe1811",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "I just started shedding but have 3/4 inch baby hair",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "baby hair coming in after 3 months on zepbound",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "664639e0",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "--- How long does the flu last",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "6a24b2df",
+      "second_message_turn": "human_3",
+      "column2": {
+        "code": "M3",
+        "evidence": "im at 350 to start",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_3",
+        "evidence": "im at 350 to start",
+        "confidence": "high",
+        "unclear": "The AI's form asked for current weight [P9]."
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M6",
+        "evidence": "I just went a whole week without saying anything to my family.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "6712af54",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "What is the Stevens-Johnson syndrome?",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "69fb8bf7",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Dull ache, feel weak when trying to stand up from sitting.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "Dealing with knee pain after challenging travel with lots of walking and stair climbing",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "697cba85",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "I would rate it at 7.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "I've been dealing with some bad stomach aches for the past few weeks.",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "6acb95ac",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "Yes they are dry and flaky and are fairly small, usually on my face",
+        "confidence": "high",
+        "unclear": "'Convert to PDF' fragment ignored [P7]."
+      },
+      "column3": {
+        "code": "D4",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": "'Only there for a few days or weeks' is episode length [P5]; the rest describes the main problem."
+      }
+    },
+    {
+      "chat_id": "69fff128",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "i've had it for four weeks or maybe more. it hasn't gotten better or worse",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D3",
+        "turn": "human_2",
+        "evidence": "i've had it for four weeks or maybe more.",
+        "confidence": "medium",
+        "unclear": "unclear because ai_1 ended with a conditional request for pain location ('If you tell me exactly where the pain is...'); if that counts as an AI question, the D2 close call (unrequested background after an AI question) would make this D2. Coded D3 as in the codebook example."
+      }
+    },
+    {
+      "chat_id": "616f347d",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "The double reappears if I don't blink a lot",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "My eyes seem to be working harder to make the prism glasses work.",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "6a21a961",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "How can I tell if I'm having an allergic reaction to antibiotics I started yesterday",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "672c1bfa",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M1",
+        "evidence": "Can we tell me what causes dandruff",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": null
+    },
+    {
+      "chat_id": "66d8e4c1",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "so under my breast I have like yeast on the skin",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D2",
+        "turn": "human_2",
+        "evidence": "And I've been to the doctor before and they gave me like a cream to put on it.",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "66d9e5be",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "For husband, he also had type 2 diabetes and smokes",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D3",
+        "turn": "human_2",
+        "evidence": "For husband, he also had type 2 diabetes and smokes",
+        "confidence": "medium",
+        "unclear": "unclear because ai_1 ended with a conditional request ('If you tell me where exactly the pain is...'); if that counts as an AI question the D2 close call would apply. Coded D3 as in the codebook example."
+      }
+    },
+    {
+      "chat_id": "6a106089",
+      "second_message_turn": "human_2",
+      "column2": {
+        "code": "M3",
+        "evidence": "he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "column3": {
+        "code": "D1",
+        "turn": "human_1",
+        "evidence": "My eye doctor is sending me to a retina specialist",
+        "confidence": "high",
+        "unclear": ""
+      }
+    },
+    {
+      "chat_id": "6a9bb385",
+      "second_message_turn": "human_3",
+      "column2": {
+        "code": "M1",
+        "evidence": "What are the small findings? What do they mean",
+        "confidence": "high",
+        "unclear": "'Convert to PDF' fragment ignored [P7]."
+      },
+      "column3": null
+    }
+  ],
+  "codebook_feedback": "D2 close call vs D3 examples: the D2 rule says unrequested background after any AI question counts as D2, but the D3 examples (69fff128, 66d9e5be) follow AI turns ending in a conditional request ('If you tell me where the pain is...'); the codebook should say whether such conditional requests count as 'the AI asked'. Short overall durations like 'started hurting yesterday' (69600cc8) or vague 'lately' (63e55f08) are hard to place between background duration and main complaint. In mental-health chats (6a0206ae) the line between main complaint and background is unclear. Fragmentary first messages (6a10664c 'I get this time time') are hard to judge for D1."
+}

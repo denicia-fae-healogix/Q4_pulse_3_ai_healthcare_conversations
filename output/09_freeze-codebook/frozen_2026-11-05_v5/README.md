@@ -1,0 +1,11 @@
+# Frozen codebooks, 2026-11-05, version v5
+
+These are the locked first-message codebooks for the Q4 Pulse 3 health-advice study. They were built in step 07 (3 LLM passes + merge + the researcher's revisions), piloted in step 08, and frozen here after the researcher approved pilot edits E6, E7 and E9 (step 07 revisions 9-12). The researcher then reverted pilot edit E8 (revisions 13-14; version 2), so emotions are not part of any request type, because emotion will go into sentiment analysis later. The Mental health and stress topic (T11) is kept. Version 3 replaces version 2 (frozen_2026-11-05_v2/): R3 and R6 are renamed and clarified around problem vs. goal (revisions 15-16). R3 is now 'How do I handle this problem, or is it safe?' and R6 is 'Help me reach a health goal', because 'what should I do' vs. 'recommendations' was confusing and 'personal' applies to all health advice. No message's label changed. Version 4 replaces version 3 (frozen_2026-11-05_v3/): it adds the first REAL message rule to the unit of analysis (revisions 17-22). When a first message is only a greeting, a joke or a one-word reply, the participant's next message with health content is coded instead (3 chats; listed in 07_first-message_substitutions.csv). The code definitions are unchanged from version 3. Version 5 replaces version 4 (frozen_2026-11-05_v4/): the researcher added the request type R7 'Explain my test results' (revisions 23-24) for questions about what one's own test results mean, with close-call rules against R4, R1, R2 and R5. The ID R7 is reused: an earlier draft code R7 ('Help with a text task') was dropped before any freeze. R7 is small (1 message) and kept by the researcher's choice.
+
+- `request_codebook.md` / `.csv`: type of request, R1-R7 (main analysis; several types per message).
+- `topic_codebook.md` / `.csv`: health topic, T1-T11 (one primary topic per message).
+- `topic_list_rules.md` and `07_topic_list_groups.csv`: how the descriptive topic list is counted.
+- `codebook_revisions.csv`: every documented change made by the researcher.
+- `SHA256SUMS.txt`: a fingerprint of each file. `python scripts/09_freeze-codebook/09_freeze_codebook.py --verify` checks nothing has changed.
+
+The files are read-only. Do not edit them; a change needs a new dated freeze.

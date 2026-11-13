@@ -1,0 +1,141 @@
+{
+  "coder": 3,
+  "seed": 10603,
+  "n_messages_coded": 9,
+  "codings": [
+    {
+      "chat_id": "6a638cf5",
+      "request": {
+        "codes": [
+          {
+            "code": "R7",
+            "evidence": "FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm.",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "right side of belly button hurts when using the bathroom",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6a0206ae",
+      "request": {
+        "codes": [
+          {
+            "code": "R3",
+            "evidence": "what I can do to give myself a better quality of life",
+            "stated_or_implied": "stated",
+            "confidence": "medium",
+            "unclear": ""
+          },
+          {
+            "code": "R1",
+            "evidence": "what's stressing me out and why I'm anxious",
+            "stated_or_implied": "stated",
+            "confidence": "medium",
+            "unclear": "unclear because R1 needs a personal symptom and a question about its cause; 'why I'm anxious' fits, but it is framed as wanting to talk rather than a diagnosis question. Considered R3 only."
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "671a8337",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "CHEST PAIN WHEN RUNNING",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Husband's low back started hurting yesterday",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "request": {
+        "codes": [
+          {
+            "code": "R7",
+            "evidence": "72 yo woman with 6.0 a1c",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "baby hair coming in after 3 months on zepbound",
+            "stated_or_implied": "implied",
+            "confidence": "medium",
+            "unclear": "unclear because the health change (hair regrowth on a medicine) may be shared as good news rather than a symptom to explain; implied-request rule points to R1. Considered R4."
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "67d5d3b7",
+      "request": {
+        "codes": [
+          {
+            "code": "R1",
+            "evidence": "Sometimes it feel like it radiates to my neck Pain that wakes you up at night",
+            "stated_or_implied": "implied",
+            "confidence": "high",
+            "unclear": ""
+          }
+        ]
+      }
+    },
+    {
+      "chat_id": "6929d658",
+      "request": {
+        "codes": [
+          {
+            "code": "R4",
+            "evidence": "email 3 draft I connected doing something for myself and my ability to speak to my family",
+            "stated_or_implied": "none",
+            "confidence": "low",
+            "unclear": "unclear because this is a text pasted for another purpose (an email draft) with no request, but it describes own struggles such as 'a feeling that speaking is impossible', which could count as a personal health change under the implied R1 rule. Considered R1."
+          }
+        ]
+      }
+    }
+  ],
+  "codebook_feedback": "6929d658: unclear whether personal emotional/communication struggles in a pasted email draft count as a 'personal symptom or health change' (implied R1) or a text pasted for another purpose (R4). 69fe1811: a positive health change on a medicine fits implied R1 only loosely. 6a0206ae: 'talk about why I'm anxious' sits between R1 and a general wish to talk; no rule addresses emotional/mental-health discussion requests."
+}

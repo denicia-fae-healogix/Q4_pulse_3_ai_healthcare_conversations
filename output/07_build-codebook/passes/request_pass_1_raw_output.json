@@ -1,0 +1,335 @@
+{
+  "codebook": "request",
+  "pass": 1,
+  "seed": 7201,
+  "n_messages_read": 53,
+  "codes": [
+    {
+      "name": "Find the cause of symptoms",
+      "definition": "The participant describes symptoms or a health change and asks what is causing it or what condition they might have. The help wanted is a possible explanation or diagnosis for something they or someone else is experiencing.",
+      "signs": [
+        "\"What could be causing this?\" or \"what could be the problem\"",
+        "\"Could it be X?\" or \"could it be that or flu?\"",
+        "\"What did I catch?\" / \"what kind of injury does this sound like\"",
+        "\"How do I know if I have X\""
+      ],
+      "closest_other": "Describe symptoms without a question",
+      "how_it_differs": "Here the message explicitly asks for a cause or diagnosis. If the message only states a symptom with no question, use Describe symptoms without a question.",
+      "examples": [
+        {
+          "chat_id": "63e55f08",
+          "quote": "What could be causing this?"
+        },
+        {
+          "chat_id": "664639e0",
+          "quote": "Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?"
+        },
+        {
+          "chat_id": "6a9f047c",
+          "quote": "I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem"
+        }
+      ],
+      "chat_ids": [
+        "5d7fd2a5",
+        "6acb95ac",
+        "5f47f200",
+        "69fff128",
+        "695be8c6",
+        "6a10664c",
+        "664639e0",
+        "63e55f08",
+        "6a9f047c",
+        "5aeeb490",
+        "6144ea17",
+        "6785ddfb",
+        "5f491a49"
+      ],
+      "n_chats": 13
+    },
+    {
+      "name": "Ways to relieve or manage",
+      "definition": "The participant asks what they can do, take or change to relieve a current symptom or manage an existing problem. The help wanted is practical self-care or treatment advice.",
+      "signs": [
+        "\"What can I do to help\" / \"what do I do?\"",
+        "\"What should I take?\"",
+        "\"How to heal X\"",
+        "\"What can I do to ... decrease my risk\" or \"would switching ... help\""
+      ],
+      "closest_other": "Personal diet or supplement plan",
+      "how_it_differs": "This code is about easing or managing a problem the person has now. If the person sets out wellness or fitness goals and asks for a tailored diet, food or supplement plan, use Personal diet or supplement plan.",
+      "examples": [
+        {
+          "chat_id": "69ab73e1",
+          "quote": "chat i have a really bad tummy ache, what can i do to help"
+        },
+        {
+          "chat_id": "69fd05bd",
+          "quote": "I have a headache, what should I take?"
+        },
+        {
+          "chat_id": "66d9e5be",
+          "quote": "How to heal neuropathy pain in leg"
+        }
+      ],
+      "chat_ids": [
+        "66d9e5be",
+        "69fd05bd",
+        "69ab73e1",
+        "672c1bfa",
+        "69fb8bf7",
+        "5eec8774",
+        "6144ea17",
+        "6a0206ae"
+      ],
+      "n_chats": 8
+    },
+    {
+      "name": "General health facts",
+      "definition": "The participant asks for factual information about a condition, symptom, treatment or body measure, not tied to working out their own case. The help wanted is an explanation, list or fact.",
+      "signs": [
+        "\"What is X?\" / \"symptoms of X\"",
+        "\"Does X ...\" / \"Can X ...\" yes-or-no fact questions",
+        "\"List every ...\" or \"what percentage ...\"",
+        "\"What if X isn't treated\""
+      ],
+      "closest_other": "Find the cause of symptoms",
+      "how_it_differs": "General health facts asks about how things work in general. If the person describes their own symptoms and wants to know what is behind them, use Find the cause of symptoms (both can apply).",
+      "examples": [
+        {
+          "chat_id": "663b8ae0",
+          "quote": "symptoms of osteoarthrits"
+        },
+        {
+          "chat_id": "6658d49a",
+          "quote": "please list every disease where fistula-in-anu is a symptom"
+        },
+        {
+          "chat_id": "6a637176",
+          "quote": "What if hand foot and mouth isn't treated"
+        }
+      ],
+      "chat_ids": [
+        "663b8ae0",
+        "6a983ff0",
+        "6952e59d",
+        "6658d49a",
+        "6a637176",
+        "6712af54",
+        "6a21a961",
+        "5f491a49",
+        "6a10664c",
+        "69f441ce",
+        "6ad69d36",
+        "66c0f464",
+        "66d8e4c1"
+      ],
+      "n_chats": 13
+    },
+    {
+      "name": "Deciding about medical care",
+      "definition": "The participant asks for help deciding whether, when or from whom to get medical care, or what a planned appointment or procedure will involve. The help wanted is guidance on using the health care system.",
+      "signs": [
+        "\"Should I see a medical specialist ... or wait it out?\"",
+        "\"Would an endocrinologist benefit me\"",
+        "\"What will they do\" at an appointment",
+        "\"Is it a must?\" about a procedure, or when to call the clinic"
+      ],
+      "closest_other": "Ways to relieve or manage",
+      "how_it_differs": "This code is about seeking or going through professional care. If the person wants things they can do themselves, use Ways to relieve or manage.",
+      "examples": [
+        {
+          "chat_id": "697cba85",
+          "quote": "Should I see a medical specialist about this or try to wait it out?"
+        },
+        {
+          "chat_id": "6abae4ea",
+          "quote": "Would an endocrinologist benefit me from learning why my hormones are our of whack?"
+        },
+        {
+          "chat_id": "6a106089",
+          "quote": "My eye doctor is sending me to a retina specialist, the appt is supposed to take 3-4 hours what will they do"
+        }
+      ],
+      "chat_ids": [
+        "697cba85",
+        "6abae4ea",
+        "69f441ce",
+        "6a106089",
+        "66aafcc3"
+      ],
+      "n_chats": 5
+    },
+    {
+      "name": "Check if normal or safe",
+      "definition": "The participant asks whether something they are experiencing or planning is normal, typical, expected or safe. The help wanted is reassurance or a yes-or-no judgement on their own situation.",
+      "signs": [
+        "\"Is that typical of the medicine\"",
+        "\"Does that make sense?\"",
+        "\"Should you be ...\" after a procedure"
+      ],
+      "closest_other": "Find the cause of symptoms",
+      "how_it_differs": "Here the person wants a judgement that something is normal or okay, not an explanation of what causes it. If they ask both (\"is it typical or could it be X\"), code both.",
+      "examples": [
+        {
+          "chat_id": "69d51123",
+          "quote": "Should you be drinking 3 weeks after endometriosis surgery and about to have your period?"
+        },
+        {
+          "chat_id": "616f347d",
+          "quote": "My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?"
+        },
+        {
+          "chat_id": "6144ea17",
+          "quote": "Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?"
+        }
+      ],
+      "chat_ids": [
+        "69d51123",
+        "616f347d",
+        "6144ea17"
+      ],
+      "n_chats": 3
+    },
+    {
+      "name": "Interpret results or numbers",
+      "definition": "The participant shares a test result, report or health number and wants it read or explained for their case. The help wanted is interpretation of their own data.",
+      "signs": [
+        "Pasted report text such as \"FINDINGS:\"",
+        "A lab value with age and sex, e.g. \"6.0 a1c\"",
+        "Comparing scan results or predicting future results"
+      ],
+      "closest_other": "General health facts",
+      "how_it_differs": "This code needs the person's own result or measurement. A question about normal ranges in general, without their own data, is General health facts.",
+      "examples": [
+        {
+          "chat_id": "66ec5904",
+          "quote": "72 yo woman with 6.0 a1c"
+        },
+        {
+          "chat_id": "6a638cf5",
+          "quote": "FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm."
+        },
+        {
+          "chat_id": "5eec8774",
+          "quote": "I expect my DEXA scan in July of 2027, will resemble my 2021 DEXA scan more than my 2025 one"
+        }
+      ],
+      "chat_ids": [
+        "6a638cf5",
+        "66ec5904",
+        "5eec8774"
+      ],
+      "n_chats": 3
+    },
+    {
+      "name": "Personal diet or supplement plan",
+      "definition": "The participant states wellness, fitness or health goals and asks for tailored recommendations on foods, meals or supplements. The help wanted is a plan or product suggestions fitted to their goals and situation.",
+      "signs": [
+        "States goals such as fat loss, muscle gain or toning",
+        "Lists current diet, supplements, weight or budget",
+        "\"Please recommend specific foods\" / \"Is there a supplement ... that has\""
+      ],
+      "closest_other": "Ways to relieve or manage",
+      "how_it_differs": "This code is goal-driven planning for diet or supplements. If the focus is easing a current symptom or problem, use Ways to relieve or manage.",
+      "examples": [
+        {
+          "chat_id": "69a1ae3c",
+          "quote": "I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals."
+        },
+        {
+          "chat_id": "69fcf529",
+          "quote": "fat loss, muscle gain and increasing testosterone are the main objectives."
+        },
+        {
+          "chat_id": "69f4ca1a",
+          "quote": "Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?"
+        }
+      ],
+      "chat_ids": [
+        "69a1ae3c",
+        "69fcf529",
+        "69f4ca1a"
+      ],
+      "n_chats": 3
+    },
+    {
+      "name": "Help with a writing task",
+      "definition": "The participant asks the AI to work on a piece of text or project, such as summarizing a section, drafting writing or adding material to an ongoing project. The help wanted is a document task rather than a health answer.",
+      "signs": [
+        "\"Briefly summarize the section titled\"",
+        "\"email 3 draft\" followed by long personal text",
+        "A pasted link with \"Let's incorporate this\" into a project"
+      ],
+      "closest_other": "General health facts",
+      "how_it_differs": "Here the AI is asked to process or produce text supplied or named by the person. If the person asks a health question directly, use General health facts.",
+      "examples": [
+        {
+          "chat_id": "69c41892",
+          "quote": "Briefly summarize the section titled: Developmental Stages and Milestones of Child Development"
+        },
+        {
+          "chat_id": "66fd6acd",
+          "quote": "Let's incorporate this to improve the health and wellness project moving forward."
+        },
+        {
+          "chat_id": "6929d658",
+          "quote": "email 3 draft I connected doing something for myself and my ability to speak to my family"
+        }
+      ],
+      "chat_ids": [
+        "69c41892",
+        "6929d658",
+        "66fd6acd"
+      ],
+      "n_chats": 3
+    },
+    {
+      "name": "Describe symptoms without a question",
+      "definition": "The participant states a symptom or health situation with no explicit question, implicitly asking the AI to assess it. The help wanted is an open-ended assessment of the stated problem.",
+      "signs": [
+        "A short symptom phrase, e.g. \"CHEST PAIN WHEN RUNNING\"",
+        "A statement about someone's symptom with no question mark",
+        "Added symptom detail with no explicit request"
+      ],
+      "closest_other": "Find the cause of symptoms",
+      "how_it_differs": "Use this when no question is asked. If the person explicitly asks what is causing it, use Find the cause of symptoms.",
+      "examples": [
+        {
+          "chat_id": "671a8337",
+          "quote": "CHEST PAIN WHEN RUNNING"
+        },
+        {
+          "chat_id": "69600cc8",
+          "quote": "Husband's low back started hurting yesterday"
+        },
+        {
+          "chat_id": "6ac2aee8",
+          "quote": "right side of belly button hurts when using the bathroom"
+        }
+      ],
+      "chat_ids": [
+        "6ac2aee8",
+        "69600cc8",
+        "671a8337",
+        "67d5d3b7",
+        "69fe1811"
+      ],
+      "n_chats": 5
+    }
+  ],
+  "no_code_chats": [
+    {
+      "chat_id": "6a9bb385",
+      "reason": "Only \"nope\"; no request."
+    },
+    {
+      "chat_id": "6ae359af",
+      "reason": "Greeting only (\"Hi meta\"); no request."
+    },
+    {
+      "chat_id": "6a24b2df",
+      "reason": "Greeting/joke with no request."
+    }
+  ],
+  "notes": "9 types (one above the suggested range; the bare-symptom type was kept separate because it recurs in 5 messages with no explicit question). Borderline: 66d8e4c1 (infections smell like onions) coded as General health facts though it may hint at a personal symptom; 66c0f464 asks about the AI's own experience with GLP-1 and was coded as General health facts; 6952e59d (normal weight for a man of given age/height) coded as General health facts, not Interpret results, since it gives no personal measurement; 66aafcc3 continues an earlier exchange about labor and was coded as Deciding about medical care (when to call L&D); 67d5d3b7 answers an AI question and was coded as Describe symptoms without a question; 69fe1811 (hair growth on zepbound) is ambiguous and coded as Describe symptoms; 5eec8774 coded as both Interpret results and Ways to relieve or manage; 6a0206ae (talk about stress and anxiety) coded as Ways to relieve or manage, an emotional-support type appears only once. 6ad69d36 (\"what diabetes\") is very vague. 6929d658 contains detailed personal and family information (religious congregation, family members' jobs, father's injury); 5d7fd2a5 contains family conflict details and travel from northern VA to New York. No names seen beyond [NAME] placeholders."
+}

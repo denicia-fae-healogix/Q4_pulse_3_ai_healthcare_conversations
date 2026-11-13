@@ -21,7 +21,7 @@ body { background: var(--page); color: var(--ink); font-family: var(--font); fon
 main { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; counter-reset: slide; }
 .slide { counter-increment: slide; position: relative; background: var(--card); border-radius: 6px; box-shadow: 0 1px 3px rgba(11,51,115,.08);
   padding: clamp(24px, 5vw, 56px) clamp(18px, 5vw, 60px) clamp(28px, 5vw, 52px); display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 16px; }
-.slide::after { content: counter(slide) " / 10"; position: absolute; right: 18px; bottom: 12px; font-size: 12px; color: var(--muted); letter-spacing: .08em; }
+.slide::after { content: counter(slide) " / %%NSLIDES%%"; position: absolute; right: 18px; bottom: 12px; font-size: 12px; color: var(--muted); letter-spacing: .08em; }
 .s-title { background: var(--navy); color: #fff; }
 .s-title::after { color: #9fb4d6; }
 .brand { font-size: clamp(30px, 6vw, 44px); letter-spacing: .32em; font-weight: 400; text-align: center; margin: 0; }
@@ -128,6 +128,13 @@ h2.white { color: #fff; }
 .waffle.w10 .sq { width: 30px; height: 30px; }
 /* takeaways */
 h2.cyan { font-weight: 700; }
+.prev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 18px; }
+.prev-card { background: #fff; border: 1px solid var(--grid, #e6e9ee); border-top: 6px solid; border-radius: 12px; padding: 16px 18px; }
+.prev-tag { font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: 14px; margin: 0; }
+.prev-who { color: var(--muted); font-size: 13px; margin: 2px 0 10px; }
+.prev-card ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.45; }
+.prev-next { margin: 18px 0 0; font-size: 17px; font-weight: 700; color: var(--dark, #0b3d68); text-align: center; }
+@media (max-width: 720px) { .prev-grid { grid-template-columns: 1fr; } }
 .tks { display: flex; flex-direction: column; gap: 20px; }
 .tk { display: grid; grid-template-columns: minmax(150px, 30%) 1fr; gap: 18px; align-items: start; }
 .tk-lab { color: #fff; border-radius: 999px; padding: 12px 14px; text-align: center; text-transform: uppercase; font-weight: 700; letter-spacing: .04em; font-size: 14px; margin: 0; }

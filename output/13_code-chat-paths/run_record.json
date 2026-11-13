@@ -1,0 +1,43 @@
+{
+  "frozen_codebook": "path_frozen_2026-11-05_v1",
+  "frozen_sha256": {
+    "column1_grouping.md": "60cfaec075c0687852a4d2e3940b1e0ad60ef67178b1534881ae57cee5bdb261",
+    "path_codebook.md": "21bd6cda7ea7d70dd24c0e6cf81a96de0a368df1a9bedc9752ee4bd8cf6eaa8f",
+    "path_codebook_definitions.csv": "5d8e9afb3eb71ecef20ed367a0f687a231a17f0b9712250858f00ff3ee1f0300",
+    "path_codebook_examples.csv": "3b5bf047d900c171a3aa528d768f71a80523a160d6ddbd9292e816ef4d1c215c",
+    "path_decisions_log.csv": "d29ec026a1ca12461468028aa5baa05784684ec08294dd4be54d72f5860cec23",
+    "README.md": "4901e14235afab8ae15c0aa1ec32083a7adb424bebe8ce898173768e1d0a4619"
+  },
+  "verify": "all frozen files match their fingerprints",
+  "coder_seeds": {
+    "1": 13101,
+    "2": 13102,
+    "3": 13103
+  },
+  "n_chats_total": 52,
+  "n_sent_to_coders": 32,
+  "n_auto_stopped_after_one_message": 20,
+  "auto_m5_chat_ids": [
+    "5d7fd2a5",
+    "6144ea17",
+    "663b8ae0",
+    "6658d49a",
+    "66ec5904",
+    "66fd6acd",
+    "67d5d3b7",
+    "6952e59d",
+    "69a1ae3c",
+    "69d51123",
+    "69f441ce",
+    "69fcf529",
+    "69fd05bd",
+    "6a637176",
+    "6a638cf5",
+    "6a983ff0",
+    "6a9f047c",
+    "6abae4ea",
+    "6ac2aee8",
+    "6ad69d36"
+  ],
+  "labels_hidden_from_coders": "step-11 draft labels and step-12 pilot labels"
+}

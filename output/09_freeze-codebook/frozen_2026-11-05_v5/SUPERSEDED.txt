@@ -1,0 +1,1 @@
+SUPERSEDED by frozen_2026-11-09_v6 (2026-11-09, revisions 25-26: request wording anywhere counts; bare personal symptoms and own results are implied requests). The full step-10 coding used this v5 version; the files here are unchanged.

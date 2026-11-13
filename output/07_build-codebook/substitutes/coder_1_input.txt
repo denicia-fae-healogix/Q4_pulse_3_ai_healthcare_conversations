@@ -1,0 +1,14 @@
+=== CHAT 6a24b2df ===
+[CONTEXT ONLY - AI text just before the message, do not code]: okayyy skinny queen project officially in SESSION. We getting skinny without making ourselves miserable. Good food, realistic deficit, meals that actually taste like something, and no sad little lettuce leaf dinners. 😭 Tell me what we're starting with: food/calories, grocery list, meal plan, weight-loss timeline, or the whole damn system?
+[MESSAGE TO CODE]: help me figure out a weight loss plan rn
+=== END CHAT ===
+
+=== CHAT 6ae359af ===
+[CONTEXT ONLY - AI text just before the message, do not code]: Hi! How's your night going in Abuja? What can I help you with?
+[MESSAGE TO CODE]: Tell me about stomach cramps
+=== END CHAT ===
+
+=== CHAT 6a9bb385 ===
+[CONTEXT ONLY - AI text just before the message, do not code]: That's reassuring. With no ongoing cough, wheezing, or shortness of breath, the prominent bronchial arteries sound like something to review at your next routine appointment, rather than an urgent concern. Ask your doctor: "Does this look like a normal anatomical variation, or does it need any follow-up?" The possible tiny liver cysts and spine wear-and-tear changes also appear suitable for routine review. Your coronary artery results remain very good news: no visible plaque or narrowing.
+[MESSAGE TO CODE]: Convert to PDF So, at a high level what did these tests show?
+=== END CHAT ===

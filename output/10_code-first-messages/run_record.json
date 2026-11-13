@@ -1,0 +1,27 @@
+{
+  "frozen_codebook": "output\\09_freeze-codebook\\frozen_2026-11-05_v5",
+  "verify_output": "all frozen files match their fingerprints",
+  "frozen_file_sha256": {
+    "07_topic_list_groups.csv": "5d6c2198799f8cff1bb669016dc71049464124cde2d950e35490e9f8e4bb8c3a",
+    "codebook_revisions.csv": "50cc0ea52bbce3cb04c3c37d595e90d2f07e048e1005044a9207c84956aa7fdb",
+    "README.md": "d0cc1056c47ae63431b01b24fd024f4c97c9a94cd14213a08364ad7f19524be7",
+    "request_codebook.csv": "ee935d3ac035031e2d99dc106d1f45008104653c3e75aea69823243ad5975408",
+    "request_codebook.md": "a03e21980e229a3fa65eb81a3018415e04082fea58705acd1380d61037dc0bc3",
+    "SHA256SUMS.txt": "3f48f387b691f011f78153bd0a7d346132b83fc0e6f552c2f0968a5212e88929",
+    "topic_codebook.csv": "fe7569209ff336f8eb3b25f7ce0b1225bea121d1b506fb19677050343a4fab2b",
+    "topic_codebook.md": "110f9dcee92966b3d78d3eb9f367336aff3cf9dbe6fe9a820120a290ac5d3375",
+    "topic_list_rules.md": "1c9d6a33f5d38bddc11430abe79a79da03f34b76cb98b32f75ffa28c42b39e74"
+  },
+  "codebook_for_coders_sha256": "d3fdbcc589176470e0535b06b1b06e32eb503136dfab45f32e8a72b6b15bd4ba",
+  "input_file": "output\\07_build-codebook\\input\\first_messages.csv",
+  "input_sha256": "d8ce23b6e1584d18cb408d59b6a17ea34851f877034825a113a104f7bdd1e2cc",
+  "n_messages": 52,
+  "n_substituted": 3,
+  "n_with_ai_context": 5,
+  "seeds": {
+    "1": 10101,
+    "2": 10102,
+    "3": 10103
+  },
+  "coder": "Claude Opus 5.5 (fresh, independent subagent per coder; same model as this session)"
+}

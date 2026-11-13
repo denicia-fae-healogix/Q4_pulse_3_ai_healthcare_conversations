@@ -1,0 +1,217 @@
+REQUEST CODEBOOK, PASS 1 INPUT: 53 first messages, shuffled with seed 7201.
+Each block is the FIRST message one survey participant wrote to an AI chatbot about a health question.
+Line breaks were lost in the survey export.
+
+=== CHAT 5d7fd2a5 ===
+[FIRST MESSAGE]: so my daughter has an abscess, it's in the crease of her buttocks (like placed exactly where a perianal abscess occurs)! we saw a general pediatric surgeon and he put on gloves and a finger inside her anal cavity and said based on feeling inside he isn't sure exactly what it is and as surgery is invasive and takes painful recovery he wants to take a minimally invasive approach and have her do sitz baths to see if it'll go away on its own! he recommended doing 2 per day and so far my daughter and ex says it's been getting better! we have a follow up appointment with the surgeon again later this month (mid-month)! what do you think caused this..she started having this she believes in March earlier this year because she remembers there was snow and going sledding (with me)! It has been painful for her and her dad has been observing it since then and when she sits she tells me it hurts or hurts badly! finally this past May it hurt so badly she said she couldn't sit and we went to urgent care! fast forward to now...what do you think caused this...i think it's possibly caused by her dad's neglectful care and not eating well (too many hours working or doing activities or being busy and not eating regularly or often enough or in good amounts or with good nutrition), resting enough, sleeping late, being worn out and exhausted and stressed as she comes back to me looking this way! in other words her immune system is weakened! additionally she takes intense piano with the competitions (practice three to four days a week about 1.5-2 hours or 1 hour each time) and lessons twice a week for two hours each plus advanced academics and intense pressure from my ex-husband to be perfect in everything she does (e.g. an A- is an Asian F and saying no one else made mistakes playing their recital pieces even though this isn't true at all! and going over the piece right after her performance in which we traveled to new york from northern va leaving very early in the morning and her having stage fright and having to wait to play etc) to see what mistakes she made or what she could've done better) or pressuring her so much (e.g. she's rushing eating and appearing overwhelmed or being stretched so thinly that she starting to get sick and then he pressures her to get up early the next morning even - very abusive!)! or sitting a lot, from playing piano all of the time, sitting watching shows on her phone or being online with friends on her phone, doing homework, sitting at school all day. also she complained about feeling hot sleeping at my house and the temperature being too hot for her to sleep well and falling asleep at school. this is during the hot summer months and i don't think this contributed to things honestly. what do you think... my ex also said it was from PE in school and the exercises there... i don't think that's it either... what do you think is the cause of her abscess... …
+=== END CHAT ===
+
+=== CHAT 663b8ae0 ===
+[FIRST MESSAGE]: symptoms of osteoarthrits
+=== END CHAT ===
+
+=== CHAT 6a106089 ===
+[FIRST MESSAGE]: My eye doctor is sending me to a retina specialist, the appt is supposed to take 3-4 hours what will they do
+=== END CHAT ===
+
+=== CHAT 6a983ff0 ===
+[FIRST MESSAGE]: Does metacarpal bossing grow
+=== END CHAT ===
+
+=== CHAT 66d9e5be ===
+[FIRST MESSAGE]: How to heal neuropathy pain in leg
+=== END CHAT ===
+
+=== CHAT 5eec8774 ===
+[FIRST MESSAGE]: Claude, I need to log for supper and meds very soon as it is almost 4:30 AM. One question before I go, you have seen my last two DEXA scans, now that my doctor has taken me off of my Raloxifene and I have been off of Prolia for about two years now , I expect my DEXA scan in July of 2027, will resemble my 2021 DEXA scan more than my 2025 one, as the latter was done when I had been off of Prolia for less than six months. Given how porous my bones are (so much so, that it is very difficult to detect hairline fractures on x-rays), what can I do to even slightly decrease my risk of new fractures at this point (either spontaneous fractures or from injuries)? I had a scare earlier when I was doing dishes and the whole part of the kitchen sink that the water comes out of detached itself and hit my hand. I am so grateful that I ended up with only a small bruise as it could easily have fractured my hand. In other words, no matter how careful I try to be, things just happen sometimes ...
+=== END CHAT ===
+
+=== CHAT 6acb95ac ===
+[FIRST MESSAGE]: What does it mean if I have eczema dry spots on my skin but they are only there for a few days or weeks and then randomly disappear for a period of time?
+=== END CHAT ===
+
+=== CHAT 69fd05bd ===
+[FIRST MESSAGE]: I have a headache, what should I take?
+=== END CHAT ===
+
+=== CHAT 6952e59d ===
+[FIRST MESSAGE]: What is the normal weight for a male who is 28 and five feet nine inches tall?
+=== END CHAT ===
+
+=== CHAT 5f47f200 ===
+[FIRST MESSAGE]: Why is the top of my foot hurting
+=== END CHAT ===
+
+=== CHAT 6abae4ea ===
+[FIRST MESSAGE]: Would an endocrinologist benefit me from learning why my hormones are our of whack?
+=== END CHAT ===
+
+=== CHAT 69d51123 ===
+[FIRST MESSAGE]: Should you be drinking 3 weeks after endometriosis surgery and about to have your period?
+=== END CHAT ===
+
+=== CHAT 69fff128 ===
+[FIRST MESSAGE]: what kind of knee injury does this sound like: no real problem running or walking. hurts to bend especially in deep squat. ok will in the squat position itself (deep), but hurts to stands up, especially when about half way between squat and standing. some weakness, can push through pain and stops hurting when standing again. worse in morning
+=== END CHAT ===
+
+=== CHAT 6a0206ae ===
+[FIRST MESSAGE]: I would like to talk about what's stressing me out and why I'm anxious and what I can do to give myself a better quality of life. I'm here and completely ready to listen.
+=== END CHAT ===
+
+=== CHAT 69ab73e1 ===
+[FIRST MESSAGE]: chat i have a really bad tummy ache, what can i do to help
+=== END CHAT ===
+
+=== CHAT 66fd6acd ===
+[FIRST MESSAGE]: https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this to improve the health and wellness project moving forward.
+=== END CHAT ===
+
+=== CHAT 6a638cf5 ===
+[FIRST MESSAGE]: FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm. The renal cortex is normal in thickness and normal in echogenicity. No hydronephrosis is seen. No dilated ureter is seen. 0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts, the larger is in the superior pole and measures 5.6 x 4.9 x 4.7 cm and the smaller is subcentimeter. The left kidney is measured at 11.4 x 5.5 x 5.6 cm. The renal cortex is normal in thickness and normal in echogenicity. No renal lesion, shadowing stone, or hydronephrosis is seen. No dilated ureter is seen. Images of the urinary bladder demonstrate no abnormalities. The visualized liver is increased in echogenicity.
+=== END CHAT ===
+
+=== CHAT 6ac2aee8 ===
+[FIRST MESSAGE]: right side of belly button hurts when using the bathroom
+=== END CHAT ===
+
+=== CHAT 697cba85 ===
+[FIRST MESSAGE]: I've been dealing with some bad stomach aches for the past few weeks. Should I see a medical specialist about this or try to wait it out?
+=== END CHAT ===
+
+=== CHAT 672c1bfa ===
+[FIRST MESSAGE]: My scalp is flaking and scabbing…what do I do?
+=== END CHAT ===
+
+=== CHAT 695be8c6 ===
+[FIRST MESSAGE]: went to doctor today with tennis elbow, injected two shots in my butt. Im feeling very bleh could it be that or flu?
+=== END CHAT ===
+
+=== CHAT 69a1ae3c ===
+[FIRST MESSAGE]: I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals. I am a 24-year-old woman who weighs around 146 pounds and has recently started going to the gym more consistently. My goals are to tone my body, grow my glutes, strengthen my muscles, and reduce belly fat while maintaining a healthy, balanced diet. I want to learn which foods are high in protein and other important nutrients, how much protein I should aim to eat daily, and how to incorporate more fruits, vegetables, healthy fats, and fiber into my meals. I am also looking for affordable food options because I am a graduate student on a budget, so I need meals that are simple to prepare and fit into my busy schedule. I enjoy variety and do not want to eat the same meals every day, and I am not a fan of overnight oats. Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals. I would also like practical grocery shopping tips, affordable ingredient substitutions, and advice on how to maintain these eating habits consistently without feeling restricted. Please make your recommendations realistic, nutritious, and sustainable for my lifestyle.
+=== END CHAT ===
+
+=== CHAT 6a10664c ===
+[FIRST MESSAGE]: I get this time time. Could it be gastritis? Tell me what causes gastritis and how long it can last.
+=== END CHAT ===
+
+=== CHAT 664639e0 ===
+[FIRST MESSAGE]: Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?
+=== END CHAT ===
+
+=== CHAT 6929d658 ===
+[FIRST MESSAGE]: email 3 draft I connected doing something for myself and my ability to speak to my family because I've noticed that a lot of my struggles in the house recently are because I do take care of something I need to get done myself but still don't want to admit to being busy, so I don't really act on anything that's said to me and just go the rest of the day without speaking. Other times, I do handle what I'm asked to do but feel stuck doing more than I agreed to and unable to say I have something else to get done, so I still go the rest of the day without speaking. I just went a whole week without saying anything to my family. It started out to convey a message again; I was assigned to fill out an audit report for the congregation and I knew that I would have a much harder time doing this than I have in the past because of my sister and nephew being here. I wanted my silence to let my sister know that I have something to do so don't expect me to help with the baby because I'm not going to. That became a feeling that speaking is impossible, and after that, it was just hard to start speaking again after going so long without doing so. I think this did help me complete the task, but I still felt like I was bothered by my sister and like I didn't have any personal space, as well as not liking hearing complaints about not helping with the baby or them talking about why I wasn't speaking and what they thought I should do because of that. I slowly started speaking to my family again beginning with when we went to my grandma's house on the regularly scheduled night and I don't think my grandma and uncle knew that I haven't been speaking at all, so I responded over there and then the next day I spoke more in the house. I was still speaking to those who share my faith before and after religious meetings and while out in the ministry, as well as commenting at meetings during this time. When I want to say something but it's hard, I've noticed that I often draw an arrow in my head from me to the person I want to speak to, which I've done for a long time. With immediate family, I also might randomly say a couple keywords from what I want to tell them that either leads into a more indirect way of saying it, or gives me the chance to explain why I said those words later on when I actually feel like talking. I haven't noticed any more times someone's behavior doesn't make sense to me in recent situations, only those where it's clear that something I said wasn't listened or paid attention to, which still leaves me feeling like finding my voice isn't worth it, especially when I also hear my sister complain that my mom doesn't listen to her and then hearing my sister ask my mom something that she already answered. Concerning my dad offering to switch cars so I can have the one I drive most often, the only other hypothesis I thought of here is that it just may be in his mind more since he drives that car a lot now as well, upon starting a new delivery job because his leave of absence paperwork was never filled out properly after his injury. I don't think it has to do with him just being available on that day, and, in the past, we would often visit my mom at her workplace, sometimes when my dad may have dropped her off at work and then we would leave her a car once I was done with it. So it still makes me think he really doesn't want me driving another vehicle or thinks I'm scared to. This subject makes me uncomfortable; I wanted to just get off of that topic as quickly as possible when he brought it up, but I also think I would've had to still be specifically told I could drive the other vehicle in this case to make sure that no one else needed it or I would just have not went again. …
+=== END CHAT ===
+
+=== CHAT 616f347d ===
+[FIRST MESSAGE]: Sometimes I'm not seeing double with my glasses on but sometimes I am. My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?
+=== END CHAT ===
+
+=== CHAT 6785ddfb ===
+[FIRST MESSAGE]: How ndo I know if i have Hives or not Hives are a type of skin reaction that can be very itchy and uncomfortable.
+=== END CHAT ===
+
+=== CHAT 69f441ce ===
+[FIRST MESSAGE]: Percentage of people need to get 2nd eye's cataract surgery after doing the first one. Is it a must?
+=== END CHAT ===
+
+=== CHAT 5f491a49 ===
+[FIRST MESSAGE]: What is sleep apnea? I think I may have it. I find myself not breathing for periods in the middle of the night
+=== END CHAT ===
+
+=== CHAT 69fb8bf7 ===
+[FIRST MESSAGE]: Dealing with knee pain after challenging travel with lots of walking and stair climbing, what can i do to alleviate knee pain and get back to normal?
+=== END CHAT ===
+
+=== CHAT 6658d49a ===
+[FIRST MESSAGE]: please list every disease where fistula-in-anu is a symptom
+=== END CHAT ===
+
+=== CHAT 69f4ca1a ===
+[FIRST MESSAGE]: Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol? I want to deal with my pcos, anemia, pmdd, and high cholesterol
+=== END CHAT ===
+
+=== CHAT 6a637176 ===
+[FIRST MESSAGE]: What if hand foot and mouth isn't treated
+=== END CHAT ===
+
+=== CHAT 67d5d3b7 ===
+[CONTEXT ONLY - AI text that came before the participant's first message. Do not code this.]: Let me ask you a few questions about your back pain. I can help you determine how concerning it sounds. Where is the pain?
+[FIRST MESSAGE]: I'm 39 and it's getting a little hard to deal. Sometimes it feel like it radiates to my neck Pain that wakes you up at night
+=== END CHAT ===
+
+=== CHAT 6a9bb385 ===
+[FIRST MESSAGE]: nope
+=== END CHAT ===
+
+=== CHAT 66aafcc3 ===
+[CONTEXT ONLY - AI text that came before the participant's first message. Do not code this.]: That can happen, especially with early/latent labor. Contractions can slow down or stop and then restart later. Losing the mucus plug and having that strong vaginal pressure still suggests your cervix may be changing, but it doesn't tell us exactly when active labor will begin. Since you're 39 weeks and scheduled for induction today, if the contractions have stopped but you're otherwise feeling okay: Keep monitoring baby's movement. Rest and drink some fluids. You don't need to force walking or other things to restart contractions. Call L&D if you still haven't heard from them, especially since they were waiting for a bed. You can simply ask whether you're still on the induction list and whether they have an estimated timeframe. If contractions return and become regular again (especially around every 3–5 minutes), call them back and let them know. And if you get constant severe pressure/urge to push, your water breaks, heavy bleeding, or decreased fetal movement, don't wait for the induction call. The fact that the contractions stopped doesn't mean today's induction won't happen. They can still call you when a bed becomes available.
+[FIRST MESSAGE]: So about 2 more hours and a half that I can call
+=== END CHAT ===
+
+=== CHAT 69600cc8 ===
+[FIRST MESSAGE]: Husband's low back started hurting yesterday
+=== END CHAT ===
+
+=== CHAT 63e55f08 ===
+[FIRST MESSAGE]: I've been feeling unusually tired lately, even after getting a full night's sleep. Sometimes I wake up feeling like I haven't rested at all. What could be causing this?
+=== END CHAT ===
+
+=== CHAT 66c0f464 ===
+[FIRST MESSAGE]: What impact (if any) has taking a GLP-1A medication had on your physical health?
+=== END CHAT ===
+
+=== CHAT 69fcf529 ===
+[FIRST MESSAGE]: fat loss, muscle gain and increasing testosterone are the main objectives. i currently take vitamin d3, fenugreek and ashwagandha each day but often have forgotten to take the d3 and fenugreek recently, just ashwagandha at bedtime. i might consider replacing the vitamin d3 with something else or keep it just in case there are periods of time where I might be inside most of the day. i eat a big meal before workouts, and the table salt m ight not be necessary, i also consume within the range provided above in terms of grams/lb of body weight through beef, pork, and chicken as well as black and pinto beans and Greek yoghurt so whey protein might not offer much benefit. i agree about supplements being more hype than function and have long suspected this to be the case. I also drink around 100 oz of water per day as a 145 lb male who also fasts for about 18 hours each night, but do not follow a keto diet due to not believing the benefits outweigh the drawbacks
+=== END CHAT ===
+
+=== CHAT 6ae359af ===
+[FIRST MESSAGE]: Hi meta
+=== END CHAT ===
+
+=== CHAT 66ec5904 ===
+[FIRST MESSAGE]: 72 yo woman with 6.0 a1c
+=== END CHAT ===
+
+=== CHAT 6144ea17 ===
+[FIRST MESSAGE]: My son started taking gaunfacine about a month ago and four days ago, upped the dose to 2mg. Ive noticed while he falls asleep easier and faster, he's been waking a lot in the night and he never used to do that. 1. Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin? And 2. If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?
+=== END CHAT ===
+
+=== CHAT 6a24b2df ===
+[FIRST MESSAGE]: hi we're getting skinny LMFAOOOO HI 😭😭
+=== END CHAT ===
+
+=== CHAT 66d8e4c1 ===
+[FIRST MESSAGE]: Hey, um, this is kind of a weird question, but can infections of some sort smell like onions
+=== END CHAT ===
+
+=== CHAT 6a9f047c ===
+[FIRST MESSAGE]: I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem
+=== END CHAT ===
+
+=== CHAT 6712af54 ===
+[FIRST MESSAGE]: Generally speaking, can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them? What are some causes for the allergy of said antibiotics? Maybe fill me in on some aspects I have not thought about relating to this as well.
+=== END CHAT ===
+
+=== CHAT 69c41892 ===
+[FIRST MESSAGE]: Briefly summarize the section titled: Developmental Stages and Milestones of Child Development
+=== END CHAT ===
+
+=== CHAT 671a8337 ===
+[FIRST MESSAGE]: CHEST PAIN WHEN RUNNING
+=== END CHAT ===
+
+=== CHAT 69fe1811 ===
+[FIRST MESSAGE]: baby hair coming in after 3 months on zepbound October 16, 2026
+=== END CHAT ===
+
+=== CHAT 5aeeb490 ===
+[FIRST MESSAGE]: i developed a sharp pain in my neck that raidates to my shoulders suddenly can this be a symptom of anything else or did I just get some isolated issue
+=== END CHAT ===
+
+=== CHAT 6a21a961 ===
+[FIRST MESSAGE]: Can an allergic reaction appear slowly
+=== END CHAT ===
+
+=== CHAT 6ad69d36 ===
+[FIRST MESSAGE]: what diabetes
+=== END CHAT ===

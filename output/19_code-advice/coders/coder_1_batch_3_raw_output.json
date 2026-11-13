@@ -1,0 +1,634 @@
+{
+  "coder": 1,
+  "batch": 3,
+  "seed": 19101,
+  "n_chats_coded": 16,
+  "codings": [
+    {
+      "chat_id": "66c0f464",
+      "rung": {
+        "code": "L0",
+        "turn": null,
+        "evidence": "",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fcf529",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Whole food sources provide better micronutrient profiles and satiety anyway.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI only agrees with the person's own diet plan (whey unnecessary); the L2 close call says agreeing counts if it gives a reason, but it could also be read as L1 information."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a24b2df",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_4",
+        "evidence": "Go at a comfortable pace. You can split walks into shorter sessions, and increase gradually when it feels easier.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6658d49a",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "~90% of fistula-in-anu cases are cryptoglandular (idiopathic)",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69fe1811",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Eat enough daily protein to give your body the building blocks it needs for hair structure.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "consider asking your doctor for a simple blood test if you suspect a deficiency",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "6a21a961",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_4",
+        "evidence": "You can ask your doctor or pharmacist if an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "diphenhydramine",
+        "loratadine"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_4",
+          "evidence": "an over-the-counter antihistamine (like Benadryl or Claritin) is appropriate to help with the itching",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Contact your prescribing doctor or pharmacist immediately.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_3",
+          "evidence": "Do not take the next dose until you have spoken with a healthcare professional.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "66ec5904",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Nutrition: Emphasize a balanced diet rich in vegetables, lean proteins, healthy fats, and high-fiber complex carbohydrates",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "For medical advice or diagnosis, consult a professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "This is for informational purposes only.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "5f491a49",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_2",
+        "evidence": "Try sleeping on your side rather than your back.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "I'd recommend scheduling an appointment with your primary care physician and specifically requesting an evaluation for sleep apnea.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "Avoid sedatives unless prescribed and medically necessary.",
+          "confidence": "medium",
+          "unclear": "unclear because the warning is about a general medicine class (sedatives) rather than a named medicine; S-warning says ANY medicine, so I coded it true."
+        }
+      }
+    },
+    {
+      "chat_id": "5aeeb490",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_7",
+        "evidence": "Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it, following the package directions.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "acetaminophen",
+        "ibuprofen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "Consider Tylenol (acetaminophen), or ibuprofen",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "I'd recommend being examined today if the headache is unusual for you",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_7",
+          "evidence": "or ibuprofen if you can safely take it, following the package directions.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "69600cc8",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Gentle walking — 5–10 minutes at a time. Walking is the #1 thing that reduces low‑back pain in the first 48 hours.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "it's important to consult a qualified healthcare professional.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69d51123",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "It is generally best to avoid alcohol or keep it to a strict minimum in this situation.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "combining them with alcohol can cause severe stomach irritation, internal bleeding, or liver stress.",
+          "confidence": "high",
+          "unclear": ""
+        }
+      }
+    },
+    {
+      "chat_id": "66aafcc3",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_0",
+        "evidence": "Rest and drink some fluids.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_0",
+          "evidence": "Call L&D if you still haven't heard from them, especially since they were waiting for a bed.",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a106089",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "They'll put drops in your eyes to get a much better view of the retina.",
+        "confidence": "medium",
+        "unclear": "unclear because the AI also gave practical tips (bring sunglasses, have someone drive you) that might be read as L2 self-care, but they concern logistics of the visit, which L1 covers ('what a visit will be like')."
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_2",
+          "evidence": "When you arrive, describe it exactly the way you described it to me:",
+          "confidence": "medium",
+          "unclear": "unclear because the AI supports an existing referral and tells the person what to tell the specialist rather than newly telling them to see a professional; S-doctor covers telling them to ask/check with a professional."
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6a637176",
+      "rung": {
+        "code": "L4",
+        "turn": "ai_1",
+        "evidence": "Over-the-counter pain relievers like ibuprofen or acetaminophen can also reduce throat pain enough to allow drinking.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [
+        "ibuprofen",
+        "acetaminophen"
+      ],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Contact a healthcare provider immediately if you or your child show signs of dehydration",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "6ac2aee8",
+      "rung": {
+        "code": "L1",
+        "turn": "ai_1",
+        "evidence": "Constipation or straining: Pushing during a bowel movement can cause cramping or muscle pain in the abdomen.",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": true,
+          "turn": "ai_1",
+          "evidence": "Seek urgent medical care today if:",
+          "confidence": "high",
+          "unclear": ""
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    },
+    {
+      "chat_id": "69a1ae3c",
+      "rung": {
+        "code": "L2",
+        "turn": "ai_1",
+        "evidence": "Build meals around affordable protein, add fiber-rich foods, eat enough to fuel your workouts",
+        "confidence": "high",
+        "unclear": ""
+      },
+      "medicines_suggested": [],
+      "types_suggested": [],
+      "flags": {
+        "F-brand": {
+          "value": false
+        },
+        "F-Rx": {
+          "value": false
+        },
+        "F-supplement": {
+          "value": false
+        },
+        "F-vaccine": {
+          "value": false
+        }
+      },
+      "safety": {
+        "S-doctor": {
+          "value": false
+        },
+        "S-warning": {
+          "value": false
+        }
+      }
+    }
+  ],
+  "codebook_feedback": "(1) 69fe1811: 'maintaining healthy levels of iron, zinc, and vitamin D' with a blood-test suggestion is ambiguous for F-supplement (no explicit supplement suggestion); coded false. (2) 6a21a961: when a type is suggested with brand examples ('an over-the-counter antihistamine (like Benadryl or Claritin)'), the codebook does not say whether the type also goes in the types list; I listed only the specific medicines. (3) 6a106089: practical visit tips (sunglasses, someone to drive) are not clearly placed between L1 and L2. (4) 69fcf529: agreeing that whey protein is unnecessary - L2 'agreeing with the person's plan' vs L1 is a close call. (5) 6658d49a: treatments in a diagnostic flowchart (biologics, antibiotics) were treated as information, and clinical statements ('require evaluation') were not coded as S-doctor because they are not directed at the person; the codebook could address reference-style answers."
+}

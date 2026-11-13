@@ -1,0 +1,45 @@
+Reading Q4_3_conversation_coding_sheet.xlsx
+  300 rows, 58 IDs, 12 blank IDs, 26 blank turn_labels
+
+Applying corrections
+  Full paste for 6a0206ae4926b3707e0947b5 rebuilt from convo_text + _cont + _cont_2 (54,010 chars)
+  Corrections 1-11 applied; 304 rows before merging
+
+Reading the survey export and renaming columns
+  export-17197355.xlsx: 61 rows x 122 columns; dictionary has 122 entries
+  122 columns renamed with the dictionary; 0 not in the dictionary (snake_case):
+  Dropped export row: Response ID 34, prolific_pid=nan, paste starts 'QWEQRWER QQQQQQQQQQQQQQQQQQQQQ'
+  60 participants kept
+
+Merging same-speaker rows and renumbering (correction 12)
+  304 rows -> 302 turns for 60 participants
+
+Exclusions (05_exclusions.csv): 1 participant(s) flagged exclude = TRUE, 12 turns kept but flagged; 59 participants remain for analysis
+
+Checking cell lengths (Excel limit 32,767 characters)
+  Split column convo_text into ['convo_text', 'convo_text_cont'] (longest value 54,010 chars)
+  Split column convo_text into ['convo_text', 'convo_text_cont'] (longest value 54,010 chars)
+
+Checks
+  wide: 60 participants; all have turns; no blank IDs, speakers or labels
+  wide per-turn n_words/n_chars match long for all 302 turns; totals add up
+  changes_log rows per correction: #1: 6, #2: 4, #3: 1, #4: 1, #5: 12, #6: 1, #7: 1, #8: 1, #9: 1, #10: 1, #11: 1, #12: 54, #13: 1
+  Text found in order in the raw paste: 298/302 turns (98.7%), 96.6% of characters; 57/60 participants fully matched
+  Turns not found word-for-word (see coverage_by_turn.csv):
+    5eec8774ff59de0009913a65 ai_3 (rows 7) whole text found elsewhere in paste: True | first 60 chars found: True | that I'm so sorry, Doreen. That is a big jump from what you were first told, and…
+    6a0206ae4926b3707e0947b5 ai_4 (rows 46) whole text found elsewhere in paste: True | first 60 chars found: True | . That is an incredible amount of heavy, high-needs dynamic for one house. You'r…
+    6a0206ae4926b3707e0947b5 ai_9 (rows 54) whole text found elsewhere in paste: False | first 60 chars found: True | That context completes the entire puzzle. You aren't just dealing with typical c…
+    66fd6acd36eb80a1ea468aed ai_1 (rows 78) whole text found elsewhere in paste: True | first 60 chars found: True | . I've incorporated this into the Health & Wellness project as a new Post-Sleep-…
+
+Checking the CSV files against the workbook
+  05_Q4_3_conversations_long.csv: 302 rows x 134 columns; matches the long sheet (sheet's 1 _cont column(s) rejoined)
+  05_Q4_3_conversations_wide.csv: 60 rows x 265 columns; matches the wide sheet (sheet's 1 _cont column(s) rejoined)
+  6a0206ae convo_text in CSV: 54,010 characters in one cell
+
+Wrote C:\Users\DeniciaAragon\OneDrive - Healogix\Q4_3_Pulse\data\processed\05_Q4_3_conversations_corrected.xlsx
+  long          302 rows x 135 columns
+  wide           60 rows x 266 columns
+  codebook       39 rows x   6 columns
+  changes_log    85 rows x   8 columns
+Wrote 05_Q4_3_conversations_long.csv (302 x 134) and 05_Q4_3_conversations_wide.csv (60 x 265)
+Check files in C:\Users\DeniciaAragon\OneDrive - Healogix\Q4_3_Pulse\output\05_build-conversation-dataset
