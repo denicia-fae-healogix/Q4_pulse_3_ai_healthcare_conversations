@@ -150,3 +150,64 @@ These are built in the 07 and 08a/08b scripts from the codes and survey answers 
 | Chatbot (07, survey) | ChatGPT / other chatbot ("can't remember" left out) | 07 |
 
 Group comparisons are tested only when every group has at least 5 people. Benjamini-Hochberg correction is applied across all 16 segments within each outcome (07) or across the 20 question-by-response pairings (3A referral slide).
+
+---
+
+## 7. Goal codes (`claude_llm_goals_v1`)
+
+Coded from the survey question C3 (`convo_goal_oe`): "When starting the conversation you just provided, what was your goal?" File: `09_Q4_3_goals_coded.csv` (pid plus codes, no text). Coded 13 Nov 2026 for all 60 people who answered.
+
+**Standing rule: code what the person wrote in their goal answer, not what they later typed in the chat.** The chat was read only once (pid 45) to tell what "drink" referred to. Goal types are multi-label: one person can have several.
+
+| Variable | Type | Definition |
+|---|---|---|
+| `goal_cause` | 0/1 | Wanted to find out what is wrong, what is causing it, whether it is normal or serious, or what a test result means |
+| `goal_treatment` | 0/1 | Wanted to know how to treat, relieve, manage or improve something (home remedies, a plan, what to take when no drug is named, supplements) |
+| `goal_care` | 0/1 | Wanted to decide whether, when or where to get care (doctor, ER, urgent care, specialist, a surgery decision, where to get a vaccine) or what a visit involves |
+| `goal_condition_info` | 0/1 | Wanted general knowledge about a condition or topic (how common, who it affects, outlook), not about their own symptoms specifically |
+| `goal_med` | 0/1 | Asked about a specific medication or which OTC product to take. Drug classes alone, vitamins, supplements and vaccines do not count (same rules as section 3) |
+| `goal_prepare_visit` | 0/1 | Wanted to get ready for a planned visit or conversation with a provider (options to discuss, organizing thoughts for a therapist, what to expect) |
+| `goal_reassurance` | 0/1 | Wanted reassurance, validation, or to calm down ("so I know it isn't a health scare") |
+| `goal_for_other` | 0/1 | The goal is about a specific other person (parent, child, partner, friend) |
+| `goal_ai_easier` | 0/1 | Said, unprompted, that AI was quicker, cheaper, easier or less embarrassing than a search or a doctor |
+| `goal_worry` | 0/1 | States worry or concern in their own words |
+| `goal_health` | 0/1 | 1 = a health goal. 0 = not health related (pid 57, a school essay). Every goal chart uses `goal_health = 1` (n = 59) |
+| `goal_primary` | category | The one goal the person led with: `cause`, `treatment`, `care`, `medication`, `condition_info`, `reassurance`, `prepare_visit`, `other` (vague or not a health goal) |
+| `goal_n_types` | count | How many of the first seven goal types apply (0 to 7) |
+| `goal_coder_confidence`, `goal_coder_note` | text | high / medium / low, and a short note on borderline calls (no quotes) |
+| `goal_coding_source` | text | `claude_llm_goals_v1` |
+
+**Was the goal met?** Coded from D2 (`convo_goal_met_oe`), asked after the chat, for all 60.
+
+| Variable | Type | Definition |
+|---|---|---|
+| `goal_met` | category | `Yes` (says it was met, including "mostly" and "for the most part"), `Partly` (hedged: "partially", "sort of", "in a sense", ongoing, or met only some parts), `No` ("not really", "no", "not at all") |
+| `goal_met_reassured` | 0/1 | Says they felt reassured, relieved, calmer, more confident or supported |
+| `goal_met_professional` | 0/1 | Brings a doctor or other provider into what came next: saw one, plans to, will if it gets worse, or a doctor confirmed what the AI said |
+| `goal_met_acted` | 0/1 | Did, or plans to do, something concrete based on the chat (bought or took something, went to the ER, sent an update, shared the advice) |
+| `goal_met_doubt` | 0/1 | Notes a limit of the AI: no clear answer, too much information, it always agrees, or not enough on its own |
+| `goal_met_coder_confidence`, `goal_met_coder_note` | text | Confidence and a short note on borderline calls |
+
+The four flags only count what people volunteered, so they are floors. 09b writes `07_Q4_3_goal-met_coding.xlsx` from `goal_met` if that workbook does not exist yet, so the 07 report can use it.
+
+**Check.** The 09b report runs a word-list cross-check on each code and lists the pids where the word list and the coder disagree. After the first review, three codes were changed (pid 17 care, pids 29 and 59 worry).
+
+**Goal met counts (59 health goals).** Yes 50 (85%), Partly 5 (8%), No 4 (7%).
+
+**Bases in 09b.** 59 health goals; 50 of them with a usable chat and their own messages (goal vs. what they asked); 56 with a usable chat (goal vs. how the AI answered); those with complete PANAS (goals and feelings).
+
+---
+
+## 8. Medications asked about vs. recommended (`claude_llm_meds_v1`)
+
+File: `10_Q4_3_med_asked_vs_recommended.csv` (pid plus the columns below, no conversation text). Covers the 50 usable chats with the participant's own messages. Built for the Part 3A slide "Most AI drug recommendations answered a symptom, not a medication question". The 08a report checks these lists against the yes/no codes.
+
+| Variable | Type | Definition |
+|---|---|---|
+| `human_meds_asked` | text | The drugs the participant named or asked about, generic name with brand in brackets, "; "-separated. Filled exactly when `human_asks_med = 1` (6 people) |
+| `ai_recommended_meds` | text | The drugs the AI suggested the person take, try, or ask a doctor about, read from the AI's text. Filled exactly when `ai_recommends_med = 1` (11 people). Drugs the AI only named or explained are in `ai_meds_named`, not here |
+| `med_symptom` | text | A short symptom label (headache, knee pain...) for the 8 people who got a recommendation without asking about a drug |
+| `med_group` | category | `asked_and_recommended` (3), `asked_only` (3), `recommended_unasked` (8), `neither` (36) |
+| `med_coding_source` | text | `claude_llm_meds_v1` |
+
+10 of the 11 recommendations were over-the-counter (the exception: zoledronic acid, suggested as a question for the doctor).

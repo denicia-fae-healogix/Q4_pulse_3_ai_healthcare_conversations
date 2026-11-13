@@ -1,0 +1,635 @@
+---
+title: "Q4 Pulse 3: What Goals Did People Bring to AI?"
+subtitle: "Codes from the C3 goal question: what people set out to do, how that compares with what they asked, how the AI answered, and how they felt afterward"
+author: "Denicia Aragon Espinosa"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+params:
+  project_root: "C:/path/to/Q4_3_Pulse"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10, fig.height = 7, dpi = 110)
+```
+
+```{r packages, include = FALSE}
+pkgs <- c("dplyr", "tidyr", "readr", "stringr", "ggplot2", "knitr", "openxlsx", "plotly", "htmltools", "jsonlite")
+to_install <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+```
+
+```{r paths, include = FALSE}
+project_root <- params$project_root
+proj <- function(...) file.path(project_root, ...)
+if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+script_name <- "09b_Q4_3_goals"
+out_dir <- proj("output", script_name)
+fig_dir <- file.path(out_dir, "figures")
+dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
+
+# ---- Inputs ----
+# The two goal files are looked for in data/processed, then in the repo folder's data/processed
+find_file <- function(name) { c1 <- proj("data", "processed", name); c2 <- proj("Q4_pulse_3_ai_healthcare_conversations", "data", "processed", name)
+  if (file.exists(c1)) c1 else if (file.exists(c2)) c2 else c1 }
+in_goal_codes <- find_file("09_Q4_3_goals_coded.csv")                            # goal codes, incl. goal met (one row per pid, no text)
+in_goal_text  <- find_file("05_Q4_3_conversations_wide_deid_only_pid_goals.csv")  # pid + C3 goal and D2 goal-met text (hover examples and keyword check)
+in_05    <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")                    # PANAS
+in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v2.csv")           # conversation codes (v1 + v2)
+in_link  <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv")          # pid -> Prolific ID (read in memory only)
+in_ids   <- proj("data", "processed", "00_Q4_3_renamed.csv")                                     # response_id + Prolific ID
+for (f in c(in_goal_codes, in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", f)
+if (!file.exists(in_goal_text)) in_goal_text <- find_file("09_Q4_3_goals_deid_pid_only.csv")   # the file 09a writes
+HAS_TEXT <- file.exists(in_goal_text)   # without it the report still runs; hovers show numbers only and the keyword check is skipped
+```
+
+```{r settings, include = FALSE}
+MIN_GROUP_N <- 5     # a comparison is tested only when every group has at least this many people
+CALMER_CUT  <- 5     # a drop of at least this many negative-affect points counts as "calmer" (same as 07, 08a, 08b)
+HOVER_EXAMPLES <- 3; HOVER_CHARS <- 200; PLOT_W <- 900
+set.seed(2026)       # the same hover examples every knit
+
+DARK <- "#0b3d68"; LIGHT <- "#29abe2"; PALE <- "#9DC3E6"; MID <- "#4A86C5"
+NEG  <- "#E3A26F"; BAR  <- "#BDBDBD"; GRID <- "#E6E9EE"; INK <- "#1c2430"; MUTED <- "#5f6b7a"
+
+PA_ITEMS <- c("interested", "excited", "strong", "enthusiastic", "proud", "alert", "inspired", "determined", "attentive", "active")
+NA_ITEMS <- c("distressed", "upset", "guilty", "scared", "hostile", "irritable", "ashamed", "nervous", "jittery", "afraid")
+
+# The seven goal types (multi-label: one person can have several). See section 7 of Q4_3_conversation_codebook.md
+GOAL_LABELS <- c(goal_cause          = "Find out what is wrong, or whether it is serious",
+                 goal_treatment      = "Find out how to treat or manage it",
+                 goal_care           = "Decide whether or where to get care",
+                 goal_condition_info = "Learn about a condition in general",
+                 goal_med            = "Ask about a specific medication",
+                 goal_prepare_visit  = "Prepare for a visit or a talk with a provider",
+                 goal_reassurance    = "Get reassurance or validation")
+EXTRA_LABELS <- c(goal_for_other = "The goal was about someone else",
+                  goal_ai_easier = "Said AI was quicker, cheaper or easier than the alternative",
+                  goal_worry     = "Said they were worried or concerned")
+PRIMARY_LABELS <- c(cause = "Find out what is wrong", treatment = "Treat or manage it", care = "Decide about care",
+                    medication = "A specific medication", condition_info = "Learn about a condition",
+                    reassurance = "Reassurance", prepare_visit = "Prepare for a visit", other = "Other or unclear")
+# Was the goal met? (D2, convo_goal_met_oe), coded Yes / Partly / No, plus four flags. Codebook section 7
+MET_LEVELS <- c("Yes", "Partly", "No")
+MET_COLORS <- c(Yes = DARK, Partly = PALE, No = NEG)
+MET_FLAGS <- c(goal_met_reassured = "Felt reassured, relieved or more confident",
+               goal_met_professional = "Mentioned a doctor in what came next (saw, plans to, will if worse, or a doctor confirmed the AI)",
+               goal_met_acted = "Did, or plans to do, something the AI suggested",
+               goal_met_doubt = "Noted a limit of the AI (unclear answer, too much, always agrees, not enough on its own)")
+MET_FLAGS_ALL <- names(MET_FLAGS)
+# Goal type -> the matching code for what the person asked in the chat (3A)
+GOAL_TO_ASK <- c(goal_cause = "human_asks_cause", goal_treatment = "human_asks_treatment", goal_care = "human_asks_care",
+                 goal_condition_info = "human_asks_condition_info", goal_med = "human_asks_med")
+```
+
+```{r load, include = FALSE}
+# ---- Participant IDs: same matching as 07, 08a and 08b, in memory only ----
+ID_COLS <- c("pid", "response_id", "prolific_id")
+clean_ids <- function(d) {
+  names(d) <- trimws(gsub("^\ufeff", "", names(d)))
+  low <- tolower(names(d))
+  rename_first <- function(d, idx, new) { if (length(idx) && !(new %in% names(d))) names(d)[idx[1]] <- new; d }
+  d <- rename_first(d, which(low == "pid"), "pid")
+  d <- rename_first(d, which(low %in% c("response_id", "response id", "responseid")), "response_id")
+  d <- rename_first(d, which(low %in% c("prolific_id", "prolific_pid", "prolificid", "url variable: prolific_pid")), "prolific_id")
+  d |> mutate(across(any_of(ID_COLS), \(x) trimws(as.character(x))))
+}
+read_chr <- function(f) read_csv(f, col_types = cols(.default = col_character()), na = c("", "NA")) |> clean_ids()
+ids <- if (file.exists(in_link)) read_chr(in_link) |> select(any_of(ID_COLS)) |> distinct() else tibble(pid = character())
+for (col in ID_COLS) if (!col %in% names(ids)) ids[[col]] <- NA_character_
+if (file.exists(in_ids)) {
+  rn <- read_chr(in_ids) |> select(any_of(c("response_id", "prolific_id")))
+  if (all(c("response_id", "prolific_id") %in% names(rn))) {
+    rn <- rn |> filter(!is.na(prolific_id), !duplicated(prolific_id))
+    ids$response_id <- coalesce(ids$response_id, rn$response_id[match(ids$prolific_id, rn$prolific_id)])
+  }
+}
+ids <- ids |> select(all_of(ID_COLS))
+ID_MATCH <- list()
+add_ids <- function(d, label) {
+  d <- clean_ids(d)
+  for (col in ID_COLS) if (!col %in% names(d)) d[[col]] <- NA_character_
+  for (key in ID_COLS) {
+    lk <- ids[!is.na(ids[[key]]) & !duplicated(ids[[key]]), ]
+    m <- match(d[[key]], lk[[key]])
+    for (other in setdiff(ID_COLS, key)) d[[other]] <- coalesce(d[[other]], lk[[other]][m])
+  }
+  if (all(is.na(d$pid))) stop("Could not find or match a pid for ", label, ".")
+  ID_MATCH[[label]] <<- c(rows = nrow(d), with_pid = sum(!is.na(d$pid)))
+  d |> filter(!is.na(pid))
+}
+
+goals <- read_chr(in_goal_codes) |> add_ids("the goal codes file")
+CODE_COLS <- c(names(GOAL_LABELS), names(EXTRA_LABELS), "goal_health", "goal_n_types")
+goals <- goals |> mutate(across(any_of(CODE_COLS), as.numeric)) |> select(pid, any_of(CODE_COLS), goal_primary, goal_coder_confidence, any_of(c("goal_met", MET_FLAGS_ALL)))
+goals <- goals |> mutate(across(any_of(MET_FLAGS_ALL), as.numeric))
+HAS_MET <- "goal_met" %in% names(goals) && any(!is.na(goals$goal_met))
+
+gtext <- if (HAS_TEXT) read_chr(in_goal_text) |> add_ids("the goal text file") |> select(pid, convo_goal_oe, any_of("convo_goal_met_oe")) else tibble(pid = character(), convo_goal_oe = character())
+if (!"convo_goal_met_oe" %in% names(gtext)) gtext$convo_goal_met_oe <- NA_character_
+
+codes <- read_chr(in_codes) |> add_ids("the conversation codes file")
+CONVO_NUM <- c("convo_usable", unname(GOAL_TO_ASK), "ai_refers_professional", "ai_urgent_care", "ai_recommends_med",
+               "ai_followup_question", "ai_n_meds", "n_human_turns")
+codes <- codes |> mutate(across(any_of(CONVO_NUM), as.numeric)) |> select(pid, any_of(CONVO_NUM), any_of(c("human_about", "coding_source_v2")))
+
+d05 <- read_chr(in_05) |> add_ids("the survey file (05)")
+PANAS_LABELS <- c("very slightly or not at all" = 1, "a little" = 2, "moderately" = 3, "quite a bit" = 4, "extremely" = 5)
+to_panas <- function(x) { t <- trimws(tolower(as.character(x))); num <- suppressWarnings(as.numeric(str_extract(t, "^[1-5](?![0-9])")))
+  ifelse(!is.na(num), num, unname(PANAS_LABELS[t])) }
+panas <- d05 |> select(pid)
+for (wave in c("pre", "post")) for (item in c(PA_ITEMS, NA_ITEMS)) {
+  main <- paste0("panas_", wave, "_", item); dup <- paste0(main, "_dup")
+  v <- to_panas(d05[[main]]); if (dup %in% names(d05)) v <- coalesce(v, to_panas(d05[[dup]]))
+  panas[[main]] <- v
+}
+score <- function(wave, items) { m <- as.matrix(panas[paste0("panas_", wave, "_", items)]); ifelse(rowSums(is.na(m)) == 0, rowSums(m), NA_real_) }
+panas <- panas |> mutate(pa_pre = score("pre", PA_ITEMS), pa_post = score("post", PA_ITEMS),
+                         na_pre = score("pre", NA_ITEMS), na_post = score("post", NA_ITEMS)) |>
+  select(pid, pa_pre, pa_post, na_pre, na_post) |> filter(!duplicated(pid))
+
+dat <- goals |>
+  left_join(gtext, by = "pid") |>
+  left_join(codes |> filter(!duplicated(pid)), by = "pid") |>
+  left_join(panas, by = "pid") |>
+  mutate(na_change = na_post - na_pre, pa_change = pa_post - pa_pre,
+         calmer = case_when(na_change <= -CALMER_CUT ~ 1, !is.na(na_change) ~ 0))
+
+id_note <- paste0("ID matching: ", paste(vapply(names(ID_MATCH), \(k) paste0(k, " ", ID_MATCH[[k]]["with_pid"], " of ",
+                  ID_MATCH[[k]]["rows"], " rows"), character(1)), collapse = "; "), ".")
+
+# ---- Bases ----
+hg  <- dat |> filter(goal_health == 1)                                     # wrote a health goal: every goal chart
+hgv <- hg  |> filter(!is.na(coding_source_v2))                             # ... and a usable chat with their own messages: goal vs. asked
+hgu <- hg  |> filter(convo_usable == 1)                                    # ... and a usable chat: goal vs. how the AI answered
+hgp <- hg  |> filter(!is.na(na_change), !is.na(pa_change))                 # ... and complete PANAS: goals and feelings
+N_ALL <- nrow(dat); N <- nrow(hg)
+```
+
+```{r helpers, include = FALSE}
+`%||%` <- function(a, b) if (is.null(a)) b else a
+safe <- function(expr) tryCatch(expr, error = function(e) NULL)
+fmt  <- function(x, d = 1) ifelse(is.na(x), "NA", formatC(x, format = "f", digits = d))
+fmts <- function(x, d = 1) ifelse(is.na(x), "NA", sprintf(paste0("%+.", d, "f"), x))
+fmtp <- function(p) ifelse(is.na(p), "NA", ifelse(p < .001, "< .001", sub("^0", "", formatC(p, format = "f", digits = 3))))
+share <- function(x) { x <- x[!is.na(x)]; c(n = sum(x == 1), N = length(x), pct = 100 * mean(x == 1)) }
+wrap <- function(x, n = 70) paste(strwrap(x, n), collapse = "\n")
+
+# Hover examples: real goal answers, internal only (keep the knitted report out of the public repo)
+clip <- function(x, n = HOVER_CHARS) { x <- gsub("\\s+", " ", trimws(x)); ifelse(nchar(x) > n, paste0(substr(x, 1, n - 3), "..."), x) }
+wrap_html <- function(x, w = 60) vapply(x, function(s) paste(strwrap(htmltools::htmlEscape(s), w), collapse = "<br>"), character(1), USE.NAMES = FALSE)
+examples <- function(ids, label = "Examples of the goals people wrote", col = "convo_goal_oe") {
+  if (!HAS_TEXT) return("")
+  ids <- unique(ids[!is.na(ids)]); if (!length(ids)) return("")
+  ids <- if (length(ids) > HOVER_EXAMPLES) sample(ids, HOVER_EXAMPLES) else ids
+  txt <- dat[[col]][match(ids, dat$pid)]
+  keep <- !is.na(txt) & nzchar(txt); if (!any(keep)) return("")
+  paste0("<br><br><b>", label, "</b><br>", paste0("<b>pid ", ids[keep], "</b><br>", wrap_html(clip(txt[keep])), collapse = "<br><br>"))
+}
+
+theme_hx <- function() theme_minimal(base_size = 15) + theme(
+  plot.title = element_text(face = "bold", color = INK, size = 18, margin = margin(b = 6)),
+  plot.subtitle = element_text(color = MUTED, size = 12, margin = margin(b = 14)),
+  plot.title.position = "plot", axis.text = element_text(color = INK), axis.title = element_text(color = INK, size = 12),
+  panel.grid.minor = element_blank(), panel.grid.major = element_line(color = GRID),
+  legend.position = "top", legend.justification = "left", legend.title = element_blank(),
+  plot.background = element_rect(fill = "white", color = NA), plot.margin = margin(20, 24, 16, 20))
+save_fig <- function(p, name, w = 10, h = 7) ggsave(file.path(fig_dir, paste0(name, ".png")), p, width = w, height = h, dpi = 300, bg = "white")
+
+# Static share bars (PNG for a deck) and the matching interactive version
+share_bars <- function(df, title, subtitle) {
+  df <- df |> mutate(label = factor(label, levels = rev(label)))
+  ggplot(df, aes(y = label)) + geom_col(aes(x = 100), fill = GRID, width = 0.62) + geom_col(aes(x = pct), fill = DARK, width = 0.62) +
+    geom_text(aes(x = pct, label = paste0(round(pct), "%")), hjust = -0.08, color = INK, size = 4.6, fontface = "bold") +
+    scale_x_continuous(limits = c(0, 118), breaks = seq(0, 100, 25), labels = function(x) paste0(x, "%"), expand = c(0, 0)) +
+    labs(title = wrap(title), subtitle = wrap(subtitle, 110), x = NULL, y = NULL) + theme_hx() + theme(panel.grid.major.y = element_blank())
+}
+pl_title <- function(title, subtitle) list(text = paste0("<b>", paste(strwrap(htmltools::htmlEscape(title), 85), collapse = "<br>"),
+  "</b><br><span style='font-size:12px;color:", MUTED, "'>", paste(strwrap(htmltools::htmlEscape(subtitle), 125), collapse = "<br>"), "</span>"),
+  x = 0, xanchor = "left", font = list(size = 16, color = INK))
+pl_layout <- function(pl, title, subtitle, ...) pl |> layout(title = pl_title(title, subtitle),
+  margin = list(t = 145, l = 10, r = 30, b = 90), font = list(family = "Arial", color = INK),
+  hoverlabel = list(align = "left", bgcolor = "white", bordercolor = GRID, font = list(color = INK, size = 12)),
+  plot_bgcolor = "white", paper_bgcolor = "white", ...) |> config(displaylogo = FALSE)
+pl_bars <- function(df, title, subtitle, xlab = "Share of people") {
+  df$y <- factor(df$label, levels = rev(df$label))
+  plot_ly(df, y = ~y, x = ~pct, type = "bar", orientation = "h", marker = list(color = DARK),
+          text = ~paste0(round(pct), "%"), textposition = "outside", cliponaxis = FALSE, textfont = list(color = INK, size = 13),
+          hovertext = ~hover, hoverinfo = "text", height = 160 + 55 * nrow(df), width = PLOT_W) |>
+    pl_layout(title, subtitle, showlegend = FALSE, xaxis = list(title = xlab, range = c(0, 112), ticksuffix = "%", gridcolor = GRID, zeroline = FALSE),
+              yaxis = list(title = "", automargin = TRUE))
+}
+RESULTS <- list()   # every number in this report, written to results.xlsx
+keep_result <- function(section, measure, value, n = NA) RESULTS[[length(RESULTS) + 1]] <<- tibble(Section = section, Measure = measure, Value = value, n = n)
+```
+
+```{js resize-in-tabs, echo = FALSE}
+$(document).on("shown.bs.tab", function() { window.dispatchEvent(new Event("resize")); });
+```
+
+**What this covers.** Every participant answered C3: "When starting the conversation you just provided, what was your goal?" and later D2, whether that goal was achieved. C3 was coded into seven goal types plus three extra flags; D2 into Yes, Partly or No plus four flags (codebook section 7). One person can have several goal types. Hover over any bar to see the numbers and a few real goal answers. **This report holds real answers, so keep it internal.**
+
+**Bases.** `r N_ALL` people wrote a goal; `r N` wrote a health goal (one described a school essay) and are the base for the goal charts. Comparisons with what people typed use the `r nrow(hgv)` of those with a usable chat and their own messages (the Part 3A base). Comparisons with how the AI answered use the `r nrow(hgu)` with a usable chat. Comparisons with feelings use the `r nrow(hgp)` with complete PANAS before and after.
+
+## {.tabset}
+
+### 1. Goal types
+
+```{r goal-types}
+gt <- bind_rows(lapply(names(GOAL_LABELS), function(v) {
+  s <- share(hg[[v]]); idx <- hg$pid[hg[[v]] %in% 1]
+  tibble(code = v, label = GOAL_LABELS[[v]], pct = s[["pct"]], n = s[["n"]], N = s[["N"]])
+})) |> arrange(desc(pct))
+gt$hover <- vapply(seq_len(nrow(gt)), function(i) paste0("<b>", htmltools::htmlEscape(gt$label[i]), "</b><br>", round(gt$pct[i]), "% (", gt$n[i], " of ", gt$N[i], ")",
+  examples(hg$pid[hg[[gt$code[i]]] %in% 1])), character(1))
+for (i in seq_len(nrow(gt))) keep_result("Goal types", gt$label[i], paste0(round(gt$pct[i]), "% (", gt$n[i], " of ", gt$N[i], ")"), gt$N[i])
+top <- gt[1, ]
+t1 <- paste0("Half went to AI to find out what was wrong; ", round(gt$pct[gt$code == "goal_treatment"]), "% wanted to know how to treat it")
+if (abs(top$pct - 50) > 8) t1 <- paste0(round(top$pct), "% went to AI to ", tolower(sub("^Find out", "find out", top$label)))
+s1 <- paste0("Share of the ", N, " people who wrote a health goal. People could have more than one goal type, so the bars add to more than 100%.")
+pl_bars(gt, t1, s1)
+save_fig(share_bars(gt, t1, s1), "01_goal_types")
+```
+
+### 2. Main goal
+
+```{r goal-main}
+pm <- hg |> count(goal_primary) |> mutate(pct = 100 * n / sum(n), label = unname(PRIMARY_LABELS[goal_primary])) |>
+  mutate(ord = ifelse(goal_primary == "other", -1, pct)) |> arrange(desc(ord))
+pm$hover <- vapply(seq_len(nrow(pm)), function(i) paste0("<b>", pm$label[i], "</b><br>", round(pm$pct[i]), "% (", pm$n[i], " of ", N, ")",
+  examples(hg$pid[hg$goal_primary == pm$goal_primary[i]])), character(1))
+for (i in seq_len(nrow(pm))) keep_result("Main goal", pm$label[i], paste0(round(pm$pct[i]), "% (", pm$n[i], " of ", N, ")"), N)
+t2 <- paste0("For most people the main goal was to find out what was wrong (", round(pm$pct[pm$goal_primary == "cause"]),
+             "%) or how to treat it (", round(pm$pct[pm$goal_primary == "treatment"]), "%)")
+s2 <- paste0("One main goal per person (the one they led with), ", N, " people. Adds to 100%.")
+pl_bars(pm |> select(label, pct, hover), t2, s2)
+save_fig(share_bars(pm, t2, s2), "02_main_goal")
+```
+
+### 3. How many goals
+
+```{r goal-count}
+nt <- hg |> mutate(k = factor(pmin(goal_n_types, 3), levels = 0:3, labels = c("None of the seven (other or unclear)", "One goal type", "Two", "Three or more"))) |>
+  count(k, .drop = FALSE) |> mutate(pct = 100 * n / sum(n), label = as.character(k))
+nt$hover <- paste0("<b>", nt$label, "</b><br>", round(nt$pct), "% (", nt$n, " of ", N, ")")
+multi <- share(as.numeric(hg$goal_n_types >= 2))
+keep_result("How many goals", "Two or more goal types", paste0(round(multi[["pct"]]), "% (", multi[["n"]], " of ", N, ")"), N)
+keep_result("How many goals", "Mean goal types per person", fmt(mean(hg$goal_n_types), 2), N)
+pl_bars(nt |> select(label, pct, hover), paste0(round(multi[["pct"]]), "% brought more than one goal to the same chat"),
+        paste0("Number of the seven goal types in each person's answer, ", N, " people. Mean ", fmt(mean(hg$goal_n_types), 1), " goal types per person."))
+```
+
+### 4. Who for, and why AI
+
+```{r goal-extras}
+ex <- bind_rows(lapply(names(EXTRA_LABELS), function(v) { s <- share(hg[[v]])
+  tibble(code = v, label = EXTRA_LABELS[[v]], pct = s[["pct"]], n = s[["n"]], N = s[["N"]]) }))
+ex$hover <- vapply(seq_len(nrow(ex)), function(i) paste0("<b>", ex$label[i], "</b><br>", round(ex$pct[i]), "% (", ex$n[i], " of ", ex$N[i], ")",
+  examples(hg$pid[hg[[ex$code[i]]] %in% 1])), character(1))
+for (i in seq_len(nrow(ex))) keep_result("Who for and why AI", ex$label[i], paste0(round(ex$pct[i]), "% (", ex$n[i], " of ", ex$N[i], ")"), ex$N[i])
+pl_bars(ex, paste0(round(ex$pct[ex$code == "goal_ai_easier"]), "% said, unprompted, that AI was quicker, cheaper or easier than a search or a doctor"),
+        paste0("Share of the ", N, " people who wrote a health goal. Nobody was asked these directly, so these are floors, not estimates."))
+```
+
+These three flags were not asked about. They only count people who brought them up in their goal answer, so the true shares are likely higher.
+
+### 5. Goal vs. what they asked
+
+```{r goal-vs-ask}
+ga <- bind_rows(lapply(names(GOAL_TO_ASK), function(g) {
+  a <- GOAL_TO_ASK[[g]]; d <- hgv |> filter(!is.na(.data[[g]]), !is.na(.data[[a]]))
+  gl <- d[[g]] == 1; al <- d[[a]] == 1
+  tibble(code = g, label = GOAL_LABELS[[g]], N = nrow(d), n_goal = sum(gl), n_ask = sum(al), n_both = sum(gl & al),
+         pct_goal = 100 * mean(gl), pct_ask = 100 * mean(al),
+         goal_not_asked = sum(gl & !al), asked_not_goal = sum(!gl & al),
+         ids_gap = list(d$pid[gl & !al]), ids_both = list(d$pid[gl & al]))
+}))
+ga <- ga |> arrange(desc(pct_goal))
+ga$hover_a <- paste0("<b>", ga$label, "</b><br>Said it was their goal: ", round(ga$pct_goal), "% (", ga$n_goal, " of ", ga$N, ")",
+                     vapply(ga$ids_gap, function(x) examples(x, "Said it was a goal, did not ask it outright"), character(1)))
+ga$hover_b <- paste0("<b>", ga$label, "</b><br>Asked it in the chat: ", round(ga$pct_ask), "% (", ga$n_ask, " of ", ga$N, ")<br>",
+                     "Both: ", ga$n_both, "; goal only: ", ga$goal_not_asked, "; asked only: ", ga$asked_not_goal)
+for (i in seq_len(nrow(ga))) {
+  keep_result("Goal vs. asked", paste0(ga$label[i], ": said it was a goal"), paste0(round(ga$pct_goal[i]), "% (", ga$n_goal[i], " of ", ga$N[i], ")"), ga$N[i])
+  keep_result("Goal vs. asked", paste0(ga$label[i], ": asked it in the chat"), paste0(round(ga$pct_ask[i]), "% (", ga$n_ask[i], " of ", ga$N[i], ")"), ga$N[i])
+}
+care <- ga[ga$code == "goal_care", ]
+t5 <- paste0(round(care$pct_goal), "% wanted help deciding about care, but only ", round(care$pct_ask), "% asked about care in the chat")
+s5 <- paste0(ga$N[1], " people with a usable chat and their own messages. Light dot: said it was a goal (C3). Dark dot: asked it in the chat (Part 3A codes).")
+d5 <- ga |> mutate(y = factor(label, levels = rev(label)))
+plot_ly(d5, height = 190 + 50 * nrow(d5), width = PLOT_W) |>
+  add_segments(x = ~pct_goal, xend = ~pct_ask, y = ~y, yend = ~y, line = list(color = BAR, width = 6), hoverinfo = "none", showlegend = FALSE) |>
+  add_markers(x = ~pct_goal, y = ~y, name = "Said it was their goal", marker = list(color = LIGHT, size = 14), hovertext = ~hover_a, hoverinfo = "text") |>
+  add_markers(x = ~pct_ask, y = ~y, name = "Asked it in the chat", marker = list(color = DARK, size = 14), hovertext = ~hover_b, hoverinfo = "text") |>
+  pl_layout(t5, s5, xaxis = list(title = "Share of people", range = c(0, 100), ticksuffix = "%", gridcolor = GRID, zeroline = FALSE),
+            yaxis = list(title = "", automargin = TRUE), legend = list(orientation = "h", x = 0, y = -0.3))
+p5 <- ggplot(d5) + geom_segment(aes(x = pct_goal, xend = pct_ask, y = y, yend = y), color = BAR, linewidth = 3) +
+  geom_point(aes(x = pct_goal, y = y, color = "Said it was their goal"), size = 5) + geom_point(aes(x = pct_ask, y = y, color = "Asked it in the chat"), size = 5) +
+  scale_color_manual(values = c("Said it was their goal" = LIGHT, "Asked it in the chat" = DARK)) +
+  scale_x_continuous(limits = c(0, 100), labels = function(x) paste0(x, "%")) + labs(title = wrap(t5), subtitle = wrap(s5, 110), x = NULL, y = NULL) + theme_hx()
+save_fig(p5, "05_goal_vs_asked")
+kable(ga |> transmute(`Goal type` = label, `Said it was a goal` = n_goal, `Asked it in the chat` = n_ask, Both = n_both,
+                      `Goal, not asked` = goal_not_asked, `Asked, not a goal` = asked_not_goal, Base = N))
+```
+
+### 6. Goal vs. how the AI answered
+
+```{r goal-vs-ai}
+# Did the AI's answer line up with the goal? Fisher's exact for each pairing, BH across the pairings shown here
+PAIRS <- tribble(~goal, ~ai, ~ai_label,
+  "goal_care", "ai_refers_professional", "AI said to see a provider",
+  "goal_care", "ai_urgent_care", "AI pointed to urgent care, the ER or 911",
+  "goal_med", "ai_recommends_med", "AI suggested a specific medication",
+  "goal_treatment", "ai_recommends_med", "AI suggested a specific medication",
+  "goal_cause", "ai_followup_question", "AI asked a follow-up question",
+  "goal_reassurance", "ai_refers_professional", "AI said to see a provider")
+gai <- bind_rows(lapply(seq_len(nrow(PAIRS)), function(i) {
+  g <- PAIRS$goal[i]; a <- PAIRS$ai[i]; d <- hgu |> filter(!is.na(.data[[g]]), !is.na(.data[[a]]))
+  yes <- d[d[[g]] == 1, ]; no <- d[d[[g]] == 0, ]
+  testable <- nrow(yes) >= MIN_GROUP_N && nrow(no) >= MIN_GROUP_N
+  p <- if (testable) safe(fisher.test(table(factor(d[[g]], 0:1), factor(d[[a]], 0:1)))$p.value) %||% NA_real_ else NA_real_
+  tibble(goal = g, ai = a, Goal = GOAL_LABELS[[g]], `AI response` = PAIRS$ai_label[i],
+         n_yes = nrow(yes), pct_yes = 100 * mean(yes[[a]] == 1), n_no = nrow(no), pct_no = 100 * mean(no[[a]] == 1), p = p)
+})) |> mutate(p_adj = p.adjust(p, "BH"))
+for (i in seq_len(nrow(gai))) keep_result("Goal vs. AI answer", paste0(gai$Goal[i], " -> ", gai$`AI response`[i]),
+  paste0(round(gai$pct_yes[i]), "% with this goal (n = ", gai$n_yes[i], ") vs. ", round(gai$pct_no[i]), "% without (n = ", gai$n_no[i], "); BH p = ", fmtp(gai$p_adj[i])))
+gc <- gai[gai$goal == "goal_care" & gai$ai == "ai_refers_professional", ]
+d6 <- gai |> mutate(row = paste0(Goal, "<br><span style='color:", MUTED, "'>", `AI response`, "</span>"), y = factor(row, levels = rev(row)),
+  h_yes = paste0("<b>", Goal, "</b><br>", `AI response`, ": ", round(pct_yes), "% of ", n_yes, " with this goal"),
+  h_no = paste0("<b>Without this goal</b><br>", `AI response`, ": ", round(pct_no), "% of ", n_no, "<br>BH-corrected p = ", fmtp(p_adj)))
+plot_ly(d6, height = 190 + 60 * nrow(d6), width = PLOT_W) |>
+  add_segments(x = ~pct_no, xend = ~pct_yes, y = ~y, yend = ~y, line = list(color = BAR, width = 6), hoverinfo = "none", showlegend = FALSE) |>
+  add_markers(x = ~pct_no, y = ~y, name = "People without this goal", marker = list(color = PALE, size = 14), hovertext = ~h_no, hoverinfo = "text") |>
+  add_markers(x = ~pct_yes, y = ~y, name = "People with this goal", marker = list(color = DARK, size = 14), hovertext = ~h_yes, hoverinfo = "text") |>
+  pl_layout(paste0("The AI told ", round(gc$pct_yes), "% of people who wanted a care decision to see a provider, and ", round(gc$pct_no), "% of everyone else"),
+            paste0(nrow(hgu), " people with a health goal and a usable chat. Fisher's exact test, Benjamini-Hochberg corrected across the ", nrow(gai), " pairings."),
+            xaxis = list(title = "Share whose AI answer did this", range = c(0, 105), ticksuffix = "%", gridcolor = GRID, zeroline = FALSE),
+            yaxis = list(title = "", automargin = TRUE), legend = list(orientation = "h", x = 0, y = -0.25))
+kable(gai |> transmute(Goal, `AI response`, `With goal` = paste0(round(pct_yes), "% (n = ", n_yes, ")"),
+                       `Without goal` = paste0(round(pct_no), "% (n = ", n_no, ")"), p = fmtp(p), `BH p` = fmtp(p_adj)))
+```
+
+### 7. Goals and feelings
+
+```{r goal-feelings}
+# Change in negative and positive affect (after minus before) for people with vs. without each goal type
+# Mann-Whitney on the change scores; BH across goal types within each outcome. Exploratory.
+FEEL_CODES <- c(names(GOAL_LABELS), names(EXTRA_LABELS))
+feel <- bind_rows(lapply(FEEL_CODES, function(g) bind_rows(lapply(c("na", "pa"), function(o) {
+  ch <- paste0(o, "_change"); d <- hgp |> filter(!is.na(.data[[g]]))
+  y <- d[[ch]][d[[g]] == 1]; n <- d[[ch]][d[[g]] == 0]
+  testable <- length(y) >= MIN_GROUP_N && length(n) >= MIN_GROUP_N
+  p <- if (testable) safe(wilcox.test(y, n, exact = FALSE)$p.value) %||% NA_real_ else NA_real_
+  cy <- d$calmer[d[[g]] == 1]; cn <- d$calmer[d[[g]] == 0]
+  tibble(code = g, label = c(GOAL_LABELS, EXTRA_LABELS)[[g]], outcome = o, n_yes = length(y), n_no = length(n),
+         mean_yes = mean(y), mean_no = mean(n), median_yes = median(y), median_no = median(n),
+         calmer_yes = 100 * mean(cy == 1), calmer_no = 100 * mean(cn == 1), testable = testable, p = p)
+})))) |> group_by(outcome) |> mutate(p_adj = p.adjust(p, "BH")) |> ungroup()
+for (i in seq_len(nrow(feel))) keep_result(paste0("Feelings (", toupper(feel$outcome[i]), " change)"), feel$label[i],
+  paste0("mean ", fmts(feel$mean_yes[i]), " with (n = ", feel$n_yes[i], ") vs. ", fmts(feel$mean_no[i]), " without (n = ", feel$n_no[i],
+         "); BH p = ", ifelse(feel$testable[i], fmtp(feel$p_adj[i]), "not tested")))
+na_all <- mean(hgp$na_change); pa_all <- mean(hgp$pa_change)
+keep_result("Feelings", "Everyone: mean change in negative affect", fmts(na_all), nrow(hgp))
+keep_result("Feelings", "Everyone: mean change in positive affect", fmts(pa_all), nrow(hgp))
+
+feel_chart <- function(o, word) {
+  d <- feel |> filter(outcome == o) |> arrange(mean_yes) |> mutate(y = factor(label, levels = label))
+  d$hover <- paste0("<b>", d$label, "</b><br>With this goal: mean ", fmts(d$mean_yes), " (median ", fmts(d$median_yes), ", n = ", d$n_yes, ")",
+                    "<br>Without: mean ", fmts(d$mean_no), " (median ", fmts(d$median_no), ", n = ", d$n_no, ")",
+                    "<br>Felt calmer (", word, " fell 5+): ", round(d$calmer_yes), "% vs. ", round(d$calmer_no), "%",
+                    "<br>", ifelse(d$testable, paste0("Mann-Whitney, BH-corrected p = ", fmtp(d$p_adj)), "Not tested (a group under 5)"))
+  sig <- d |> filter(testable, p_adj < .05)
+  title <- if (nrow(sig)) paste0("People whose goal was '", tolower(sig$label[1]), "' changed most in ", word) else
+    { avg <- if (o == "na") na_all else pa_all
+      paste0("No goal type stood out once corrected for multiple comparisons; on average ", word, " ", ifelse(avg < 0, "fell ", "rose "),
+             fmt(abs(avg)), " points") }
+  plot_ly(d, y = ~y, x = ~mean_yes, type = "bar", orientation = "h", marker = list(color = ifelse((d$mean_yes < 0) == (o == "na"), DARK, NEG)),   # blue = the better direction (less distress, more positive)
+          text = ~paste0(fmts(mean_yes), "  (n = ", n_yes, ")"), textposition = "outside", cliponaxis = FALSE,
+          hovertext = ~hover, hoverinfo = "text", height = 160 + 45 * nrow(d), width = PLOT_W) |>
+    pl_layout(title, paste0("Mean change in ", word, " (after minus before, 10 to 50 scale) among people with each goal. ", nrow(hgp),
+                            " people with a health goal and complete PANAS. Mann-Whitney on change scores, BH across the ", nrow(d), " goal flags. Exploratory."),
+              showlegend = FALSE, xaxis = list(title = paste0("Mean change in ", word), gridcolor = GRID, zeroline = TRUE, zerolinecolor = MUTED,
+                                               range = c(min(-6, min(d$mean_yes) - 2), max(4, max(d$mean_yes) + 3))),
+              yaxis = list(title = "", automargin = TRUE))
+}
+feel_chart("na", "negative affect")
+feel_chart("pa", "positive affect")
+kable(feel |> transmute(Goal = label, Outcome = ifelse(outcome == "na", "Negative affect", "Positive affect"),
+                        `With goal` = paste0(fmts(mean_yes), " (n = ", n_yes, ")"), `Without` = paste0(fmts(mean_no), " (n = ", n_no, ")"),
+                        `BH p` = ifelse(testable, fmtp(p_adj), "not tested")))
+```
+
+### 8. Was the goal met?
+
+```{r goal-met}
+if (!HAS_MET) {
+  cat("No goal-met codes found (goal_met in 09_Q4_3_goals_coded.csv), so this tab is empty.")
+  met_by <- met_ai <- met_feel <- NULL
+} else {
+hm <- hg |> filter(!is.na(goal_met)) |> mutate(goal_met = factor(goal_met, levels = MET_LEVELS), met_yes = as.integer(goal_met == "Yes"))
+NM <- nrow(hm)
+met_ex <- function(ids, label = "In their words (D2)") examples(ids, label, col = "convo_goal_met_oe")
+
+# ---- a. Overall ----
+mo <- hm |> count(goal_met, .drop = FALSE) |> mutate(pct = 100 * n / NM, label = as.character(goal_met))
+mo$hover <- vapply(seq_len(nrow(mo)), function(i) paste0("<b>Goal met? ", mo$label[i], "</b><br>", round(mo$pct[i]), "% (", mo$n[i], " of ", NM, ")",
+  met_ex(hm$pid[hm$goal_met == mo$label[i]])), character(1))
+for (i in seq_len(nrow(mo))) keep_result("Goal met", paste0("Goal met: ", mo$label[i]), paste0(round(mo$pct[i]), "% (", mo$n[i], " of ", NM, ")"), NM)
+tm <- paste0(round(mo$pct[mo$label == "Yes"]), "% said the chat met their goal; ", round(mo$pct[mo$label == "Partly"]), "% said partly and ",
+             round(mo$pct[mo$label == "No"]), "% said no")
+sm <- paste0(NM, " people with a health goal. D2 asked whether the goal they set was achieved; answers coded Yes, Partly or No. Adds to 100%.")
+mo$y <- "All"
+pm_met <- plot_ly(height = 300, width = PLOT_W)
+for (lv in MET_LEVELS) { r <- mo[mo$label == lv, ]
+  pm_met <- pm_met |> add_trace(data = r, y = ~y, x = ~pct, type = "bar", orientation = "h", name = lv,
+    marker = list(color = MET_COLORS[[lv]], line = list(color = "white", width = 2)),
+    text = ~paste0(round(pct), "%"), textposition = "inside", insidetextanchor = "middle", textfont = list(color = ifelse(lv == "Yes", "white", INK)),
+    hovertext = ~hover, hoverinfo = "text") }
+w1 <- pm_met |> pl_layout(tm, sm, barmode = "stack", xaxis = list(title = "Share of people", range = c(0, 100), ticksuffix = "%", gridcolor = GRID),
+                          yaxis = list(visible = FALSE), legend = list(orientation = "h", x = 0, y = -0.75, traceorder = "normal"))
+
+# ---- b. By goal type (people can appear in several rows) ----
+met_by <- bind_rows(lapply(names(GOAL_LABELS), function(g) { d <- hm[hm[[g]] %in% 1, ]
+  bind_rows(lapply(MET_LEVELS, function(lv) tibble(code = g, group = GOAL_LABELS[[g]], cat = lv, n = sum(d$goal_met == lv), N = nrow(d),
+    pid_list = list(d$pid[d$goal_met == lv])))) })) |> mutate(pct = 100 * n / N)
+ord <- met_by |> filter(cat == "Yes") |> arrange(desc(pct)) |> pull(group)
+met_by <- met_by |> mutate(group = factor(group, levels = ord)) |> arrange(group)
+met_by$hover <- paste0("<b>", met_by$group, "</b><br>Goal met? ", met_by$cat, ": ", round(met_by$pct), "% (", met_by$n, " of ", met_by$N, ")",
+                       vapply(met_by$pid_list, met_ex, character(1)))
+for (g in ord) { r <- met_by[met_by$group == g, ]; keep_result("Goal met by goal type", g,
+  paste0("Yes ", round(r$pct[r$cat == "Yes"]), "%, partly ", round(r$pct[r$cat == "Partly"]), "%, no ", round(r$pct[r$cat == "No"]), "%"), r$N[1]) }
+low <- met_by |> filter(cat == "Yes") |> arrange(pct) |> slice(1)
+pb <- plot_ly(height = 170 + 50 * length(ord), width = PLOT_W)
+for (lv in MET_LEVELS) { r <- met_by[met_by$cat == lv, ]
+  pb <- pb |> add_trace(data = r, y = ~factor(group, levels = rev(ord)), x = ~pct, type = "bar", orientation = "h", name = lv,
+    marker = list(color = MET_COLORS[[lv]], line = list(color = "white", width = 2)),
+    text = ~ifelse(pct >= 8, paste0(round(pct), "%"), ""), textposition = "inside", insidetextanchor = "middle",
+    hovertext = ~hover, hoverinfo = "text") }
+w2 <- pb |> pl_layout(paste0("Goals were met least often when people wanted to ", tolower(sub("^(Find out|Decide|Learn|Ask|Prepare|Get) ", "\\1 ", low$group)),
+                       " (", round(low$pct), "% fully met, n = ", low$N, ")"),
+                paste0("Share of people with each goal type who said the goal was met. People with several goal types appear in several rows. Groups are small (n in the hover), so read these as patterns, not tests."),
+                barmode = "stack", xaxis = list(title = "Share of people with this goal", range = c(0, 100), ticksuffix = "%", gridcolor = GRID),
+                yaxis = list(title = "", automargin = TRUE), legend = list(orientation = "h", x = 0, y = -0.25, traceorder = "normal"))
+p8 <- ggplot(met_by |> mutate(txt_col = ifelse(cat == "Yes", "white", INK), cat = factor(cat, levels = rev(MET_LEVELS)), group = factor(group, levels = rev(ord))),
+             aes(y = group, x = pct, fill = cat)) +
+  geom_col(width = 0.62, color = "white") + scale_fill_manual(values = MET_COLORS, breaks = MET_LEVELS) +
+  geom_text(aes(label = ifelse(pct >= 8, paste0(round(pct), "%"), ""), color = txt_col), position = position_stack(vjust = 0.5), size = 4, show.legend = FALSE) +
+  scale_color_identity() +
+  scale_x_continuous(labels = function(x) paste0(x, "%"), expand = c(0, 0)) + labs(title = wrap(tm), subtitle = wrap("Share of people with each goal type who said the goal was met", 110), x = NULL, y = NULL) + theme_hx()
+save_fig(p8, "08_goal_met_by_type")
+
+# ---- c. What people said about the outcome (flags) ----
+mf <- bind_rows(lapply(names(MET_FLAGS), function(v) { s <- share(hm[[v]])
+  tibble(code = v, label = MET_FLAGS[[v]], pct = s[["pct"]], n = s[["n"]], N = s[["N"]]) })) |> arrange(desc(pct))
+mf$hover <- vapply(seq_len(nrow(mf)), function(i) paste0("<b>", htmltools::htmlEscape(mf$label[i]), "</b><br>", round(mf$pct[i]), "% (", mf$n[i], " of ", mf$N[i], ")",
+  met_ex(hm$pid[hm[[mf$code[i]]] %in% 1])), character(1))
+for (i in seq_len(nrow(mf))) keep_result("Goal met: what they said", mf$label[i], paste0(round(mf$pct[i]), "% (", mf$n[i], " of ", mf$N[i], ")"), mf$N[i])
+w3 <- pl_bars(mf, paste0("Most said their goal was met, yet ", round(mf$pct[mf$code == "goal_met_professional"]), "% still brought a doctor into what came next"),
+        paste0("Share of the ", NM, " people. Coded from what they volunteered in D2, so these are floors. A person can have several."))
+
+# ---- d. Goal met and feelings ----
+hmp <- hm |> filter(!is.na(na_change), !is.na(pa_change)) |> mutate(grp = ifelse(met_yes == 1, "Goal met", "Partly or not met"))
+met_feel <- bind_rows(lapply(c("na", "pa"), function(o) { ch <- paste0(o, "_change"); y <- hmp[[ch]][hmp$met_yes == 1]; n <- hmp[[ch]][hmp$met_yes == 0]
+  testable <- length(y) >= MIN_GROUP_N && length(n) >= MIN_GROUP_N
+  tibble(outcome = o, label = ifelse(o == "na", "Negative affect", "Positive affect"), n_met = length(y), n_not = length(n),
+         pre_met = mean(hmp[[paste0(o, "_pre")]][hmp$met_yes == 1]), post_met = mean(hmp[[paste0(o, "_post")]][hmp$met_yes == 1]),
+         pre_not = mean(hmp[[paste0(o, "_pre")]][hmp$met_yes == 0]), post_not = mean(hmp[[paste0(o, "_post")]][hmp$met_yes == 0]),
+         mean_met = mean(y), mean_not = mean(n), median_met = median(y), median_not = median(n),
+         p = if (testable) safe(wilcox.test(y, n, exact = FALSE)$p.value) %||% NA_real_ else NA_real_) }))
+cm <- share(hmp$calmer[hmp$met_yes == 1]); cn <- share(hmp$calmer[hmp$met_yes == 0])
+p_calm <- if (min(table(hmp$met_yes)) >= MIN_GROUP_N) safe(fisher.test(table(hmp$met_yes, hmp$calmer))$p.value) %||% NA_real_ else NA_real_
+for (i in 1:2) keep_result("Goal met and feelings", paste0(met_feel$label[i], " change"),
+  paste0(fmts(met_feel$mean_met[i]), " goal met (n = ", met_feel$n_met[i], ") vs. ", fmts(met_feel$mean_not[i]), " partly or not met (n = ", met_feel$n_not[i], "); Mann-Whitney p = ", fmtp(met_feel$p[i])))
+keep_result("Goal met and feelings", "Felt calmer (negative affect fell 5+)", paste0(round(cm[["pct"]]), "% goal met vs. ", round(cn[["pct"]]), "% partly or not met; Fisher p = ", fmtp(p_calm)))
+dd <- bind_rows(lapply(1:2, function(i) { r <- met_feel[i, ]
+  tibble(label = paste0(r$label, ": ", c("goal met", "partly or not met")), a = c(r$pre_met, r$pre_not), b = c(r$post_met, r$post_not),
+         n = c(r$n_met, r$n_not), ch = c(r$mean_met, r$mean_not), p = r$p) }))
+dd$y <- factor(dd$label, levels = rev(dd$label))
+dd$h_a <- paste0("<b>", dd$label, "</b><br>Before the chat: ", fmt(dd$a), " (n = ", dd$n, ")")
+dd$h_b <- paste0("<b>", dd$label, "</b><br>After the chat: ", fmt(dd$b), "<br>Change: ", fmts(dd$ch), "<br>Mann-Whitney on change, p = ", fmtp(dd$p))
+na_r <- met_feel[met_feel$outcome == "na", ]
+w4 <- plot_ly(dd, height = 380, width = PLOT_W) |>
+  add_segments(x = ~a, xend = ~b, y = ~y, yend = ~y, line = list(color = BAR, width = 6), hoverinfo = "none", showlegend = FALSE) |>
+  add_markers(x = ~a, y = ~y, name = "Before the chat", marker = list(color = PALE, size = 14), hovertext = ~h_a, hoverinfo = "text") |>
+  add_markers(x = ~b, y = ~y, name = "After the chat", marker = list(color = DARK, size = 14), hovertext = ~h_b, hoverinfo = "text") |>
+  pl_layout(paste0("Negative affect changed by ", fmts(na_r$mean_met), " points when the goal was met and ", fmts(na_r$mean_not), " when it was partly or not met"),
+            paste0(nrow(hmp), " people with a health goal and complete PANAS (", na_r$n_met, " met, ", na_r$n_not, " partly or not met). Mean scores, 10 to 50. Mann-Whitney on change scores: negative p = ",
+                   fmtp(met_feel$p[1]), ", positive p = ", fmtp(met_feel$p[2]), ". Felt calmer: ", round(cm[["pct"]]), "% vs. ", round(cn[["pct"]]), "%."),
+            xaxis = list(title = "Mean score (10 to 50)", gridcolor = GRID, zeroline = FALSE), yaxis = list(title = "", automargin = TRUE),
+            legend = list(orientation = "h", x = 0, y = -0.25))
+
+# ---- e. Goal met by what happened in the chat ----
+hmu <- hm |> filter(convo_usable == 1)
+# Did they ask about their main goal in the chat? (main goal type -> matching ask code; 3A base only)
+main_to_ask <- c(cause = "human_asks_cause", treatment = "human_asks_treatment", care = "human_asks_care", condition_info = "human_asks_condition_info", medication = "human_asks_med")
+hmu$asked_own_goal <- vapply(seq_len(nrow(hmu)), function(i) { a <- main_to_ask[hmu$goal_primary[i]]
+  if (is.na(a) || is.na(hmu$coding_source_v2[i])) NA_real_ else as.numeric(hmu[[a]][i]) }, numeric(1))
+hmu$multi_turn <- ifelse(is.na(hmu$coding_source_v2), NA, as.numeric(hmu$n_human_turns > 1))
+MET_SEG <- c(ai_refers_professional = "AI said to see a provider", ai_urgent_care = "AI pointed to urgent care, the ER or 911",
+             ai_recommends_med = "AI suggested a specific medication", ai_followup_question = "AI asked a follow-up question",
+             multi_turn = "Person sent more than one message", asked_own_goal = "Person asked the AI about their main goal")
+met_ai <- bind_rows(lapply(names(MET_SEG), function(v) { d <- hmu |> filter(!is.na(.data[[v]]))
+  y <- d[d[[v]] == 1, ]; n <- d[d[[v]] == 0, ]; testable <- nrow(y) >= MIN_GROUP_N && nrow(n) >= MIN_GROUP_N
+  tibble(code = v, label = MET_SEG[[v]], n_yes = nrow(y), met_yes = 100 * mean(y$met_yes), n_no = nrow(n), met_no = 100 * mean(n$met_yes),
+         p = if (testable) safe(fisher.test(table(factor(d[[v]], 0:1), factor(d$met_yes, 0:1)))$p.value) %||% NA_real_ else NA_real_) })) |>
+  mutate(p_adj = p.adjust(p, "BH"))
+for (i in seq_len(nrow(met_ai))) keep_result("Goal met by what happened in the chat", met_ai$label[i],
+  paste0(round(met_ai$met_yes[i]), "% met when yes (n = ", met_ai$n_yes[i], ") vs. ", round(met_ai$met_no[i]), "% when no (n = ", met_ai$n_no[i], "); BH p = ", fmtp(met_ai$p_adj[i])))
+de <- met_ai |> mutate(y = factor(label, levels = rev(label)),
+  h1 = paste0("<b>", label, ": yes</b><br>Goal fully met: ", round(met_yes), "% of ", n_yes),
+  h0 = paste0("<b>", label, ": no</b><br>Goal fully met: ", round(met_no), "% of ", n_no, "<br>Fisher's exact, BH-corrected p = ", fmtp(p_adj)))
+w5 <- plot_ly(de, height = 190 + 50 * nrow(de), width = PLOT_W) |>
+  add_segments(x = ~met_no, xend = ~met_yes, y = ~y, yend = ~y, line = list(color = BAR, width = 6), hoverinfo = "none", showlegend = FALSE) |>
+  add_markers(x = ~met_no, y = ~y, name = "Did not happen", marker = list(color = PALE, size = 14), hovertext = ~h0, hoverinfo = "text") |>
+  add_markers(x = ~met_yes, y = ~y, name = "Happened", marker = list(color = DARK, size = 14), hovertext = ~h1, hoverinfo = "text") |>
+  pl_layout("Most goals were met whatever the AI did, so no single chat feature stood out",
+            paste0("Share whose goal was fully met. ", nrow(hmu), " people with a health goal and a usable chat (the last two rows use the ", sum(!is.na(hmu$coding_source_v2)),
+                   " with their own messages). Fisher's exact, BH across the ", nrow(met_ai), " rows."),
+            xaxis = list(title = "Share whose goal was fully met", range = c(0, 105), ticksuffix = "%", gridcolor = GRID, zeroline = FALSE),
+            yaxis = list(title = "", automargin = TRUE), legend = list(orientation = "h", x = 0, y = -0.25))
+t5 <- kable(met_ai |> transmute(`In the chat` = label, `Met when yes` = paste0(round(met_yes), "% (n = ", n_yes, ")"),
+                          `Met when no` = paste0(round(met_no), "% (n = ", n_no, ")"), p = fmtp(p), `BH p` = fmtp(p_adj)), format = "html")
+# Charts made inside an if-block are not shown automatically, so they are printed together here
+htmltools::tagList(w1, w2, w3, w4, w5, htmltools::HTML(t5))
+}
+```
+
+The headline of the last chart is written for the expected result. If any row reaches BH p < .05 on your data, rewrite the headline to name it (the table shows the p-values).
+
+```{r goal-met-07, include = FALSE}
+# Fill the 07 goal-met workbook from these codes, only if it does not exist yet (never overwrites hand coding)
+goal_file_07 <- proj("data", "processed", "07_Q4_3_goal-met_coding.xlsx")
+WROTE_07 <- FALSE
+if (HAS_MET && !file.exists(goal_file_07)) {
+  t07 <- dat |> transmute(pid, convo_goal_met_oe, goal_met, goal_reason = "", coder_notes = "coded in 09 (claude_llm_goals_v1)")
+  wb7 <- createWorkbook(); addWorksheet(wb7, "goal_coding"); writeData(wb7, "goal_coding", t07, headerStyle = createStyle(textDecoration = "bold"))
+  setColWidths(wb7, "goal_coding", cols = 1:5, widths = c(8, 80, 12, 30, 30)); freezePane(wb7, "goal_coding", firstRow = TRUE)
+  saveWorkbook(wb7, goal_file_07); WROTE_07 <- TRUE
+}
+```
+
+`r if (HAS_MET) { if (WROTE_07) "The 07 goal-met workbook did not exist, so this report wrote it from the codes above. Re-knit 07 to use it." else "The 07 goal-met workbook already exists, so it was left as is (it may hold your own coding)." } else ""`
+
+### 9. Coding check
+
+```{r coding-check}
+# A rule-based second look: does a simple word list flag the same goals the coder did?
+# Low agreement points to goals worth rereading. Word lists are editable here.
+KEYWORDS <- c(
+  goal_cause          = "\\bwhy\\b|caus|what (is|was|'s) wrong|what (it|this) (is|was|could|might)|diagnos|serious|normal|figure out|results|what i (possibly )?(could )?have|what could",
+  goal_treatment      = "treat|remed|relie|what (i|to) (can |could |should )?(do|take)|plan\\b|manage|ease|improve|fix|get rid|lessen|stretch|feel better|next step",
+  goal_care           = "doctor|\\bdr\\b|physician|hospital|\\ber\\b|urgent care|specialist|seek medical|medical attention|surgery|vaccine|endocrinolog|appointment|appt|call my|professional|checked out",
+  goal_condition_info = "learn|general|information about|knowledge|more about|how (it|common)|probabilit",
+  goal_med            = "medication|\\bmeds?\\b|ibuprofen|tylenol|benadryl|antibiotic|zepbound|ozempic|prescri",
+  goal_prepare_visit  = "before (i|then|taking|my)|prepare|discuss|share them with|what to expect|appointment|appt",
+  goal_reassurance    = "reassur|valid|calm|health scare|isn'?t (a )?serious|not serious",
+  goal_for_other      = "\\bmy (mom|mother|dad|father|husband|wife|son|daughter|child|kid|friend|partner|significant other)|\\bhis\\b|\\bher\\b|\\bhe\\b|\\bshe\\b",
+  goal_ai_easier      = "quick|faster|easier|\\beasy\\b|embarrass|expensive|leg work|google|internet search|in lieu|without having to",
+  goal_worry          = "worr|concern|scare|anxious|afraid")
+if (HAS_TEXT) {
+  txt <- tolower(dat$convo_goal_oe %||% "")
+  chk <- bind_rows(lapply(names(KEYWORDS), function(v) {
+    kw <- as.integer(str_detect(txt, KEYWORDS[[v]])); cd <- dat[[v]]; ok <- !is.na(cd) & !is.na(txt)
+    a <- mean(kw[ok] == cd[ok]); pe <- mean(kw[ok]) * mean(cd[ok]) + (1 - mean(kw[ok])) * (1 - mean(cd[ok]))
+    tibble(code = v, Code = c(GOAL_LABELS, EXTRA_LABELS)[[v]], `Coder yes` = sum(cd[ok]), `Word list yes` = sum(kw[ok]),
+           Agreement = paste0(round(100 * a), "%"), Kappa = fmt(ifelse(pe < 1, (a - pe) / (1 - pe), NA), 2),
+           `Coder yes, words no` = paste(dat$pid[ok][cd[ok] == 1 & kw[ok] == 0], collapse = ", "),
+           `Words yes, coder no` = paste(dat$pid[ok][cd[ok] == 0 & kw[ok] == 1], collapse = ", "))
+  }))
+  kable(chk |> select(-code))
+} else cat("The goal text file was not found, so the word-list check was skipped.")
+```
+
+The word lists are blunt (for example, "her" flags a goal about someone else but also "her appointment"), so disagreement is expected. The pid lists show which answers to reread if a code looks off. Coder confidence: `r paste(names(table(dat$goal_coder_confidence)), table(dat$goal_coder_confidence), collapse = ", ")`.
+
+```{r export, include = FALSE}
+res <- bind_rows(RESULTS)
+wb <- createWorkbook(); addWorksheet(wb, "results"); writeData(wb, "results", res, headerStyle = createStyle(textDecoration = "bold"))
+setColWidths(wb, "results", cols = 1:4, widths = c(26, 70, 60, 8))
+if (exists("chk")) { addWorksheet(wb, "coding_check"); writeData(wb, "coding_check", chk |> select(-code), headerStyle = createStyle(textDecoration = "bold")) }
+saveWorkbook(wb, file.path(out_dir, "goal-results.xlsx"), overwrite = TRUE)
+
+# Aggregates only (no pids, no text): safe to copy to data/public/ if the goals go on the web page
+pub <- list(n_goal = N, goal_types = gt |> select(code, label, n, N, pct), main_goal = pm |> select(goal_primary, label, n, pct),
+            two_plus = unname(multi), extras = ex |> select(code, label, n, N, pct),
+            goal_vs_asked = ga |> select(code, label, N, n_goal, n_ask, n_both),
+            goal_vs_ai = gai |> select(goal, ai, n_yes, pct_yes, n_no, pct_no, p_adj),
+            feelings = feel |> select(code, outcome, n_yes, mean_yes, n_no, mean_no, p_adj, testable))
+if (HAS_MET) pub$goal_met <- list(overall = mo |> select(label, n, pct), by_goal = met_by |> select(code, cat, n, N, pct),
+                                  said = mf |> select(code, label, n, N, pct), feelings = met_feel |> select(outcome, n_met, mean_met, n_not, mean_not, p),
+                                  by_chat = met_ai |> select(code, n_yes, met_yes, n_no, met_no, p_adj))
+write_json(pub, file.path(out_dir, "part3a_goals_summary.json"), auto_unbox = TRUE, digits = 10, pretty = TRUE)
+```
+
+### Check
+
+```{r check}
+cat(id_note, "\n\n")
+kable(tibble(Base = c("Wrote a goal", "Wrote a health goal", "... with a usable chat and own messages", "... with a usable chat", "... with complete PANAS"),
+             n = c(N_ALL, N, nrow(hgv), nrow(hgu), nrow(hgp))))
+```
+
+Outputs in `r out_dir`: `goal-results.xlsx` (every number above, plus the coding check), `part3a_goals_summary.json` (aggregates only, for the web page) and `figures/` (static PNGs of the goal-type, main-goal and goal-vs-asked charts for Canva).

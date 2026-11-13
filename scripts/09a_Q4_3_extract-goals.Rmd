@@ -1,0 +1,114 @@
+---
+title: "Q4 Pulse 3: Extract the Goal Answers for Coding"
+subtitle: "Writes pid plus the two goal open ends (C3 and D2) to one small file, with no other IDs or survey answers"
+author: "Denicia Aragon Espinosa"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+params:
+  project_root: "C:/path/to/Q4_3_Pulse"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+**What this script does.** It takes the two goal questions from the survey file and writes them next to `pid` only:
+
+- `convo_goal_oe` (C3): "When starting the conversation you just provided, what was your goal?"
+- `convo_goal_met_oe` (D2): how the person described the moment the conversation ended (did they get what they wanted?)
+
+The output, `09_Q4_3_goals_deid_pid_only.csv`, is the only file shared for coding. It holds no response_id, Prolific ID, demographics or PANAS answers. This report shows counts only, never the answers themselves.
+
+```{r packages, include = FALSE}
+pkgs <- c("dplyr", "readr", "stringr", "knitr")
+to_install <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+```
+
+```{r paths, include = FALSE}
+project_root <- params$project_root
+proj <- function(...) file.path(project_root, ...)
+if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+in_05   <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")           # survey answers, including C3 and D2
+in_link <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv")  # pid -> Prolific ID (read in memory only)
+in_ids  <- proj("data", "processed", "00_Q4_3_renamed.csv")                            # response_id + Prolific ID
+out_file <- proj("data", "processed", "09_Q4_3_goals_deid_pid_only.csv")
+if (!file.exists(in_05)) stop("Input not found: ", in_05)
+```
+
+```{r ids, include = FALSE}
+# ---- Same ID matching as 07, 08a and 08b: every row gets a pid, in memory only ----
+ID_COLS <- c("pid", "response_id", "prolific_id")
+clean_ids <- function(d) {
+  names(d) <- trimws(gsub("^\ufeff", "", names(d)))
+  low <- tolower(names(d))
+  rename_first <- function(d, idx, new) { if (length(idx) && !(new %in% names(d))) names(d)[idx[1]] <- new; d }
+  d <- rename_first(d, which(low == "pid"), "pid")
+  d <- rename_first(d, which(low %in% c("response_id", "response id", "responseid")), "response_id")
+  d <- rename_first(d, which(low %in% c("prolific_id", "prolific_pid", "prolificid", "url variable: prolific_pid")), "prolific_id")
+  d |> mutate(across(any_of(ID_COLS), \(x) trimws(as.character(x))))
+}
+read_chr <- function(f) read_csv(f, col_types = cols(.default = col_character()), na = c("", "NA")) |> clean_ids()
+
+ids <- if (file.exists(in_link)) read_chr(in_link) |> select(any_of(ID_COLS)) |> distinct() else tibble(pid = character())
+for (col in ID_COLS) if (!col %in% names(ids)) ids[[col]] <- NA_character_
+if (file.exists(in_ids)) {
+  rn <- read_chr(in_ids) |> select(any_of(c("response_id", "prolific_id")))
+  if (all(c("response_id", "prolific_id") %in% names(rn))) {
+    rn <- rn |> filter(!is.na(prolific_id), !duplicated(prolific_id))
+    ids$response_id <- coalesce(ids$response_id, rn$response_id[match(ids$prolific_id, rn$prolific_id)])
+  }
+}
+ids <- ids |> select(all_of(ID_COLS))
+
+d05 <- read_chr(in_05)
+for (col in ID_COLS) if (!col %in% names(d05)) d05[[col]] <- NA_character_
+for (key in ID_COLS) {
+  lk <- ids[!is.na(ids[[key]]) & !duplicated(ids[[key]]), ]
+  m <- match(d05[[key]], lk[[key]])
+  for (other in setdiff(ID_COLS, key)) d05[[other]] <- coalesce(d05[[other]], lk[[other]][m])
+}
+n_rows <- nrow(d05); n_pid <- sum(!is.na(d05$pid))
+if (n_pid == 0) stop("No row could be matched to a pid. Check that ", basename(in_link), " and ", basename(in_ids), " are in data/processed.")
+```
+
+```{r extract, include = FALSE}
+GOAL_COLS <- c("convo_goal_oe", "convo_goal_met_oe")
+missing <- setdiff(GOAL_COLS, names(d05))
+if (length(missing)) stop("These columns are not in the 05 file: ", paste(missing, collapse = ", "),
+                          ". Check the names in variable-dictionary-Q4_3.R (rows 31 and 57).")
+
+blank_to_na <- function(x) { x <- str_squish(x); ifelse(is.na(x) | x == "", NA_character_, x) }
+goals <- d05 |>
+  filter(!is.na(pid)) |>
+  transmute(pid, convo_goal_oe = blank_to_na(convo_goal_oe), convo_goal_met_oe = blank_to_na(convo_goal_met_oe)) |>
+  filter(!duplicated(pid)) |>
+  arrange(as.numeric(pid))
+
+# pid + the two open ends only. No response_id, no Prolific ID.
+stopifnot(identical(names(goals), c("pid", GOAL_COLS)))
+write_csv(goals, out_file, na = "")
+```
+
+## Check
+
+```{r check}
+words <- function(x) ifelse(is.na(x), NA, str_count(x, "\\S+"))
+tibble(
+  Check = c("Rows in the 05 survey file", "Rows matched to a pid", "People in the goals file",
+            "Wrote a goal (C3)", "Wrote whether it was met (D2)", "Wrote both",
+            "Median words, goal (C3)", "Median words, goal met (D2)"),
+  Value = c(n_rows, n_pid, nrow(goals),
+            sum(!is.na(goals$convo_goal_oe)), sum(!is.na(goals$convo_goal_met_oe)),
+            sum(!is.na(goals$convo_goal_oe) & !is.na(goals$convo_goal_met_oe)),
+            median(words(goals$convo_goal_oe), na.rm = TRUE), median(words(goals$convo_goal_met_oe), na.rm = TRUE))
+) |> kable()
+```
+
+Written to: `r out_file`
+
+**Next step.** Upload `09_Q4_3_goals_deid_pid_only.csv` to the chat for coding. Keep it out of the public repo (the `.gitignore` already excludes `data/`).

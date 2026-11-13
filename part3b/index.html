@@ -123,6 +123,18 @@ h2.white { color: #fff; }
 .sbar .dlab { font-size: 15px; }
 .strack { position: relative; height: 34px; background: var(--grid); }
 .sfill { position: absolute; left: 0; top: 0; bottom: 0; }
+.mgrp { display: flex; justify-content: space-between; font-weight: 700; color: var(--dark); font-size: 15px; margin-top: 10px; }
+.mgrp span { font-weight: 400; color: var(--muted, #5f6b7a); }
+.mpr { display: grid; grid-template-columns: minmax(0,1fr) 22px minmax(0,1fr); gap: 6px; align-items: center; font-size: 14.5px; padding: 2px 4px; border-radius: 6px; }
+.mpr > div { padding: 6px 10px; border-radius: 6px; line-height: 1.25; min-width: 0; }
+.mpr .ma { background: #eaf6fc; border-left: 5px solid #29abe2; }
+.mpr .mb { background: #e9eef4; border-left: 5px solid #0b3d68; }
+.mpr .mn { background: transparent; border-left: 5px dashed #c3ccd6; color: #6b7581; font-style: italic; }
+.mpr .marr { text-align: center; color: #5f6b7a; padding: 0; }
+.mpr:hover, .mpr:focus-visible, .mpr.on { background: rgba(41,171,226,.08); }
+.ptracks { display: flex; flex-direction: column; gap: 4px; }
+.ptracks .strack { height: 22px; }
+.ptracks .sval { font-size: 13.5px; }
 .sval { position: absolute; top: 50%; transform: translateY(-50%); padding-left: 10px; font-weight: 700; color: var(--dark); white-space: nowrap; font-size: 15px; }
 .waffle.w10 { grid-template-columns: repeat(10, 30px); }
 .waffle.w10 .sq { width: 30px; height: 30px; }
@@ -198,7 +210,7 @@ html { scroll-behavior: smooth; }
   <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
   <h2>What we found in Parts 1 and 2</h2>
   <div class="prev-grid"><div class="prev-card" style="border-top-color:#a5306d"><p class="prev-tag" style="color:#a5306d">Part 1 &middot; August 2026</p><p class="prev-who">184 U.S. adults</p><ul><li><b style="color:#a5306d">65%</b> had used AI to look up health information, most often about symptoms and possible diagnoses (81% of those users).</li><li><b style="color:#a5306d">71% vs. 56%</b> Women used AI for health more than men, and more often turned to AI first for emotional support (51% vs. 26%).</li><li><b style="color:#a5306d">59% vs. 47%</b> Men more often told their provider what they had found with AI.</li></ul></div><div class="prev-card" style="border-top-color:#627fcc"><p class="prev-tag" style="color:#627fcc">Part 2 &middot; October 2026</p><p class="prev-who">64 U.S. adults from our August and September pulses</p><ul><li><b style="color:#627fcc">39%</b> would go to an AI chatbot before any person with a worrying health question; 61% had used AI for emotional support.</li><li><b style="color:#627fcc">70% to 53%</b> For a worrying question, asking family fell from 70% to 53% and a close friend from 56% to 44%; AI fell only from 84% to 78%.</li><li><b style="color:#627fcc">58%</b> of those who would go to AI first said the top reason was asking without feeling like a burden. People still rated their own doctor favorably, including on trust (PDRQ-9).</li></ul></div></div>
-  <p class="prev-next">Part 3B looks inside real AI health chats at what the AI said back, and how people felt afterward.</p>
+  <p class="prev-next">Part 3A looked at what people asked AI. Part 3B looks at what the AI said back, and how people felt afterward.</p>
   <p class="foot">Online surveys via Prolific. Part 2 re-surveyed people from the earlier pulses.</p>
 </section>
 

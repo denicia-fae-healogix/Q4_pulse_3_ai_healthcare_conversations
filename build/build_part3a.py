@@ -12,14 +12,14 @@ N_MULTI = D["n_multi"]
 E = html.escape
 TIPS = {}
 
-def tip(key, title, stats, quotes=(), note=None):
+def tip(key, title, stats, quotes=(), note=None, sub="From the conversations"):
     h = f'<p class="tt-title">{E(title)}</p>'
     if stats:
         h += '<dl class="tt-stats">' + "".join(f"<dt>{E(a)}</dt><dd>{E(b)}</dd>" for a, b in stats) + "</dl>"
     if note:
         h += f'<p class="tt-note">{E(note)}</p>'
     if quotes:
-        h += '<p class="tt-sub">From the conversations</p>' + "".join(f'<blockquote><span>{E(s)}</span>{E(t)}</blockquote>' for s, t in quotes)
+        h += f'<p class="tt-sub">{E(sub)}</p>' + "".join(f'<blockquote><span>{E(s)}</span>{E(t)}</blockquote>' for s, t in quotes)
     TIPS[key] = h
     return key
 
@@ -56,14 +56,15 @@ slides.append(f"""
   <p class="byline">Denicia Aragon Espinosa &amp; James Dunlea, Ph.D.</p>
   <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
 </section>""")
-slides.append(prior_slide("s1b", "Part 3A looks inside real AI health chats, starting with what people asked."))
+slides.append(prior_slide("s1b", "Part 3A looks inside real AI health chats, starting with what people asked. Part 3B covers what the AI said back, and how people felt afterward."))
 
 
 pills = [("#a5306d", "Most people asked about their own health, not general facts", "s4"),
          ("#9b4c96", "Half asked the AI what was causing a symptom", "s5"),
          ("#8467b6", "People asked deeper questions but rarely pushed back", "s7"),
          ("#627fcc", "Asking for a cause always led to a referral", "s8"),
-         ("#4a8fd0", "The AI pointed 4 in 5 people to a professional", "s9")]
+         ("#4a8fd0", "The AI pointed 4 in 5 people to a professional", "s9"),
+         ("#2f9fd8", f"{round(100 * D['goals']['met']['Yes'] / D['goals']['N'])}% said AI met the goal they came with", "s14")]
 slides.append(f"""
 <section class="slide" id="s2">{EYEBROW}
   <h2 class="ov-title">What people ask AI about their health, and how the AI answers</h2>
@@ -217,6 +218,28 @@ slides.append(f"""
   <p class="foot">Coded from the AI's text (n = {N}). One conversation can count in several bars. Only {pct(D['asks']['human_asks_care'][0], N)}% asked whether or where to get care, yet the AI referred {pct(rwa, rwat)}% of those who did not ask. In {pct(nmn, nmnt)}% of the chats where the AI named a drug, the person had not asked about one.</p>
 </section>""")
 
+
+# ---- 9b medications: what people asked about vs. what the AI recommended (one row per chat) ----
+MP = D["med_pairs"]; mc = MP["counts"]; otc, nrec = MP["otc_of_recommended"]
+MED_NOTE = {"Asked, and got a recommendation": "The person named a drug, and the AI suggested a specific one to take, try or ask a doctor about.",
+            "Asked, no recommendation": "The person named a drug; the AI explained it but did not suggest taking or trying one.",
+            "Recommended without being asked": "The person described a symptom without asking about any drug; the AI suggested one anyway."}
+mrows = ""
+for gi, g in enumerate(MP["groups"]):
+    mrows += f'<div class="mgrp">{E(g["label"])}<span>{len(g["rows"]) if gi < 2 else mc["recommended_unasked"]} people</span></div>'
+    for ri, (a, b) in enumerate(g["rows"]):
+        unasked = gi == 2
+        k = tip(f"md{gi}{ri}", g["label"], [("They asked about" if not unasked else "They described", a), ("The AI recommended", b or "Nothing specific; it explained only")], (), MED_NOTE[g["label"]])
+        mrows += (f'<div class="mpr" {attrs(k)}><div class="{"mn" if unasked else "ma"}">{E(a)}</div><div class="marr">&rarr;</div>'
+                  f'<div class="{"mb" if b else "mn"}">{E(b or "Explained only")}</div></div>')
+slides.append(f"""
+<section class="slide" id="s9b">{EYEBROW}
+  <h2>Most AI drug recommendations answered a symptom, not a medication question</h2>
+  <div class="legend"><span><i class="lg-sq" style="background:{LIGHT}"></i>What the person asked about</span><span><i class="lg-sq" style="background:{DARK}"></i>What the AI recommended</span></div>
+  <div class="mpairs">{mrows}</div>
+  <p class="foot">Each row is one conversation ({sum(mc[x] for x in ("asked_and_recommended", "asked_only", "recommended_unasked"))} of the {MP['N']} involved a medication question or a recommendation). Italic = the person described a symptom and did not ask about a drug. {otc} of the {nrec} recommendations were over-the-counter. Drug names as they appeared in the chat.</p>
+</section>""")
+
 # ---- 10 takeaways ----
 self_other = D["about"]["other_person"]
 pb, pbt = D["followup"]["human_pushback"]
@@ -237,6 +260,97 @@ slides.append(f"""
   <h2 class="cyan">Now what does that mean?</h2>
   <div class="tks">{tk}</div>
   <p class="foot small">Notes: exploratory pulse; {N} participants whose pasted conversation included their own messages. Group sizes are small, so differences are directional. BH-adjusted p-values are shown where tests were run. Question types, health topic, who the question was about and follow-up behavior were coded from participant messages; referral, medication, urgent-care and disclaimer codes from the AI text. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out.</p>
+</section>""")
+
+
+# ---- 12 to 14: the goals people set (survey C3) and whether they were met (D2) ----
+G = D["goals"]; NG = G["N"]; NA_ = G["N_asked"]
+SAID = "In their words (survey answer)"
+GOALS = [("goal_cause", "Find out what is wrong, or whether it is serious", [P("I wanted to understand why I've been feeling so tired lately, even after getting a full night's sleep."), P("Finding out what's wrong with my wrist.")]),
+         ("goal_treatment", "Find out how to treat or manage it", [P("I was looking for at-home treatments to ease knee pain.")]),
+         ("goal_care", "Decide whether or where to get care", [P("I wanted to determine if I needed to call my doctor or just wait out whatever sickness I was coming down with.")]),
+         ("goal_condition_info", "Learn about a condition in general", [P("I wanted to learn about sleep apnea and see if it was something I might have myself.")]),
+         ("goal_med", "Ask about a specific medication", [P("I wanted to see how often people are allergic to some antibiotics.")]),
+         ("goal_prepare_visit", "Prepare for a visit or a talk with a provider", [P("I wanted to get an idea before I go see a doctor.")]),
+         ("goal_reassurance", "Get reassurance", [P("I wanted the AI to show me different examples of what it could be, so I know it isn't a health scare.")])]
+rows = []
+for i, (code, lab, qs) in enumerate(GOALS):
+    n = G["types"][code]; m_yes, m_n = G["met_by_type"][code]
+    k = tip(f"g{i}", lab, [("Share", f"{pct(n, NG)}%"), ("People", f"{n} of {NG}"), ("Said this goal was met", f"{pct(m_yes, m_n)}% ({m_yes} of {m_n})")], qs,
+            "Coded from what people wrote as their goal before the chat. One person can have several goals.", SAID)
+    out_col = DARK if i < 2 else LIGHT
+    rows.append((lab, n, NG, out_col, k))
+bars = ""
+for lab, n, tot, col, k in rows:
+    p = 100 * n / tot
+    bars += f"""<div class="sbar" {attrs(k)}><div class="dlab{' b' if col == DARK else ''}">{E(lab)}</div>
+      <div class="strack"><span class="sfill" style="width:{p:.2f}%;background:{col}"></span><span class="sval" style="left:{p:.2f}%">{round(p)}%</span></div></div>"""
+slides.append(f"""
+<section class="slide" id="s12">{EYEBROW}
+  <h2>Half came to AI to find out what was wrong; {pct(G['types']['goal_treatment'], NG)}% wanted to know how to treat it</h2>
+  <p class="chart-title">What participants said their goal was</p>
+  <div class="sbars">{bars}</div>
+  <p class="axis-title">% of participants with a given goal</p>
+  <p class="foot">Coded from answers to &ldquo;When starting the conversation you just provided, what was your goal?&rdquo; (n = {NG} participants who described a health goal). One person can have more than one goal ({pct(G['two_plus'], NG)}% did), so bars add up to more than 100%. {pct(G['for_other'], NG)}% said the goal was about someone else, and {pct(G['ai_easier'], NG)}% said, unprompted, that AI was quicker, cheaper or easier than a search or a doctor.</p>
+</section>""")
+
+# ---- 13 goal vs. what they asked ----
+PAIR_Q = {"goal_cause": [P("Why is the top of my foot hurting?")], "goal_treatment": [P("What can I do to alleviate knee pain and get back to normal?")],
+          "goal_care": [P("Should I see a medical specialist about this or try to wait it out?")], "goal_condition_info": [P("What is sleep apnea?")],
+          "goal_med": [P("I have a headache, what should I take?")]}
+LAB = dict((c, l) for c, l, _ in GOALS)
+pb_ = ""
+for i, code in enumerate(["goal_cause", "goal_treatment", "goal_care", "goal_condition_info", "goal_med"]):
+    ng, na = G["goal_vs_asked"][code]; pg, pa = 100 * ng / NA_, 100 * na / NA_
+    k = tip(f"ga{i}", LAB[code], [("Said it was their goal", f"{round(pg)}% ({ng} of {NA_})"), ("Asked it in the chat", f"{round(pa)}% ({na} of {NA_})")],
+            PAIR_Q[code], "Goal from the survey answer; asked from the participant's own messages in the chat.", "What the question looked like in the chat")
+    strong = code == "goal_care"
+    pb_ += f"""<div class="sbar" {attrs(k)}><div class="dlab{' b' if strong else ''}">{E(LAB[code])}</div><div class="ptracks">
+      <div class="strack"><span class="sfill" style="width:{pg:.2f}%;background:{LIGHT}"></span><span class="sval" style="left:{pg:.2f}%">{round(pg)}%</span></div>
+      <div class="strack"><span class="sfill" style="width:{pa:.2f}%;background:{DARK}"></span><span class="sval" style="left:{pa:.2f}%">{round(pa)}%</span></div></div></div>"""
+cg, ca = G["goal_vs_asked"]["goal_care"]
+slides.append(f"""
+<section class="slide" id="s13">{EYEBROW}
+  <h2>{pct(cg, NA_)}% hoped AI would help them decide about care, but only {pct(ca, NA_)}% asked it outright</h2>
+  <p class="chart-title">Their goal vs. what they asked the AI</p>
+  <div class="legend"><span><i class="lg-sq" style="background:{LIGHT}"></i>Said it was their goal</span><span><i class="lg-sq" style="background:{DARK}"></i>Asked it in the chat</span></div>
+  <div class="sbars">{pb_}</div>
+  <p class="axis-title">% of participants</p>
+  <p class="foot">Goals coded from the survey answer; questions coded from participants' own messages in the pasted chat (n = {NA_} participants with both). Treatment shows a similar gap ({pct(G['goal_vs_asked']['goal_treatment'][0], NA_)}% vs. {pct(G['goal_vs_asked']['goal_treatment'][1], NA_)}%): people often described a symptom and left the AI to suggest next steps.</p>
+</section>""")
+
+# ---- 14 was the goal met? ----
+MET = [("Yes", "Yes, it was met", DARK, "#fff", [P("I took some Tylenol and laid down for a short nap. When I woke up my headache was gone.")]),
+       ("Partly", "Partly", PALE, "#1c2430", [P("It gave almost too much information and I struggled to parse it.")]),
+       ("No", "No", "#E3A26F", "#1c2430", [P("It didn't really have a solid answer. There was no ah-ha moment that I was hoping for.")])]
+segs = ""
+for code, lab, col, txt, qs in MET:
+    n = G["met"][code]; p = 100 * n / NG
+    k = tip(f"m_{code}", f"Goal met? {lab}", [("Share", f"{round(p)}%"), ("People", f"{n} of {NG}")], qs, None, SAID)
+    segs += f'<div class="hseg" style="width:{p:.2f}%;background:{col};color:{txt}" {attrs(k)}><b>{round(p)}%</b></div>'
+FL = [("goal_met_reassured", "Felt reassured, relieved or more confident", DARK, [P("I was reassured I'll be okay.")]),
+      ("goal_met_professional", "Brought a doctor into what came next", DARK, [P("It also gave me tips on scheduling an appointment with a medical professional.")]),
+      ("goal_met_acted", "Did something the AI suggested", LIGHT, [P("I ended up buying the right kind of cough drops.")]),
+      ("goal_met_doubt", "Noted a limit of the AI", LIGHT, [P("ChatGPT kind of always validates my thoughts.")])]
+fbars = ""
+for i, (code, lab, col, qs) in enumerate(FL):
+    n = G["met_flags"][code]; p = 100 * n / NG
+    note = "Saw a doctor, plans to, will if it gets worse, or a doctor confirmed what the AI said." if code == "goal_met_professional" else \
+           "Unclear answer, too much information, always agrees, or not enough on its own." if code == "goal_met_doubt" else None
+    k = tip(f"mf{i}", lab, [("Share", f"{round(p)}%"), ("People", f"{n} of {NG}")], qs, note, SAID)
+    fbars += f"""<div class="sbar" {attrs(k)}><div class="dlab{' b' if col == DARK else ''}">{E(lab)}</div>
+      <div class="strack"><span class="sfill" style="width:{p:.2f}%;background:{col}"></span><span class="sval" style="left:{p:.2f}%">{round(p)}%</span></div></div>"""
+ay, an_ = G["met_by_asked_own"]["asked"]; ny_, nn_ = G["met_by_asked_own"]["did_not_ask"]
+slides.append(f"""
+<section class="slide" id="s14">{EYEBROW}
+  <h2>{pct(G['met']['Yes'], NG)}% said AI met their goal, yet 3 in 10 still brought a doctor into what came next</h2>
+  <p class="chart-title">Did the chat meet the goal they set?</p>
+  <div class="legend"><span><i class="lg-sq" style="background:{DARK}"></i>Yes</span><span><i class="lg-sq" style="background:{PALE}"></i>Partly</span><span><i class="lg-sq" style="background:#E3A26F"></i>No</span></div>
+  <div class="hchart"><div class="hrow"><div class="hlab"><b>All participants</b><br><span class="muted">(n = {NG})</span></div><div class="hbar" style="height:64px">{segs}</div></div></div>
+  <p class="chart-title" style="margin-top:22px">What they said, unprompted, about how it went</p>
+  <div class="sbars">{fbars}</div>
+  <p class="axis-title">% of participants</p>
+  <p class="foot">Coded from the survey answer on whether the goal was achieved (n = {NG}). The lower bars only count what people volunteered, so they are floors. People who asked the AI about their main goal said it was met {pct(ay, an_)}% of the time, vs. {pct(ny_, nn_)}% for those who did not (n = {an_} and {nn_}; Fisher's exact p = .06, a pattern rather than a firm result).</p>
 </section>""")
 
 slides.append("""

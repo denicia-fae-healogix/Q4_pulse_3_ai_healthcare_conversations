@@ -78,7 +78,7 @@ slides.append(("title", """
 
 # ---------- 1b what we found before ----------
 from prior_pulses import prior_slide
-slides.append(("prior", prior_slide("s1b", "Part 3B looks inside real AI health chats at what the AI said back, and how people felt afterward.")))
+slides.append(("prior", prior_slide("s1b", "Part 3A looked at what people asked AI. Part 3B looks at what the AI said back, and how people felt afterward.")))
 
 # ---------- 2 overview ----------
 pills = [("#a5306d", "Distress dropped after the chat, most after a referral to a professional", "s4"),

@@ -123,6 +123,18 @@ h2.white { color: #fff; }
 .sbar .dlab { font-size: 15px; }
 .strack { position: relative; height: 34px; background: var(--grid); }
 .sfill { position: absolute; left: 0; top: 0; bottom: 0; }
+.mgrp { display: flex; justify-content: space-between; font-weight: 700; color: var(--dark); font-size: 15px; margin-top: 10px; }
+.mgrp span { font-weight: 400; color: var(--muted, #5f6b7a); }
+.mpr { display: grid; grid-template-columns: minmax(0,1fr) 22px minmax(0,1fr); gap: 6px; align-items: center; font-size: 14.5px; padding: 2px 4px; border-radius: 6px; }
+.mpr > div { padding: 6px 10px; border-radius: 6px; line-height: 1.25; min-width: 0; }
+.mpr .ma { background: #eaf6fc; border-left: 5px solid #29abe2; }
+.mpr .mb { background: #e9eef4; border-left: 5px solid #0b3d68; }
+.mpr .mn { background: transparent; border-left: 5px dashed #c3ccd6; color: #6b7581; font-style: italic; }
+.mpr .marr { text-align: center; color: #5f6b7a; padding: 0; }
+.mpr:hover, .mpr:focus-visible, .mpr.on { background: rgba(41,171,226,.08); }
+.ptracks { display: flex; flex-direction: column; gap: 4px; }
+.ptracks .strack { height: 22px; }
+.ptracks .sval { font-size: 13.5px; }
 .sval { position: absolute; top: 50%; transform: translateY(-50%); padding-left: 10px; font-weight: 700; color: var(--dark); white-space: nowrap; font-size: 15px; }
 .waffle.w10 { grid-template-columns: repeat(10, 30px); }
 .waffle.w10 .sq { width: 30px; height: 30px; }

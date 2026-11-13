@@ -97,5 +97,168 @@
  "named_med_not_asked": [
   14,
   20
- ]
+ ],
+ "goals": {
+  "N": 59,
+  "types": {
+   "goal_cause": 31,
+   "goal_treatment": 26,
+   "goal_care": 17,
+   "goal_condition_info": 11,
+   "goal_med": 8,
+   "goal_prepare_visit": 6,
+   "goal_reassurance": 5
+  },
+  "two_plus": 34,
+  "for_other": 9,
+  "ai_easier": 8,
+  "met": {
+   "Yes": 50,
+   "Partly": 5,
+   "No": 4
+  },
+  "met_flags": {
+   "goal_met_reassured": 17,
+   "goal_met_professional": 17,
+   "goal_met_acted": 13,
+   "goal_met_doubt": 8
+  },
+  "met_by_type": {
+   "goal_cause": [
+    25,
+    31
+   ],
+   "goal_treatment": [
+    24,
+    26
+   ],
+   "goal_care": [
+    14,
+    17
+   ],
+   "goal_condition_info": [
+    9,
+    11
+   ],
+   "goal_med": [
+    6,
+    8
+   ],
+   "goal_prepare_visit": [
+    5,
+    6
+   ],
+   "goal_reassurance": [
+    3,
+    5
+   ]
+  },
+  "N_asked": 50,
+  "goal_vs_asked": {
+   "goal_cause": [
+    27,
+    26
+   ],
+   "goal_treatment": [
+    21,
+    16
+   ],
+   "goal_care": [
+    14,
+    8
+   ],
+   "goal_condition_info": [
+    9,
+    13
+   ],
+   "goal_med": [
+    6,
+    6
+   ]
+  },
+  "met_by_asked_own": {
+   "asked": [
+    29,
+    32
+   ],
+   "did_not_ask": [
+    7,
+    11
+   ]
+  }
+ },
+ "med_pairs": {
+  "N": 50,
+  "counts": {
+   "asked_and_recommended": 3,
+   "asked_only": 3,
+   "recommended_unasked": 8,
+   "neither": 36
+  },
+  "otc_of_recommended": [
+   10,
+   11
+  ],
+  "groups": [
+   {
+    "label": "Asked, and got a recommendation",
+    "rows": [
+     [
+      "Prolia and raloxifene",
+      "Zoledronic acid (ask your doctor)"
+     ],
+     [
+      "Amoxicillin (a reaction)",
+      "Benadryl or Claritin"
+     ],
+     [
+      "An antifungal cream",
+      "Clotrimazole"
+     ]
+    ]
+   },
+   {
+    "label": "Asked, no recommendation",
+    "rows": [
+     [
+      "Bactrim and other antibiotics",
+      null
+     ],
+     [
+      "Zepbound",
+      null
+     ],
+     [
+      "Guanfacine",
+      null
+     ]
+    ]
+   },
+   {
+    "label": "Recommended without being asked",
+    "rows": [
+     [
+      "Headache",
+      "Tylenol or ibuprofen"
+     ],
+     [
+      "Flu-like aches",
+      "Tylenol or ibuprofen"
+     ],
+     [
+      "Knee pain",
+      "Ibuprofen, naproxen or diclofenac gel"
+     ],
+     [
+      "Stomach ache",
+      "Simethicone (Gas-X)"
+     ],
+     [
+      "Back pain, sharp pain, sore throat, scalp (4 chats)",
+      "Ibuprofen or Tylenol"
+     ]
+    ]
+   }
+  ]
+ }
 }
