@@ -20,3 +20,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# The codebook workbook holds definitions only, so it can be committed
+!codebook/*.xlsx

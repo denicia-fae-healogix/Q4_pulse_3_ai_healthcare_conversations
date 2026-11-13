@@ -410,7 +410,7 @@ slides.append("""
   <p class="howto"><a href="../part3b/" style="color:inherit">Continue to Part 3B: What did AI say back to people? &rarr;</a></p>
 </section>""")
 
-# The takeaways slide sits after the goal slides (deck slide 17), just before the closing slide
+# The takeaways slide is second to last (deck slide 18; the deck ends with the QR slide, the web page with the contact slide)
 _tk = next(i for i, s in enumerate(slides) if 'id="s10"' in s)
 _tk_slide = slides.pop(_tk)
 slides.insert(next(i for i, s in enumerate(slides) if 'id="s11"' in s), _tk_slide)

@@ -680,22 +680,22 @@ if (exists("meds")) {
 } else cat("10_Q4_3_med_asked_vs_recommended.csv not found, so this slide is not checked.")
 ```
 
-## 17. Takeaways
+## 18. Takeaways
 
-```{r slide17}
-# Deck slide 17 ("Now what does that mean?"), after the goal slides. Goal numbers (28% vs. 16%) are checked in 09b.
-check("17", "Follow-ups that added detail", "87%", paste0(round(s7$pct[s7$code == "human_followup_adds_detail"]), "%"))
-check("17", "Most often muscles, bones and joints", "20%", paste0(round(s7a$pct[s7a$code == "topic_muscles_bones_joints"]), "%"))
-check("17", "About half never named a condition", "about half (52%)", paste0(round(100 * mean(pp$human_mentions_disease == 0, na.rm = TRUE)), "%"))
-check("17", "Asked whether or where to get care", "16%", paste0(round(s6q$pct[s6q$code == "human_asks_care"]), "%"))
-check("17", "AI pointed people to a professional", "80%", paste0(round(s9$pct[s9$code == "ai_refers_professional"]), "%"))
-if (exists("meds")) check("17", "Got a drug recommendation without asking about one", "8 of 11",
+```{r slide18}
+# Deck slide 18 ("Now what does that mean?"), second to last: after the contact slide, before the QR slide. Goal numbers (28% vs. 16%) are checked in 09b.
+check("18", "Follow-ups that added detail", "87%", paste0(round(s7$pct[s7$code == "human_followup_adds_detail"]), "%"))
+check("18", "Most often muscles, bones and joints", "20%", paste0(round(s7a$pct[s7a$code == "topic_muscles_bones_joints"]), "%"))
+check("18", "About half never named a condition", "about half (52%)", paste0(round(100 * mean(pp$human_mentions_disease == 0, na.rm = TRUE)), "%"))
+check("18", "Asked whether or where to get care", "16%", paste0(round(s6q$pct[s6q$code == "human_asks_care"]), "%"))
+check("18", "AI pointed people to a professional", "80%", paste0(round(s9$pct[s9$code == "ai_refers_professional"]), "%"))
+if (exists("meds")) check("18", "Got a drug recommendation without asking about one", "8 of 11",
                         paste(gc[["recommended_unasked"]], "of", gc[["recommended_unasked"]] + gc[["asked_and_recommended"]]))
-check("17", "Asked what was causing a symptom", "46%", paste0(round(s6q$pct[s6q$code == "human_asks_what_cause"]), "%"))
-check("17", "Asked whether it was serious", "12%", paste0(round(s6q$pct[s6q$code == "human_asks_serious"]), "%"))
-check("17", "AI replies with a disclaimer", "10%", paste0(round(s9$pct[s9$code == "ai_disclaimer"]), "%"))
-check("17", "Pushed back (of people who sent follow-ups)", "4 of 30", paste0(s7$n[s7$code == "human_pushback"], " of ", s7$N[s7$code == "human_pushback"]))
-check("17", "Asked on behalf of someone else", "1 in 10", paste0("1 in ", round(100 / by5$pct[by5$who == "Someone else (partner, child)"])))
+check("18", "Asked what was causing a symptom", "46%", paste0(round(s6q$pct[s6q$code == "human_asks_what_cause"]), "%"))
+check("18", "Asked whether it was serious", "12%", paste0(round(s6q$pct[s6q$code == "human_asks_serious"]), "%"))
+check("18", "AI replies with a disclaimer", "10%", paste0(round(s9$pct[s9$code == "ai_disclaimer"]), "%"))
+check("18", "Pushed back (of people who sent follow-ups)", "4 of 30", paste0(s7$n[s7$code == "human_pushback"], " of ", s7$N[s7$code == "human_pushback"]))
+check("18", "Asked on behalf of someone else", "1 in 10", paste0("1 in ", round(100 / by5$pct[by5$who == "Someone else (partner, child)"])))
 check("4", "Overview pill: drug recommendations without being asked", "8 of 11 (most)", if (exists("meds")) paste(gc[["recommended_unasked"]], "of 11") else "no med file")
 
 # For reference, as in the 07 report (not on the slides)
@@ -705,9 +705,9 @@ recode_intent <- function(x) factor(case_when(
   levels = c("Symptom interpretation", "Self-management", "Other questions"))
 d9 <- dat |> mutate(intent = recode_intent(human_first_intent), calm = CALMER_OF(na_change)) |> filter(!is.na(intent), !is.na(calm)) |>
   group_by(intent) |> summarise(n = n(), calm = sum(calm == "Calmer"), .groups = "drop") |> mutate(pct = 100 * calm / n)
-for (g9 in levels(d9$intent)) { r <- d9[d9$intent == g9, ]; if (nrow(r)) check("17", paste("For reference, felt calmer by first-message intent:", g9), "(not on slide)", paste0(round(r$pct), "% (n = ", r$n, ")")) }
+for (g9 in levels(d9$intent)) { r <- d9[d9$intent == g9, ]; if (nrow(r)) check("18", paste("For reference, felt calmer by first-message intent:", g9), "(not on slide)", paste0(round(r$pct), "% (n = ", r$n, ")")) }
 kable(d9 |> transmute(`First message` = intent, n, `Felt calmer` = paste0(round(pct), "% (", calm, ")")), align = "lrr")
-cat("\nSlide 17 has no chart. Its numbers are checked in the Check against deck tab.")
+cat("\nSlide 18 has no chart. Its numbers are checked in the Check against deck tab.")
 ```
 
 ## New codes and feelings
