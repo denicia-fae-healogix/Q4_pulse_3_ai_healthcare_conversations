@@ -29,17 +29,6 @@
   ]
  },
  "n_more_than_one_kind": 12,
- "health_area": {
-  "pain_muscles_bones": 10,
-  "other": 9,
-  "skin_allergy": 7,
-  "digestive": 6,
-  "diet_fitness_weight": 6,
-  "mental_health_sleep": 3,
-  "diabetes_hormones": 3,
-  "cold_flu_infection": 3,
-  "eyes": 3
- },
  "followup": {
   "human_followup_adds_detail": [
    26,
@@ -260,5 +249,135 @@
     ]
    }
   ]
- }
+ },
+ "asks6": {
+  "human_asks_what_cause": [
+   23,
+   50
+  ],
+  "human_asks_treatment": [
+   16,
+   50
+  ],
+  "human_asks_condition_info": [
+   13,
+   50
+  ],
+  "human_asks_care": [
+   8,
+   50
+  ],
+  "human_asks_serious": [
+   6,
+   50
+  ],
+  "human_asks_med": [
+   6,
+   50
+  ],
+  "human_asks_test_result": [
+   3,
+   50
+  ]
+ },
+ "n_more_than_one_kind6": 14,
+ "n_cause_and_serious": 5,
+ "topics": {
+  "topic_muscles_bones_joints": [
+   10,
+   50
+  ],
+  "topic_diet_fitness_weight": [
+   6,
+   50
+  ],
+  "topic_digestive": [
+   6,
+   50
+  ],
+  "topic_cold_flu_infection": [
+   5,
+   50
+  ],
+  "topic_allergy_rash": [
+   5,
+   50
+  ],
+  "topic_diabetes_hormones": [
+   5,
+   50
+  ],
+  "topic_head_nerves": [
+   3,
+   50
+  ],
+  "topic_eyes": [
+   3,
+   50
+  ],
+  "topic_mental_health_sleep": [
+   3,
+   50
+  ],
+  "topic_skin_hair": [
+   2,
+   50
+  ],
+  "topic_other": [
+   6,
+   50
+  ]
+ },
+ "n_two_plus_areas": 4,
+ "n_everyday": 32,
+ "drug_classes": [
+  {
+   "class": "OTC pain relievers",
+   "examples": "ibuprofen, Tylenol, naproxen",
+   "asked": 0,
+   "recommended": 7
+  },
+  {
+   "class": "Antibiotics",
+   "examples": "amoxicillin, Bactrim",
+   "asked": 2,
+   "recommended": 0
+  },
+  {
+   "class": "Osteoporosis drugs",
+   "examples": "Prolia, raloxifene, zoledronic acid",
+   "asked": 1,
+   "recommended": 1
+  },
+  {
+   "class": "Antifungal creams",
+   "examples": "clotrimazole",
+   "asked": 1,
+   "recommended": 1
+  },
+  {
+   "class": "Weight-loss drug",
+   "examples": "Zepbound",
+   "asked": 1,
+   "recommended": 0
+  },
+  {
+   "class": "ADHD drug",
+   "examples": "guanfacine",
+   "asked": 1,
+   "recommended": 0
+  },
+  {
+   "class": "Antihistamines",
+   "examples": "Benadryl, Claritin",
+   "asked": 0,
+   "recommended": 1
+  },
+  {
+   "class": "Gas relief",
+   "examples": "simethicone (Gas-X)",
+   "asked": 0,
+   "recommended": 1
+  }
+ ]
 }

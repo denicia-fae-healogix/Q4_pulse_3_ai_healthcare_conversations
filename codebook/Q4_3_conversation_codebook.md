@@ -9,6 +9,7 @@ One row per participant (`pid`). This codebook covers every variable that was co
 | `05_Q4_3_conversations_wide_deid.csv` | Survey answers and PANAS, plus the split conversation turns | 00 and 01 scripts |
 | `05_Q4_3_conversations_wide_deid_coded.csv` | v1 codes (section 3) | LLM-assisted coding, `coding_source = claude_llm_v1` (11 Nov 2026) |
 | `05_Q4_3_conversations_wide_deid_coded_v2.csv` | v1 codes plus v2 participant codes (section 4) | LLM-assisted coding, `coding_source_v2 = claude_llm_v2` (12 Nov 2026) |
+| `05_Q4_3_conversations_wide_deid_coded_v3.csv` | v2 file plus v3 codes (section 4b). Only adds columns, so it replaces v2 in every script | LLM-assisted coding, `coding_source_v3 = claude_llm_v3` (13 Nov 2026) |
 | `06_Q4_3_binary-categories` output | Word-list binary codes (section 5) | 06 script |
 
 **Value conventions.** Binary codes use 1 = yes and 0 = no. A blank (NA) means the code does not apply to that person (see each code), never "no".
@@ -98,17 +99,54 @@ Coded only for the 50 usable conversations with at least one participant turn; b
 | Variable | Type | Definition |
 |---|---|---|
 | `human_about` | category | Who the question is about: `self`; `other_person` (a named or described other person, such as a husband, son or daughter); `general` (no specific person, for example "what is diabetes"). Third-person descriptions with no other person named are coded `self` (see `coder_note_v2`) |
-| `human_health_area` | category | Main health area, one per conversation: `pain_muscles_bones`, `digestive`, `skin_allergy` (skin, hair, allergic reactions), `cold_flu_infection`, `diet_fitness_weight` (including supplements), `mental_health_sleep`, `diabetes_hormones`, `eyes`, `other` (chest pain, headache, fatigue, kidney or test reports, surgery recovery) |
-| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result) |
+| `human_health_area` | category | (Kept for reference; the slides now use the v3 `topic_*` codes in section 4b.) Main health area, one per conversation: `pain_muscles_bones`, `digestive`, `skin_allergy` (skin, hair, allergic reactions), `cold_flu_infection`, `diet_fitness_weight` (including supplements), `mental_health_sleep`, `diabetes_hormones`, `eyes`, `other` (chest pain, headache, fatigue, kidney or test reports, surgery recovery) |
+| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result). This combined measure equals 1 when any of the three v3 codes `human_asks_what_cause`, `human_asks_serious` or `human_asks_test_result` is 1 (52%). Used on 3A slides 4, 10 and 14 and in the goals comparisons |
 | `human_asks_treatment` | 0/1 | Asks what to do, take, eat or change to treat or manage something |
 | `human_asks_care` | 0/1 | Asks whether or where to get care, which specialist or test, or what a visit involves |
 | `human_asks_condition_info` | 0/1 | Asks for general information about a condition ("what is X", "does X grow"). Medication questions stay in `human_asks_med` |
 | `human_pushback` | 0/1 | (2+ participant turns only) Corrects the AI, says it missed something, or asks it to reconsider. Blank for one-turn chats |
 | `human_followup_adds_detail` | 0/1 | (2+ turns only) A later message adds symptoms, history or context |
-| `human_followup_new_question` | 0/1 | (2+ turns only) A later message asks a new or deeper question |
+| `human_followup_new_question` | 0/1 | (2+ turns only) A later message asks a new question (a new topic or a more specific follow-up) |
 | `human_expresses_worry` | 0/1 | States worry, fear, stress, frustration or distress in their own words |
 | `coder_note_v2` | text | Short note on borderline calls |
 | `coding_source_v2` | text | `claude_llm_v2` |
+
+---
+
+## 4b. Version 3 codes, participant side (`claude_llm_v3`)
+
+Added 13 Nov 2026 after review of the Part 3A deck. Coded for the same 50 usable conversations with at least one participant turn; blank for everyone else. Each code looks across all participant turns.
+
+**Question types.** The combined `human_asks_cause` is split into three, because asking what is causing a symptom and asking whether it is serious are different questions. One person can have several.
+
+| Variable | Type | Definition | Share |
+|---|---|---|---|
+| `human_asks_what_cause` | 0/1 | Asks what is causing a symptom or what it could be ("why is my foot hurting", "what could this be") | 46% (23) |
+| `human_asks_serious` | 0/1 | Asks whether something is normal, typical, serious or worth worrying about | 12% (6) |
+| `human_asks_test_result` | 0/1 | Asks the AI to explain a test result, lab value or report (for example an A1c value or a scan report) | 6% (3) |
+
+The three together reproduce `human_asks_cause` exactly. 5 people (10%) asked both what was causing a symptom and whether it was serious.
+
+**Health areas.** Replaces the single `human_health_area` on the slides. A conversation counts in every area the person asked about (4 people, 8%, covered two or more). Pain is a symptom, not an area, so it is counted under the body area it affects (stomach pain under digestion, nerve pain under head and nerves, chest pain under other).
+
+| Variable | Type | Covers | Share |
+|---|---|---|---|
+| `topic_muscles_bones_joints` | 0/1 | Joint, back, neck and foot pain, bone density, osteoarthritis, sports injuries | 20% (10) |
+| `topic_diet_fitness_weight` | 0/1 | Weight loss, diet and nutrition, exercise, supplements | 12% (6) |
+| `topic_digestive` | 0/1 | Stomach pain and cramps, diarrhea, gas, bowel problems | 12% (6) |
+| `topic_cold_flu_infection` | 0/1 | Colds, flu, sore throat, fever, infections (including an abscess and a yeast skin infection) | 10% (5) |
+| `topic_allergy_rash` | 0/1 | Allergic and drug reactions, hives, rashes, eczema | 10% (5) |
+| `topic_diabetes_hormones` | 0/1 | Diabetes and A1c, hormones, PCOS, testosterone | 10% (5) |
+| `topic_head_nerves` | 0/1 | Headaches, nerve pain | 6% (3) |
+| `topic_eyes` | 0/1 | Vision problems, eye surgery | 6% (3) |
+| `topic_mental_health_sleep` | 0/1 | Stress, anxiety, sleep, ADHD | 6% (3) |
+| `topic_skin_hair` | 0/1 | Scalp, dandruff, hair loss (not rashes or allergies) | 4% (2) |
+| `topic_other` | 0/1 | Heart and lungs (chest pain), kidneys and liver, fatigue, recovery after surgery | 12% (6) |
+| `coding_source_v3` | text | `claude_llm_v3` | |
+
+Coding calls worth knowing: eczema and the yeast skin infection count under allergies and rashes (the yeast infection also under infections); the abscess counts as an infection; the A1c chat counts under diabetes and as a test-result question; chest pain counts under other.
+
+**Slide 8 text.** The symptoms and medications listed for each area on 3A slide 8 are a hand summary written while coding (aggregate wording only). It lists any drug named in the chat, whether suggested, explained or warned against, so it differs from `ai_recommends_med` and the slide 12 and 13 drug lists. The same text lives in `AREA_DETAIL` (08a) and `AREAS` (build_part3a.py).
 
 ---
 
@@ -133,8 +171,12 @@ These are built in the 07 and 08a/08b scripts from the codes and survey answers 
 
 | Grouping | Rule | Where |
 |---|---|---|
-| Asked more than one kind of question | 2+ of `human_asks_cause`, `_treatment`, `_condition_info`, `_care`, `human_asks_med` | 3A question-types footer (24%) |
-| Everyday complaints | `human_health_area` is pain_muscles_bones, skin_allergy, diet_fitness_weight, digestive or cold_flu_infection | 3A health-topic footer (64%) |
+| Asked more than one kind of question | 2+ of `human_asks_what_cause`, `_treatment`, `_condition_info`, `_care`, `_serious`, `human_asks_med`, `_test_result` | 3A slide 6 footer (28%) |
+| Asked both cause and serious | `human_asks_what_cause = 1` and `human_asks_serious = 1` | 3A slide 6 footer (10%) |
+| Asked what was causing it, or whether it was serious (combined) | `human_asks_cause = 1` (any of the three v3 cause codes) | 3A slides 4, 10 and 14 (52%) |
+| Everyday complaints | Any of `topic_muscles_bones_joints`, `topic_diet_fitness_weight`, `topic_digestive`, `topic_cold_flu_infection`, `topic_allergy_rash`, `topic_skin_hair` | 3A slide 7 footer (64%) |
+| Asked about two or more areas | 2+ `topic_*` codes | 3A slide 7 footer (8%) |
+| Drug class (slide 13) | Word match in `human_meds_asked` and `ai_recommended_meds` (section 8): OTC pain relievers, antibiotics, osteoporosis drugs, antifungal creams, weight-loss drug, ADHD drug, antihistamines, gas relief | 3A slide 13 |
 | AI named a medication | `ai_n_meds >= 1` | 3A "How the AI answered" (40%) |
 | Referred without asking about care | `ai_refers_professional = 1` among `human_asks_care = 0` | 3A footer (79%, 33 of 42) |
 | Named a drug the person had not asked about | `human_asks_med = 0` among `ai_n_meds >= 1` | 3A footer (70%, 14 of 20) |
@@ -149,7 +191,7 @@ These are built in the 07 and 08a/08b scripts from the codes and survey answers 
 | Prior knowledge (07, survey) | Nothing or a little / moderate or more | 07 |
 | Chatbot (07, survey) | ChatGPT / other chatbot ("can't remember" left out) | 07 |
 
-Group comparisons are tested only when every group has at least 5 people. Benjamini-Hochberg correction is applied across all 16 segments within each outcome (07) or across the 20 question-by-response pairings (3A referral slide).
+Group comparisons are tested only when every group has at least 5 people. Benjamini-Hochberg correction is applied across all 16 segments within each outcome (07) or across the 20 question-by-response pairings (3A referral slide). The referral tests keep the five v2 question types, with the combined `human_asks_cause`, so the 20 pairings are unchanged.
 
 ---
 

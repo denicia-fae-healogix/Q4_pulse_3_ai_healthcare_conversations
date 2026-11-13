@@ -38,7 +38,7 @@ find_file <- function(name) { c1 <- proj("data", "processed", name); c2 <- proj(
 in_goal_codes <- find_file("09_Q4_3_goals_coded.csv")                            # goal codes, incl. goal met (one row per pid, no text)
 in_goal_text  <- find_file("05_Q4_3_conversations_wide_deid_only_pid_goals.csv")  # pid + C3 goal and D2 goal-met text (hover examples and keyword check)
 in_05    <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")                    # PANAS
-in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v2.csv")           # conversation codes (v1 + v2)
+in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v3.csv")           # conversation codes (v1 + v2 + v3; v3 only adds columns)
 in_link  <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv")          # pid -> Prolific ID (read in memory only)
 in_ids   <- proj("data", "processed", "00_Q4_3_renamed.csv")                                     # response_id + Prolific ID
 for (f in c(in_goal_codes, in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", f)

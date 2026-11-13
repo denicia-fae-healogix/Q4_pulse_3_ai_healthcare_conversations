@@ -59,11 +59,11 @@ slides.append(f"""
 slides.append(prior_slide("s1b", "Part 3A looks inside real AI health chats, starting with what people asked. Part 3B covers what the AI said back, and how people felt afterward."))
 
 
-pills = [("#a5306d", "Most people asked about their own health, not general facts", "s4"),
-         ("#9b4c96", "Half asked the AI what was causing a symptom", "s5"),
-         ("#8467b6", "People asked deeper questions but rarely pushed back", "s7"),
+pills = [("#a5306d", "Most people asked about their own health, mostly everyday complaints", "s6"),
+         ("#9b4c96", "Nearly half asked the AI what was causing a symptom", "s5"),
+         ("#8467b6", "People added detail but rarely pushed back", "s7"),
          ("#627fcc", "Asking for a cause always led to a referral", "s8"),
-         ("#4a8fd0", "The AI pointed 4 in 5 people to a professional", "s9"),
+         ("#4a8fd0", "Most drug recommendations were unasked", "s9b"),
          ("#2f9fd8", f"{round(100 * D['goals']['met']['Yes'] / D['goals']['N'])}% said AI met the goal they came with", "s14")]
 slides.append(f"""
 <section class="slide" id="s2">{EYEBROW}
@@ -109,57 +109,85 @@ slides.append(f"""
   <p class="foot">Coded from participant messages (n = {N}). Someone else = a named or described other person, such as a partner or child. No one in particular = general questions about a condition or health topic.</p>
 </section>""")
 
-# ---- 5 question types ----
-asks = [("What is causing it, or is it serious", "human_asks_cause", [P("Why is the top of my foot hurting?"), P("I have had a headache for 2 days and pain behind my eyes. What could be the problem?")]),
+# ---- 5 question types (deck slide 6): the combined cause measure split into three (v3 codes), in deck order ----
+asks = [("What is causing it", "human_asks_what_cause", [P("Why is the top of my foot hurting?"), P("I have had a headache for 2 days and pain behind my eyes. What could be the problem?")]),
         ("How to treat or manage it", "human_asks_treatment", [P("My scalp is flaking and scabbing. What do I do?"), P("What can I do to alleviate knee pain and get back to normal?")]),
         ("General facts about a condition", "human_asks_condition_info", [P("What is sleep apnea?"), P("Does metacarpal bossing grow?")]),
         ("Whether or where to get care", "human_asks_care", [P("Should I see a medical specialist about this or try to wait it out?"), P("Should I schedule an appointment with a specialist?")]),
-        ("About a specific medication", "human_asks_med", [P("I have a headache, what should I take?"), P("How can I tell if I'm having an allergic reaction to antibiotics I started yesterday?")])]
+        ("Is it normal or serious", "human_asks_serious", [P("Is that typical of the medicine?")]),
+        ("About a specific medication", "human_asks_med", [P("I have a headache, what should I take?"), P("How can I tell if I'm having an allergic reaction to antibiotics I started yesterday?")]),
+        ("What a test result means", "human_asks_test_result", [P("At a high level, what did these tests show?")])]
 rows = []
 for i, (lab, col, qs) in enumerate(asks):
-    n, tot = cnt(col)
+    n, tot = D["asks6"][col]
     rows.append((lab, n, tot, DARK if i == 0 else LIGHT, qs))
-multi_kind = D["n_more_than_one_kind"]
+multi_kind = D["n_more_than_one_kind6"]
 slides.append(f"""
 <section class="slide" id="s5">{EYEBROW}
-  <h2>Half of participants asked the AI what was causing their symptom</h2>
+  <h2>Nearly half asked the AI what was causing a symptom; fewer asked if it was serious</h2>
   <p class="chart-title">What participants asked the AI, at any point in the chat</p>
   {sbars(rows, "q", "Coded from every participant message. One person can ask more than one kind of question.")}
   <p class="axis-title">% of participants asking a given question type</p>
-  <p class="foot">Coded from every participant message in each pasted conversation (n = {N}). One person can ask more than one kind of question ({pct(multi_kind, N)}% did), so bars add up to more than 100%.</p>
+  <p class="foot">Coded from every participant message (n = {N}). People could ask more than one kind of question ({pct(multi_kind, N)}% did), so bars add up to more than 100%. {pct(D['n_cause_and_serious'], N)}% asked both what was causing a symptom and whether it was serious.</p>
 </section>""")
 
-# ---- 6 health areas (sorted by count, so Other sits second) ----
-AREAS = [("pain_muscles_bones", "Pain, muscles and bones", [P("Dull ache, feel weak when trying to stand up from sitting.")]),
-         ("other", "Other: chest pain, headaches, test reports and more", [P("Chest pain when running.")]),
-         ("skin_allergy", "Skin, hair and allergies", [P("Can you sunburn your scalp?")]),
-         ("diet_fitness_weight", "Diet, fitness and weight", [P("I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals.")]),
-         ("digestive", "Stomach and digestion", [P("I've been dealing with some bad stomach aches for the past few weeks.")]),
-         ("cold_flu_infection", "Colds, flu and infections", [P("I'm feeling a bit better today, no aches or chills. Sore throat, no runny nose. Still think it's the flu?")]),
-         ("diabetes_hormones", "Diabetes and hormones", [P("Would an endocrinologist benefit me from learning why my hormones are out of whack?")]),
-         ("eyes", "Eyes", [P("My eye doctor is sending me to a retina specialist. The appointment is supposed to take 3 to 4 hours. What will they do?")]),
-         ("mental_health_sleep", "Mental health and sleep", [P("What is sleep apnea? I think I may have it.")])]
-AREAS.sort(key=lambda a: -D["health_area"].get(a[0], 0))
-EVERYDAY = ["pain_muscles_bones", "skin_allergy", "diet_fitness_weight", "digestive", "cold_flu_infection"]
-everyday_n = sum(D["health_area"].get(c, 0) for c in EVERYDAY)
-rows = [(lab, D["health_area"].get(code, 0), N, DARK if i < 2 else LIGHT, qs) for i, (code, lab, qs) in enumerate(AREAS)]
+# ---- 6 health areas (deck slide 7): every area a conversation covered (v3), in deck order with Other last ----
+# What people described in each area and which drugs came up: a hand summary written while coding the conversations
+# (aggregate wording only). Used for the slide 7 hovers and the slide 8 table. Same text as AREA_DETAIL in 08a.
+AREAS = [("topic_muscles_bones_joints", "Muscles, bones and joints", "Knee, back, neck, shoulder and foot pain; tennis elbow; fragile bones; osteoarthritis; a bony bump on the hand", "Prolia, raloxifene", "Prolia, alendronate and other bone drugs; steroid shots; ibuprofen, naproxen, diclofenac; Tylenol"),
+         ("topic_diet_fitness_weight", "Diet, fitness and weight", "Weight loss, building muscle, healthy foods and protein, supplements, workouts", None, None),
+         ("topic_digestive", "Stomach and digestion", "Stomach aches and cramps, diarrhea and gas, pain near the belly button, an anal fistula", None, "Gas-X; ibuprofen, naproxen, aspirin"),
+         ("topic_cold_flu_infection", "Colds, flu and infections", "Fever, chills, body aches, congestion, sore throat, hand, foot and mouth disease, an abscess, a yeast skin infection", None, "Tylenol, ibuprofen, Tamiflu"),
+         ("topic_allergy_rash", "Allergies and rashes", "Hives and itchy bumps, facial swelling after an antibiotic, a burning drug reaction, eczema patches", "Bactrim, amoxicillin, an antifungal cream", "21 antibiotics in one chat; Benadryl, Claritin, epinephrine; antifungal creams; hydrocortisone"),
+         ("topic_diabetes_hormones", "Diabetes and hormones", "Diabetes, A1c results, hormone imbalance, PCOS, testosterone", None, "Insulin, estradiol, progesterone"),
+         ("topic_head_nerves", "Head and nerves", "Headaches, vomiting, pain behind the eyes, nerve pain in the leg", None, "Tylenol, ibuprofen; gabapentin, pregabalin, duloxetine; lidocaine"),
+         ("topic_eyes", "Eyes", "Double vision, blurry central vision, cataract surgery", None, None),
+         ("topic_mental_health_sleep", "Mental health and sleep", "Stress and anxiety, pauses in breathing at night, a child waking at night on an ADHD drug", "Guanfacine", "Guanfacine"),
+         ("topic_skin_hair", "Skin and hair", "Scalp flaking and dandruff, hair shedding", "Zepbound", "Zepbound; dandruff shampoos"),
+         ("topic_other", "Other (heart, lungs, kidneys, fatigue)", "Chest pain with coughing up blood, ongoing tiredness, test findings (heart, lungs, liver, kidneys), recovery after surgery", None, "Ibuprofen, naproxen")]
+TOPIC = D["topics"]
+bars = ""
+for i, (code, lab, sym, _, _) in enumerate(AREAS):
+    n, tot = TOPIC[code]; p = 100 * n / tot; col = DARK if i == 0 else LIGHT
+    k = tip(f"a{i}", lab, [("Share", f"{round(p)}%"), ("People", f"{n} of {tot}")], (),
+            "Symptoms people described: " + sym + ".")
+    bars += f"""<div class="sbar" {attrs(k)}><div class="dlab{' b' if i == 0 else ''}">{E(lab)}</div>
+      <div class="strack"><span class="sfill" style="width:{p:.2f}%;background:{col}"></span><span class="sval" style="left:{p:.2f}%">{round(p)}%</span></div></div>"""
 slides.append(f"""
 <section class="slide" id="s6">{EYEBROW}
   <h2>Most AI health conversations were about everyday complaints, though some involved serious symptoms</h2>
-  <p class="chart-title">Main health topic of each conversation</p>
-  {sbars(rows, "a", "One main topic per conversation.")}
-  <p class="axis-title">% of participants mentioning each topic</p>
-  <p class="foot">Coded from participant messages (n = {N}), one main topic per conversation. Everyday complaints (pain, skin, diet, digestion, colds and flu) = {pct(everyday_n, N)}% of conversations. Other includes chest pain, headache, fatigue, kidney or test reports and recovery after surgery.</p>
+  <p class="chart-title">Areas of health participants asked the AI about</p>
+  <div class="sbars">{bars}</div>
+  <p class="axis-title">% of participants asking about each area</p>
+  <p class="foot">Coded from participant messages (n = {N}). A conversation counts in every area the person asked about ({pct(D['n_two_plus_areas'], N)}% asked about two or more). Symptoms such as pain are counted under the body area they affect. {pct(D['n_everyday'], N)}% asked about an everyday complaint (muscles and bones, diet, digestion, colds, rashes or skin). Hover over a bar to see the symptoms people described.</p>
+  <p class="prev-next"><a href="#s6b" style="color:inherit">Next: the symptoms and medications people and the AI named in each area &darr;</a></p>
+</section>""")
+
+# ---- 6b symptoms and medications by area (deck slide 8) ----
+arows = ('<div class="arow ahead"><div>Area (% of people)</div><div>Symptoms and issues people described</div><div>Medications named in the chat</div></div>')
+for i, (code, lab, sym, pm, am) in enumerate(AREAS):
+    n, tot = TOPIC[code]
+    meds = (f'<span class="mp">Person: {E(pm)}</span>' if pm else "") + (f'<span class="mai">AI: {E(am)}</span>' if am else "")
+    k = tip(f"sx{i}", lab, [("Share", f"{pct(n, tot)}%"), ("People", f"{n} of {tot}"),
+                            ("Named by the person", pm or "None"), ("Named by the AI", am or "None")], (), "Symptoms people described: " + sym + ".")
+    arows += (f'<div class="arow" {attrs(k)}><div><b>{E(lab)}</b><span class="apct">{pct(n, tot)}%</span></div><div>{E(sym)}</div>'
+              f'<div>{meds or "<span class=mnone>None named</span>"}</div></div>')
+slides.append(f"""
+<section class="slide" id="s6b">{EYEBROW}
+  <h2>What people described in each area, and which medications came up</h2>
+  <div class="legend"><span><i class="lg-sq" style="background:{DARK}"></i>Named by the person</span><span><i class="lg-sq" style="background:#1a8cc8"></i>Named by the AI</span></div>
+  <div class="atab">{arows}</div>
+  <p class="foot">Coded from participant messages (n = {N}); one conversation can fall in more than one area. Medications include any drug named in the chat, whether suggested, explained or warned against; long AI lists are shortened.</p>
 </section>""")
 
 # ---- 7 follow-ups (headline behaviors first; added detail last and lighter) ----
-fu = [("Asked a new or deeper question", "human_followup_new_question", DARK, [P("My scalp is flaking and scabbing. What do I do?"), P("Can you sunburn your scalp?")]),
+fu = [("Asked a new question", "human_followup_new_question", DARK, [P("My scalp is flaking and scabbing. What do I do?"), P("Can you sunburn your scalp?")]),
       ("Pushed back or corrected the AI", "human_pushback", DARK, [P("Still think it's the flu?"), P("But I can run without pain, I could start and stop with no real problem.")]),
       ("Added more about their situation", "human_followup_adds_detail", PALE, [P("Why is the top of my foot hurting?"), P("There is no swelling but I do run daily.")])]
 rows = [(lab, *D["followup"][col], c, qs) for lab, col, c, qs in fu]
 slides.append(f"""
 <section class="slide" id="s7">{EYEBROW}
-  <h2>Over the course of their AI chats, people asked deeper questions but rarely pushed back on AI's recommendations</h2>
+  <h2>As their AI chats went on, people added detail and asked new questions, but rarely pushed back</h2>
   <p class="chart-title">Among the {N_MULTI} participants who sent a follow-up message</p>
   {sbars(rows, "f", "Coded from participant messages after the first. One person can count in more than one bar.")}
   <p class="axis-title">% of participants whose later messages did each of these</p>
@@ -235,9 +263,27 @@ for gi, g in enumerate(MP["groups"]):
 slides.append(f"""
 <section class="slide" id="s9b">{EYEBROW}
   <h2>Most AI drug recommendations answered a symptom, not a medication question</h2>
-  <div class="legend"><span><i class="lg-sq" style="background:{LIGHT}"></i>What the person asked about</span><span><i class="lg-sq" style="background:{DARK}"></i>What the AI recommended</span></div>
-  <div class="mpairs">{mrows}</div>
+  <div class="mpairs"><div class="mhead"><div class="mh1">What the person asked about</div><div></div><div class="mh2">What the AI recommended</div></div>{mrows}</div>
   <p class="foot">Each row is one conversation ({sum(mc[x] for x in ("asked_and_recommended", "asked_only", "recommended_unasked"))} of the {MP['N']} involved a medication question or a recommendation). Italic = the person described a symptom and did not ask about a drug. {otc} of the {nrec} recommendations were over-the-counter. Drug names as they appeared in the chat.</p>
+</section>""")
+
+# ---- 9c medications by type of drug (deck slide 13) ----
+DC = D["drug_classes"]; mx = max(max(d["asked"], d["recommended"]) for d in DC) * 100 / N
+dv = '<div class="dvr dvh"><div>Person asked about it</div><div></div><div>AI recommended it</div></div>'
+for i, d in enumerate(DC):
+    pa, pr = 100 * d["asked"] / N, 100 * d["recommended"] / N
+    k = tip(f"dc{i}", d["class"], [("Asked about it", f"{round(pa)}% ({d['asked']} of {N})"), ("AI recommended it", f"{round(pr)}% ({d['recommended']} of {N})")],
+            (), "Examples: " + d["examples"] + ".")
+    wl, wr = 80 * pa / mx, 80 * pr / mx
+    left = (f'<span class="f" style="width:{wl:.1f}%"></span><b style="right:calc({wl:.1f}% + 8px)">{round(pa)}%</b>' if pa else '<b class="z" style="right:8px">0%</b>')
+    right = (f'<span class="f" style="width:{wr:.1f}%"></span><b style="left:calc({wr:.1f}% + 8px)">{round(pr)}%</b>' if pr else '<b class="z" style="left:8px">0%</b>')
+    dv += f'<div class="dvr" {attrs(k)}><div class="dvl">{left}</div><div class="dvmid">{E(d["class"])}<small>{E(d["examples"])}</small></div><div class="dvrt">{right}</div></div>'
+slides.append(f"""
+<section class="slide" id="s9c">{EYEBROW}
+  <h2>People asked about prescriptions; the AI recommended over-the-counter relief</h2>
+  <p class="chart-title">Asked about vs. recommended, by type of drug</p>
+  <div class="dvg">{dv}</div>
+  <p class="foot">% of participants (n = {N}). Asked = named a specific drug in their own messages ({pct(med_n, N)}% did). Recommended = the AI suggested they take, try or ask a doctor about a specific drug ({pct(ai['ai_recommends_med'][0], N)}%). {otc} of the {nrec} recommendations were over-the-counter, and {mc['recommended_unasked']} of the {nrec} people who got one had not asked about any medication.</p>
 </section>""")
 
 # ---- 10 takeaways ----
@@ -246,20 +292,19 @@ pb, pbt = D["followup"]["human_pushback"]
 ad, adt = D["followup"]["human_followup_adds_detail"]
 take = [("For research", "#a5306d", [
             ("AI chats can be a new source of patient voice.", f" In their follow-ups, {pct(ad, adt)}% of people added detail about their situation, so these transcripts capture symptoms and context in people's own words."),
-            ("The full exchange tells the story, on both sides.", " Much of what people reveal comes after their first message, and the AI's side (referrals, drug names) is half of what happens in the chat.")]),
+            ("Chats show how health problems sound before a diagnosis.", f" People described everyday symptoms across 11 areas of health, most often muscles, bones and joints ({pct(D['topics']['topic_muscles_bones_joints'][0], N)}%), and about half never named a condition.")]),
         ("For healthcare & pharma", "#627fcc", [
-            ("AI is steering people toward care, usually unprompted.", f" Only {pct(D['asks']['human_asks_care'][0], N)}% asked whether or where to get care, yet the AI pointed {pct(ref_n, N)}% of people to a professional."),
-            ("“Is this serious?” is the front door.", f" Half of people ({pct(cause_n, N)}%) asked what was causing a symptom or whether it was serious, which makes symptom explanation the moment where disease education matters most."),
-            ("The AI usually decides which drugs come up.", f" Only {pct(med_n, N)}% asked about a medication by name, yet the AI named one in {pct(nm, nmt)}% of chats.")]),
+            ("AI is steering people toward care, and toward drugs, usually unprompted.", f" Only {pct(D['asks']['human_asks_care'][0], N)}% asked whether or where to get care, yet the AI pointed {pct(ref_n, N)}% of people to a professional. {D['med_pairs']['counts']['recommended_unasked']} of the {D['med_pairs']['otc_of_recommended'][1]} people who got a drug recommendation had not asked about any medication, and {D['med_pairs']['otc_of_recommended'][0]} of the {D['med_pairs']['otc_of_recommended'][1]} drugs were over the counter."),
+            ("“What is causing this?” is the front door.", f" {pct(D['asks6']['human_asks_what_cause'][0], N)}% asked what was causing a symptom, and only {pct(D['asks6']['human_asks_serious'][0], N)}% asked whether it was serious, which makes symptom explanation the moment where disease education matters most.")]),
         ("Where the risk sits", "#8467b6", [
             ("AI rarely hedges, and people rarely push back.", f" Only {pct(ai['ai_disclaimer'][0], N)}% of AI replies included a disclaimer, and only {pb} of {pbt} people who sent follow-ups questioned an answer."),
-            ("The person asking isn't always the patient.", f" {'One in 10' if pct(self_other, N) == 10 else str(pct(self_other, N)) + '%'} asked on behalf of someone else, such as a partner or a child, so AI advice reaches people it never heard from.")])]
+            ("Care decisions often go unasked.", f" {pct(D['goals']['goal_vs_asked']['goal_care'][0], D['goals']['N_asked'])}% hoped AI would help them decide about care, but only {pct(D['goals']['goal_vs_asked']['goal_care'][1], D['goals']['N_asked'])}% asked it outright, and {'1 in 10' if pct(self_other, N) == 10 else str(pct(self_other, N)) + '%'} asked on behalf of someone the AI never heard from.")])]
 tk = "".join(f'<div class="tk"><p class="tk-lab" style="background:{c}">{E(h)}</p><ul>' + "".join(f'<li><b style="color:{c}">{E(a)}</b>{E(b)}</li>' for a, b in items) + "</ul></div>" for h, c, items in take)
 slides.append(f"""
 <section class="slide" id="s10">{EYEBROW}
   <h2 class="cyan">Now what does that mean?</h2>
   <div class="tks">{tk}</div>
-  <p class="foot small">Notes: exploratory pulse; {N} participants whose pasted conversation included their own messages. Group sizes are small, so differences are directional. BH-adjusted p-values are shown where tests were run. Question types, health topic, who the question was about and follow-up behavior were coded from participant messages; referral, medication, urgent-care and disclaimer codes from the AI text. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out.</p>
+  <p class="foot small">Notes: exploratory pulse; {N} participants whose pasted conversation included their own messages. Group sizes are small, so differences are directional. BH-adjusted p-values are shown where tests were run. Question types, health areas, who the question was about and follow-up behavior were coded from participant messages; referral, medication, urgent-care and disclaimer codes from the AI text; goals from the survey answers. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out.</p>
 </section>""")
 
 
@@ -364,6 +409,11 @@ slides.append("""
   <p class="lede">Meet Behavioral Science at Healogix. We like to get a feel for how people really think and act, so each month we run a short online study on a behavioral question worth asking.</p>
   <p class="howto"><a href="../part3b/" style="color:inherit">Continue to Part 3B: What did AI say back to people? &rarr;</a></p>
 </section>""")
+
+# The takeaways slide sits after the goal slides (deck slide 17), just before the closing slide
+_tk = next(i for i, s in enumerate(slides) if 'id="s10"' in s)
+_tk_slide = slides.pop(_tk)
+slides.insert(next(i for i, s in enumerate(slides) if 'id="s11"' in s), _tk_slide)
 
 tpl = open(ROOT / "build" / "template.html", encoding="utf-8").read()
 out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3A").replace("%%SLIDES%%", "\n".join(slides)).replace("%%TIPS%%", json.dumps(TIPS)).replace("%%NSLIDES%%", str(len(slides)))

@@ -35,7 +35,7 @@ dir.create(fig_dir, recursive = TRUE, showWarnings = FALSE)
 
 # ---- Inputs ----
 in_05    <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")           # survey answers + PANAS
-in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v2.csv")  # v1 codes + new participant codes (v2)
+in_codes <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded_v3.csv")  # v1 + v2 codes + v3 question-type split and health areas
 in_link  <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv")  # pid -> Prolific ID (read in memory only)
 in_ids   <- proj("data", "processed", "00_Q4_3_renamed.csv")                            # response_id + Prolific ID
 in_meds  <- proj("data", "processed", "10_Q4_3_med_asked_vs_recommended.csv")           # which drugs were asked about / recommended (optional)
@@ -57,17 +57,57 @@ PA_ITEMS <- c("interested", "excited", "strong", "enthusiastic", "proud",
 NA_ITEMS <- c("distressed", "upset", "guilty", "scared", "hostile",
               "irritable", "ashamed", "nervous", "jittery", "afraid")
 
-# Labels for the new participant codes (see the v2 section of Q4_3_conversation_codebook.md)
-AREA_LABELS <- c(pain_muscles_bones = "Pain, muscles and bones", skin_allergy = "Skin, hair and allergies",
-                 digestive = "Stomach and digestion", diet_fitness_weight = "Diet, fitness and weight",
-                 mental_health_sleep = "Mental health and sleep", diabetes_hormones = "Diabetes and hormones",
-                 cold_flu_infection = "Colds, flu and infections", eyes = "Eyes",
-                 other = "Other: chest pain, headaches, test reports and more")
+# Labels for the participant codes (see sections 4 and 5 of Q4_3_conversation_codebook.md)
+# The five v2 question types. human_asks_cause is the combined measure (what is causing it, is it serious, or what a
+# test result means); slides 4, 10 and 14 use it, and the slide 10 tests run across these five types (20 pairings).
 ASK_LABELS <- c(human_asks_cause = "What is causing it, or is it serious",
                 human_asks_treatment = "How to treat or manage it",
                 human_asks_condition_info = "General facts about a condition",
                 human_asks_care = "Whether or where to get care",
                 human_asks_med = "About a specific medication")
+# Slide 6 splits the combined measure into three (v3). Rows stay in deck order.
+ASK6_LABELS <- c(human_asks_what_cause = "What is causing it",
+                 human_asks_treatment = "How to treat or manage it",
+                 human_asks_condition_info = "General facts about a condition",
+                 human_asks_care = "Whether or where to get care",
+                 human_asks_serious = "Is it normal or serious",
+                 human_asks_med = "About a specific medication",
+                 human_asks_test_result = "What a test result means")
+# Slide 7: health areas (v3). A conversation counts in every area the person asked about; symptoms such as pain
+# count under the body area they affect. Rows stay in deck order, with Other last.
+TOPIC_LABELS <- c(topic_muscles_bones_joints = "Muscles, bones and joints", topic_diet_fitness_weight = "Diet, fitness and weight",
+                  topic_digestive = "Stomach and digestion", topic_cold_flu_infection = "Colds, flu and infections",
+                  topic_allergy_rash = "Allergies and rashes", topic_diabetes_hormones = "Diabetes and hormones",
+                  topic_head_nerves = "Head and nerves", topic_eyes = "Eyes", topic_mental_health_sleep = "Mental health and sleep",
+                  topic_skin_hair = "Skin and hair", topic_other = "Other (heart, lungs, kidneys, fatigue)")
+EVERYDAY <- c("topic_muscles_bones_joints", "topic_diet_fitness_weight", "topic_digestive", "topic_cold_flu_infection",
+              "topic_allergy_rash", "topic_skin_hair")
+# Slide 8: what people described in each area and which drugs came up. A hand summary written while coding the
+# conversations (aggregate wording only). R checks the percentages; the text is reviewed by eye.
+AREA_DETAIL <- tribble(
+  ~code, ~symptoms, ~person_meds, ~ai_meds,
+  "topic_muscles_bones_joints", "Knee, back, neck, shoulder and foot pain; tennis elbow; fragile bones; osteoarthritis; a bony bump on the hand", "Prolia, raloxifene", "Prolia, alendronate and other bone drugs; steroid shots; ibuprofen, naproxen, diclofenac; Tylenol",
+  "topic_diet_fitness_weight", "Weight loss, building muscle, healthy foods and protein, supplements, workouts", NA, NA,
+  "topic_digestive", "Stomach aches and cramps, diarrhea and gas, pain near the belly button, an anal fistula", NA, "Gas-X; ibuprofen, naproxen, aspirin",
+  "topic_cold_flu_infection", "Fever, chills, body aches, congestion, sore throat, hand, foot and mouth disease, an abscess, a yeast skin infection", NA, "Tylenol, ibuprofen, Tamiflu",
+  "topic_allergy_rash", "Hives and itchy bumps, facial swelling after an antibiotic, a burning drug reaction, eczema patches", "Bactrim, amoxicillin, an antifungal cream", "21 antibiotics in one chat; Benadryl, Claritin, epinephrine; antifungal creams; hydrocortisone",
+  "topic_diabetes_hormones", "Diabetes, A1c results, hormone imbalance, PCOS, testosterone", NA, "Insulin, estradiol, progesterone",
+  "topic_head_nerves", "Headaches, vomiting, pain behind the eyes, nerve pain in the leg", NA, "Tylenol, ibuprofen; gabapentin, pregabalin, duloxetine; lidocaine",
+  "topic_eyes", "Double vision, blurry central vision, cataract surgery", NA, NA,
+  "topic_mental_health_sleep", "Stress and anxiety, pauses in breathing at night, a child waking at night on an ADHD drug", "Guanfacine", "Guanfacine",
+  "topic_skin_hair", "Scalp flaking and dandruff, hair shedding", "Zepbound", "Zepbound; dandruff shampoos",
+  "topic_other", "Chest pain with coughing up blood, ongoing tiredness, test findings (heart, lungs, liver, kidneys), recovery after surgery", NA, "Ibuprofen, naproxen")
+# Slide 13: drug classes, matched in the drug lists of 10_Q4_3_med_asked_vs_recommended.csv
+DRUG_CLASSES <- tribble(
+  ~class, ~examples, ~pattern,
+  "OTC pain relievers", "ibuprofen, Tylenol, naproxen", "ibuprofen|tylenol|acetaminophen|naproxen|diclofenac|aspirin|advil|aleve|motrin",
+  "Antibiotics", "amoxicillin, Bactrim", "amoxicillin|bactrim|antibiotic|sulfameth",
+  "Osteoporosis drugs", "Prolia, raloxifene, zoledronic acid", "prolia|denosumab|raloxifene|zoledronic|alendronate",
+  "Antifungal creams", "clotrimazole", "antifungal|clotrimazole",
+  "Weight-loss drug", "Zepbound", "zepbound|tirzepatide",
+  "ADHD drug", "guanfacine", "guanfacine",
+  "Antihistamines", "Benadryl, Claritin", "benadryl|claritin|diphenhydramine|loratadine",
+  "Gas relief", "simethicone (Gas-X)", "simethicone|gas-x")
 ```
 
 ```{r load-and-score, include = FALSE}
@@ -117,11 +157,12 @@ d05   <- read_chr(in_05) |> add_ids("the survey file (05)")
 codes <- read_chr(in_codes) |> add_ids("the codes file")
 id_note <- paste0("ID matching: ", paste(vapply(names(ID_MATCH), \(k) paste0(k, " ", ID_MATCH[[k]]["with_pid"], " of ",
                   ID_MATCH[[k]]["rows"], " rows matched to a pid"), character(1)), collapse = "; "), ".")
-if (!"coding_source_v2" %in% names(codes)) stop("The codes file has no v2 participant codes. Use 05_Q4_3_conversations_wide_deid_coded_v2.csv.")
+if (!"coding_source_v2" %in% names(codes)) stop("The codes file has no v2 participant codes. Use 05_Q4_3_conversations_wide_deid_coded_v3.csv.")
+if (!"coding_source_v3" %in% names(codes)) stop("The codes file has no v3 codes (question-type split, health areas). Use 05_Q4_3_conversations_wide_deid_coded_v3.csv.")
 
 CODE_BIN <- c("convo_usable", "human_mentions_disease", "human_shares_personal", "human_asks_med", "human_multi_turn",
               "ai_recommends_med", "ai_refers_professional", "ai_urgent_care", "ai_followup_question", "ai_disclaimer",
-              names(ASK_LABELS), "human_pushback", "human_followup_adds_detail", "human_followup_new_question",
+              names(ASK_LABELS), names(ASK6_LABELS), names(TOPIC_LABELS), "human_pushback", "human_followup_adds_detail", "human_followup_new_question",
               "human_expresses_worry")
 CODE_NUM <- c("n_human_turns", "ai_n_meds")
 codes <- codes |> mutate(across(any_of(unique(c(CODE_BIN, CODE_NUM))), as.numeric))
@@ -221,6 +262,9 @@ wrap_html <- function(x, w = 60) vapply(x, function(s) paste(strwrap(htmltools::
 # Words that point to the passage behind each code. Used only to pick which sentence or message to show.
 PAT <- list(
   human_asks_cause          = "why|what (is|could|might|would)|caus|normal|serious|worr|concern|is (this|it|that) ",
+  human_asks_what_cause     = "why|what (is|could|might|would)|caus|could (it|this) be",
+  human_asks_serious        = "normal|serious|worr|concern|dangerous|should i be",
+  human_asks_test_result    = "result|a1c|report|scan|x-?ray|mri|level|blood work|lab",
   human_asks_treatment      = "what (can|should) i (do|take|eat|use)|how (do|can|should) i|treat|reliev|help (with|my)|get rid|remed|manage",
   human_asks_condition_info = "what (is|are) |does .* (grow|spread|go away|last)|how long|tell me about|explain",
   human_asks_care           = "doctor|\\bdr\\b|see (a|someone|my)|urgent|\\ber\\b|emergency|specialist|appointment|clinic|test|surgery",
@@ -335,17 +379,17 @@ The base is the `r nrow(pp)` usable conversations with at least one participant 
 
 # Slides {.tabset}
 
-## 3. Big numbers
+## 4. Big numbers
 
-```{r slide3}
+```{r slide4}
 s_self  <- share(as.numeric(pp$human_about == "self"))
 s_cause <- share(pp$human_asks_cause)
 s_med   <- share(pp$human_asks_med)
 pct_only <- function(s) paste0(round(s[["pct"]]), "%")
-check("3", "Asked about their own health", "78%", pct_only(s_self))
-check("3", "Asked what was causing a symptom", "52%", pct_only(s_cause))
-check("3", "Asked about a specific medication", "12%", pct_only(s_med))
-check("3", "Base (footer)", "n = 50", paste0("n = ", nrow(pp)))
+check("4", "Asked about their own health", "78%", pct_only(s_self))
+check("4", "Asked what was causing a symptom", "52%", pct_only(s_cause))
+check("4", "Asked about a specific medication", "12%", pct_only(s_med))
+check("4", "Base (footer)", "n = 50", paste0("n = ", nrow(pp)))
 
 s3 <- tibble(label = c("Asked about their own health", "Asked what was causing a symptom", "Asked about a specific medication"),
              n = c(s_self[["n"]], s_cause[["n"]], s_med[["n"]]), N = c(s_self[["N"]], s_cause[["N"]], s_med[["N"]]),
@@ -354,7 +398,7 @@ p3 <- share_bars(s3, paste0("People ask AI about their own bodies: ", round(s_se
                             round(s_med[["pct"]]), "% asked about a medication"),
                  paste0("Coded from participant messages  |  n = ", nrow(pp), " usable conversations with at least one participant message"),
                  fills = c(DARK, LIGHT, DARK))
-invisible(save_fig(p3, "slide03_big-numbers", h = 5.5))
+invisible(save_fig(p3, "slide04_big-numbers", h = 5.5))
 s3$hover <- c(
   hover_share(s3$label[1], s3$pct[1], s3$n[1], s3$N[1], examples(ids_where(pp, pp$human_about == "self"), list(Participant = first_msg))),
   hover_share(s3$label[2], s3$pct[2], s3$n[2], s3$N[2], examples(ids_where(pp, pp$human_asks_cause == 1), list(Participant = ask_msg("human_asks_cause")))),
@@ -362,15 +406,15 @@ s3$hover <- c(
 pl_bars(s3, p3, "% of participants", c(DARK, LIGHT, DARK))
 ```
 
-## 4. Who it was about
+## 5. Who it was about
 
-```{r slide4}
+```{r slide5}
 ab <- pp |> filter(!is.na(human_about)) |>
   mutate(who = factor(recode(human_about, self = "Themselves", other_person = "Someone else (partner, child)", general = "No one in particular (general questions)"),
                       levels = c("Themselves", "Someone else (partner, child)", "No one in particular (general questions)")))
 by5 <- ab |> count(who, .drop = FALSE) |> mutate(N = sum(n), pct = 100 * n / N)
 deck5 <- c("Themselves" = "78%", "Someone else (partner, child)" = "10%", "No one in particular (general questions)" = "12%")
-for (w in names(deck5)) { r <- by5[by5$who == w, ]; check("4", paste("Question was about:", w), deck5[[w]], paste0(round(r$pct), "%")) }
+for (w in names(deck5)) { r <- by5[by5$who == w, ]; check("5", paste("Question was about:", w), deck5[[w]], paste0(round(r$pct), "%")) }
 
 COLS <- 10
 w5 <- ab |> arrange(who) |> mutate(i = row_number() - 1, col = i %% COLS, row = -(i %/% COLS))
@@ -382,82 +426,111 @@ p5 <- ggplot(w5, aes(x = col, y = row, fill = who)) +
   labs(title = wrap(paste0("Most people asked about themselves; 1 in ", round(100 / by5$pct[2]), " asked for someone else")),
        subtitle = wrap(paste0("One square per participant  |  coded from participant messages  |  n = ", nrow(ab)), 110), x = NULL, y = NULL) +
   theme_hx() + theme(axis.text = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-invisible(save_fig(p5, "slide04_who-it-was-about", h = 6.5))
+invisible(save_fig(p5, "slide05_who-it-was-about", h = 6.5))
 w5h <- w5 |> mutate(x = col, y = row, group = factor(lab5[as.character(who)], levels = unname(lab5[levels(who)])),
                     hover = paste0("<b>pid ", pid, "</b> | ", who, "<br><br><i>First message:</i> ", wrap_html(clip(vapply(pid, first_msg, character(1))))))
 pl_waffle(w5h, p5, c(DARK, LIGHT, PALE))
 ```
 
-## 5. What people asked
-
-```{r slide5}
-s4 <- tibble(code = names(ASK_LABELS), label = unname(ASK_LABELS)) |>
-  mutate(v = lapply(code, function(cd) share(pp[[cd]])),
-         n = vapply(v, `[[`, numeric(1), "n"), N = vapply(v, `[[`, numeric(1), "N"), pct = vapply(v, `[[`, numeric(1), "pct")) |>
-  select(-v) |> arrange(desc(pct))
-deck4 <- c(human_asks_cause = "52%", human_asks_treatment = "32%", human_asks_condition_info = "26%", human_asks_care = "16%", human_asks_med = "12%")
-for (cd in names(deck4)) { r <- s4[s4$code == cd, ]; check("5", paste("Asked:", ASK_LABELS[[cd]]), deck4[[cd]], paste0(round(r$pct), "%")) }
-n_kinds <- rowSums(pp[names(ASK_LABELS)], na.rm = TRUE)
-check("5", "Asked more than one kind of question (footer)", "24%", paste0(round(100 * mean(n_kinds > 1)), "%"))
-
-p4 <- share_bars(s4, "Half of participants asked the AI what was causing their symptom",
-                 paste0("Kinds of question asked at any point in the chat  |  n = ", nrow(pp), "  |  one person can ask more than one kind (",
-                        round(100 * mean(n_kinds > 1)), "% did)")) + labs(x = "% of participants asking a given question type")
-invisible(save_fig(p4, "slide05_what-people-asked", h = 6))
-s4$hover <- vapply(seq_len(nrow(s4)), function(i) hover_share(s4$label[i], s4$pct[i], s4$n[i], s4$N[i],
-  examples(ids_where(pp, pp[[s4$code[i]]] == 1), list(Participant = ask_msg(s4$code[i])))), character(1))
-pl_bars(s4, p4, "% of participants asking a given question type")
-```
-
-## 6. Health topics
+## 6. What people asked
 
 ```{r slide6}
-EVERYDAY <- c("pain_muscles_bones", "skin_allergy", "diet_fitness_weight", "digestive", "cold_flu_infection")
-s6 <- pp |> filter(!is.na(human_health_area)) |> count(human_health_area) |>
-  mutate(N = sum(n), pct = 100 * n / N, label = AREA_LABELS[human_health_area]) |>
-  arrange(desc(n), label)   # sorted by count, so "Other" sits second
-deck6 <- c(pain_muscles_bones = "20%", other = "18%", skin_allergy = "14%", digestive = "12%", diet_fitness_weight = "12%",
-           mental_health_sleep = "6%", diabetes_hormones = "6%", cold_flu_infection = "6%", eyes = "6%")
-for (a in names(deck6)) { r <- s6[s6$human_health_area == a, ]
-  check("6", paste("Health topic:", AREA_LABELS[[a]]), deck6[[a]], if (nrow(r)) paste0(round(r$pct), "%") else "none") }
-everyday_pct <- 100 * sum(s6$n[s6$human_health_area %in% EVERYDAY]) / sum(s6$n)
-check("6", "Everyday complaints (pain, skin, diet, digestion, colds and flu), footer", "64%", paste0(round(everyday_pct), "%"))
+s6q <- tibble(code = names(ASK6_LABELS), label = unname(ASK6_LABELS)) |>
+  mutate(v = lapply(code, function(cd) share(pp[[cd]])),
+         n = vapply(v, `[[`, numeric(1), "n"), N = vapply(v, `[[`, numeric(1), "N"), pct = vapply(v, `[[`, numeric(1), "pct")) |>
+  select(-v)   # deck order
+deck6 <- c(human_asks_what_cause = "46%", human_asks_treatment = "32%", human_asks_condition_info = "26%", human_asks_care = "16%",
+           human_asks_serious = "12%", human_asks_med = "12%", human_asks_test_result = "6%")
+for (cd in names(deck6)) { r <- s6q[s6q$code == cd, ]; check("6", paste("Asked:", ASK6_LABELS[[cd]]), deck6[[cd]], paste0(round(r$pct), "%")) }
+n_kinds <- rowSums(pp[names(ASK6_LABELS)], na.rm = TRUE)
+check("6", "Asked more than one kind of question (footer)", "28%", paste0(round(100 * mean(n_kinds > 1)), "%"))
+check("6", "Asked both what was causing it and whether it was serious (footer)", "10%",
+      paste0(round(100 * mean(pp$human_asks_what_cause == 1 & pp$human_asks_serious == 1, na.rm = TRUE)), "%"))
+# The three split codes together equal the combined measure used on slides 4, 10 and 14
+split_ok <- all(as.numeric((pp$human_asks_what_cause + pp$human_asks_serious + pp$human_asks_test_result) > 0) == pp$human_asks_cause, na.rm = TRUE)
+check("6", "Cause + serious + test result = combined measure (slide 4: 52%)", "52%",
+      paste0(round(100 * mean((pp$human_asks_what_cause + pp$human_asks_serious + pp$human_asks_test_result) > 0)), "%", if (split_ok) "" else " (codes disagree)"))
 
-p6 <- share_bars(s6 |> select(label, n, N, pct), "Most AI health conversations were about everyday complaints, though some involved serious symptoms",
-                 paste0("Main health topic of each conversation  |  n = ", sum(s6$n), "  |  everyday complaints = ", round(everyday_pct), "%"),
-                 fills = ifelse(seq_len(nrow(s6)) <= 2, DARK, LIGHT)) + labs(x = "% of participants mentioning each topic")
-invisible(save_fig(p6, "slide06_health-topics", h = 7))
-s6$hover <- vapply(seq_len(nrow(s6)), function(i) hover_share(s6$label[i], s6$pct[i], s6$n[i], s6$N[i],
-  examples(ids_where(pp, pp$human_health_area == s6$human_health_area[i]), list(Participant = first_msg))), character(1))
-pl_bars(s6, p6, "% of participants mentioning each topic", ifelse(seq_len(nrow(s6)) <= 2, DARK, LIGHT))
+FILL6 <- ifelse(s6q$code == "human_asks_what_cause", DARK, LIGHT)
+p6 <- share_bars(s6q, "Nearly half asked the AI what was causing a symptom; fewer asked if it was serious",
+                 paste0("Kinds of question asked at any point in the chat  |  n = ", nrow(pp), "  |  one person can ask more than one kind (",
+                        round(100 * mean(n_kinds > 1)), "% did)"), fills = FILL6) + labs(x = "% of participants asking a given question type")
+invisible(save_fig(p6, "slide06_what-people-asked", h = 6.5))
+s6q$hover <- vapply(seq_len(nrow(s6q)), function(i) hover_share(s6q$label[i], s6q$pct[i], s6q$n[i], s6q$N[i],
+  examples(ids_where(pp, pp[[s6q$code[i]]] == 1), list(Participant = ask_msg(s6q$code[i])))), character(1))
+pl_bars(s6q, p6, "% of participants asking a given question type", FILL6)
 ```
 
-## 7. How chats unfolded
+## 7. Health areas
 
 ```{r slide7}
+s7a <- tibble(code = names(TOPIC_LABELS), label = unname(TOPIC_LABELS)) |>
+  mutate(v = lapply(code, function(cd) share(pp[[cd]])),
+         n = vapply(v, `[[`, numeric(1), "n"), N = vapply(v, `[[`, numeric(1), "N"), pct = vapply(v, `[[`, numeric(1), "pct")) |>
+  select(-v)   # deck order
+deck7a <- c(topic_muscles_bones_joints = "20%", topic_diet_fitness_weight = "12%", topic_digestive = "12%", topic_cold_flu_infection = "10%",
+            topic_allergy_rash = "10%", topic_diabetes_hormones = "10%", topic_head_nerves = "6%", topic_eyes = "6%",
+            topic_mental_health_sleep = "6%", topic_skin_hair = "4%", topic_other = "12%")
+for (a in names(deck7a)) { r <- s7a[s7a$code == a, ]; check("7", paste("Health area:", TOPIC_LABELS[[a]]), deck7a[[a]], paste0(round(r$pct), "%")) }
+n_areas <- rowSums(pp[names(TOPIC_LABELS)], na.rm = TRUE)
+everyday_pct <- 100 * mean(rowSums(pp[EVERYDAY], na.rm = TRUE) > 0)
+check("7", "Asked about two or more areas (footer)", "8%", paste0(round(100 * mean(n_areas > 1)), "%"))
+check("7", "Everyday complaint: muscles and bones, diet, digestion, colds, rashes or skin (footer)", "64%", paste0(round(everyday_pct), "%"))
+check("7", "Every conversation has at least one area", "50", as.character(sum(n_areas > 0)))
+
+FILL7 <- ifelse(seq_len(nrow(s7a)) == 1, DARK, LIGHT)
+p7a <- share_bars(s7a, "Most AI health conversations were about everyday complaints, though some involved serious symptoms",
+                  paste0("Areas of health participants asked the AI about  |  n = ", nrow(pp), "  |  a conversation counts in every area it covered (",
+                         round(100 * mean(n_areas > 1)), "% covered two or more)  |  everyday complaints = ", round(everyday_pct), "%"),
+                  fills = FILL7) + labs(x = "% of participants asking about each area")
+invisible(save_fig(p7a, "slide07_health-areas", h = 7.5))
+# Hover: what people described in that area (slide 8 text), then example first messages
+sym_of <- setNames(AREA_DETAIL$symptoms, AREA_DETAIL$code)
+s7a$hover <- vapply(seq_len(nrow(s7a)), function(i) paste0(
+  hover_share(s7a$label[i], s7a$pct[i], s7a$n[i], s7a$N[i], ""), "<br><br><b>Symptoms people described</b><br>", wrap_html(sym_of[[s7a$code[i]]]),
+  examples(ids_where(pp, pp[[s7a$code[i]]] == 1), list(Participant = first_msg))), character(1))
+pl_bars(s7a, p7a, "% of participants asking about each area", FILL7)
+```
+
+## 8. Symptoms and medications by area
+
+```{r slide8}
+# Percentages come from the v3 codes; the symptom and drug text is the hand summary in AREA_DETAIL (settings chunk)
+s8 <- AREA_DETAIL |> left_join(s7a |> select(code, label, pct), by = "code")
+for (i in seq_len(nrow(s8))) check("8", paste("Area %:", s8$label[i]), deck7a[[s8$code[i]]], paste0(round(s8$pct[i]), "%"))
+kable(s8 |> transmute(Area = paste0(label, " (", round(pct), "%)"), `Symptoms and issues people described` = symptoms,
+                      `Named by the person` = coalesce(person_meds, ""), `Named by the AI` = coalesce(ai_meds, "")),
+      align = "llll")
+cat("\nMedications include any drug named in the chat, whether suggested, explained or warned against; long AI lists are shortened.",
+    "This differs from slides 12 and 13, which count only drugs the person asked about or the AI recommended.")
+```
+
+## 9. How chats unfolded
+
+```{r slide9}
 s_multi <- share(as.numeric(pp$n_human_turns > 1))
 s7 <- tibble(code = c("human_followup_new_question", "human_pushback", "human_followup_adds_detail"),
-             label = c("Asked a new or deeper question", "Pushed back or corrected the AI", "Added more about their situation")) |>
+             label = c("Asked a new question", "Pushed back or corrected the AI", "Added more about their situation")) |>
   mutate(v = lapply(code, function(cd) share(multi[[cd]])),
          n = vapply(v, `[[`, numeric(1), "n"), N = vapply(v, `[[`, numeric(1), "N"), pct = vapply(v, `[[`, numeric(1), "pct")) |> select(-v)
-check("7", "Participants who sent a follow-up message (subtitle)", "30", as.character(s_multi[["n"]]))
+check("9", "Participants who sent a follow-up message (subtitle)", "30", as.character(s_multi[["n"]]))
 deck7 <- c(human_followup_new_question = "47%", human_pushback = "13%", human_followup_adds_detail = "87%")
-for (cd in names(deck7)) { r <- s7[s7$code == cd, ]; check("7", paste("Later messages:", r$label), deck7[[cd]], paste0(round(r$pct), "%")) }
+for (cd in names(deck7)) { r <- s7[s7$code == cd, ]; check("9", paste("Later messages:", r$label), deck7[[cd]], paste0(round(r$pct), "%")) }
 
 p7 <- share_bars(s7 |> select(label, n, N, pct),
-                 "Over the course of their AI chats, people asked deeper questions but rarely pushed back on AI's recommendations",
+                 "As their AI chats went on, people added detail and asked new questions, but rarely pushed back",
                  paste0("Among the ", s_multi[["n"]], " participants who sent a follow-up message  |  one person could do more than one of these, so bars add up to more than 100%"),
                  fills = c(DARK, DARK, PALE)) + labs(x = "% of participants whose later messages did each of these")
-invisible(save_fig(p7, "slide07_how-chats-unfolded", h = 5.5))
+invisible(save_fig(p7, "slide09_how-chats-unfolded", h = 5.5))
 s7$hover <- vapply(seq_len(nrow(s7)), function(i) hover_share(s7$label[i], s7$pct[i], s7$n[i], s7$N[i],
   examples(ids_where(multi, multi[[s7$code[i]]] == 1),
            list(`First message` = first_msg, `Later message` = later_msg(if (s7$code[i] == "human_followup_adds_detail") NULL else s7$code[i])))), character(1))
 pl_bars(s7, p7, "% of participants whose later messages did each of these", c(DARK, DARK, PALE))
 ```
 
-## 8. What they asked vs. what the AI said
+## 10. What they asked vs. what the AI said
 
-```{r slide8}
+```{r slide10}
 # Every pairing of a question type with an AI response, with Fisher's exact test and a BH correction across all pairings.
 AI_RESP <- c(ai_refers_professional = "AI referred to a professional", ai_urgent_care = "AI mentioned urgent care or the ER",
              ai_recommends_med = "AI recommended a medication", ai_followup_question = "AI asked a follow-up question")
@@ -477,10 +550,10 @@ xt <- bind_rows(Map(pair_test, grid8$ask, grid8$resp)) |>
 g <- function(a, r) xt[xt$ask == a & xt$resp == r, ]
 c_ref <- g("human_asks_cause", "ai_refers_professional"); t_med <- g("human_asks_treatment", "ai_recommends_med")
 t_ref <- g("human_asks_treatment", "ai_refers_professional")
-check("8", "Referred: asked what was causing it", "100%", paste0(round(100 * c_ref$resp_yes / c_ref$n_yes), "%"))
-check("8", "Referred: did not ask (headline: about 6 in 10)", "58%", paste0(round(100 * c_ref$resp_no / c_ref$n_no), "%"))
-check("8", "Group sizes", "n = 26 / 24", paste0("n = ", c_ref$n_yes, " / ", c_ref$n_no))
-check("8", "Fisher's exact p (BH across 20 pairings)", "< .001 (.004)", paste0(fmtp(c_ref$p), " (", fmtp(c_ref$p_bh), ")"))
+check("10", "Referred: asked what was causing it", "100%", paste0(round(100 * c_ref$resp_yes / c_ref$n_yes), "%"))
+check("10", "Referred: did not ask (headline: about 6 in 10)", "58%", paste0(round(100 * c_ref$resp_no / c_ref$n_no), "%"))
+check("10", "Group sizes", "n = 26 / 24", paste0("n = ", c_ref$n_yes, " / ", c_ref$n_no))
+check("10", "Fisher's exact p (BH across 20 pairings)", "< .001 (.004)", paste0(fmtp(c_ref$p), " (", fmtp(c_ref$p_bh), ")"))
 
 d8 <- tibble(group = c(paste0("Asked what was causing it\n(n = ", c_ref$n_yes, ")"), paste0("Did not ask\n(n = ", c_ref$n_no, ")")),
              yes = c(c_ref$resp_yes, c_ref$resp_no), N = c(c_ref$n_yes, c_ref$n_no)) |>
@@ -499,7 +572,7 @@ p8 <- ggplot(d8, aes(x = pct, y = group, fill = cat)) +
                               " (BH-adjusted ", fmtp(c_ref$p_bh), " across all ", sum(!is.na(xt$p)), " tested pairings below)"), 110),
        x = "% of conversations", y = NULL) +
   theme_hx() + theme(panel.grid.major.y = element_blank())
-invisible(save_fig(p8, "slide08_asked-vs-referral", h = 5.5))
+invisible(save_fig(p8, "slide10_asked-vs-referral", h = 5.5))
 grp8 <- list(asked = pp$human_asks_cause == 1, not = pp$human_asks_cause == 0)
 d8h <- bind_rows(lapply(names(grp8), function(g) {
   inn <- !is.na(grp8[[g]]) & grp8[[g]]; N <- sum(inn)
@@ -516,13 +589,13 @@ pl_stack(d8h, p8, "% of conversations", c("AI referred to a professional" = DARK
 
 All pairings of question type and AI response. Descriptive; pairings with fewer than `r MIN_GROUP_N` people in a group are not tested.
 
-```{r slide8-table}
+```{r slide10-table}
 kable(xt |> transmute(`Question type`, `AI response`, Asked, `Did not ask`, p = fmtp(p), `p (BH)` = fmtp(p_bh)), align = "llllrr")
 ```
 
-## 9. How the AI answered
+## 11. How the AI answered
 
-```{r slide9}
+```{r slide11}
 # Same 50 people as every other slide in Part 3A
 s9 <- tibble(code = c("ai_refers_professional", "ai_followup_question", "ai_named_med", "ai_urgent_care", "ai_recommends_med", "ai_disclaimer"),
              label = c("Pointed them to a doctor or other professional", "Asked them a question back", "Named a specific medication",
@@ -531,26 +604,26 @@ s9 <- tibble(code = c("ai_refers_professional", "ai_followup_question", "ai_name
          n = vapply(v, `[[`, numeric(1), "n"), N = vapply(v, `[[`, numeric(1), "N"), pct = vapply(v, `[[`, numeric(1), "pct")) |> select(-v)
 deck9 <- c(ai_refers_professional = "80%", ai_followup_question = "62%", ai_named_med = "40%", ai_urgent_care = "36%",
            ai_recommends_med = "22%", ai_disclaimer = "10%")
-for (cd in names(deck9)) { r <- s9[s9$code == cd, ]; check("9", paste("AI:", r$label), deck9[[cd]], paste0(round(r$pct), "%")) }
+for (cd in names(deck9)) { r <- s9[s9$code == cd, ]; check("11", paste("AI:", r$label), deck9[[cd]], paste0(round(r$pct), "%")) }
 no_care <- pp |> filter(human_asks_care == 0)
 named   <- pp |> filter(ai_n_meds > 0)
-check("9", "Footer: referred among those who did not ask about care", "79%", paste0(round(100 * mean(no_care$ai_refers_professional == 1, na.rm = TRUE)), "%"))
-check("9", "Footer: chats naming a drug where the person had not asked about one", "70%", paste0(round(100 * mean(named$human_asks_med == 0, na.rm = TRUE)), "%"))
+check("11", "Footer: referred among those who did not ask about care", "79%", paste0(round(100 * mean(no_care$ai_refers_professional == 1, na.rm = TRUE)), "%"))
+check("11", "Footer: chats naming a drug where the person had not asked about one", "70%", paste0(round(100 * mean(named$human_asks_med == 0, na.rm = TRUE)), "%"))
 
 p9 <- share_bars(s9 |> select(label, n, N, pct), "The AI pointed 4 in 5 people to a professional, but rarely added a disclaimer",
                  paste0("What the AI did in its replies  |  coded from the AI's text  |  n = ", nrow(pp), "  |  one conversation can count in several bars"),
                  fills = c(DARK, LIGHT, DARK, LIGHT, LIGHT, DARK)) + labs(x = "% of conversations")
-invisible(save_fig(p9, "slide09_how-the-ai-answered", h = 6.5))
+invisible(save_fig(p9, "slide11_how-the-ai-answered", h = 6.5))
 s9$hover <- vapply(seq_len(nrow(s9)), function(i) {
   cd <- s9$code[i]; inn <- if (cd == "ai_named_med") pp$ai_n_meds > 0 else pp[[cd]] == 1
   hover_share(s9$label[i], s9$pct[i], s9$n[i], s9$N[i], examples(ids_where(pp, inn), list(Participant = first_msg, AI = ai_msg(cd)))) }, character(1))
 pl_bars(s9, p9, "% of conversations", c(DARK, LIGHT, DARK, LIGHT, LIGHT, DARK))
 ```
 
-## 9b. Medications asked about vs. recommended
+## 12. Medications asked about vs. recommended
 
-```{r slide9b}
-# One row per conversation that involved a medication question or recommendation (deck slide 11)
+```{r slide12}
+# One row per conversation that involved a medication question or recommendation (deck slide 12)
 if (!file.exists(in_meds)) {
   cat("10_Q4_3_med_asked_vs_recommended.csv not found, so this slide is not checked.")
 } else {
@@ -560,10 +633,10 @@ if (!file.exists(in_meds)) {
   bad <- meds |> filter((human_asks_med == 1) != !is.na(human_meds_asked) | (ai_recommends_med == 1) != !is.na(ai_recommended_meds))
   if (nrow(bad)) cat("Warning:", nrow(bad), "rows where the drug lists and the yes/no codes disagree (pids:", paste(bad$pid, collapse = ", "), ")\n\n")
   gc <- table(factor(meds$med_group, levels = c("asked_and_recommended", "asked_only", "recommended_unasked", "neither")))
-  check("11", "Asked, and got a recommendation", "3 people", as.character(gc[["asked_and_recommended"]]))
-  check("11", "Asked, no recommendation", "3 people", as.character(gc[["asked_only"]]))
-  check("11", "Recommended without being asked", "8 people", as.character(gc[["recommended_unasked"]]))
-  check("11", "Conversations shown", "14 of 50", paste(sum(gc[1:3]), "of", nrow(meds)))
+  check("12", "Asked, and got a recommendation", "3 people", as.character(gc[["asked_and_recommended"]]))
+  check("12", "Asked, no recommendation", "3 people", as.character(gc[["asked_only"]]))
+  check("12", "Recommended without being asked", "8 people", as.character(gc[["recommended_unasked"]]))
+  check("12", "Conversations shown", "14 of 50", paste(sum(gc[1:3]), "of", nrow(meds)))
   ORDER <- c(asked_and_recommended = "Asked, and got a recommendation", asked_only = "Asked, no recommendation", recommended_unasked = "Recommended without being asked")
   tab <- meds |> filter(med_group != "neither") |>
     mutate(Group = factor(ORDER[med_group], levels = ORDER), `What they asked about (or described)` = coalesce(human_meds_asked, paste0("(symptom) ", med_symptom)),
@@ -573,18 +646,57 @@ if (!file.exists(in_meds)) {
 }
 ```
 
-## 10. Takeaways
+## 13. Medications by type of drug (alternative to slide 12)
 
-```{r slide10}
-check("10", "Follow-ups that added detail", "87%", paste0(round(s7$pct[s7$code == "human_followup_adds_detail"]), "%"))
-check("10", "Asked whether or where to get care", "16%", paste0(round(s4$pct[s4$code == "human_asks_care"]), "%"))
-check("10", "AI pointed people to a professional", "80%", paste0(round(s9$pct[s9$code == "ai_refers_professional"]), "%"))
-check("10", "Asked what was causing a symptom", "52%", paste0(round(s_cause[["pct"]]), "%"))
-check("10", "Asked about a medication by name", "12%", paste0(round(s_med[["pct"]]), "%"))
-check("10", "AI named a medication", "40%", paste0(round(s9$pct[s9$code == "ai_named_med"]), "%"))
-check("10", "AI replies with a disclaimer", "10%", paste0(round(s9$pct[s9$code == "ai_disclaimer"]), "%"))
-check("10", "Pushed back (of people who sent follow-ups)", "4 of 30", paste0(s7$n[s7$code == "human_pushback"], " of ", s7$N[s7$code == "human_pushback"]))
-check("10", "Asked on behalf of someone else", "1 in 10", paste0("1 in ", round(100 / by5$pct[by5$who == "Someone else (partner, child)"])))
+```{r slide13}
+# Same data as slide 12, counted by drug class: % of the 50 participants who asked about each class, and who were recommended one
+if (exists("meds")) {
+  has <- function(x, p) !is.na(x) & str_detect(tolower(x), p)
+  s13 <- DRUG_CLASSES |> mutate(asked = vapply(pattern, function(p) sum(has(meds$human_meds_asked, p)), integer(1)),
+                                recommended = vapply(pattern, function(p) sum(has(meds$ai_recommended_meds, p)), integer(1)),
+                                pa = 100 * asked / nrow(pp), pr = 100 * recommended / nrow(pp))
+  deck13 <- list("OTC pain relievers" = c("0%", "14%"), "Antibiotics" = c("4%", "0%"), "Osteoporosis drugs" = c("2%", "2%"),
+                 "Antifungal creams" = c("2%", "2%"), "Weight-loss drug" = c("2%", "0%"), "ADHD drug" = c("2%", "0%"),
+                 "Antihistamines" = c("0%", "2%"), "Gas relief" = c("0%", "2%"))
+  for (k in names(deck13)) { r <- s13[s13$class == k, ]
+    check("13", paste("Asked about:", k), deck13[[k]][1], paste0(round(r$pa), "%"))
+    check("13", paste("AI recommended:", k), deck13[[k]][2], paste0(round(r$pr), "%")) }
+  check("13", "Footer: named a drug in their own messages", "12%", paste0(round(100 * mean(pp$human_asks_med == 1, na.rm = TRUE)), "%"))
+  check("13", "Footer: AI recommended a specific drug", "22%", paste0(round(100 * mean(pp$ai_recommends_med == 1, na.rm = TRUE)), "%"))
+  d13 <- s13 |> select(class, pa, pr) |> pivot_longer(c(pa, pr), names_to = "who", values_to = "pct") |>
+    mutate(who = factor(who, c("pa", "pr"), c("Person asked about it", "AI recommended it")), class = factor(class, rev(DRUG_CLASSES$class)),
+           x = ifelse(who == "Person asked about it", -pct, pct))
+  p13 <- ggplot(d13, aes(x = x, y = class, fill = who)) + geom_col(width = 0.62) + geom_vline(xintercept = 0, color = BAR) +
+    geom_text(aes(label = paste0(round(pct), "%"), hjust = ifelse(who == "Person asked about it", 1.15, -0.15),
+                  color = pct > 0), size = 4.4, fontface = "bold") +
+    scale_color_manual(values = c(`TRUE` = INK, `FALSE` = "#9aa3ad"), guide = "none") +
+    scale_fill_manual(values = c("Person asked about it" = LIGHT, "AI recommended it" = DARK)) +
+    scale_x_continuous(limits = c(-18, 18), breaks = seq(-15, 15, 5), labels = function(x) paste0(abs(x), "%")) +
+    labs(title = wrap("People asked about prescriptions; the AI recommended over-the-counter relief"),
+         subtitle = wrap(paste0("Asked about vs. recommended, by type of drug  |  % of participants (n = ", nrow(pp), ")"), 110), x = NULL, y = NULL) +
+    theme_hx() + theme(panel.grid.major.y = element_blank())
+  invisible(save_fig(p13, "slide13_meds-by-drug-type", h = 6.5))
+  p13
+} else cat("10_Q4_3_med_asked_vs_recommended.csv not found, so this slide is not checked.")
+```
+
+## 17. Takeaways
+
+```{r slide17}
+# Deck slide 17 ("Now what does that mean?"), after the goal slides. Goal numbers (28% vs. 16%) are checked in 09b.
+check("17", "Follow-ups that added detail", "87%", paste0(round(s7$pct[s7$code == "human_followup_adds_detail"]), "%"))
+check("17", "Most often muscles, bones and joints", "20%", paste0(round(s7a$pct[s7a$code == "topic_muscles_bones_joints"]), "%"))
+check("17", "About half never named a condition", "about half (52%)", paste0(round(100 * mean(pp$human_mentions_disease == 0, na.rm = TRUE)), "%"))
+check("17", "Asked whether or where to get care", "16%", paste0(round(s6q$pct[s6q$code == "human_asks_care"]), "%"))
+check("17", "AI pointed people to a professional", "80%", paste0(round(s9$pct[s9$code == "ai_refers_professional"]), "%"))
+if (exists("meds")) check("17", "Got a drug recommendation without asking about one", "8 of 11",
+                        paste(gc[["recommended_unasked"]], "of", gc[["recommended_unasked"]] + gc[["asked_and_recommended"]]))
+check("17", "Asked what was causing a symptom", "46%", paste0(round(s6q$pct[s6q$code == "human_asks_what_cause"]), "%"))
+check("17", "Asked whether it was serious", "12%", paste0(round(s6q$pct[s6q$code == "human_asks_serious"]), "%"))
+check("17", "AI replies with a disclaimer", "10%", paste0(round(s9$pct[s9$code == "ai_disclaimer"]), "%"))
+check("17", "Pushed back (of people who sent follow-ups)", "4 of 30", paste0(s7$n[s7$code == "human_pushback"], " of ", s7$N[s7$code == "human_pushback"]))
+check("17", "Asked on behalf of someone else", "1 in 10", paste0("1 in ", round(100 / by5$pct[by5$who == "Someone else (partner, child)"])))
+check("4", "Overview pill: drug recommendations without being asked", "8 of 11 (most)", if (exists("meds")) paste(gc[["recommended_unasked"]], "of 11") else "no med file")
 
 # For reference, as in the 07 report (not on the slides)
 recode_intent <- function(x) factor(case_when(
@@ -593,9 +705,9 @@ recode_intent <- function(x) factor(case_when(
   levels = c("Symptom interpretation", "Self-management", "Other questions"))
 d9 <- dat |> mutate(intent = recode_intent(human_first_intent), calm = CALMER_OF(na_change)) |> filter(!is.na(intent), !is.na(calm)) |>
   group_by(intent) |> summarise(n = n(), calm = sum(calm == "Calmer"), .groups = "drop") |> mutate(pct = 100 * calm / n)
-for (g9 in levels(d9$intent)) { r <- d9[d9$intent == g9, ]; if (nrow(r)) check("10", paste("For reference, felt calmer by first-message intent:", g9), "(not on slide)", paste0(round(r$pct), "% (n = ", r$n, ")")) }
+for (g9 in levels(d9$intent)) { r <- d9[d9$intent == g9, ]; if (nrow(r)) check("17", paste("For reference, felt calmer by first-message intent:", g9), "(not on slide)", paste0(round(r$pct), "% (n = ", r$n, ")")) }
 kable(d9 |> transmute(`First message` = intent, n, `Felt calmer` = paste0(round(pct), "% (", calm, ")")), align = "lrr")
-cat("\nSlide 10 has no chart. Its numbers are checked in the Check against deck tab.")
+cat("\nSlide 17 has no chart. Its numbers are checked in the Check against deck tab.")
 ```
 
 ## New codes and feelings
@@ -606,7 +718,9 @@ Exploratory: how feelings changed for each new participant code. These are **not
 NEW_SEG <- list(
   "Asked about themselves"          = factor(ifelse(dat$human_about == "self", "About themselves", ifelse(is.na(dat$human_about), NA, "Someone else or general")),
                                              levels = c("About themselves", "Someone else or general")),
-  "Asked what was causing it"       = dat$human_asks_cause,
+  "Asked what was causing it, or if it was serious (combined)" = dat$human_asks_cause,
+  "Asked what was causing it"       = dat$human_asks_what_cause,
+  "Asked if it was normal or serious" = dat$human_asks_serious,
   "Asked how to treat or manage it" = dat$human_asks_treatment,
   "Asked general facts"             = dat$human_asks_condition_info,
   "Asked whether or where to get care" = dat$human_asks_care,
