@@ -44,7 +44,7 @@ invisible(lapply(pkgs, library, character.only = TRUE))
 
 ```{r paths}
 # ---- Project folder: every path below is built from here ----
-project_root <- "C:/path/to/Q4_3_Pulse"
+project_root <- "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
 proj <- function(...) file.path(project_root, ...)
 
 if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)

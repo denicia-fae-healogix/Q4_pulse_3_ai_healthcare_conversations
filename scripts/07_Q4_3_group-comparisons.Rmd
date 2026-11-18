@@ -22,22 +22,35 @@ invisible(lapply(pkgs, library, character.only = TRUE))
 
 ```{r paths, include = FALSE}
 # ---- Project folder: every path below is built from here ----
-project_root <- "C:/path/to/Q4_3_Pulse"
+project_root <- "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
 proj <- function(...) file.path(project_root, ...)
 if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+# ---- Find an input file anywhere inside the project folder ----
+# Looks in data/processed first, then searches every subfolder for the same file name,
+# so the script still runs if the data sit in a different folder.
+find_in <- function(name) {
+  first <- proj("data", "processed", name)
+  if (file.exists(first)) return(first)
+  hits <- list.files(project_root, pattern = paste0("^", gsub(".", "\\.", name, fixed = TRUE), "$"),
+                     recursive = TRUE, full.names = TRUE)
+  hits <- hits[!grepl("/output/", hits)]
+  if (length(hits) > 0) return(hits[1])
+  first
+}
 
 script_name <- "07_Q4_3_group-comparisons"
 out_dir <- proj("output", script_name)
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 # ---- Inputs: check these filenames ----
-in_05     <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")         # survey answers + PANAS
-in_codes  <- proj("data", "processed", "05_Q4_3_conversations_wide_deid_coded.csv")   # conversation codes
-in_link   <- proj("data", "processed", "05_Q4_3_conversations_pid_and_prolific_id.csv") # pid -> Prolific ID
-in_ids    <- proj("data", "processed", "00_Q4_3_renamed.csv")                         # response_id + Prolific ID
+in_05     <- find_in("05_Q4_3_conversations_wide_deid.csv")         # survey answers + PANAS
+in_codes  <- find_in("05_Q4_3_conversations_wide_deid_coded.csv")   # conversation codes
+in_link   <- find_in("05_Q4_3_conversations_pid_and_prolific_id.csv") # pid -> Prolific ID
+in_ids    <- find_in("00_Q4_3_renamed.csv")                         # response_id + Prolific ID
 goal_file <- proj("data", "processed", "07_Q4_3_goal-met_coding.xlsx")                # hand-coded; created on first knit
 
-for (f in c(in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", f)
+for (f in c(in_05, in_codes)) if (!file.exists(f)) stop("Input not found: ", basename(f), " (looked in every folder inside ", project_root, ")")
 ```
 
 ```{r settings, include = FALSE}

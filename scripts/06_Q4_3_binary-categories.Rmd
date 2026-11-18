@@ -48,9 +48,22 @@ invisible(lapply(pkgs, library, character.only = TRUE))
 
 ```{r paths}
 # ---- Project folder: every path below is built from here ----
-project_root <- "C:/path/to/Q4_3_Pulse"
+project_root <- "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
 proj <- function(...) file.path(project_root, ...)
 if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+# ---- Find an input file anywhere inside the project folder ----
+# Looks in data/processed first, then searches every subfolder for the same file name,
+# so the script still runs if the data sit in a different folder.
+find_in <- function(name) {
+  first <- proj("data", "processed", name)
+  if (file.exists(first)) return(first)
+  hits <- list.files(project_root, pattern = paste0("^", gsub(".", "\\.", name, fixed = TRUE), "$"),
+                     recursive = TRUE, full.names = TRUE)
+  hits <- hits[!grepl("/output/", hits)]
+  if (length(hits) > 0) return(hits[1])
+  first
+}
 
 script_name <- "06_Q4_3_binary-categories"
 out_dir <- proj("output", script_name)
@@ -58,9 +71,9 @@ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(proj("data", "processed"), recursive = TRUE, showWarnings = FALSE)
 
 # ---- Check this filename and folder against your 05 output ----
-in_file  <- proj("data", "processed", "05_Q4_3_conversations_wide_deid.csv")
+in_file  <- find_in("05_Q4_3_conversations_wide_deid.csv")
 out_file <- proj("data", "processed", "06_Q4_3_binary_categories.xlsx")
-if (!file.exists(in_file)) stop("Input not found: ", in_file)
+if (!file.exists(in_file)) stop("Input not found: ", basename(in_file), " (looked in every folder inside ", project_root, ")")
 ```
 
 ## Read the data

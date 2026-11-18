@@ -34,6 +34,11 @@ ASKS6 = ["human_asks_what_cause", "human_asks_treatment", "human_asks_condition_
 TOPICS = ["topic_muscles_bones_joints", "topic_diet_fitness_weight", "topic_digestive", "topic_cold_flu_infection",
           "topic_allergy_rash", "topic_diabetes_hormones", "topic_head_nerves", "topic_eyes", "topic_mental_health_sleep",
           "topic_skin_hair", "topic_other"]
+# Nov 2026 review: "Skin and hair" and "Allergies and rashes" are shown as one area, "Skin, rashes and allergies"
+# (a person counts once if they asked about either). The deck and web page show these 10 areas.
+TOPICS10 = ["topic_muscles_bones_joints", "topic_skin_rash_allergy", "topic_diet_fitness_weight", "topic_digestive",
+            "topic_cold_flu_infection", "topic_diabetes_hormones", "topic_head_nerves", "topic_eyes",
+            "topic_mental_health_sleep", "topic_other"]
 EVERYDAY = ["topic_muscles_bones_joints", "topic_diet_fitness_weight", "topic_digestive", "topic_cold_flu_infection",
             "topic_allergy_rash", "topic_skin_hair"]
 FOLLOW = ["human_followup_adds_detail", "human_followup_new_question", "human_pushback"]
@@ -41,6 +46,9 @@ FOLLOW = ["human_followup_adds_detail", "human_followup_new_question", "human_pu
 def referral(mask):
     g = pp[mask]
     return [int((g.ai_refers_professional == 1).sum()), int(len(g))]
+
+pp = pp.copy()
+pp["topic_skin_rash_allergy"] = pp[["topic_skin_hair", "topic_allergy_rash"]].max(axis=1, skipna=False)
 
 out = {
     "N": int(len(pp)),
@@ -51,8 +59,8 @@ out = {
     "asks6": {c: cnt(c, pp) for c in ASKS6},
     "n_more_than_one_kind6": int((pp[ASKS6].sum(axis=1) > 1).sum()),
     "n_cause_and_serious": int(((pp.human_asks_what_cause == 1) & (pp.human_asks_serious == 1)).sum()),
-    "topics": {c: cnt(c, pp) for c in TOPICS},
-    "n_two_plus_areas": int((pp[TOPICS].sum(axis=1) > 1).sum()),
+    "topics": {c: cnt(c, pp) for c in TOPICS + ["topic_skin_rash_allergy"]},
+    "n_two_plus_areas": int((pp[TOPICS10].sum(axis=1) > 1).sum()),
     "n_everyday": int((pp[EVERYDAY].sum(axis=1) > 0).sum()),
     "followup": {c: cnt(c, multi) for c in FOLLOW},
     "referral_by_asked_cause": {"asked": referral(pp.human_asks_cause == 1),

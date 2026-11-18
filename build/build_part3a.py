@@ -51,20 +51,21 @@ slides.append(f"""
 <section class="slide s-title" id="s1">
   <p class="brand">HEALOGIX</p>
   <p class="kicker">Q4 &middot; November 2026 &middot; Pulse</p>
-  <h1>Part 3A: What did people ask AI?</h1>
-  <p class="lede">The Behavioral Science Team at Healogix looks inside real AI health conversations</p>
+  <h1>Part 3A: When people turn to AI for health advice, what do they ask?</h1>
+  <p class="lede">The Healogix Behavioral Science team collected and coded real AI health chats to see what people asked, how the AI answered, and whether it met their goals.</p>
   <p class="byline">Denicia Aragon Espinosa &amp; James Dunlea, Ph.D.</p>
   <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
 </section>""")
 slides.append(prior_slide("s1b", "Part 3A looks inside real AI health chats, starting with what people asked. Part 3B covers what the AI said back, and how people felt afterward."))
 
 
-pills = [("#a5306d", "Most people asked about their own health, mostly everyday complaints", "s6"),
-         ("#9b4c96", "Nearly half asked the AI what was causing a symptom", "s5"),
-         ("#8467b6", "People added detail but rarely pushed back", "s7"),
-         ("#627fcc", "Asking for a cause always led to a referral", "s8"),
-         ("#4a8fd0", "Most drug recommendations were unasked", "s9b"),
-         ("#2f9fd8", f"{round(100 * D['goals']['met']['Yes'] / D['goals']['N'])}% said AI met the goal they came with", "s14")]
+# Overview callouts (Nov 2026 review), in the order of the slides they link to
+pills = [("#a5306d", "Most people asked about an everyday complaint of their own, and nearly half wanted to know its cause", "s6"),
+         ("#9b4c96", "About 3 in 10 turned to AI to help them decide whether or not to get care", "s13"),
+         ("#8467b6", "People added detail as the chat went on but rarely pushed back", "s7"),
+         ("#627fcc", "The AI pointed 4 in 5 people to a professional, most of whom had not asked", "s9"),
+         ("#4a8fd0", "When the AI recommended a drug, it was usually OTC and unprompted", "s9b"),
+         ("#2f9fd8", f"{round(100 * D['goals']['met']['Yes'] / D['goals']['N'])}% said the chat met the goal they came with", "s14")]
 slides.append(f"""
 <section class="slide" id="s2">{EYEBROW}
   <h2 class="ov-title">What people ask AI about their health, and how the AI answers</h2>
@@ -102,7 +103,7 @@ for code, lab, col, qs in who:
     sqs += "".join(f'<i class="sq" style="background:{col}" data-tip="{k}"></i>' for _ in range(n))
 slides.append(f"""
 <section class="slide" id="s4">{EYEBROW}
-  <h2>Most people asked about themselves; 1 in 10 asked for someone else</h2>
+  <h2>Most people asked AI about their own health, and 1 in 10 asked on behalf of someone else</h2>
   <p class="chart-title">Who the participant's question was about</p>
   <div class="legend">{leg}</div>
   <div class="wpanels"><div class="wpanel"><div class="waffle w10">{sqs}</div><p class="muted">One square = one participant</p></div></div>
@@ -124,7 +125,7 @@ for i, (lab, col, qs) in enumerate(asks):
 multi_kind = D["n_more_than_one_kind6"]
 slides.append(f"""
 <section class="slide" id="s5">{EYEBROW}
-  <h2>Nearly half asked the AI what was causing a symptom; fewer asked if it was serious</h2>
+  <h2>Within those complaints, nearly half asked what was causing a symptom, and a third asked how to treat it</h2>
   <p class="chart-title">What participants asked the AI, at any point in the chat</p>
   {sbars(rows, "q", "Coded from every participant message. One person can ask more than one kind of question.")}
   <p class="axis-title">% of participants asking a given question type</p>
@@ -134,16 +135,16 @@ slides.append(f"""
 # ---- 6 health areas (deck slide 7): every area a conversation covered (v3), in deck order with Other last ----
 # What people described in each area and which drugs came up: a hand summary written while coding the conversations
 # (aggregate wording only). Used for the slide 7 hovers and the slide 8 table. Same text as AREA_DETAIL in 08a.
+# Nov 2026 review: "Skin and hair" and "Allergies and rashes" are combined into "Skin, rashes and allergies" (10 areas).
 AREAS = [("topic_muscles_bones_joints", "Muscles, bones and joints", "Knee, back, neck, shoulder and foot pain; tennis elbow; fragile bones; osteoarthritis; a bony bump on the hand", "Prolia, raloxifene", "Prolia, alendronate and other bone drugs; steroid shots; ibuprofen, naproxen, diclofenac; Tylenol"),
+         ("topic_skin_rash_allergy", "Skin, rashes and allergies", "Hives and itchy bumps, facial swelling after an antibiotic, a burning drug reaction, eczema patches, scalp flaking and dandruff, hair shedding", "Bactrim, amoxicillin, an antifungal cream, Zepbound", "21 antibiotics in one chat; Benadryl, Claritin, epinephrine; antifungal creams; hydrocortisone; dandruff shampoos"),
          ("topic_diet_fitness_weight", "Diet, fitness and weight", "Weight loss, building muscle, healthy foods and protein, supplements, workouts", None, None),
          ("topic_digestive", "Stomach and digestion", "Stomach aches and cramps, diarrhea and gas, pain near the belly button, an anal fistula", None, "Gas-X; ibuprofen, naproxen, aspirin"),
          ("topic_cold_flu_infection", "Colds, flu and infections", "Fever, chills, body aches, congestion, sore throat, hand, foot and mouth disease, an abscess, a yeast skin infection", None, "Tylenol, ibuprofen, Tamiflu"),
-         ("topic_allergy_rash", "Allergies and rashes", "Hives and itchy bumps, facial swelling after an antibiotic, a burning drug reaction, eczema patches", "Bactrim, amoxicillin, an antifungal cream", "21 antibiotics in one chat; Benadryl, Claritin, epinephrine; antifungal creams; hydrocortisone"),
          ("topic_diabetes_hormones", "Diabetes and hormones", "Diabetes, A1c results, hormone imbalance, PCOS, testosterone", None, "Insulin, estradiol, progesterone"),
          ("topic_head_nerves", "Head and nerves", "Headaches, vomiting, pain behind the eyes, nerve pain in the leg", None, "Tylenol, ibuprofen; gabapentin, pregabalin, duloxetine; lidocaine"),
          ("topic_eyes", "Eyes", "Double vision, blurry central vision, cataract surgery", None, None),
          ("topic_mental_health_sleep", "Mental health and sleep", "Stress and anxiety, pauses in breathing at night, a child waking at night on an ADHD drug", "Guanfacine", "Guanfacine"),
-         ("topic_skin_hair", "Skin and hair", "Scalp flaking and dandruff, hair shedding", "Zepbound", "Zepbound; dandruff shampoos"),
          ("topic_other", "Other (heart, lungs, kidneys, fatigue)", "Chest pain with coughing up blood, ongoing tiredness, test findings (heart, lungs, liver, kidneys), recovery after surgery", None, "Ibuprofen, naproxen")]
 TOPIC = D["topics"]
 bars = ""
@@ -155,12 +156,11 @@ for i, (code, lab, sym, _, _) in enumerate(AREAS):
       <div class="strack"><span class="sfill" style="width:{p:.2f}%;background:{col}"></span><span class="sval" style="left:{p:.2f}%">{round(p)}%</span></div></div>"""
 slides.append(f"""
 <section class="slide" id="s6">{EYEBROW}
-  <h2>Most AI health conversations were about everyday complaints, though some involved serious symptoms</h2>
+  <h2>Their questions were mostly about everyday complaints, led by muscle, bone and joint pain</h2>
   <p class="chart-title">Areas of health participants asked the AI about</p>
   <div class="sbars">{bars}</div>
   <p class="axis-title">% of participants asking about each area</p>
-  <p class="foot">Coded from participant messages (n = {N}). A conversation counts in every area the person asked about ({pct(D['n_two_plus_areas'], N)}% asked about two or more). Symptoms such as pain are counted under the body area they affect. {pct(D['n_everyday'], N)}% asked about an everyday complaint (muscles and bones, diet, digestion, colds, rashes or skin). Hover over a bar to see the symptoms people described.</p>
-  <p class="prev-next"><a href="#s6b" style="color:inherit">Next: the symptoms and medications people and the AI named in each area &darr;</a></p>
+  <p class="foot">Coded from participant messages (n = {N}). A conversation counts in every area the person asked about ({pct(D['n_two_plus_areas'], N)}% asked about two or more). Symptoms such as pain are counted under the body area they affect. {pct(D['n_everyday'], N)}% asked about an everyday complaint (muscles and bones, skin, rashes and allergies, diet, digestion, colds). Hover over a bar to see the symptoms people described.</p>
 </section>""")
 
 # ---- 6b symptoms and medications by area (deck slide 8) ----
@@ -187,7 +187,7 @@ fu = [("Asked a new question", "human_followup_new_question", DARK, [P("My scalp
 rows = [(lab, *D["followup"][col], c, qs) for lab, col, c, qs in fu]
 slides.append(f"""
 <section class="slide" id="s7">{EYEBROW}
-  <h2>As their AI chats went on, people added detail and asked new questions, but rarely pushed back</h2>
+  <h2>As the chats went on, people added more about their situation ({pct(*D['followup']['human_followup_adds_detail'])}%) far more often than they pushed back ({pct(*D['followup']['human_pushback'])}%)</h2>
   <p class="chart-title">Among the {N_MULTI} participants who sent a follow-up message</p>
   {sbars(rows, "f", "Coded from participant messages after the first. One person can count in more than one bar.")}
   <p class="axis-title">% of participants whose later messages did each of these</p>
@@ -212,7 +212,7 @@ for lab, r, n, qref, qno in [("Asked what was causing it", ry, ny, [A("Because t
 ticks = "".join(f'<span style="left:{t}%">{t}%</span>' for t in range(0, 101, 25))
 slides.append(f"""
 <section class="slide" id="s8">{EYEBROW}
-  <h2>Asking AI for a cause always triggered a &lsquo;see a professional,&rsquo; compared with about 6 in 10 times otherwise</h2>
+  <h2>Asking what was causing a symptom always led to a referral, compared with about 6 in 10 times otherwise</h2>
   <p class="chart-title">How often the AI pointed people to a professional</p>
   <div class="legend"><span><i class="lg-sq" style="background:{DARK}"></i>AI referred to a professional</span><span><i class="lg-sq" style="background:{PALE}"></i>AI did not refer</span></div>
   <div class="hchart">{bars}<div class="hrow"><div></div><div class="ticks">{ticks}</div></div>
@@ -239,7 +239,7 @@ ai_rows = [("Pointed them to a doctor or other professional", *ai["ai_refers_pro
             [A("For medical advice or diagnosis, consult a professional.")])]
 slides.append(f"""
 <section class="slide" id="s9">{EYEBROW}
-  <h2>The AI pointed 4 in 5 people to a professional, but rarely added a disclaimer</h2>
+  <h2>The AI filled the gap by pointing 4 in 5 people to a professional, including most who never asked about care</h2>
   <p class="chart-title">What the AI did in its replies to these {N} participants</p>
   {sbars(ai_rows, "ai", "Coded from the AI's replies across the whole conversation.")}
   <p class="axis-title">% of conversations</p>
@@ -262,7 +262,7 @@ for gi, g in enumerate(MP["groups"]):
                   f'<div class="{"mb" if b else "mn"}">{E(b or "Explained only")}</div></div>')
 slides.append(f"""
 <section class="slide" id="s9b">{EYEBROW}
-  <h2>Most AI drug recommendations answered a symptom, not a medication question</h2>
+  <h2>When the AI recommended a drug, it was usually OTC relief for a symptom, and {mc['recommended_unasked']} of its {nrec} recommendations were unprompted</h2>
   <div class="mpairs"><div class="mhead"><div class="mh1">What the person asked about</div><div></div><div class="mh2">What the AI recommended</div></div>{mrows}</div>
   <p class="foot">Each row is one conversation ({sum(mc[x] for x in ("asked_and_recommended", "asked_only", "recommended_unasked"))} of the {MP['N']} involved a medication question or a recommendation). Italic = the person described a symptom and did not ask about a drug. {otc} of the {nrec} recommendations were over-the-counter. Drug names as they appeared in the chat.</p>
 </section>""")
@@ -291,14 +291,14 @@ self_other = D["about"]["other_person"]
 pb, pbt = D["followup"]["human_pushback"]
 ad, adt = D["followup"]["human_followup_adds_detail"]
 take = [("For research", "#a5306d", [
-            ("AI chats can be a new source of patient voice.", f" In their follow-ups, {pct(ad, adt)}% of people added detail about their situation, so these transcripts capture symptoms and context in people's own words."),
-            ("Chats show how health problems sound before a diagnosis.", f" People described everyday symptoms across 11 areas of health, most often muscles, bones and joints ({pct(D['topics']['topic_muscles_bones_joints'][0], N)}%), and about half never named a condition.")]),
+            ("AI chats can be a new source of patient voice.", f" In their follow-ups, {pct(ad, adt)}% of people who kept chatting added detail about their situation, so these transcripts capture symptoms and context in people's own words."),
+            ("Chats show how people describe health problems in their own words.", f" People described everyday symptoms across {len(AREAS)} areas of health, most often muscles, bones and joints ({pct(D['topics']['topic_muscles_bones_joints'][0], N)}%).")]),
         ("For healthcare & pharma", "#627fcc", [
-            ("AI is steering people toward care, and toward drugs, usually unprompted.", f" Only {pct(D['asks']['human_asks_care'][0], N)}% asked whether or where to get care, yet the AI pointed {pct(ref_n, N)}% of people to a professional. {D['med_pairs']['counts']['recommended_unasked']} of the {D['med_pairs']['otc_of_recommended'][1]} people who got a drug recommendation had not asked about any medication, and {D['med_pairs']['otc_of_recommended'][0]} of the {D['med_pairs']['otc_of_recommended'][1]} drugs were over the counter."),
-            ("“What is causing this?” is the front door.", f" {pct(D['asks6']['human_asks_what_cause'][0], N)}% asked what was causing a symptom, and only {pct(D['asks6']['human_asks_serious'][0], N)}% asked whether it was serious, which makes symptom explanation the moment where disease education matters most.")]),
+            ("AI is steering people toward care, and sometimes toward OTC drugs, usually unprompted.", f" Only {pct(D['asks']['human_asks_care'][0], N)}% asked whether or where to get care, yet the AI pointed {pct(ref_n, N)}% of people to a professional. {D['med_pairs']['counts']['recommended_unasked']} of the {D['med_pairs']['otc_of_recommended'][1]} people who got a drug recommendation had not asked about any medication, and {D['med_pairs']['otc_of_recommended'][0]} of the {D['med_pairs']['otc_of_recommended'][1]} drugs were over the counter."),
+            ("“What is causing this?” is the front door.", f" {pct(D['asks6']['human_asks_what_cause'][0], N)}% asked what was causing a symptom, and only {pct(D['asks6']['human_asks_serious'][0], N)}% asked whether it was serious. Cause questions are also where the AI referred most reliably, so this is the moment that most shapes whether people reach an HCP.")]),
         ("Where the risk sits", "#8467b6", [
-            ("AI rarely hedges, and people rarely push back.", f" Only {pct(ai['ai_disclaimer'][0], N)}% of AI replies included a disclaimer, and only {pb} of {pbt} people who sent follow-ups questioned an answer."),
-            ("Care decisions often go unasked.", f" {pct(D['goals']['goal_vs_asked']['goal_care'][0], D['goals']['N_asked'])}% hoped AI would help them decide about care, but only {pct(D['goals']['goal_vs_asked']['goal_care'][1], D['goals']['N_asked'])}% asked it outright, and {'1 in 10' if pct(self_other, N) == 10 else str(pct(self_other, N)) + '%'} asked on behalf of someone the AI never heard from.")])]
+            ("AI rarely adds a disclaimer, and people rarely push back.", f" Only {pct(ai['ai_disclaimer'][0], N)}% of AI replies included a disclaimer, and only {pb} of {pbt} people who sent follow-ups questioned an answer."),
+            ("Care decisions often go unasked.", f" {pct(D['goals']['goal_vs_asked']['goal_care'][0], D['goals']['N_asked'])}% hoped AI would help them decide about care, but only {pct(D['goals']['goal_vs_asked']['goal_care'][1], D['goals']['N_asked'])}% asked it outright. People who asked about their goal directly tended to say it was met more often ({pct(*D['goals']['met_by_asked_own']['asked'])}% vs. {pct(*D['goals']['met_by_asked_own']['did_not_ask'])}%), and {'1 in 10' if pct(self_other, N) == 10 else str(pct(self_other, N)) + '%'} asked on behalf of someone the AI never heard from.")])]
 tk = "".join(f'<div class="tk"><p class="tk-lab" style="background:{c}">{E(h)}</p><ul>' + "".join(f'<li><b style="color:{c}">{E(a)}</b>{E(b)}</li>' for a, b in items) + "</ul></div>" for h, c, items in take)
 slides.append(f"""
 <section class="slide" id="s10">{EYEBROW}
@@ -356,7 +356,7 @@ for i, code in enumerate(["goal_cause", "goal_treatment", "goal_care", "goal_con
 cg, ca = G["goal_vs_asked"]["goal_care"]
 slides.append(f"""
 <section class="slide" id="s13">{EYEBROW}
-  <h2>{pct(cg, NA_)}% hoped AI would help them decide about care, but only {pct(ca, NA_)}% asked it outright</h2>
+  <h2>Their goals ran ahead of their questions: {pct(cg, NA_)}% wanted help deciding about care, yet only {pct(ca, NA_)}% asked for it</h2>
   <p class="chart-title">Their goal vs. what they asked the AI</p>
   <div class="legend"><span><i class="lg-sq" style="background:{LIGHT}"></i>Said it was their goal</span><span><i class="lg-sq" style="background:{DARK}"></i>Asked it in the chat</span></div>
   <div class="sbars">{pb_}</div>
@@ -388,7 +388,7 @@ for i, (code, lab, col, qs) in enumerate(FL):
 ay, an_ = G["met_by_asked_own"]["asked"]; ny_, nn_ = G["met_by_asked_own"]["did_not_ask"]
 slides.append(f"""
 <section class="slide" id="s14">{EYEBROW}
-  <h2>{pct(G['met']['Yes'], NG)}% said AI met their goal, yet 3 in 10 still brought a doctor into what came next</h2>
+  <h2>{pct(G['met']['Yes'], NG)}% said the chat met their goal, and people who asked about that goal directly tended to be more satisfied ({pct(ay, an_)}% vs. {pct(ny_, nn_)}%)</h2>
   <p class="chart-title">Did the chat meet the goal they set?</p>
   <div class="legend"><span><i class="lg-sq" style="background:{DARK}"></i>Yes</span><span><i class="lg-sq" style="background:{PALE}"></i>Partly</span><span><i class="lg-sq" style="background:#E3A26F"></i>No</span></div>
   <div class="hchart"><div class="hrow"><div class="hlab"><b>All participants</b><br><span class="muted">(n = {NG})</span></div><div class="hbar" style="height:64px">{segs}</div></div></div>
@@ -410,10 +410,14 @@ slides.append("""
   <p class="howto"><a href="../part3b/" style="color:inherit">Continue to Part 3B: What did AI say back to people? &rarr;</a></p>
 </section>""")
 
-# The takeaways slide is second to last (deck slide 18; the deck ends with the QR slide, the web page with the contact slide)
-_tk = next(i for i, s in enumerate(slides) if 'id="s10"' in s)
-_tk_slide = slides.pop(_tk)
-slides.insert(next(i for i, s in enumerate(slides) if 'id="s11"' in s), _tk_slide)
+# Slide order (Nov 2026 review, matches the Canva deck). The takeaways slide is second to last; the deck ends with
+# the QR slide, the web page with the contact slide. Cut for now and kept in the code so they can come back:
+# s1b (Parts 1 and 2), s3 (big numbers), s6b (symptoms by area), s9c (drugs by type), s12 (goals).
+ORDER = ["s1", "s2", "s4", "s6", "s5", "s13", "s7", "s9", "s8", "s9b", "s14", "s10", "s11"]
+_by_id = {s.split('id="', 1)[1].split('"', 1)[0]: s for s in slides}
+slides = [_by_id[i] for i in ORDER]
+_keep = "".join(slides)
+TIPS = {k: v for k, v in TIPS.items() if f'data-tip="{k}"' in _keep}
 
 tpl = open(ROOT / "build" / "template.html", encoding="utf-8").read()
 out = tpl.replace("%%TITLE%%", "AI and Trust, Part 3A").replace("%%SLIDES%%", "\n".join(slides)).replace("%%TIPS%%", json.dumps(TIPS)).replace("%%NSLIDES%%", str(len(slides)))

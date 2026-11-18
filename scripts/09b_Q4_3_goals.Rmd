@@ -330,7 +330,7 @@ for (i in seq_len(nrow(ga))) {
   keep_result("Goal vs. asked", paste0(ga$label[i], ": asked it in the chat"), paste0(round(ga$pct_ask[i]), "% (", ga$n_ask[i], " of ", ga$N[i], ")"), ga$N[i])
 }
 care <- ga[ga$code == "goal_care", ]
-t5 <- paste0(round(care$pct_goal), "% wanted help deciding about care, but only ", round(care$pct_ask), "% asked about care in the chat")
+t5 <- paste0("Their goals ran ahead of their questions: ", round(care$pct_goal), "% wanted help deciding about care, yet only ", round(care$pct_ask), "% asked for it")
 s5 <- paste0(ga$N[1], " people with a usable chat and their own messages. Light dot: said it was a goal (C3). Dark dot: asked it in the chat (Part 3A codes).")
 d5 <- ga |> mutate(y = factor(label, levels = rev(label)))
 plot_ly(d5, height = 190 + 50 * nrow(d5), width = PLOT_W) |>

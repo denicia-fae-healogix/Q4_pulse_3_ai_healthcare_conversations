@@ -100,7 +100,7 @@ Coded only for the 50 usable conversations with at least one participant turn; b
 |---|---|---|
 | `human_about` | category | Who the question is about: `self`; `other_person` (a named or described other person, such as a husband, son or daughter); `general` (no specific person, for example "what is diabetes"). Third-person descriptions with no other person named are coded `self` (see `coder_note_v2`) |
 | `human_health_area` | category | (Kept for reference; the slides now use the v3 `topic_*` codes in section 4b.) Main health area, one per conversation: `pain_muscles_bones`, `digestive`, `skin_allergy` (skin, hair, allergic reactions), `cold_flu_infection`, `diet_fitness_weight` (including supplements), `mental_health_sleep`, `diabetes_hormones`, `eyes`, `other` (chest pain, headache, fatigue, kidney or test reports, surgery recovery) |
-| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result). This combined measure equals 1 when any of the three v3 codes `human_asks_what_cause`, `human_asks_serious` or `human_asks_test_result` is 1 (52%). Used on 3A slides 4, 10 and 14 and in the goals comparisons |
+| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result). This combined measure equals 1 when any of the three v3 codes `human_asks_what_cause`, `human_asks_serious` or `human_asks_test_result` is 1 (52%). Used on 3A slide 9 and in the goals comparisons |
 | `human_asks_treatment` | 0/1 | Asks what to do, take, eat or change to treat or manage something |
 | `human_asks_care` | 0/1 | Asks whether or where to get care, which specialist or test, or what a visit involves |
 | `human_asks_condition_info` | 0/1 | Asks for general information about a condition ("what is X", "does X grow"). Medication questions stay in `human_asks_med` |
@@ -142,11 +142,14 @@ The three together reproduce `human_asks_cause` exactly. 5 people (10%) asked bo
 | `topic_mental_health_sleep` | 0/1 | Stress, anxiety, sleep, ADHD | 6% (3) |
 | `topic_skin_hair` | 0/1 | Scalp, dandruff, hair loss (not rashes or allergies) | 4% (2) |
 | `topic_other` | 0/1 | Heart and lungs (chest pain), kidneys and liver, fatigue, recovery after surgery | 12% (6) |
+| `topic_skin_rash_allergy` | 0/1 | Made in 08a and the web export, not stored in the coded file: 1 if `topic_skin_hair` or `topic_allergy_rash` is 1. Shown on the slides as "Skin, rashes and allergies" (Nov 2026 review; no one had both) | 14% (7) |
 | `coding_source_v3` | text | `claude_llm_v3` | |
+
+On the slides (Nov 2026 review), skin and hair and allergies and rashes are shown as one area, "Skin, rashes and allergies", so the deck and web page show 10 areas. The two original codes stay in the coded file.
 
 Coding calls worth knowing: eczema and the yeast skin infection count under allergies and rashes (the yeast infection also under infections); the abscess counts as an infection; the A1c chat counts under diabetes and as a test-result question; chest pain counts under other.
 
-**Slide 8 text.** The symptoms and medications listed for each area on 3A slide 8 are a hand summary written while coding (aggregate wording only). It lists any drug named in the chat, whether suggested, explained or warned against, so it differs from `ai_recommends_med` and the slide 12 and 13 drug lists. The same text lives in `AREA_DETAIL` (08a) and `AREAS` (build_part3a.py).
+**Area text.** The symptoms and medications listed for each area (the slide 4 hovers, and a table slide cut in the Nov 2026 review) are a hand summary written while coding (aggregate wording only). It lists any drug named in the chat, whether suggested, explained or warned against, so it differs from `ai_recommends_med` and the slide 10 drug list. The same text lives in `AREA_DETAIL` (08a) and `AREAS` (build_part3a.py).
 
 ---
 
@@ -171,12 +174,12 @@ These are built in the 07 and 08a/08b scripts from the codes and survey answers 
 
 | Grouping | Rule | Where |
 |---|---|---|
-| Asked more than one kind of question | 2+ of `human_asks_what_cause`, `_treatment`, `_condition_info`, `_care`, `_serious`, `human_asks_med`, `_test_result` | 3A slide 6 footer (28%) |
-| Asked both cause and serious | `human_asks_what_cause = 1` and `human_asks_serious = 1` | 3A slide 6 footer (10%) |
-| Asked what was causing it, or whether it was serious (combined) | `human_asks_cause = 1` (any of the three v3 cause codes) | 3A slides 4, 10 and 14 (52%) |
-| Everyday complaints | Any of `topic_muscles_bones_joints`, `topic_diet_fitness_weight`, `topic_digestive`, `topic_cold_flu_infection`, `topic_allergy_rash`, `topic_skin_hair` | 3A slide 7 footer (64%) |
-| Asked about two or more areas | 2+ `topic_*` codes | 3A slide 7 footer (8%) |
-| Drug class (slide 13) | Word match in `human_meds_asked` and `ai_recommended_meds` (section 8): OTC pain relievers, antibiotics, osteoporosis drugs, antifungal creams, weight-loss drug, ADHD drug, antihistamines, gas relief | 3A slide 13 |
+| Asked more than one kind of question | 2+ of `human_asks_what_cause`, `_treatment`, `_condition_info`, `_care`, `_serious`, `human_asks_med`, `_test_result` | 3A slide 5 footer (28%) |
+| Asked both cause and serious | `human_asks_what_cause = 1` and `human_asks_serious = 1` | 3A slide 5 footer (10%) |
+| Asked what was causing it, or whether it was serious (combined) | `human_asks_cause = 1` (any of the three v3 cause codes) | 3A slide 9 (52%) |
+| Everyday complaints | Any of `topic_muscles_bones_joints`, `topic_skin_rash_allergy`, `topic_diet_fitness_weight`, `topic_digestive`, `topic_cold_flu_infection` | 3A slide 4 footer (64%) |
+| Asked about two or more areas | 2+ of the 10 areas shown | 3A slide 4 footer (8%) |
+| Drug class (cut slide) | Word match in `human_meds_asked` and `ai_recommended_meds` (section 8): OTC pain relievers, antibiotics, osteoporosis drugs, antifungal creams, weight-loss drug, ADHD drug, antihistamines, gas relief | Cut in the Nov 2026 review; still in 08a |
 | AI named a medication | `ai_n_meds >= 1` | 3A "How the AI answered" (40%) |
 | Referred without asking about care | `ai_refers_professional = 1` among `human_asks_care = 0` | 3A footer (79%, 33 of 42) |
 | Named a drug the person had not asked about | `human_asks_med = 0` among `ai_n_meds >= 1` | 3A footer (70%, 14 of 20) |
