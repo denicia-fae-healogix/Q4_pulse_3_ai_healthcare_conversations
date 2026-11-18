@@ -1,0 +1,11 @@
+variable,n_dup_copy,n_main_copy
+panas_pre_interested,60,60
+panas_pre_distressed,59,60
+panas_pre_excited,60,60
+panas_pre_upset,60,60
+panas_pre_strong,60,60
+panas_post_interested,59,60
+panas_post_distressed,58,60
+panas_post_excited,60,60
+panas_post_upset,60,60
+panas_post_strong,60,60

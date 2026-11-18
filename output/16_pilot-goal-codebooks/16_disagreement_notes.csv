@@ -1,0 +1,7 @@
+﻿chat_id,what,plain_explanation,suggested_fix
+671a8337,Main goal,The first sentence mixes two goals: 'signs and symptoms of chest pain' and 'when to seek medical attention'. 2 coders took 'when to seek care' (A2) as the first clear goal; 1 took the diagnosis request (A1). The rules do not say what to do when one sentence holds two goals.,P2
+671a8337,"Goal A4 Learn about a condition, medicine or test",All 3 coders added A4 for 'more information about the illness'. The draft missed this extra goal. The coders are right.,P2
+66aafcc3,Goal A6 Prepare for an appointment or a care decision,All 3 coders added A6: the induction was already planned and she asked whether it would still happen and when to call the hospital. That fits 'care already planned'. The draft missed it. The coders are right.,P1
+5f491a49,Goal A3 Find out what to do about it,1 coder added A3 for 'what might be used to treat it'. The other 2 (and the draft) read it as learning about the condition in general (A4). The rules do not say where 'learning about treatments' goes.,P5
+6acb95ac,Why not W2 Needed a real doctor,1 coder added W2 because the person wondered whether a professional should still take a look. The other 2 (and the draft) kept only W1 (still unsure). W1 and W2 overlap when someone is unsure AND thinking about a doctor.,P6
+663b8ae0,Goal A6 Prepare for an appointment or a care decision,The draft and 1 coder coded A6 for 'before taking her to the specialist'; 2 coders treated it as timing only. The rules do not say whether a 'before my appointment' phrase counts as a goal.,P1

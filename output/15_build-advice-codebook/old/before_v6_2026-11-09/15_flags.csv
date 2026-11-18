@@ -1,0 +1,11 @@
+chat_id,rung_draft,rung_label,close_call_note
+5d7fd2a5,L1,General health information,Supports the surgeon's sitz baths but adds no new tip of its own: L1.
+5eec8774,L4,Suggested a specific medicine,"Bone-medicine options are described with how they are usually given ('once a year'). That is a description, not an instruction, so L4 not L5 (V4)."
+6144ea17,L3,Suggested a type of medicine,AI lists 'reintroduce a sleep aid if appropriate' as something the prescriber could advise: counted as an option for this person (L3).
+66d8e4c1,L2,Self-care or lifestyle tips,"AI tells the person to keep using their own clotrimazole: does not count (V22), so L2 from 'keep the area gently clean and dry'. Was L4."
+66fd6acd,L2,Self-care or lifestyle tips,"Summarises exercise research as tools for the person's own routine: L2, could be L1."
+695be8c6,L2,Self-care or lifestyle tips,"Recommends a flu shot: Vaccine tag, not a rung (V19). Also suggests fluids, a salt-water gargle and rest, so L2. Was L4."
+69f4ca1a,L2,Self-care or lifestyle tips,"Supplement plan with a B12 amount: Supplement tag, not a rung (V18). Supplement advice counts as self-care, so L2. Was L5."
+69fcf529,L2,Self-care or lifestyle tips,"Agrees whey protein is unnecessary and whole foods are enough: diet guidance (L2), could be L1."
+6a0206ae,L2,Self-care or lifestyle tips,Mostly relationship and stress coaching. Coping steps counted as self-care (L2).
+6abae4ea,L1,General health information,Repeats the person's own hormone doses (not a dose suggestion) and suggests a specialist: L1.

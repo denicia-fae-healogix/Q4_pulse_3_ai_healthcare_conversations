@@ -1,0 +1,3 @@
+﻿codebook,n_messages,n_excluded,n_codes,n_codes_below_min,n_analyst_revisions,pass1_codes,pass2_codes,pass3_codes,n_dropped,n_no_code,median_code_kappa,mapping_problems,primary_kappa,primary_all3_agree,primary_2plus_agree
+topic,52,1,11,1,8,10,9,9,0,3,0.88,none,0.81,0.75,1.0
+request,52,1,7,1,17,9,7,6,3,1,0.9199999999999999,none,,,

@@ -1,0 +1,2 @@
+﻿prolific_pid,chat_id,reason,decided_by,date
+69c41892ffbcb7d0ac0aa8a8,69c41892,"Not a personal health conversation: the participant pasted a homework assignment (the AI summarises a CDC section on child developmental milestones and writes a class discussion post). Flagged exclude = TRUE and left out of analyses (step 06 onward); the rows are kept in the data.",Denicia Aragon Espinosa (researcher),2026-11-05

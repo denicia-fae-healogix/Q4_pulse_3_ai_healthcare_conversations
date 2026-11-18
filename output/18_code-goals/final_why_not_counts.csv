@@ -1,0 +1,7 @@
+﻿code,label,n_chats,base_not_yes,pct_of_not_yes
+W1,No clear answer or still unsure,4,12,0.3333333333333333
+W2,Needed a real doctor,2,12,0.16666666666666666
+W3,Too much or hard-to-read information,1,12,0.08333333333333333
+W4,Still in progress,1,12,0.08333333333333333
+W5,"Hedged, nothing named as missing",4,12,0.3333333333333333
+W6,AI could not do an extra task,1,12,0.08333333333333333

@@ -1,0 +1,8 @@
+﻿code,name,plain_label,n_messages,n_analysed,pct_messages
+R1,Ask what is causing symptoms,Why is this happening to me?,15,52,0.2885
+R2,General health facts,General facts about health,15,52,0.2885
+R3,"How do I handle this problem, or is it safe?","How do I handle this problem, or is it safe?",8,52,0.1538
+R4,Information shared without a question,"Shared information, no question asked",8,52,0.1538
+R5,Whether to seek medical care,Should I see a doctor or get care?,4,52,0.0769
+R6,Help me reach a health goal,Help me reach a health goal,5,52,0.0962
+NONE,No type of request,No request type given,1,52,0.0192

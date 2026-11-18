@@ -1,0 +1,8 @@
+﻿code,chats_with_any_vote,majority_chats,all_3_agree_chats,fleiss_kappa
+R1,6,6,9,1.0
+R2,0,0,9,
+R3,1,1,9,1.0
+R4,1,1,9,1.0
+R5,0,0,9,
+R6,0,0,9,
+R7,2,2,9,1.0

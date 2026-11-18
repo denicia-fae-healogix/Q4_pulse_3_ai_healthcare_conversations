@@ -1,0 +1,86 @@
+﻿change_id,correction,sheet_row,prolific_pid,what_changed,before,after,why
+1,1,63,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+2,1,64,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+3,1,65,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+4,1,66,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+5,1,67,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+6,1,68,6712af54b9c073fb6f726116,prolific_pid,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson conversation is 6712af54's paste
+7,2,162,63e55f08844f6fb08115851f,prolific_pid,6ae4fe1ed707d958ebe2747d,63e55f08844f6fb08115851f,"Wrong ID: 6ae4fe1e... is this person's URL session_id, not their Prolific ID"
+8,2,163,63e55f08844f6fb08115851f,prolific_pid,6ae4fe1ed707d958ebe2747d,63e55f08844f6fb08115851f,"Wrong ID: 6ae4fe1e... is this person's URL session_id, not their Prolific ID"
+9,2,164,63e55f08844f6fb08115851f,prolific_pid,6ae4fe1ed707d958ebe2747d,63e55f08844f6fb08115851f,"Wrong ID: 6ae4fe1e... is this person's URL session_id, not their Prolific ID"
+10,2,165,63e55f08844f6fb08115851f,prolific_pid,6ae4fe1ed707d958ebe2747d,63e55f08844f6fb08115851f,"Wrong ID: 6ae4fe1e... is this person's URL session_id, not their Prolific ID"
+11,5,184,671a833709bfed135c1c9dac,prolific_pid,(blank),671a833709bfed135c1c9dac,ID was blank; recovered by matching the text to the participant's paste
+12,5,185,671a833709bfed135c1c9dac,prolific_pid,(blank),671a833709bfed135c1c9dac,ID was blank; recovered by matching the text to the participant's paste
+13,5,186,671a833709bfed135c1c9dac,prolific_pid,(blank),671a833709bfed135c1c9dac,ID was blank; recovered by matching the text to the participant's paste
+14,5,188,69fd05bd74fde4da7ae547a7,prolific_pid,(blank),69fd05bd74fde4da7ae547a7,ID was blank; recovered by matching the text to the participant's paste
+15,5,191,6a983ff0e4cfd6cc333dbdc9,prolific_pid,(blank),6a983ff0e4cfd6cc333dbdc9,ID was blank; recovered by matching the text to the participant's paste
+16,5,193,69fb8bf75f06a7590c8ed0cc,prolific_pid,(blank),69fb8bf75f06a7590c8ed0cc,ID was blank; recovered by matching the text to the participant's paste
+17,5,194,69fb8bf75f06a7590c8ed0cc,prolific_pid,(blank),69fb8bf75f06a7590c8ed0cc,ID was blank; recovered by matching the text to the participant's paste
+18,5,195,69fb8bf75f06a7590c8ed0cc,prolific_pid,(blank),69fb8bf75f06a7590c8ed0cc,ID was blank; recovered by matching the text to the participant's paste
+19,5,196,69fb8bf75f06a7590c8ed0cc,prolific_pid,(blank),69fb8bf75f06a7590c8ed0cc,ID was blank; recovered by matching the text to the participant's paste
+20,5,197,69fb8bf75f06a7590c8ed0cc,prolific_pid,(blank),69fb8bf75f06a7590c8ed0cc,ID was blank; recovered by matching the text to the participant's paste
+21,5,213,6ac2aee8cdc2b94a7b290430,prolific_pid,(blank),6ac2aee8cdc2b94a7b290430,ID was blank; recovered by matching the text to the participant's paste
+22,5,266,6658d49af0f0787f8c8132b9,prolific_pid,(blank),6658d49af0f0787f8c8132b9,ID was blank; recovered by matching the text to the participant's paste
+23,7,49 -> 50,6a0206ae4926b3707e0947b5,text moved (human -> ai),"end of row 49: That is a complete, unacceptable violation of your privacy and basic human dignity.","start of row 50: That is a complete, unacceptable violation of your privacy and basic human dignity.","Boundary: this sentence is the AI's reply, not the participant's message"
+24,6,50,6a0206ae4926b3707e0947b5,row split into ai / human / ai,"one AI row (9,505 chars)","ai (2,648 chars) / human: Should I move out? This is the stuff I deal with on a regular basis. Is there a way to move out without ruining the relationship with my gf / ai (6,714 chars)",Missed participant turn inside ai_6
+25,8,277 -> 276,6a638cf578610d0220d258b7,text moved (ai -> human),start of row 277: Images of the urinary bladder demonstrate no abnormalities.  The visualized liver is increased in echogenicity.,end of row 276: Images of the urinary bladder demonstrate no abnormalities.  The visualized liver is increased in echogenicity.,"Boundary: the pasted ultrasound report continues into row 277; the AI starts at 'Overall, this ultrasound is mostly reassuring'"
+26,9,233,5aeeb4903c80f200013af2ed,speaker,human,ai,"'For example, it happened while I was watching TV...' is the AI's example answer under its question 'Anything else about how the pain started?'; the participant likely skipped it"
+27,10,174 -> 175,695be8c64cd9b03864442eaf,text moved (human -> ai),end of row 174: LOL 😂,start of row 175: LOL 😂,'LOL 😂' sits on its own line and matches this chatbot's emoji style
+28,11,154,67d5d3b719258bd5eeaef834,notes,(blank),ends with quick-reply button text 'Pain that wakes you up at night','Pain that wakes you up at night' is a quick-reply button the AI offered; kept as human
+29,3,(new),6720084598df3cb5ac3ac3f2,row added,(no rows),one ai row: A doctor will assess your medical history and the extent of your liver condition to A doctor will assess your medical hi…,Paste was never coded. AI-only paste; participant's copy repeats part of the text
+30,4,(new),6a0497c25c04f83a27e1f07a,row added,(no rows),"one ai row: Sì, questo è utile, ma **non è un referto del tumore ovarico**. Quello che hai trovato è una comunicazione relativa a un…","Paste was never coded. AI-only paste, in Italian"
+31,12,"232, 233, 234",5aeeb4903c80f200013af2ed,rows merged,"3 ai rows (ai_1, human_2, ai_2)",one turn,Back-to-back rows by the same speaker are one turn
+32,12,29,6a9bb3853ad2e1bb2ba3e139,turn_label,(blank),ai_5,turn_label recomputed after corrections and merges (was blank)
+33,12,50 (split),6a0206ae4926b3707e0947b5,turn_label,(blank),human_7,turn_label recomputed after corrections and merges (was blank)
+34,12,50 (split),6a0206ae4926b3707e0947b5,turn_label,(blank),ai_7,turn_label recomputed after corrections and merges (was blank)
+35,12,51,6a0206ae4926b3707e0947b5,turn_label,human_7,human_8,turn_label recomputed after corrections and merges
+36,12,52,6a0206ae4926b3707e0947b5,turn_label,ai_7,ai_8,turn_label recomputed after corrections and merges
+37,12,53,6a0206ae4926b3707e0947b5,turn_label,human_8,human_9,turn_label recomputed after corrections and merges
+38,12,54,6a0206ae4926b3707e0947b5,turn_label,ai_8,ai_9,turn_label recomputed after corrections and merges
+39,12,55,6a0206ae4926b3707e0947b5,turn_label,human_9,human_10,turn_label recomputed after corrections and merges
+40,12,56,6a0206ae4926b3707e0947b5,turn_label,ai_9,ai_10,turn_label recomputed after corrections and merges
+41,12,57,6a0206ae4926b3707e0947b5,turn_label,human_10,human_11,turn_label recomputed after corrections and merges
+42,12,58,6a0206ae4926b3707e0947b5,turn_label,ai_10,ai_11,turn_label recomputed after corrections and merges
+43,12,59,6a0206ae4926b3707e0947b5,turn_label,human_11,human_12,turn_label recomputed after corrections and merges
+44,12,60,6a0206ae4926b3707e0947b5,turn_label,ai_11,ai_12,turn_label recomputed after corrections and merges
+45,12,61,6a0206ae4926b3707e0947b5,turn_label,human_12,human_13,turn_label recomputed after corrections and merges
+46,12,62,6a0206ae4926b3707e0947b5,turn_label,ai_12,ai_13,turn_label recomputed after corrections and merges
+47,12,new,6720084598df3cb5ac3ac3f2,turn_label,(blank),ai_0,turn_label recomputed after corrections and merges (was blank)
+48,12,85,66aafcc3d4f933f032778877,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+49,12,86,66aafcc3d4f933f032778877,turn_label,(blank),human_2,turn_label recomputed after corrections and merges (was blank)
+50,12,new,6a0497c25c04f83a27e1f07a,turn_label,(blank),ai_0,turn_label recomputed after corrections and merges (was blank)
+51,12,88,672c1bfa1ae605ad8e6fd726,turn_label,(blank),human_1,turn_label recomputed after corrections and merges (was blank)
+52,12,89,672c1bfa1ae605ad8e6fd726,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+53,12,123,6929d6581f54fd39c4c59891,turn_label,(blank),human_1,turn_label recomputed after corrections and merges (was blank)
+54,12,124,6929d6581f54fd39c4c59891,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+55,12,127,6929d6581f54fd39c4c59891,turn_label,(blank),human_3,turn_label recomputed after corrections and merges (was blank)
+56,12,184,671a833709bfed135c1c9dac,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+57,12,185,671a833709bfed135c1c9dac,turn_label,(blank),human_2,turn_label recomputed after corrections and merges (was blank)
+58,12,186,671a833709bfed135c1c9dac,turn_label,(blank),ai_2,turn_label recomputed after corrections and merges (was blank)
+59,12,188,69fd05bd74fde4da7ae547a7,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+60,12,191,6a983ff0e4cfd6cc333dbdc9,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+61,12,193,69fb8bf75f06a7590c8ed0cc,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+62,12,194,69fb8bf75f06a7590c8ed0cc,turn_label,(blank),human_2,turn_label recomputed after corrections and merges (was blank)
+63,12,195,69fb8bf75f06a7590c8ed0cc,turn_label,(blank),ai_2,turn_label recomputed after corrections and merges (was blank)
+64,12,196,69fb8bf75f06a7590c8ed0cc,turn_label,(blank),human_3,turn_label recomputed after corrections and merges (was blank)
+65,12,197,69fb8bf75f06a7590c8ed0cc,turn_label,(blank),ai_3,turn_label recomputed after corrections and merges (was blank)
+66,12,213,6ac2aee8cdc2b94a7b290430,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+67,12,"232, 233, 234",5aeeb4903c80f200013af2ed,turn_label,"ai_1, human_2, ai_2",ai_1,turn_label recomputed after corrections and merges
+68,12,235,5aeeb4903c80f200013af2ed,turn_label,human_3,human_2,turn_label recomputed after corrections and merges
+69,12,236,5aeeb4903c80f200013af2ed,turn_label,ai_3,ai_2,turn_label recomputed after corrections and merges
+70,12,237,5aeeb4903c80f200013af2ed,turn_label,human_4,human_3,turn_label recomputed after corrections and merges
+71,12,238,5aeeb4903c80f200013af2ed,turn_label,ai_4,ai_3,turn_label recomputed after corrections and merges
+72,12,239,5aeeb4903c80f200013af2ed,turn_label,human_5,human_4,turn_label recomputed after corrections and merges
+73,12,240,5aeeb4903c80f200013af2ed,turn_label,ai_5,ai_4,turn_label recomputed after corrections and merges
+74,12,241,5aeeb4903c80f200013af2ed,turn_label,human_6,human_5,turn_label recomputed after corrections and merges
+75,12,242,5aeeb4903c80f200013af2ed,turn_label,ai_6,ai_5,turn_label recomputed after corrections and merges
+76,12,243,5aeeb4903c80f200013af2ed,turn_label,human_7,human_6,turn_label recomputed after corrections and merges
+77,12,244,5aeeb4903c80f200013af2ed,turn_label,(blank),ai_6,turn_label recomputed after corrections and merges (was blank)
+78,12,245,5aeeb4903c80f200013af2ed,turn_label,(blank),human_7,turn_label recomputed after corrections and merges (was blank)
+79,12,246,5aeeb4903c80f200013af2ed,turn_label,ai_8,ai_7,turn_label recomputed after corrections and merges
+80,12,263,69ab73e18d186d5aefe45bd3,turn_label,(blank),human_2,turn_label recomputed after corrections and merges (was blank)
+81,12,264,69ab73e18d186d5aefe45bd3,turn_label,(blank),ai_2,turn_label recomputed after corrections and merges (was blank)
+82,12,266,6658d49af0f0787f8c8132b9,turn_label,(blank),ai_1,turn_label recomputed after corrections and merges (was blank)
+83,12,288,69c41892ffbcb7d0ac0aa8a8,turn_label,(blank),human_6,turn_label recomputed after corrections and merges (was blank)
+84,12,289,69c41892ffbcb7d0ac0aa8a8,turn_label,(blank),ai_6,turn_label recomputed after corrections and merges (was blank)
+85,13,all rows,69c41892ffbcb7d0ac0aa8a8,exclude / exclude_reason,exclude = FALSE,"exclude = TRUE (rows kept, flagged)",Not a personal health conversation: the participant pasted a homework assignment (the AI summarises a CDC section on child developmental milestones and writes a class discussion post). Flagged exclude = TRUE and left out of analyses (step 06 onward); the rows are kept in the data. Decided by Denicia Aragon Espinosa (researcher) on 2026-11-05; listed in 05_exclusions.csv.

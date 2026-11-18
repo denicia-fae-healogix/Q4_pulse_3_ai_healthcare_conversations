@@ -1,0 +1,7 @@
+code,label,n,pct,ci_low,ci_high,n_within_medicine_chats,of_medicine_chats
+flag_brand_named,Named a brand,8,15.4,8.0,27.5,8,12
+flag_prescription_suggested,Suggested a prescription-only medicine,3,5.8,2.0,15.6,3,12
+flag_supplement_suggested,Supplement tag,1,1.9,0.3,10.1,0,12
+flag_vaccine_suggested,Vaccine tag,1,1.9,0.3,10.1,0,12
+said_see_doctor,Said to see a doctor or professional,37,71.2,57.7,81.7,12,12
+gave_warning,Gave a warning or caveat,21,40.4,28.2,53.9,10,12

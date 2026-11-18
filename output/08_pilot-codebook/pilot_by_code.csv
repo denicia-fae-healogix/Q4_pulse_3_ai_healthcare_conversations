@@ -1,0 +1,18 @@
+﻿codebook,code,name,n_draft,n_pilot_majority,times_given,n_coders_split,fleiss_kappa,n_medium_conf,n_low_conf,n_unclear_notes,pilot_draft_disagree
+topic,T1,"Bones, joints and muscles",0,0,0,0,,0,0,0,0
+topic,T2,"Diet, weight and fitness",0,0,0,0,,0,0,0,0
+topic,T3,Stomach and digestion,1,1,3,0,1.0,0,0,0,0
+topic,T4,"Skin, hair and allergies",1,1,3,0,1.0,0,0,0,0
+topic,T5,Infections and acute illness,1,1,3,0,1.0,3,0,3,0
+topic,T6,Diabetes and hormones,2,1,3,0,1.0,0,0,0,1
+topic,T7,Sleep and fatigue,1,1,3,0,1.0,0,0,0,0
+topic,T8,Eyes and vision,1,1,3,0,1.0,0,0,0,0
+topic,T9,Headaches and nerve pain,1,1,3,0,1.0,1,0,1,0
+topic,T10,Pregnancy and reproductive health,1,2,6,0,1.0,3,0,3,1
+topic,T11,Mental health and stress,1,1,3,0,1.0,0,0,0,0
+request,R1,Ask what is causing symptoms,3,4,12,0,1.0,1,2,3,1
+request,R2,General health facts,2,2,6,0,1.0,0,0,0,0
+request,R3,"How do I handle this problem, or is it safe?",2,4,11,1,0.87,7,0,7,2
+request,R4,Information shared without a question,3,3,9,0,1.0,1,0,1,0
+request,R5,Whether to seek medical care,1,1,3,0,1.0,1,0,1,0
+request,R6,Help me reach a health goal,1,1,3,0,1.0,3,0,3,0

@@ -1,0 +1,5 @@
+context,meaning,example_chat,example_quote
+suggested,"Suggested, or offered as an option for this person. Counts on the ladder (supplements and vaccines get a tag instead).",6a637176,Over-the-counter pain relievers like ibuprofen or acetaminophen can also reduce throat pain enough to allow drinking.
+information,"Named only to explain: a possible cause, a test, a list of examples. Does not count.",6a10664c,"Regular use of ibuprofen (Advil), naproxen (Aleve), or aspirin can damage the stomach's protective lining."
+warning,"Named to warn against it. Does not count on the ladder, but feeds S-warning.",6acb95ac,Avoid applying hydrocortisone or other steroid creams to your face without medical guidance
+own,"The person's own current medicine, repeated, discussed, or told to keep using. Does not count.",6abae4ea,make sure the endocrinologist knows you're using estradiol 0.0375 mg and progesterone 100 mg nightly

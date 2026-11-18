@@ -1,0 +1,34 @@
+﻿medicine,kind,n_chats,brands,access,chats,brand_used,kind_label
+ibuprofen,medicine,7,"Advil, Motrin",OTC or Rx,5aeeb490;664639e0;66d9e5be;672c1bfa;69fb8bf7;69fd05bd;6a637176,True,Named by a brand too
+acetaminophen,medicine,6,Tylenol,OTC,5aeeb490;664639e0;66d9e5be;672c1bfa;69fd05bd;6a637176,True,Named by a brand too
+alendronate,medicine,1,Fosamax,Rx,5eec8774,True,Named by a brand too
+berberine,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+coal tar,medicine,1,,OTC,672c1bfa,False,Generic name only
+denosumab,medicine,1,Prolia,Rx,5eec8774,True,Named by a brand too
+diclofenac,medicine,1,Voltaren,OTC,69fb8bf7,True,Named by a brand too
+diphenhydramine,medicine,1,Benadryl,OTC,6a21a961,True,Named by a brand too
+duloxetine,medicine,1,,Rx,66d9e5be,False,Generic name only
+flu vaccine,vaccine,1,,vaccine,695be8c6,False,"Vaccine (tag, not on the ladder)"
+folate,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+gabapentin,medicine,1,,Rx,66d9e5be,False,Generic name only
+ibandronate,medicine,1,Boniva,Rx,5eec8774,True,Named by a brand too
+inositol,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+iron,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+ketoconazole,medicine,1,Nizoral,OTC or Rx,672c1bfa,True,Named by a brand too
+lidocaine,medicine,1,,OTC or Rx,66d9e5be,False,Generic name only
+loratadine,medicine,1,Claritin,OTC,6a21a961,True,Named by a brand too
+magnesium,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+naproxen,medicine,1,,OTC or Rx,69fb8bf7,False,Generic name only
+omega-3 / fish oil,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+oseltamivir,medicine,1,Tamiflu,Rx,664639e0,True,Named by a brand too
+pamidronate,medicine,1,,Rx,5eec8774,False,Generic name only
+pregabalin,medicine,1,,Rx,66d9e5be,False,Generic name only
+risedronate,medicine,1,"Actonel, Atelvia",Rx,5eec8774,True,Named by a brand too
+selenium sulfide,medicine,1,,OTC,672c1bfa,False,Generic name only
+simethicone,medicine,1,Gas-X,OTC,69ab73e1,True,Named by a brand too
+sleep aid (the melatonin he used before),supplement,1,,supplement,6144ea17,False,"Supplement (tag, not on the ladder)"
+vitamin B12,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+vitamin C,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+vitamin D,supplement,1,,supplement,69f4ca1a,False,"Supplement (tag, not on the ladder)"
+zinc pyrithione,medicine,1,,OTC,672c1bfa,False,Generic name only
+zoledronic acid,medicine,1,Reclast,Rx,5eec8774,True,Named by a brand too

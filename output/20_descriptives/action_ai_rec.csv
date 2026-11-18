@@ -1,0 +1,8 @@
+response,n,pct
+Did not recommend any action,6,0.1016949152542373
+Mentioned possible actions but did not recommend one,5,0.0847457627118644
+"Mentioned to wait it out, that your symptoms will improve over time",2,0.03389830508474576
+Gently suggested a specific action,17,0.288135593220339
+Clearly recommended a specific action,18,0.3050847457627119
+Strongly urged an action,8,0.13559322033898305
+I don't remember,3,0.05084745762711865

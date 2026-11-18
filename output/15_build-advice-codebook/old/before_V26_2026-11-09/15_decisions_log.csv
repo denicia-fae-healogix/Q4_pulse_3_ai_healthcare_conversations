@@ -1,0 +1,26 @@
+id,decision,detail,status
+V1,Unit and summary,Each AI reply is read; each chat gets the MOST specific rung reached in any reply.,proposed (analyst-assistant draft; not a review question)
+V2,Mentioned vs suggested,"A medicine counts on the ladder only if the AI suggested it or offered it as an option for this person. Medicines named as information, a possible cause, a warning, or the person's own medicine stay in the medicine list but do not count.",approved by analyst (V20)
+V3,"Brand is a flag, not a rung","Naming Tylenol is no more directive than naming acetaminophen, so brand is a flag (F-brand) and is shown in the medicines chart.",approved by analyst (V17)
+V4,Dose is the top rung,"L5 = an amount (mg, mcg, %) or an instruction of how often to use a SUGGESTED medicine. Describing how a medicine is usually given ('once a year') stays L4. The person's own dose repeated back and food amounts do not count.",approved by analyst (V17)
+V5,Prescription vs over the counter,"Recorded per medicine (OTC, Rx, OTC or Rx, supplement, vaccine) and as a chat flag F-Rx. Not a rung.",approved by analyst (V23)
+V6,Supplements count as medicines,"Vitamins, minerals and other supplements suggested by the AI count on the ladder, with flag F-supplement.",replaced by V18 (analyst said no)
+V7,Vaccines count as a specific medicine,"A recommended vaccine counts as L4, with flag F-vaccine.",replaced by V19 (analyst said no)
+V8,Devices are not medicines,"Breathing machines (CPAP), lenses and similar devices are not medicines. 'APAP' (a CPAP setting) was removed from the word list.",proposed (analyst-assistant draft; not a review question)
+V9,Keep using your own medicine,"If the AI tells the person to keep using their own medicine, that counts as suggested (66d8e4c1).",replaced by V22 (analyst said no)
+V10,'Ask your doctor about X',Offering X as an option to raise with a doctor counts as suggesting X.,approved by analyst (V21)
+V11,Said to see a doctor or professional,"Includes pharmacists, specialists, urgent care, and 'seek care if ...' warning-sign lists.",proposed (analyst-assistant draft; not a review question)
+V12,Gave a warning or caveat,"Medicine cautions (side effects, interactions, maximums, who should avoid it, 'if you can safely take it') and disclaimers ('not medical advice'). General 'see a doctor if ...' advice is S-doctor, not S-warning.",proposed (analyst-assistant draft; not a review question)
+V13,L0 vs L1,L0 is only for chats where the AI did a non-health task (writing or editing help).,proposed (analyst-assistant draft; not a review question)
+V14,Stress and relationship coping,Coping steps for stress count as self-care (L2) (6a0206ae).,approved by analyst (V25)
+V15,How drafts were made,"Medicines: word list plus a hand-read context for every medicine. L0-L2: hand-read. Safety codes: word rules, every hit checked by hand (2 rule hits removed, 1 caution added).",proposed (analyst-assistant draft; not a review question)
+V16,Stock disclaimers,"A stock line such as 'For medical advice or diagnosis, consult a professional' counts as S-doctor, and 'This is for informational purposes only' counts as S-warning.",proposed (analyst-assistant draft; not a review question)
+V17,"Q1: brand flag, dose top rung","Analyst: yes. Brand name is a flag, and giving a dose or how often is the top rung (L5).",analyst decision
+V18,Q2: supplements are a tag,"Analyst's words: 'label as supplements'. Interpreted as a separate Supplement tag, not a medicine rung. Supplement advice is treated like diet advice, so it counts as self-care (L2) at most, and a supplement amount is not a dose (L5). 69f4ca1a moves from L5 to L2 (checked by re-reading the chat).",analyst decision
+V19,Q3: vaccines are a tag,"Analyst: a separate Vaccine tag, not a medicine rung. Recommending a vaccine does not raise the rung; the chat's rung comes from its other advice. 695be8c6 moves from L4 to L2, not L1, because the AI also suggested 'drinking plenty of fluids, gargling warm salt water, and getting some rest'.",analyst decision
+V20,Q4: information-only mentions,"Analyst: yes. Only medicines the AI suggested count; medicines named as information, a cause, a warning or the person's own stay off the ladder.",analyst decision
+V21,Q5: 'ask your doctor about X',"Analyst: yes, it counts as suggesting X (5eec8774, 66d9e5be stay L4).",analyst decision
+V22,Q6: keep using your own medicine,"Analyst: no, it does not count. 66d8e4c1 moves from L4 to L2 ('keep the area gently clean and dry').",analyst decision
+V23,Q7: prescription-only,"Analyst: prescription-only is a flag (F-Rx), not a rung.",analyst decision
+V24,Q8: compare with the survey,"Analyst: yes. Planned as a later step after full coding: cross-tabulate the coded ladder (medicine suggested, L3 or higher) against the survey question med_mentioned (Yes / No / Not sure) within the 52 chats, and list the chats where they disagree.","analyst decision (planned, later step)"
+V25,Q9: stress coping,"Analyst: yes, stress-coping steps count as self-care (L2); 6a0206ae stays L2.",analyst decision

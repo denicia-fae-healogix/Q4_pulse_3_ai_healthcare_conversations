@@ -1,0 +1,92 @@
+﻿coder,chat_id,codebook,role,code,evidence,confidence,unclear,none_reason,quote_found
+1,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,"unclear because the message centres on feeling generally unwell and possible flu (T5), but it opens with tennis elbow (T1); the rule on adding a secondary only when a second subject is clearly asked about did not clearly decide whether T1 should be secondary, so I left it out.",,yes
+1,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,yes
+1,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,yes
+1,69fe1811,topic,secondary,T2,after 3 months on zepbound,high,,,yes
+1,69fe1811,request,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",high,,,yes
+1,6a0206ae,topic,primary,T11,what's stressing me out and why I'm anxious,high,,,yes
+1,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,medium,"unclear because R3 is framed around relieving a current health problem; here the problem is emotional stress/anxiety, which seems to fit, but it is phrased as a broad wellbeing goal (R6 was considered).",,yes
+1,6a0206ae,request,request,R1,why I'm anxious,low,"unclear because R1 is about explaining described symptoms; the person asks why they are anxious but describes no specific symptoms, so it may just be a wish to talk rather than a request for a cause.",,yes
+1,6a638cf5,topic,primary,NONE,,high,"unclear because the report is about the kidneys (stone, cysts) and liver echogenicity; no topic covers kidneys, urinary tract or liver, so NONE.","The message is a kidney/bladder ultrasound report (kidney stone, renal cysts, liver echogenicity); no topic code covers the kidneys, urinary tract or liver.",n/a (no code)
+1,6a638cf5,request,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts,high,,,yes
+1,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the message lists reproductive conditions (PCOS, PMDD -> T10) and a metabolic condition (high cholesterol -> T6) without clearly centring on one; anemia fits no topic; supplements could also suggest T2 as secondary, but only one secondary is allowed.",,yes
+1,69f4ca1a,topic,secondary,T6,"pmdd, and high cholesterol",medium,unclear because T6 vs T10 primary was not decided by the PCOS rule when both kinds of conditions are listed equally; T2 (supplements for a named condition) was also a possible secondary.,,yes
+1,69f4ca1a,request,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",medium,"unclear because the wording matches an R6 sign exactly, but the R6/R3 close call says if the focus is treating a current problem use R3; the aim here is to treat named conditions.",,yes
+1,69f4ca1a,request,request,R3,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the supplement is wanted to manage existing conditions (R3), but the request is a product recommendation that matches R6's signs.",,yes
+1,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,yes
+1,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,yes
+1,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that,high,,,yes
+1,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,yes
+1,6144ea17,request,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,high,,,yes
+1,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,yes
+1,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,yes
+1,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,medium,"unclear because headache with vomiting and pain behind the eyes is a listed T9 sign, but vomiting for 2 days could suggest a sudden acute illness (T5); no fever, chills or body aches are mentioned, so T9 was chosen.",,yes
+1,6a9f047c,request,request,R1,I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem,high,,,yes
+1,69d51123,topic,primary,T10,3 weeks after endometriosis surgery and about to have your period?,high,,,yes
+1,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery,medium,"unclear because it is a 'should I do X' question not about professional care (R3 per the general rules), but it is phrased with a general 'you' and could be read as a general fact question (R2); it is also not clearly about relieving a problem.",,yes
+1,69f441ce,topic,primary,T8,2nd eye's cataract surgery after doing the first one,high,,,yes
+1,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,yes
+1,69f441ce,request,request,R5,Is it a must?,high,,,yes
+1,6a9bb385,topic,primary,NONE,,high,,One-word reply ('nope') with no health subject.,n/a (no code)
+1,6a9bb385,request,request,NONE,,,,One-word reply with no request content.,n/a (no code)
+2,6a0206ae,topic,primary,T11,I would like to talk about what's stressing me out and why I'm anxious,high,,,yes
+2,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,high,,,yes
+2,6a0206ae,request,request,R1,what's stressing me out and why I'm anxious,medium,"unclear because R1 is framed around symptoms or a health change; asking why they are anxious fits 'what could be causing this' but describes no specific symptom, and R2 was considered",,yes
+2,6a9bb385,topic,primary,NONE,,high,,One-word reply ('nope') with no health subject.,n/a (no code)
+2,6a9bb385,request,request,NONE,,,,One-word reply with no question or request content.,n/a (no code)
+2,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that,high,,,yes
+2,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,yes
+2,6144ea17,request,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,high,,,yes
+2,69d51123,topic,primary,T10,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,yes
+2,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,medium,"unclear because it is a 'should I do X' question not about professional care (general rule says R3), but it is about whether a habit is safe after surgery rather than relieving a current problem; R2 was considered since it is phrased generally ('you')",,yes
+2,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,yes
+2,69fe1811,topic,secondary,T2,baby hair coming in after 3 months on zepbound,high,,,yes
+2,69fe1811,request,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",high,,,yes
+2,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,high,,,yes
+2,6a9f047c,request,request,R1,pain behind my eyes what could be the problem,high,,,yes
+2,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,"unclear because the visit was for tennis elbow (T1), but the question centres on feeling generally unwell and possible flu; T1 considered as primary",,yes
+2,695be8c6,topic,secondary,T1,went to doctor today with tennis elbow,medium,,,yes
+2,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,yes
+2,6a638cf5,topic,primary,NONE,,medium,"unclear because the subject (kidney stone, kidney cysts, fatty-appearing liver on ultrasound) is health-related but no topic covers kidneys, urinary tract or liver; T3 was considered for the liver but it is not the digestive tract as defined",Pasted kidney/bladder ultrasound report; kidney and urinary topics fit none of T1-T11.,n/a (no code)
+2,6a638cf5,request,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney.,high,,,yes
+2,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the message lists reproductive conditions (PCOS, PMDD) and a metabolic one (high cholesterol) plus anemia, which has no code; T6 considered as primary, and T2 (supplements) was also close as secondary",,yes
+2,69f4ca1a,topic,secondary,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,unclear because only one secondary is allowed and T2 (supplements to treat a named condition) also qualified as secondary,,yes
+2,69f4ca1a,request,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",medium,"unclear because it matches the R6 sign 'Is there a supplement or vitamin that has', but the aim is to manage conditions, which points to R3",,yes
+2,69f4ca1a,request,request,R3,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,unclear because the supplement request is aimed at treating named conditions (R3) while the R6 sign wording also matches,,yes
+2,69f441ce,topic,primary,T8,get 2nd eye's cataract surgery after doing the first one,high,,,yes
+2,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,yes
+2,69f441ce,request,request,R5,Is it a must?,high,,,yes
+2,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,yes
+2,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,yes
+2,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,yes
+2,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,yes
+3,69f441ce,topic,primary,T8,need to get 2nd eye's cataract surgery after doing the first one,high,,,yes
+3,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery,high,,,yes
+3,69f441ce,request,request,R5,need to get 2nd eye's cataract surgery after doing the first one. Is it a must?,medium,"unclear because ""Is it a must?"" could be read as a general fact (R2) rather than a personal decision about a procedure; R5 sign 'Is it a must? about a procedure' decided it toward R5.",,yes
+3,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that,high,,,yes
+3,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,yes
+3,6144ea17,request,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,high,,,yes
+3,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the message lists reproductive conditions (PCOS, PMDD; T10) and high cholesterol (T6) plus anemia, which fits no code; I chose T10 since two of the conditions are reproductive. The diet/supplement rule would also allow T2 as secondary, but only one secondary is permitted.",,yes
+3,69f4ca1a,topic,secondary,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,unclear because PCOS can fit T6 or T10 and high cholesterol is T6; T2 (supplements) was also considered as the secondary.,,yes
+3,69f4ca1a,request,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",medium,"unclear because the wording matches an R6 sign (supplement/vitamin), but the goal is to treat named conditions ('deal with my pcos...'), which points to R3 (problem-driven).",,yes
+3,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,yes
+3,69fe1811,topic,secondary,T2,after 3 months on zepbound,high,,,yes
+3,69fe1811,request,request,R4,baby hair coming in after 3 months on zepbound,medium,"unclear because there is no stated question, so R4 applies, though the implied request may be R1 (what it means).",,yes
+3,6a9bb385,topic,primary,NONE,,high,,The message is a one-word reply ('nope') with no health subject.,n/a (no code)
+3,6a9bb385,request,request,NONE,,,,One-word reply with no request content.,n/a (no code)
+3,6a0206ae,topic,primary,T11,what's stressing me out and why I'm anxious,high,,,yes
+3,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,medium,"unclear because coping with emotional strain is not an obvious 'current health problem' for R3, and R6 (personal plan) was considered; R3 fits best as problem-driven.",,yes
+3,6a0206ae,request,request,R1,why I'm anxious,low,"unclear because 'why I'm anxious' asks for an explanation of a personal state (R1), but it reads more as a wish to talk than a request for a cause; no symptoms are described in detail.",,yes
+3,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,"unclear because the subject is general malaise with flu as a candidate (T5), while tennis elbow (T1) is the reason for the doctor visit; I chose T5 as the question centres on feeling unwell.",,yes
+3,695be8c6,topic,secondary,T1,went to doctor today with tennis elbow,medium,unclear because tennis elbow is context for the injection rather than what is asked about; included as secondary.,,yes
+3,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,yes
+3,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,yes
+3,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,yes
+3,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,high,,,yes
+3,6a9f047c,request,request,R1,pain behind my eyes what could be the problem,high,,,yes
+3,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,yes
+3,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,yes
+3,6a638cf5,topic,primary,NONE,,medium,"unclear because the report is about the kidneys (stone, cysts) and liver echogenicity, and no topic code covers the kidneys, urinary tract or liver; T3 (digestion) was considered for the liver but does not fit.",Kidney/urinary and liver findings fit none of the topic codes.,n/a (no code)
+3,6a638cf5,request,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts,high,,,yes
+3,69d51123,topic,primary,T10,3 weeks after endometriosis surgery and about to have your period?,high,,,yes
+3,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery,medium,"unclear because 'Should you be drinking' is a 'should I do X' question not about professional care (rule -> R3), but it is phrased generally ('you') and could be R2; it is also not clearly relief of a current problem.",,yes

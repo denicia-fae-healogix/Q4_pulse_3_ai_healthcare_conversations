@@ -1,0 +1,9 @@
+group,code,n,yes,partly,no,unclear,pct_yes,ci_low_yes,ci_high_yes,pct_yes_or_partly,small_n
+Find out what might be wrong,A1,20,12,5,3,0,0.6,0.3865814992347542,0.7811934687282198,0.85,False
+Decide whether to get medical care,A2,5,5,0,0,0,1.0,0.5655175313406071,1.0,1.0,True
+Find out what to do about it,A3,9,9,0,0,0,1.0,0.700854948272956,1.0,1.0,True
+"Learn about a condition, medicine or test",A4,9,7,2,0,0,0.7777777777777778,0.4525889666922117,0.9367748934594303,1.0,True
+"Get a diet, exercise or weight plan",A5,2,1,1,0,0,0.5,0.09453120463920084,0.9054687953607992,1.0,True
+Prepare for an appointment or a care decision,A6,4,4,0,0,0,1.0,0.5101091596030786,0.9999999999999999,1.0,True
+Get reassurance or emotional support,A7,2,1,0,0,1,0.5,0.09453120463920084,0.9054687953607992,0.5,True
+No clear goal stated,A8,1,1,0,0,0,1.0,0.2065493117918027,1.0,1.0,True

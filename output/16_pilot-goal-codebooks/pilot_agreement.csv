@@ -1,0 +1,20 @@
+﻿what,type,chats,all_3_agree,pct_all_3,times_coded_yes,fleiss_kappa,kappa_note
+Main goal,single,16,15,93.8,,0.95,
+Goal met,single,16,16,100.0,,1.0,
+Goal A1 Find out what might be wrong,yes/no,16,16,100.0,21,1.0,
+Goal A2 Decide whether to get medical care,yes/no,16,16,100.0,9,1.0,
+Goal A3 Find out what to do about it,yes/no,16,15,93.8,16,0.91,
+"Goal A4 Learn about a condition, medicine or test",yes/no,16,16,100.0,15,1.0,
+"Goal A5 Get a diet, exercise or weight plan",yes/no,16,16,100.0,3,1.0,rare code: kappa unstable
+Goal A6 Prepare for an appointment or a care decision,yes/no,16,15,93.8,13,0.89,
+Goal A7 Get reassurance or emotional support,yes/no,16,16,100.0,9,1.0,
+Goal A8 No clear goal stated,yes/no,16,16,100.0,3,1.0,rare code: kappa unstable
+Why not W1 No clear answer or still unsure,yes/no,16,16,100.0,6,1.0,rare code: kappa unstable
+Why not W2 Needed a real doctor,yes/no,16,15,93.8,4,0.73,rare code: kappa unstable
+Why not W3 Too much or hard-to-read information,yes/no,16,16,100.0,3,1.0,rare code: kappa unstable
+Why not W4 Still in progress,yes/no,16,16,100.0,3,1.0,rare code: kappa unstable
+"Why not W5 Hedged, nothing named as missing",yes/no,16,16,100.0,6,1.0,rare code: kappa unstable
+Why not W6 AI could not do an extra task,yes/no,16,16,100.0,3,1.0,rare code: kappa unstable
+Tag T-doctor Told to see a doctor,yes/no,16,16,100.0,6,1.0,rare code: kappa unstable
+Tag T-other Asked on behalf of someone else,yes/no,16,16,100.0,12,1.0,
+Tag T-whyAI Said why they used AI,yes/no,16,16,100.0,9,1.0,

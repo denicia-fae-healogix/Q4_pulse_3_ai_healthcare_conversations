@@ -1,0 +1,33 @@
+﻿chat_id,second_turn,m_draft,m_evidence,first_detail_turn,d_draft,d_evidence,flag_note
+5aeeb490,human_2,M3,"Back of neck, closer to shoulders",human_4,D2,After sleeping,"Column 3: 'After sleeping' (answering the AI's 'How did it start?') is something that happened before the problem began, so it is background (L18/P3); still After the AI asked."
+5eec8774,human_2,M4,"Claude, you are missing a conversation.",,,,
+5f47f200,human_2,M3,There is no swelling but I do run daily,human_2,D2,but I do run daily,
+5f491a49,human_2,M2,Should I schedule an appointment with a specialist?,,D4,,
+616f347d,human_2,M3,The double reappears if I don't blink a lot,human_1,D1,My eyes seem to be working harder to make the prism glasses work.,Column 3: wearing prism glasses counted as health history (rule L14).
+63e55f08,human_2,M3,more like physical exhaustion,,D4,,Column 3: only describes the tiredness itself; Never shared under L8 (rule L15).
+664639e0,human_2,M1,How long does the flu last,,,,
+66aafcc3,human_2,M1,Now how likely will they have a bed at 12,,,,
+66c0f464,human_2,M1,What impact (if any) has taking a GLP-1A medication had on your mental health?,,,,"Column 2: the person questions the AI about the AI's own experience, as in the first message. Drafted as M1."
+66d8e4c1,human_2,M3,"Okay, so under my breast I have like yeast on the skin.",human_2,D2,And I've been to the doctor before and they gave me like a cream to put on it.,
+66d9e5be,human_2,M3,"For husband, he also had type 2 diabetes and smokes",human_2,D3,"For husband, he also had type 2 diabetes and smokes",
+6712af54,human_2,M1,What is the Stevens-Johnson syndrome?,,,,
+671a8337,human_2,M2,what if i am spitting blood,,D4,,"Column 3: 'what if' names a possible symptom, not one they said they have; drafted Never shared. Confirmed by L17/P2."
+672c1bfa,human_2,M1,Can we tell me what causes dandruff,,,,
+6785ddfb,human_2,M3,yes I have itching and bumps all over,,D4,,Column 3: itching and bumps are the hives question itself (main complaint); Never shared under L8 (rule L15).
+6929d658,human_2,M6,I just went a whole week without saying anything to my family.,,,,"Column 2: re-pasted, edited version of the same email draft; new label Continued a task (n = 1)."
+695be8c6,human_2,M3,yes it was for pain for the tendinitis,human_1,D1,went to doctor today with tennis elbow,
+69600cc8,human_2,M3,"Center left and right, but worse on one side",human_1,D1,Husband's low back started hurting yesterday,Column 3: 'started yesterday' counted as how long it has been going on.
+697cba85,human_2,M3,I would rate it at 7.,human_1,D1,I've been dealing with some bad stomach aches for the past few weeks.,
+69ab73e1,human_2,M2,What should I do?,,D4,,"Column 3: gives location and 'other symptoms are none'; only the main problem, so Never shared."
+69f4ca1a,human_2,M3,My anemia is from b12/folate deficiency,human_1,D1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+69fb8bf7,human_2,M3,"Dull ache, feel weak when trying to stand up from sitting.",human_1,D1,after challenging travel with lots of walking and stair climbing,Column 3: the travel that led up to the knee pain counted as background (rule L14).
+69fe1811,human_2,M3,I just started shedding but have 3/4 inch baby hair,human_1,D1,after 3 months on zepbound,
+69fff128,human_2,M3,i've had it for four weeks or maybe more.,human_2,D3,i've had it for four weeks or maybe more.,
+6a0206ae,human_2,M3,I have been with my gf for 2.5 years.,human_2,D2,I have been dealing with this for most of that.,
+6a106089,human_2,M3,the middle letters from top to bottom are blurry,human_1,D1,My eye doctor is sending me to a retina specialist,Column 3: the referral counted as recent care (rule L14).
+6a10664c,human_2,M2,what medical assessment is appropriate,human_3,D2,I do have a lot of cramping and gas between episodes.,"Column 2: asks both to understand causes and what assessment is needed; M2 under action wins (L7). Column 3: other symptoms between episodes, after the AI asked."
+6a21a961,human_2,M1,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,,,,
+6a24b2df,human_3,M3,im at 350 to start,human_3,D2,im at 350 to start,Column 3: changed from On their own later to After the AI asked after the pilot (L24/P9): the AI asked for current weight in a form-style list with no question mark.
+6a9bb385,human_3,M1,What are the small findings? What do they mean,,,,
+6acb95ac,human_2,M3,"Yes they are dry and flaky and are fairly small, usually on my face",,D4,,Column 3: eczema spots and where they appear are the main problem; Never shared under L8 (rule L15).
+6ae359af,human_4,M1,How do I tell i have cramps,,,,Column 2: 'Nice' was skipped as a thanks-only message (L5).

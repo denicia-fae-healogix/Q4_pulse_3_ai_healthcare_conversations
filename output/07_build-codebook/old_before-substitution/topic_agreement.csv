@@ -1,0 +1,12 @@
+﻿code,name,n_passes_found,primary_pass1,primary_pass2,primary_pass3,n_primary_majority_vote,n_primary,chats_pass1,chats_pass2,chats_pass3,n_chats_majority_vote,n_chats,chats_any_pass,chats_all_3,pct_chats_unanimous,fleiss_kappa,meets_min_chats,analyst_revised
+T1,"Bones, joints and muscles",3,9,10,10,9,9,10,10,11,10,10,11,10,0.981,0.96,True,False
+T2,"Diet, weight and fitness",3,5,7,5,6,6,6,8,7,7,7,8,6,0.962,0.89,True,False
+T3,Stomach and digestion,3,5,6,7,6,6,6,6,7,6,6,7,6,0.981,0.94,True,False
+T4,"Skin, hair and allergies",3,6,5,6,6,6,6,6,6,6,6,6,6,1.0,1.0,True,False
+T5,Infections and acute illness,3,5,3,6,4,4,5,5,7,5,5,7,5,0.962,0.87,True,False
+T6,Diabetes and hormones,3,4,6,4,4,4,5,6,5,5,5,7,4,0.942,0.79,True,False
+T7,Sleep and fatigue,3,3,5,4,3,3,4,6,4,4,4,6,4,0.962,0.84,True,False
+T8,Eyes and vision,3,3,3,3,3,3,3,4,3,3,3,4,3,0.981,0.89,True,False
+T9,Headaches and nerve pain,2,3,3,0,3,3,3,3,0,3,3,3,0,0.942,0.48,True,False
+T10,Pregnancy and reproductive health,2,2,0,2,2,2,3,0,3,3,3,3,0,0.942,0.48,True,False
+T11,Mental health and stress,0,0,0,0,0,2,0,0,0,0,2,0,0,1.0,,False,True

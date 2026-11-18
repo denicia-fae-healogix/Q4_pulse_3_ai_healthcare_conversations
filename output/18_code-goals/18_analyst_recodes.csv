@@ -1,0 +1,3 @@
+﻿chat_id,column,from_code,to_code,log_id,reason
+671a8337,main_goal,A2,A1,G15,The researcher ruled in the step-16 pilot review (G15) that this chat's main goal is A1 (find out what might be wrong). The 3 coders chose A2; her earlier ruling stands.
+671a8337,goals,A1;A2;A4,A1;A2,G15,The researcher ruled in the step-16 pilot review (G15) that this chat's goals are A1;A2; adding A4 was not approved. 2 of the 3 coders added A4; her earlier ruling stands.

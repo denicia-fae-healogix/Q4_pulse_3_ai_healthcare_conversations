@@ -1,0 +1,4 @@
+med_alternatives,Yes,No,Not sure
+"Yes, it named one or more other medications as well",11,5,0
+"No, it only named one medication",3,11,1
+I don't know,0,24,4

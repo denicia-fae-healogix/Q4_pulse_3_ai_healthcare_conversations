@@ -1,0 +1,7 @@
+code,label,definition,status,n_chats
+W1,No clear answer or still unsure,"The AI could not say what it was, or they were left uncertain.",kept (G14); coded for every chat that is not Yes,4
+W2,Needed a real doctor,"They say only a doctor could answer, or that they still need a doctor to check. Wondering whether to see a professional while still unsure is W1.",kept (G14); coded for every chat that is not Yes,2
+W3,Too much or hard-to-read information,"The answer was too long, too technical or hard to use.",kept (G14); coded for every chat that is not Yes,1
+W4,Still in progress,The conversation is ongoing and the goal is not finished yet (used with Unclear).,kept (G14); coded for every chat that is not Yes,1
+W5,"Hedged, nothing named as missing","They said ""mostly"" or similar but did not say what was missing.",kept (G14); coded for every chat that is not Yes,4
+W6,AI could not do an extra task,"The AI could not do something extra they asked for (for example, make a PDF).",kept (G14); coded for every chat that is not Yes,1

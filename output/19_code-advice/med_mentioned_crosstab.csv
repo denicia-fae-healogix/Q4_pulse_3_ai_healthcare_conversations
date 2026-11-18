@@ -1,0 +1,5 @@
+﻿coded_measure,coded_value,n_chats,survey_yes,survey_no,survey_not_sure
+ai_suggested_specific_medicine,Yes (L4 or L5),10,2,6,2
+ai_suggested_specific_medicine,No,42,11,28,3
+ai_named_any_specific_medicine,Yes,22,7,11,4
+ai_named_any_specific_medicine,No,30,6,23,1

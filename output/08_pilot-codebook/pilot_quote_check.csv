@@ -1,0 +1,83 @@
+﻿coder,chat_id,codebook,code,evidence,quote_found
+1,695be8c6,topic,T5,Im feeling very bleh could it be that or flu?,yes
+1,695be8c6,request,R1,Im feeling very bleh could it be that or flu?,yes
+1,69fe1811,topic,T4,baby hair coming in after 3 months on zepbound,yes
+1,69fe1811,topic,T2,after 3 months on zepbound,yes
+1,69fe1811,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",yes
+1,6a0206ae,topic,T11,what's stressing me out and why I'm anxious,yes
+1,6a0206ae,request,R3,what I can do to give myself a better quality of life,yes
+1,6a0206ae,request,R1,why I'm anxious,yes
+1,6a638cf5,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts,yes
+1,69f4ca1a,topic,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+1,69f4ca1a,topic,T6,"pmdd, and high cholesterol",yes
+1,69f4ca1a,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",yes
+1,69f4ca1a,request,R3,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+1,66ec5904,topic,T6,72 yo woman with 6.0 a1c,yes
+1,66ec5904,request,R4,72 yo woman with 6.0 a1c,yes
+1,6144ea17,topic,T7,he's been waking a lot in the night and he never used to do that,yes
+1,6144ea17,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,yes
+1,6144ea17,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,yes
+1,6658d49a,topic,T3,please list every disease where fistula-in-anu is a symptom,yes
+1,6658d49a,request,R2,please list every disease where fistula-in-anu is a symptom,yes
+1,6a9f047c,topic,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,yes
+1,6a9f047c,request,R1,I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem,yes
+1,69d51123,topic,T10,3 weeks after endometriosis surgery and about to have your period?,yes
+1,69d51123,request,R3,Should you be drinking 3 weeks after endometriosis surgery,yes
+1,69f441ce,topic,T8,2nd eye's cataract surgery after doing the first one,yes
+1,69f441ce,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,yes
+1,69f441ce,request,R5,Is it a must?,yes
+2,6a0206ae,topic,T11,I would like to talk about what's stressing me out and why I'm anxious,yes
+2,6a0206ae,request,R3,what I can do to give myself a better quality of life,yes
+2,6a0206ae,request,R1,what's stressing me out and why I'm anxious,yes
+2,6144ea17,topic,T7,he's been waking a lot in the night and he never used to do that,yes
+2,6144ea17,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,yes
+2,6144ea17,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,yes
+2,69d51123,topic,T10,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,yes
+2,69d51123,request,R3,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,yes
+2,69fe1811,topic,T4,baby hair coming in after 3 months on zepbound,yes
+2,69fe1811,topic,T2,baby hair coming in after 3 months on zepbound,yes
+2,69fe1811,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",yes
+2,6a9f047c,topic,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,yes
+2,6a9f047c,request,R1,pain behind my eyes what could be the problem,yes
+2,695be8c6,topic,T5,Im feeling very bleh could it be that or flu?,yes
+2,695be8c6,topic,T1,went to doctor today with tennis elbow,yes
+2,695be8c6,request,R1,Im feeling very bleh could it be that or flu?,yes
+2,6a638cf5,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney.,yes
+2,69f4ca1a,topic,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+2,69f4ca1a,topic,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+2,69f4ca1a,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",yes
+2,69f4ca1a,request,R3,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+2,69f441ce,topic,T8,get 2nd eye's cataract surgery after doing the first one,yes
+2,69f441ce,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,yes
+2,69f441ce,request,R5,Is it a must?,yes
+2,66ec5904,topic,T6,72 yo woman with 6.0 a1c,yes
+2,66ec5904,request,R4,72 yo woman with 6.0 a1c,yes
+2,6658d49a,topic,T3,please list every disease where fistula-in-anu is a symptom,yes
+2,6658d49a,request,R2,please list every disease where fistula-in-anu is a symptom,yes
+3,69f441ce,topic,T8,need to get 2nd eye's cataract surgery after doing the first one,yes
+3,69f441ce,request,R2,Percentage of people need to get 2nd eye's cataract surgery,yes
+3,69f441ce,request,R5,need to get 2nd eye's cataract surgery after doing the first one. Is it a must?,yes
+3,6144ea17,topic,T7,he's been waking a lot in the night and he never used to do that,yes
+3,6144ea17,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,yes
+3,6144ea17,request,R3,would switching to giving it to him in the morning help instead of taking it at night?,yes
+3,69f4ca1a,topic,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+3,69f4ca1a,topic,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",yes
+3,69f4ca1a,request,R6,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",yes
+3,69fe1811,topic,T4,baby hair coming in after 3 months on zepbound,yes
+3,69fe1811,topic,T2,after 3 months on zepbound,yes
+3,69fe1811,request,R4,baby hair coming in after 3 months on zepbound,yes
+3,6a0206ae,topic,T11,what's stressing me out and why I'm anxious,yes
+3,6a0206ae,request,R3,what I can do to give myself a better quality of life,yes
+3,6a0206ae,request,R1,why I'm anxious,yes
+3,695be8c6,topic,T5,Im feeling very bleh could it be that or flu?,yes
+3,695be8c6,topic,T1,went to doctor today with tennis elbow,yes
+3,695be8c6,request,R1,Im feeling very bleh could it be that or flu?,yes
+3,6658d49a,topic,T3,please list every disease where fistula-in-anu is a symptom,yes
+3,6658d49a,request,R2,please list every disease where fistula-in-anu is a symptom,yes
+3,6a9f047c,topic,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,yes
+3,6a9f047c,request,R1,pain behind my eyes what could be the problem,yes
+3,66ec5904,topic,T6,72 yo woman with 6.0 a1c,yes
+3,66ec5904,request,R4,72 yo woman with 6.0 a1c,yes
+3,6a638cf5,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney. There are 2 simple-appearing cysts,yes
+3,69d51123,topic,T10,3 weeks after endometriosis surgery and about to have your period?,yes
+3,69d51123,request,R3,Should you be drinking 3 weeks after endometriosis surgery,yes

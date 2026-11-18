@@ -1,0 +1,97 @@
+﻿chat_id,coder,second_turn,col2,col2_evidence,col2_confidence,col2_unclear,col3,col3_turn,col3_evidence,col3_confidence,col3_unclear
+69f4ca1a,1,human_2,M3,My anemia is from b12/folate deficiency,high,,D1,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",high,
+66c0f464,1,human_2,M1,What impact (if any) has taking a GLP-1A medication had on your mental health?,high,,,,,,
+5aeeb490,1,human_2,M3,"Back of neck, closer to shoulders",high,,D2,human_4,After sleeping,high,
+5f47f200,1,human_2,M3,There is no swelling but I do run daily,high,,D2,human_2,I do run daily,medium,"unclear because the AI asked about onset, swelling, pain quality and triggers but not activity; the D2 close call says unrequested background after an AI question still counts as D2, D3 was considered."
+66aafcc3,1,human_2,M1,Now how likely will they have a bed at 12,high,,,,,,
+6a10664c,1,human_2,M2,Help me understand what causes are most consistent and what medical assessment is appropriate,high,,D2,human_3,I do have a lot of cramping and gas between episodes.,medium,"unclear because the coded first message 'I get this time time' may mean the problem recurs over time (overall duration, D1), but it is too fragmentary to count; human_2 only describes the main pain's location and pattern."
+695be8c6,1,human_2,M3,yes it was for pain for the tendinitis,high,,D1,human_1,"went to doctor today with tennis elbow, injected two shots in my butt",high,
+5eec8774,1,human_2,M4,"Claude, you are missing a conversation.",high,,,,,,
+5f491a49,1,human_2,M2,Should I schedule an appointment with a specialist?,high,,D4,,,high,
+6785ddfb,1,human_2,M3,yes I have itching and bumps all over,high,,D4,,,high,Itching and bumps are part of the hives problem asked about [P6]; human_3 is thanks only.
+69ab73e1,1,human_2,M2,What should I do?,high,,D4,,,high,Only location and feel of the main pain plus 'my other symptoms are none' [P4].
+671a8337,1,human_2,M2,what if i am spitting blood,high,,D4,,,high,'When running' is the activity during which the symptom shows [P3]; spitting blood is a 'what if' [P2].
+6a0206ae,1,human_2,M3,Right now the biggest stressors is my gf's family primarily her disrespectful kids,high,,D2,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,medium,unclear because it is hard to separate the main complaint (stress and anxiety) from background in a mental-health chat; the overall duration and moving in in January were treated as background answering the AI's question about stressors.
+63e55f08,1,human_2,M3,more like physical exhaustion,high,,D4,,,medium,"unclear because 'lately' in the first message could be read as overall duration (D1), and 'even after getting a full night's sleep' as a sleep habit, but both seem to describe the main problem rather than background."
+69600cc8,1,human_2,M3,"Center left and right, but worse on one side",high,,D1,human_1,Husband's low back started hurting yesterday,medium,unclear because 'started hurting yesterday' is the overall duration of the problem (counts as background [P5]) but is very short and close to the main complaint itself; D4 was considered.
+6ae359af,1,human_4,M1,How do I tell i have cramps,high,human_3 'Nice' is thanks-only and was skipped.,,,,,
+69fe1811,1,human_2,M3,I just started shedding but have 3/4 inch baby hair,high,,D1,human_1,baby hair coming in after 3 months on zepbound,high,
+664639e0,1,human_2,M1,--- How long does the flu last,high,,,,,,
+6a24b2df,1,human_3,M3,im at 350 to start,high,,D2,human_3,im at 350 to start,high,The AI's form asked for current weight [P9].
+6929d658,1,human_2,M6,I just went a whole week without saying anything to my family.,high,,,,,,
+6712af54,1,human_2,M1,What is the Stevens-Johnson syndrome?,high,,,,,,
+69fb8bf7,1,human_2,M3,"Dull ache, feel weak when trying to stand up from sitting.",high,,D1,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,high,
+697cba85,1,human_2,M3,I would rate it at 7.,high,,D1,human_1,I've been dealing with some bad stomach aches for the past few weeks.,high,
+6acb95ac,1,human_2,M3,"Yes they are dry and flaky and are fairly small, usually on my face",high,'Convert to PDF' fragment ignored [P7].,D4,,,high,'Only there for a few days or weeks' is episode length [P5]; the rest describes the main problem.
+69fff128,1,human_2,M3,i've had it for four weeks or maybe more. it hasn't gotten better or worse,high,,D3,human_2,i've had it for four weeks or maybe more.,medium,"unclear because ai_1 ended with a conditional request for pain location ('If you tell me exactly where the pain is...'); if that counts as an AI question, the D2 close call (unrequested background after an AI question) would make this D2. Coded D3 as in the codebook example."
+616f347d,1,human_2,M3,The double reappears if I don't blink a lot,high,,D1,human_1,My eyes seem to be working harder to make the prism glasses work.,high,
+6a21a961,1,human_2,M1,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,high,,,,,,
+672c1bfa,1,human_2,M1,Can we tell me what causes dandruff,high,,,,,,
+66d8e4c1,1,human_2,M3,so under my breast I have like yeast on the skin,high,,D2,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,high,
+66d9e5be,1,human_2,M3,"For husband, he also had type 2 diabetes and smokes",high,,D3,human_2,"For husband, he also had type 2 diabetes and smokes",medium,unclear because ai_1 ended with a conditional request ('If you tell me where exactly the pain is...'); if that counts as an AI question the D2 close call would apply. Coded D3 as in the codebook example.
+6a106089,1,human_2,M3,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,high,,D1,human_1,My eye doctor is sending me to a retina specialist,high,
+6a9bb385,1,human_3,M1,What are the small findings? What do they mean,high,'Convert to PDF' fragment ignored [P7].,,,,,
+6a106089,2,human_2,M3,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,high,,D1,human_1,My eye doctor is sending me to a retina specialist,high,
+672c1bfa,2,human_2,M1,Can we tell me what causes dandruff,high,,,,,,
+66aafcc3,2,human_2,M1,Now how likely will they have a bed at 12,high,,,,,,
+697cba85,2,human_2,M3,I would rate it at 7.,high,,D1,human_1,I've been dealing with some bad stomach aches for the past few weeks.,high,
+671a8337,2,human_2,M2,what if i am spitting blood,high,,D4,,,medium,"unclear because running could be read as an activity habit, but the codebook says the activity during which the symptom shows up ('chest pain when running') is not background, and spitting blood is only a 'what if' symptom; considered D1."
+66d8e4c1,2,human_2,M3,under my breast I have like yeast on the skin. And I've been to the doctor before and they gave me like a cream to put on it.,medium,"unclear because the turn ends with 'I don't know if that means anything', an implied question about meaning that could make it M1; coded M3 because it is mainly an answer to the AI's follow-up question about where the smell is and there is no explicit question.",D2,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,high,
+6929d658,2,human_2,M6,I just went a whole week without saying anything to my family.,high,,,,,,
+66c0f464,2,human_2,M1,What impact (if any) has taking a GLP-1A medication had on your mental health?,high,,,,,,
+69f4ca1a,2,human_2,M3,My anemia is from b12/folate deficiency,high,,D1,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",high,
+66d9e5be,2,human_2,M3,"For husband, he also had type 2 diabetes and smokes",high,,D3,human_2,"For husband, he also had type 2 diabetes and smokes",medium,"unclear because the AI turn before ended with 'If you tell me where exactly the pain is... and whether you have numbness or tingling', which could count as asking (D2, since sharing different background after an AI question is still D2); coded D3 because it is an offer rather than a direct question and the codebook lists this exact message as a D3 example."
+69ab73e1,2,human_2,M2,What should I do?,high,,D4,,,high,"Location, cramp feel and 'my other symptoms are none' are main-problem description or 'no other symptoms' [P4], not background."
+6a21a961,2,human_2,M1,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,medium,"unclear because the message also mentions starting antibiotics (background), but the question is 'how can I tell' (M1 per close calls), not what to do (M2).",,,,,
+69fff128,2,human_2,M3,i've had it for four weeks or maybe more. it hasn't gotten better or worse,high,,D3,human_2,i've had it for four weeks or maybe more.,medium,"unclear because the AI turn before ended with 'If you tell me exactly where the pain is...', which could count as the AI asking (D2, different background still counts); coded D3 because the AI did not ask about duration, it was an offer not a question, and the codebook lists this message as a D3 example. 'no real problem running or walking' in the first message describes the problem, not activity level."
+6acb95ac,2,human_2,M3,"Yes they are dry and flaky and are fairly small, usually on my face",high,,D4,,,medium,"unclear because the first message names eczema, which could be read as a condition (D1); treated as the main complaint. 'only there for a few days or weeks' is episode length [P5] and the 2nd message only describes the patches."
+6ae359af,2,human_4,M1,How do I tell i have cramps,high,,,,,,
+6712af54,2,human_2,M1,What is the Stevens-Johnson syndrome?,high,,,,,,
+6785ddfb,2,human_2,M3,yes I have itching and bumps all over,high,,D4,,,high,Itching and bumps are part of the hives problem asked about [P6]; the later 'Ok thank you' adds nothing.
+5f47f200,2,human_2,M3,There is no swelling but I do run daily,high,,D2,human_2,I do run daily,medium,"unclear because the AI asked about onset, swelling and pain but not activity; per the D2 close call, unrequested background given in reply to an AI question still counts as D2 rather than D3."
+6a9bb385,2,human_3,M1,What are the small findings? What do they mean,high,,,,,,
+5aeeb490,2,human_2,M3,"Back of neck, closer to shoulders",high,,D2,human_4,After sleeping,high,
+5eec8774,2,human_2,M4,"Claude, you are missing a conversation.",high,,,,,,
+6a24b2df,2,human_3,M3,im at 350 to start,high,,D2,human_3,im at 350 to start,high,
+5f491a49,2,human_2,M2,Should I schedule an appointment with a specialist?,high,,D4,,,high,Not breathing at night is the main complaint; no later background.
+69600cc8,2,human_2,M3,"Center left and right, but worse on one side",high,,D1,human_1,Husband's low back started hurting yesterday,medium,"unclear because 'started hurting yesterday' is an onset/overall duration (counts per P5) but very short, and could be read as part of the main complaint (D4)."
+664639e0,2,human_2,M1,How long does the flu last,high,,,,,,
+6a10664c,2,human_2,M2,Help me understand what causes are most consistent and what medical assessment is appropriate,medium,unclear because it asks both to understand causes (M1) and what assessment is appropriate (M2); action wins.,D2,human_3,I do have a lot of cramping and gas between episodes.,medium,unclear because cramping between episodes could be seen as part of the main problem; treated as other symptoms per the codebook D2 example. Location and pain pattern in human_2 are main-problem description.
+69fb8bf7,2,human_2,M3,"Dull ache, feel weak when trying to stand up from sitting.",high,,D1,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,high,
+63e55f08,2,human_2,M3,more like physical exhaustion,high,,D4,,,medium,unclear because 'lately' and 'even after getting a full night's sleep' in the first message could be read as overall duration or sleep habits (D1); treated as vague description of the main complaint.
+616f347d,2,human_2,M3,The double reappears if I don't blink a lot,high,,D1,human_1,My eyes seem to be working harder to make the prism glasses work.,high,
+6a0206ae,2,human_2,M3,Right now the biggest stressors is my gf's family primarily her disrespectful kids,high,,D2,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,medium,"unclear because the stressors themselves are arguably the main problem; the overall duration and moving in in January are background, given in reply to the AI asking about biggest stressors."
+69fe1811,2,human_2,M3,I just started shedding but have 3/4 inch baby hair,high,,D1,human_1,baby hair coming in after 3 months on zepbound,high,
+695be8c6,2,human_2,M3,yes it was for pain for the tendinitis,high,,D1,human_1,"went to doctor today with tennis elbow, injected two shots in my butt.",high,
+69600cc8,3,human_2,M3,"Center left and right, but worse on one side",high,,D1,human_1,Husband's low back started hurting yesterday,medium,unclear because 'started hurting yesterday' gives onset/overall duration (background under P5) but is so short it could be read as just the main complaint; considered D4.
+69fb8bf7,3,human_2,M3,"Dull ache, feel weak when trying to stand up from sitting.",high,,D1,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,high,
+69fff128,3,human_2,M3,i've had it for four weeks or maybe more. it hasn't gotten better or worse,high,,D3,human_2,i've had it for four weeks or maybe more.,medium,"unclear because the AI turn before ended with 'If you tell me exactly where the pain is...', a request about the person, and the D2 close call says unrequested background after an AI question still counts as D2; coded D3 because the duration was not asked for and the codebook uses this exact quote as a D3 example."
+66d9e5be,3,human_2,M3,"For husband, he also had type 2 diabetes and smokes",high,,D3,human_2,"For husband, he also had type 2 diabetes and smokes",medium,"unclear because ai_1 ended with 'If you tell me where exactly the pain is...' (a request about the person), so the D2 close call could apply; coded D3 because conditions/smoking were not asked for and the codebook lists this quote as a D3 example."
+616f347d,3,human_2,M3,The double reappears if I don't blink a lot,high,,D1,human_1,My eyes seem to be working harder to make the prism glasses work.,high,
+6929d658,3,human_2,M6,I just went a whole week without saying anything to my family.,high,,,,,,
+695be8c6,3,human_2,M3,yes it was for pain for the tendinitis,high,,D1,human_1,"went to doctor today with tennis elbow, injected two shots in my butt.",high,
+664639e0,3,human_2,M1,--- How long does the flu last,high,,,,,,
+5f47f200,3,human_2,M3,There is no swelling but I do run daily,high,,D3,human_2,There is no swelling but I do run daily,high,
+69fe1811,3,human_2,M3,I just started shedding but have 3/4 inch baby hair,high,,D1,human_1,baby hair coming in after 3 months on zepbound,high,
+6ae359af,3,human_4,M1,How do I tell i have cramps,high,,,,,,
+6712af54,3,human_2,M1,What is the Stevens-Johnson syndrome?,high,,,,,,
+66aafcc3,3,human_2,M1,Now how likely will they have a bed at 12,high,,,,,,
+6a9bb385,3,human_3,M1,What are the small findings? What do they mean,high,,,,,,
+63e55f08,3,human_2,M3,more like physical exhaustion,high,,D4,,,medium,"unclear because human_1 says 'lately', a vague duration that could count as overall duration (D1); judged too vague to be background, and the AI's later question about how long was not answered."
+5eec8774,3,human_2,M4,"Claude, you are missing a conversation.",high,,,,,,
+5aeeb490,3,human_2,M3,"Back of neck, closer to shoulders",high,,D2,human_4,After sleeping,high,
+69f4ca1a,3,human_2,M3,My anemia is from b12/folate deficiency,high,,D1,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",high,
+69ab73e1,3,human_2,M2,What should I do?,high,,D4,,,high,"Only location, type of pain and 'other symptoms are none' (P4) were given."
+5f491a49,3,human_2,M2,Should I schedule an appointment with a specialist?,high,,D4,,,high,
+66d8e4c1,3,human_2,M3,under my breast I have like yeast on the skin. And I've been to the doctor before and they gave me like a cream to put on it.,high,,D2,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,high,
+6a10664c,3,human_2,M2,Help me understand what causes are most consistent and what medical assessment is appropriate,high,,D2,human_3,I do have a lot of cramping and gas between episodes.,medium,"unclear because human_1 'I get this time time.' hints the problem recurs over time (possible overall duration, D1) but is too vague; also gas/cramping could be read as part of the main problem rather than other symptoms. Considered D1."
+6a21a961,3,human_2,M1,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,medium,unclear because the question mentions starting antibiotics (information) but asks 'how can I tell' (M1 close call); considered M2 since it concerns a medicine.,,,,,
+671a8337,3,human_2,M2,what if i am spitting blood,medium,"unclear because a 'what if' symptom question is listed under M2, but it could also be read as a real new symptom being reported (M3).",D4,,,medium,Chest pain when running is the activity during which the main symptom appears (P3); spitting blood was asked only as a 'what if' (P2).
+672c1bfa,3,human_2,M1,Can we tell me what causes dandruff,high,,,,,,
+6a0206ae,3,human_2,M3,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,high,,D2,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,medium,"unclear because the stressors could be seen as the main complaint itself rather than background; the duration and moving in count as background, and ai_1 asked 'What are the biggest stressors hitting you right now?'."
+66c0f464,3,human_2,M1,What impact (if any) has taking a GLP-1A medication had on your mental health?,high,,,,,,
+6785ddfb,3,human_2,M3,yes I have itching and bumps all over,high,,D4,,,high,Itching and bumps are part of the hives problem asked about (P6); the later turn is thanks only.
+6acb95ac,3,human_2,M3,"Yes they are dry and flaky and are fairly small, usually on my face",high,,D4,,,high,First message gives only episode length (P5); no overall duration or other background was given.
+6a24b2df,3,human_3,M3,im at 350 to start,high,,D2,human_3,im at 350 to start,high,
+697cba85,3,human_2,M3,I would rate it at 7.,high,,D1,human_1,I've been dealing with some bad stomach aches for the past few weeks.,high,
+6a106089,3,human_2,M3,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,high,,D1,human_1,My eye doctor is sending me to a retina specialist,high,

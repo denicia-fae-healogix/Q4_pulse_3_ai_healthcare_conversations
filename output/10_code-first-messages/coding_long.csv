@@ -1,0 +1,345 @@
+﻿coder,chat_id,codebook,role,code,evidence,confidence,unclear,none_reason,quote_found
+1,6785ddfb,topic,primary,T4,How ndo I know if i have Hives or not,high,,,exact
+1,6785ddfb,request,request,R1,How ndo I know if i have Hives or not,high,,,exact
+1,6ae359af,topic,primary,T3,Tell me about stomach cramps,high,,,exact
+1,6ae359af,request,request,R2,Tell me about stomach cramps,high,,,exact
+1,69ab73e1,topic,primary,T3,"i have a really bad tummy ache, what can i do to help",high,,,exact
+1,69ab73e1,request,request,R3,"i have a really bad tummy ache, what can i do to help",high,,,exact
+1,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the message lists reproductive conditions (PCOS, PMDD) and a metabolic one (high cholesterol) plus anemia; T10 vs T6 centre is not decided, I chose T10 as two of the named conditions are reproductive",,exact
+1,69f4ca1a,topic,secondary,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,,,exact
+1,69f4ca1a,request,request,R3,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",high,,,exact
+1,616f347d,topic,primary,T8,Sometimes I'm not seeing double with my glasses on but sometimes I am.,high,,,exact
+1,616f347d,request,request,R1,My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?,high,,,exact
+1,5f47f200,topic,primary,T1,Why is the top of my foot hurting,high,,,exact
+1,5f47f200,request,request,R1,Why is the top of my foot hurting,high,,,exact
+1,66d9e5be,topic,primary,T9,How to heal neuropathy pain in leg,high,,,exact
+1,66d9e5be,request,request,R3,How to heal neuropathy pain in leg,high,,,exact
+1,697cba85,topic,primary,T3,I've been dealing with some bad stomach aches for the past few weeks.,high,,,exact
+1,697cba85,request,request,R5,Should I see a medical specialist about this or try to wait it out?,high,,,exact
+1,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,exact
+1,69fe1811,topic,secondary,T2,baby hair coming in after 3 months on zepbound,high,,,exact
+1,69fe1811,request,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",high,,,exact
+1,66d8e4c1,topic,primary,T5,can infections of some sort smell like onions,high,,,exact
+1,66d8e4c1,request,request,R2,can infections of some sort smell like onions,medium,"unclear because ""kind of a weird question"" hints at a personal case (R1), but no personal symptom is described, so the general-fact rule (R2) was applied",,exact
+1,66aafcc3,topic,primary,T10,So about 2 more hours and a half that I can call,medium,"unclear because the message itself names no health subject; the topic (labor/induction) comes only from the AI context, and NONE was considered",,exact
+1,66aafcc3,request,request,R5,So about 2 more hours and a half that I can call,medium,"unclear because the message is a short follow-up statement that may be a question; it checks when they can call the care team (R5 sign), R4 was considered",,exact
+1,671a8337,topic,primary,NONE,,high,,chest pain,n/a (no code)
+1,671a8337,request,request,R4,CHEST PAIN WHEN RUNNING,high,,,exact
+1,6a9bb385,topic,primary,NONE,,medium,unclear because the tests (chest/heart imaging per context) fit no topic code; T1 or others not supported by message text,overall summary of imaging/test results (chest and heart scans),n/a (no code)
+1,6a9bb385,request,request,R7,"So, at a high level what did these tests show?",high,,,exact
+1,63e55f08,topic,primary,T7,"I've been feeling unusually tired lately, even after getting a full night's sleep.",high,,,exact
+1,63e55f08,request,request,R1,Sometimes I wake up feeling like I haven't rested at all. What could be causing this?,high,,,exact
+1,67d5d3b7,topic,primary,T1,Sometimes it feel like it radiates to my neck,high,,,exact
+1,67d5d3b7,request,request,R4,I'm 39 and it's getting a little hard to deal. Sometimes it feel like it radiates to my neck,medium,unclear because the message answers an AI question about back pain and states details with no question; R4 applied since no request is stated,,exact
+1,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,high,,,exact
+1,6a9f047c,request,request,R1,I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem,high,,,exact
+1,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that.,high,,,exact
+1,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,exact
+1,6144ea17,request,request,R3,"If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?",high,,,exact
+1,6a10664c,topic,primary,T3,Could it be gastritis? Tell me what causes gastritis and how long it can last.,high,,,exact
+1,6a10664c,request,request,R1,I get this time time. Could it be gastritis?,high,,,exact
+1,6a10664c,request,request,R2,Tell me what causes gastritis and how long it can last.,high,,,exact
+1,5f491a49,topic,primary,T7,What is sleep apnea? I think I may have it.,high,,,exact
+1,5f491a49,request,request,R2,What is sleep apnea?,high,,,exact
+1,5f491a49,request,request,R1,I think I may have it. I find myself not breathing for periods in the middle of the night,medium,"unclear because the personal case is described and a candidate cause is offered, but no explicit question about the cause is asked; R4 was considered for this part",,exact
+1,6ad69d36,topic,primary,T6,what diabetes,high,,,exact
+1,6ad69d36,request,request,R2,what diabetes,high,,,exact
+1,5eec8774,topic,primary,T1,"Given how porous my bones are (so much so, that it is very difficult to detect hairline fractures on x-rays),",high,,,exact
+1,5eec8774,request,request,R3,what can I do to even slightly decrease my risk of new fractures at this point (either spontaneous fractures or from injuries)?,high,,,exact
+1,69f441ce,topic,primary,T8,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+1,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+1,69f441ce,request,request,R5,after doing the first one. Is it a must?,high,,,exact
+1,69d51123,topic,primary,T10,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+1,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+1,6a24b2df,topic,primary,T2,help me figure out a weight loss plan rn,high,,,exact
+1,6a24b2df,request,request,R6,help me figure out a weight loss plan rn,high,,,exact
+1,6712af54,topic,primary,T4,can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?,high,,,exact
+1,6712af54,request,request,R2,"Generally speaking, can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?",high,,,exact
+1,6a0206ae,topic,primary,T11,I would like to talk about what's stressing me out and why I'm anxious,high,,,exact
+1,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,medium,"unclear because asking how to cope with current stress/anxiety fits R3 (a problem to handle), though R6 (wellbeing goal) was considered",,exact
+1,6a0206ae,request,request,R1,what's stressing me out and why I'm anxious,low,"unclear because wanting to explore why they are anxious resembles asking what is causing a personal symptom, but it is framed as wanting to talk rather than a cause question; may be no R1",,exact
+1,6a638cf5,topic,primary,NONE,,high,,"kidney ultrasound report (kidney stone, cysts, liver echogenicity)",n/a (no code)
+1,6a638cf5,request,request,R4,FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm.,high,,,exact
+1,6952e59d,topic,primary,T2,What is the normal weight for a male who is 28 and five feet nine inches tall?,high,,,exact
+1,6952e59d,request,request,R2,What is the normal weight for a male who is 28 and five feet nine inches tall?,high,,,exact
+1,6acb95ac,topic,primary,T4,What does it mean if I have eczema dry spots on my skin,high,,,exact
+1,6acb95ac,request,request,R1,What does it mean if I have eczema dry spots on my skin but they are only there for a few days or weeks and then randomly disappear for a period of time?,high,,,exact
+1,69fd05bd,topic,primary,T9,"I have a headache, what should I take?",high,,,exact
+1,69fd05bd,request,request,R3,"I have a headache, what should I take?",high,,,exact
+1,663b8ae0,topic,primary,T1,symptoms of osteoarthrits,high,,,exact
+1,663b8ae0,request,request,R2,symptoms of osteoarthrits,high,,,exact
+1,69600cc8,topic,primary,T1,Husband's low back started hurting yesterday,high,,,exact
+1,69600cc8,request,request,R4,Husband's low back started hurting yesterday,high,,,exact
+1,5d7fd2a5,topic,primary,T3,it's in the crease of her buttocks (like placed exactly where a perianal abscess occurs)!,medium,"unclear because the abscess is an infection (T5) but located perianally; the T5 close-call rule puts the organ system as primary, so T3 with T5 secondary",,exact
+1,5d7fd2a5,topic,secondary,T5,so my daughter has an abscess,medium,,,exact
+1,5d7fd2a5,request,request,R1,what do you think is the cause of her abscess,high,,,exact
+1,5aeeb490,topic,primary,T1,i developed a sharp pain in my neck that raidates to my shoulders suddenly,high,,,exact
+1,5aeeb490,request,request,R1,can this be a symptom of anything else or did I just get some isolated issue,high,,,exact
+1,69a1ae3c,topic,primary,T2,"I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals.",high,,,exact
+1,69a1ae3c,request,request,R6,"Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals.",high,,,exact
+1,6a21a961,topic,primary,T4,Can an allergic reaction appear slowly,high,,,exact
+1,6a21a961,request,request,R2,Can an allergic reaction appear slowly,high,,,exact
+1,6a983ff0,topic,primary,T1,Does metacarpal bossing grow,high,,,exact
+1,6a983ff0,request,request,R2,Does metacarpal bossing grow,high,,,exact
+1,6929d658,topic,primary,T11,I just went a whole week without saying anything to my family.,high,,,exact
+1,6929d658,request,request,R4,I just went a whole week without saying anything to my family.,low,"unclear because the message is a pasted email draft about emotional and family struggles with no question; R4 is defined around symptoms or health details, and NONE (no request content) was considered",,exact
+1,66c0f464,topic,primary,T2,What impact (if any) has taking a GLP-1A medication had on your physical health?,high,,,exact
+1,66c0f464,request,request,R2,What impact (if any) has taking a GLP-1A medication had on your physical health?,medium,"unclear because the question is addressed to the AI as if about its own experience; read as a general question about GLP-1 effects (R2), no code fits exactly",,exact
+1,69fcf529,topic,primary,T2,"fat loss, muscle gain and increasing testosterone are the main objectives.",high,,,exact
+1,69fcf529,topic,secondary,T6,"fat loss, muscle gain and increasing testosterone are the main objectives.",medium,,,exact
+1,69fcf529,request,request,R6,"fat loss, muscle gain and increasing testosterone are the main objectives.",medium,"unclear because the message states goals and background diet/supplements but makes no explicit request; R6 signs (goal plus current diet/supplements as background) fit, R4 considered",,exact
+1,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,exact
+1,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,exact
+1,6a106089,topic,primary,T8,My eye doctor is sending me to a retina specialist,high,,,exact
+1,6a106089,request,request,R2,the appt is supposed to take 3-4 hours what will they do,high,,,exact
+1,69fb8bf7,topic,primary,T1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,high,,,exact
+1,69fb8bf7,request,request,R3,what can i do to alleviate knee pain and get back to normal?,high,,,exact
+1,664639e0,topic,primary,T5,"Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested.",high,,,exact
+1,664639e0,request,request,R1,nose is congested. What did I catch?,high,,,exact
+1,66fd6acd,topic,primary,T2,https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this,medium,"unclear because the linked article is about a workout and sleep loss; T2 (exercise) vs T7 (sleep loss), T2 chosen as the workout is the action to incorporate",,exact
+1,66fd6acd,topic,secondary,T7,https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this,low,,,exact
+1,66fd6acd,request,request,R6,Let's incorporate this to improve the health and wellness project moving forward.,medium,"unclear because it asks to add a routine to an ongoing wellness plan (goal, no problem); R2 not asked",,exact
+1,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,unclear because the main subject is feeling unwell after injections for tennis elbow; T5 (possible flu) chosen over T1 (tennis elbow),,exact
+1,695be8c6,topic,secondary,T1,went to doctor today with tennis elbow,medium,,,exact
+1,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,exact
+1,6ac2aee8,topic,primary,T3,right side of belly button hurts when using the bathroom,high,,,exact
+1,6ac2aee8,request,request,R4,right side of belly button hurts when using the bathroom,high,,,exact
+1,6a637176,topic,primary,T5,What if hand foot and mouth isn't treated,high,,,exact
+1,6a637176,request,request,R2,What if hand foot and mouth isn't treated,high,,,exact
+1,672c1bfa,topic,primary,T4,My scalp is flaking and scabbing,high,,,exact
+1,672c1bfa,request,request,R3,My scalp is flaking and scabbing…what do I do?,high,,,exact
+1,69fff128,topic,primary,T1,what kind of knee injury does this sound like,high,,,exact
+1,69fff128,request,request,R1,what kind of knee injury does this sound like,high,,,exact
+1,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,exact
+1,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,exact
+1,6abae4ea,topic,primary,T6,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+1,6abae4ea,request,request,R5,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+2,6952e59d,topic,primary,T2,What is the normal weight for a male,high,,,exact
+2,6952e59d,request,request,R2,What is the normal weight for a male who is 28 and five feet nine inches tall?,high,,,exact
+2,6a21a961,topic,primary,T4,Can an allergic reaction appear slowly,high,,,exact
+2,6a21a961,request,request,R2,Can an allergic reaction appear slowly,high,,,exact
+2,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,exact
+2,69fe1811,topic,secondary,T2,after 3 months on zepbound,high,,,exact
+2,69fe1811,request,request,R4,baby hair coming in after 3 months on zepbound,medium,"unclear because no question is stated so R4 applies, but the intent (whether this is expected, R1) has to be inferred; R1 considered.",,exact
+2,5d7fd2a5,topic,primary,T3,it's in the crease of her buttocks (like placed exactly where a perianal abscess occurs),medium,"unclear because the abscess is an infection (T5) located at the perianal area; the T5 close-call rule says use the body-system code as primary for a perianal abscess, so T3 was chosen with T5 secondary.",,exact
+2,5d7fd2a5,topic,secondary,T5,so my daughter has an abscess,medium,,,exact
+2,5d7fd2a5,request,request,R1,what do you think is the cause of her abscess,high,,,exact
+2,616f347d,topic,primary,T8,Sometimes I'm not seeing double with my glasses on but sometimes I am.,high,,,exact
+2,616f347d,request,request,R1,My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?,high,,,exact
+2,5aeeb490,topic,primary,T1,i developed a sharp pain in my neck that raidates to my shoulders suddenly,high,,,exact
+2,5aeeb490,request,request,R1,can this be a symptom of anything else or did I just get some isolated issue,high,,,exact
+2,6acb95ac,topic,primary,T4,What does it mean if I have eczema dry spots on my skin,high,,,exact
+2,6acb95ac,request,request,R1,What does it mean if I have eczema dry spots on my skin,high,,,exact
+2,663b8ae0,topic,primary,T1,symptoms of osteoarthrits,high,,,exact
+2,663b8ae0,request,request,R2,symptoms of osteoarthrits,high,,,exact
+2,5f47f200,topic,primary,T1,Why is the top of my foot hurting,high,,,exact
+2,5f47f200,request,request,R1,Why is the top of my foot hurting,high,,,exact
+2,5eec8774,topic,primary,T1,"Given how porous my bones are (so much so, that it is very difficult to detect hairline fractures on x-rays)",high,,,exact
+2,5eec8774,request,request,R3,what can I do to even slightly decrease my risk of new fractures at this point (either spontaneous fractures or from injuries)?,medium,unclear because the request is to lower future fracture risk (prevention) rather than treat a symptom; it starts from an existing condition (porous bones) so R3 rather than R6. R7 considered for the DEXA expectation but no explicit question about what the results mean.,,exact
+2,6929d658,topic,primary,T11,I just went a whole week without saying anything to my family.,high,,,exact
+2,6929d658,request,request,R4,I just went a whole week without saying anything to my family.,low,"unclear because the message is a long journal-like account of emotional struggles with no explicit question or request; R4 is defined around symptoms or health details, and ""email 3 draft"" may imply a writing request outside the codebook; NONE considered.",,exact
+2,69fb8bf7,topic,primary,T1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,high,,,exact
+2,69fb8bf7,request,request,R3,what can i do to alleviate knee pain and get back to normal?,high,,,exact
+2,69fcf529,topic,primary,T2,"fat loss, muscle gain and increasing testosterone are the main objectives.",high,,,exact
+2,69fcf529,topic,secondary,T6,muscle gain and increasing testosterone,low,"unclear because T6 lists testosterone ""as a condition to manage"", but here it is a fitness goal; T2 alone considered.",,exact
+2,69fcf529,request,request,R6,"fat loss, muscle gain and increasing testosterone are the main objectives.",medium,"unclear because no explicit request is stated (the message continues an exchange), but a goal with diet and supplement background matches the R6 signs; R4 considered.",,exact
+2,6ae359af,topic,primary,T3,Tell me about stomach cramps,high,,,exact
+2,6ae359af,request,request,R2,Tell me about stomach cramps,high,,,exact
+2,67d5d3b7,topic,primary,T1,Sometimes it feel like it radiates to my neck,high,,,exact
+2,67d5d3b7,request,request,R4,I'm 39 and it's getting a little hard to deal. Sometimes it feel like it radiates to my neck Pain that wakes you up at night,high,,,exact
+2,6a0206ae,topic,primary,T11,what's stressing me out and why I'm anxious,high,,,exact
+2,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,medium,"unclear because the ""problem"" is emotional rather than a physical symptom; R3 fits asking how to manage a current problem.",,exact
+2,6a0206ae,request,request,R1,I would like to talk about what's stressing me out and why I'm anxious,low,"unclear because asking ""why I'm anxious"" seeks an explanation for a personal state, but R1 is framed around symptoms; may be just a wish to talk.",,exact
+2,69a1ae3c,topic,primary,T2,"I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals.",high,,,exact
+2,69a1ae3c,request,request,R6,"Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals.",high,,,exact
+2,6a637176,topic,primary,T5,What if hand foot and mouth isn't treated,high,,,exact
+2,6a637176,request,request,R2,What if hand foot and mouth isn't treated,high,,,exact
+2,69fd05bd,topic,primary,T9,"I have a headache, what should I take?",high,,,exact
+2,69fd05bd,request,request,R3,"I have a headache, what should I take?",high,,,exact
+2,69600cc8,topic,primary,T1,Husband's low back started hurting yesterday,high,,,exact
+2,69600cc8,request,request,R4,Husband's low back started hurting yesterday,high,,,exact
+2,66d8e4c1,topic,primary,T5,can infections of some sort smell like onions,high,,,exact
+2,66d8e4c1,request,request,R2,can infections of some sort smell like onions,high,,,exact
+2,671a8337,topic,primary,NONE,,high,,chest pain,n/a (no code)
+2,671a8337,request,request,R4,CHEST PAIN WHEN RUNNING,high,,,exact
+2,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the message lists reproductive (PCOS, PMDD) and metabolic (high cholesterol) conditions plus anemia; T10 chosen as two of four centre on it, T6 secondary.",,exact
+2,69f4ca1a,topic,secondary,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,,,exact
+2,69f4ca1a,request,request,R3,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol?",high,,,exact
+2,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,high,,,exact
+2,6a9f047c,request,request,R1,I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem,high,,,exact
+2,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,exact
+2,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,exact
+2,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,"unclear because the message also names tennis elbow (T1), but the question centres on feeling unwell and possible flu.",,exact
+2,695be8c6,topic,secondary,T1,went to doctor today with tennis elbow,high,,,exact
+2,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,exact
+2,6a24b2df,topic,primary,T2,help me figure out a weight loss plan rn,high,,,exact
+2,6a24b2df,request,request,R6,help me figure out a weight loss plan rn,high,,,exact
+2,6ad69d36,topic,primary,T6,what diabetes,high,,,exact
+2,6ad69d36,request,request,R2,what diabetes,medium,"unclear because the two-word question is ambiguous; read as ""what is diabetes"" (general fact).",,exact
+2,63e55f08,topic,primary,T7,"I've been feeling unusually tired lately, even after getting a full night's sleep.",high,,,exact
+2,63e55f08,request,request,R1,Sometimes I wake up feeling like I haven't rested at all. What could be causing this?,high,,,exact
+2,66c0f464,topic,primary,T2,What impact (if any) has taking a GLP-1A medication had on your physical health?,high,,,exact
+2,66c0f464,request,request,R2,What impact (if any) has taking a GLP-1A medication had on your physical health?,medium,unclear because the question is addressed to the AI as if it had personal experience; read as a general question about GLP-1 effects (R2).,,exact
+2,69d51123,topic,primary,T10,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+2,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+2,6712af54,topic,primary,T4,can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?,high,,,exact
+2,6712af54,request,request,R2,"Generally speaking, can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?",high,,,exact
+2,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that.,high,,,exact
+2,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,exact
+2,6144ea17,request,request,R3,"If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?",high,,,exact
+2,66fd6acd,topic,primary,T2,Let's incorporate this to improve the health and wellness project moving forward.,medium,unclear because the linked article is about a workout (T2) protecting memory after sleep loss (T7); T2 chosen as the action is exercise for a wellness project.,,exact
+2,66fd6acd,topic,secondary,T7,https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this,medium,,,exact
+2,66fd6acd,request,request,R6,Let's incorporate this to improve the health and wellness project moving forward.,medium,unclear because it asks to add to an ongoing wellness plan rather than explicitly naming a goal; R6 is the closest fit.,,exact
+2,6a10664c,topic,primary,T3,Could it be gastritis? Tell me what causes gastritis and how long it can last.,high,,,exact
+2,6a10664c,request,request,R1,I get this time time. Could it be gastritis?,high,,,exact
+2,6a10664c,request,request,R2,Tell me what causes gastritis and how long it can last.,high,,,exact
+2,69ab73e1,topic,primary,T3,i have a really bad tummy ache,high,,,exact
+2,69ab73e1,request,request,R3,"chat i have a really bad tummy ache, what can i do to help",high,,,exact
+2,5f491a49,topic,primary,T7,What is sleep apnea? I think I may have it.,high,,,exact
+2,5f491a49,request,request,R2,What is sleep apnea?,high,,,exact
+2,5f491a49,request,request,R1,I think I may have it. I find myself not breathing for periods in the middle of the night,medium,"unclear because the person describes a personal symptom and suspects a cause, but does not explicitly ask whether they have it; only R2 is an explicit question.",,exact
+2,6abae4ea,topic,primary,T6,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+2,6abae4ea,request,request,R5,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+2,697cba85,topic,primary,T3,I've been dealing with some bad stomach aches for the past few weeks.,high,,,exact
+2,697cba85,request,request,R5,Should I see a medical specialist about this or try to wait it out?,high,,,exact
+2,66aafcc3,topic,primary,T10,So about 2 more hours and a half that I can call,medium,unclear because the message itself names no health subject; the AI context shows it is about calling labor and delivery before an induction (T10).,,exact
+2,66aafcc3,request,request,R5,So about 2 more hours and a half that I can call,medium,"unclear because the message reads as a confirmation rather than a question, but it is checking when they can call the care team.",,exact
+2,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,exact
+2,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,exact
+2,6785ddfb,topic,primary,T4,How ndo I know if i have Hives or not,high,,,exact
+2,6785ddfb,request,request,R1,How ndo I know if i have Hives or not,medium,"unclear because no personal symptoms are described beyond the question; the sign ""How do I know if I have X"" points to R1, R2 considered.",,exact
+2,672c1bfa,topic,primary,T4,My scalp is flaking and scabbing,high,,,exact
+2,672c1bfa,request,request,R3,My scalp is flaking and scabbing…what do I do?,high,,,exact
+2,69fff128,topic,primary,T1,what kind of knee injury does this sound like,high,,,exact
+2,69fff128,request,request,R1,what kind of knee injury does this sound like,high,,,exact
+2,664639e0,topic,primary,T5,"fatigue, body aches, felt hot, later had the chills, nose is congested. What did I catch?",high,,,exact
+2,664639e0,request,request,R1,nose is congested. What did I catch?,high,,,exact
+2,6a9bb385,topic,primary,NONE,,medium,"unclear because the message refers to general test results; context mentions bronchial arteries, liver cysts, spine and coronary arteries, none of which fits one topic code.","overall test/imaging results (heart, lung, liver, spine findings)",n/a (no code)
+2,6a9bb385,request,request,R7,"So, at a high level what did these tests show?",high,,,exact
+2,6a983ff0,topic,primary,T1,Does metacarpal bossing grow,high,,,exact
+2,6a983ff0,request,request,R2,Does metacarpal bossing grow,high,,,exact
+2,69f441ce,topic,primary,T8,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+2,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+2,69f441ce,request,request,R5,Is it a must?,high,,,exact
+2,6a106089,topic,primary,T8,My eye doctor is sending me to a retina specialist,high,,,exact
+2,6a106089,request,request,R2,the appt is supposed to take 3-4 hours what will they do,high,,,exact
+2,66d9e5be,topic,primary,T9,How to heal neuropathy pain in leg,high,,,exact
+2,66d9e5be,request,request,R3,How to heal neuropathy pain in leg,high,,,exact
+2,6ac2aee8,topic,primary,T3,right side of belly button hurts when using the bathroom,high,,,exact
+2,6ac2aee8,request,request,R4,right side of belly button hurts when using the bathroom,high,,,exact
+2,6a638cf5,topic,primary,NONE,,high,,kidney ultrasound report (kidney stone and cysts),n/a (no code)
+2,6a638cf5,request,request,R4,The right kidney is measured at 12.2 x 6.1 x 5.0 cm.,high,,,exact
+3,6712af54,topic,primary,T4,what percentage are allergic to them? What are some causes for the allergy of said antibiotics?,high,,,exact
+3,6712af54,request,request,R2,"Generally speaking, can you list some of the major antibiotics and roughly estimate how often or what percentage are allergic to them?",high,,,exact
+3,6a637176,topic,primary,T5,What if hand foot and mouth isn't treated,high,,,exact
+3,6a637176,request,request,R2,What if hand foot and mouth isn't treated,high,,,exact
+3,6a9bb385,topic,primary,NONE,,medium,"unclear because the message names no body system; the AI context suggests heart/chest imaging, which has no topic code","own test results (scans), body system not named in message",n/a (no code)
+3,6a9bb385,request,request,R7,"So, at a high level what did these tests show?",high,,,exact
+3,69fb8bf7,topic,primary,T1,what can i do to alleviate knee pain and get back to normal?,high,,,exact
+3,69fb8bf7,request,request,R3,what can i do to alleviate knee pain and get back to normal?,high,,,exact
+3,6a106089,topic,primary,T8,My eye doctor is sending me to a retina specialist,high,,,exact
+3,6a106089,request,request,R2,the appt is supposed to take 3-4 hours what will they do,high,,,exact
+3,66c0f464,topic,primary,T2,What impact (if any) has taking a GLP-1A medication had on your physical health?,high,,,exact
+3,66c0f464,request,request,R2,What impact (if any) has taking a GLP-1A medication had on your physical health?,medium,"unclear because the question is addressed to the AI's own experience rather than asking for facts; no code fits a personal-experience question, R2 is the closest general-information code",,exact
+3,663b8ae0,topic,primary,T1,symptoms of osteoarthrits,high,,,exact
+3,663b8ae0,request,request,R2,symptoms of osteoarthrits,high,,,exact
+3,697cba85,topic,primary,T3,I've been dealing with some bad stomach aches for the past few weeks.,high,,,exact
+3,697cba85,request,request,R5,Should I see a medical specialist about this or try to wait it out?,high,,,exact
+3,5f491a49,topic,primary,T7,What is sleep apnea? I think I may have it.,high,,,exact
+3,5f491a49,request,request,R2,What is sleep apnea?,high,,,exact
+3,5f491a49,request,request,R1,I think I may have it. I find myself not breathing for periods in the middle of the night,medium,unclear because the personal case is described but the only explicit question is general (R2); R1 is implied by 'I think I may have it',,exact
+3,6929d658,topic,primary,T11,I just went a whole week without saying anything to my family.,high,,,exact
+3,6929d658,request,request,R4,I just went a whole week without saying anything to my family.,low,"unclear because the message is a long emotional narrative (an 'email draft') with no question or request; R4 is defined around symptoms or health details, and NONE (no request) was considered",,exact
+3,66d9e5be,topic,primary,T9,How to heal neuropathy pain in leg,high,,,exact
+3,66d9e5be,request,request,R3,How to heal neuropathy pain in leg,high,,,exact
+3,6a0206ae,topic,primary,T11,what's stressing me out and why I'm anxious,high,,,exact
+3,6a0206ae,request,request,R3,what I can do to give myself a better quality of life,medium,unclear because coping with stress fits R3 (managing a current problem) but could be read as a wellbeing goal (R6),,exact
+3,6a0206ae,request,request,R1,why I'm anxious,low,"unclear because 'why I'm anxious' asks the cause of a personal state, but no symptoms are described; R1 is written around symptoms",,exact
+3,616f347d,topic,primary,T8,Sometimes I'm not seeing double with my glasses on but sometimes I am.,high,,,exact
+3,616f347d,request,request,R1,My eyes seem to be working harder to make the prism glasses work. Blinking more. Does that make sense?,high,,,exact
+3,69fcf529,topic,primary,T2,"fat loss, muscle gain and increasing testosterone are the main objectives.",high,,,exact
+3,69fcf529,topic,secondary,T6,"fat loss, muscle gain and increasing testosterone are the main objectives.",low,"unclear because testosterone is mentioned as a fitness goal, not a condition to manage, so T6 may not apply",,exact
+3,69fcf529,request,request,R6,"fat loss, muscle gain and increasing testosterone are the main objectives.",medium,unclear because the message gives background and opinions with no explicit question; R4 was considered but the stated goal fits R6,,exact
+3,69fff128,topic,primary,T1,what kind of knee injury does this sound like,high,,,exact
+3,69fff128,request,request,R1,what kind of knee injury does this sound like,high,,,exact
+3,69d51123,topic,primary,T10,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+3,69d51123,request,request,R3,Should you be drinking 3 weeks after endometriosis surgery and about to have your period?,high,,,exact
+3,66fd6acd,topic,primary,T2,https://www.psypost.org/a-20-minute-workout-protects-memory-after-sleep-loss-just-as-well-as-a-90-minute-nap/ Let's incorporate this to improve the health and wellness project moving forward.,medium,unclear because the article links exercise (T2) and sleep loss (T7); the wording 'workout' and 'health and wellness project' led to T2,,exact
+3,66fd6acd,request,request,R6,Let's incorporate this to improve the health and wellness project moving forward.,medium,unclear because the request is to add an article to an ongoing project rather than to ask for a plan; no other code fits better,,exact
+3,672c1bfa,topic,primary,T4,My scalp is flaking and scabbing,high,,,exact
+3,672c1bfa,request,request,R3,My scalp is flaking and scabbing…what do I do?,high,,,exact
+3,6acb95ac,topic,primary,T4,What does it mean if I have eczema dry spots on my skin,high,,,exact
+3,6acb95ac,request,request,R1,What does it mean if I have eczema dry spots on my skin but they are only there for a few days or weeks and then randomly disappear for a period of time?,high,,,exact
+3,5eec8774,topic,primary,T1,what can I do to even slightly decrease my risk of new fractures at this point,high,,,exact
+3,5eec8774,request,request,R3,what can I do to even slightly decrease my risk of new fractures at this point (either spontaneous fractures or from injuries)?,high,,,exact
+3,5f47f200,topic,primary,T1,Why is the top of my foot hurting,high,,,exact
+3,5f47f200,request,request,R1,Why is the top of my foot hurting,high,,,exact
+3,6a9f047c,topic,primary,T9,I have had an headache and vomitting for 2 days and pain behind my eyes,high,,,exact
+3,6a9f047c,request,request,R1,I have had an headache and vomitting for 2 days and pain behind my eyes what could be the problem,high,,,exact
+3,69a1ae3c,topic,primary,T2,"I want to discover affordable, healthy foods that will help me achieve my fitness and wellness goals.",high,,,exact
+3,69a1ae3c,request,request,R6,"Please recommend specific foods, explain their nutritional benefits, and suggest easy breakfast, lunch, dinner, and snack ideas that support my goals.",high,,,exact
+3,6abae4ea,topic,primary,T6,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+3,6abae4ea,request,request,R5,Would an endocrinologist benefit me from learning why my hormones are our of whack?,high,,,exact
+3,63e55f08,topic,primary,T7,"I've been feeling unusually tired lately, even after getting a full night's sleep.",high,,,exact
+3,63e55f08,request,request,R1,Sometimes I wake up feeling like I haven't rested at all. What could be causing this?,high,,,exact
+3,69f4ca1a,topic,primary,T10,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,"unclear because the list mixes reproductive (PCOS, PMDD) and metabolic (high cholesterol) conditions; T6 considered, made secondary",,exact
+3,69f4ca1a,topic,secondary,T6,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",medium,unclear because the message does not say which condition it centres on,,exact
+3,69f4ca1a,request,request,R3,"Is there a supplement or vitamin that has fish oil, vitamin d3, vitamin c, B vitamins, magnesium, Berberine, and inositol? I want to deal with my pcos, anemia, pmdd, and high cholesterol",high,,,exact
+3,69f441ce,topic,primary,T8,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+3,69f441ce,request,request,R2,Percentage of people need to get 2nd eye's cataract surgery after doing the first one.,high,,,exact
+3,69f441ce,request,request,R5,Is it a must?,high,,,exact
+3,67d5d3b7,topic,primary,T1,Sometimes it feel like it radiates to my neck,medium,unclear because the back is named only in the AI context; the message itself names the neck,,exact
+3,67d5d3b7,request,request,R4,I'm 39 and it's getting a little hard to deal. Sometimes it feel like it radiates to my neck Pain that wakes you up at night,medium,unclear because the message answers the AI's question with no request of its own; R4 fits as health detail shared without a question,,exact
+3,6a24b2df,topic,primary,T2,help me figure out a weight loss plan rn,high,,,exact
+3,6a24b2df,request,request,R6,help me figure out a weight loss plan rn,high,,,exact
+3,6a21a961,topic,primary,T4,Can an allergic reaction appear slowly,high,,,exact
+3,6a21a961,request,request,R2,Can an allergic reaction appear slowly,high,,,exact
+3,6952e59d,topic,primary,T2,What is the normal weight for a male who is 28 and five feet nine inches tall?,high,,,exact
+3,6952e59d,request,request,R2,What is the normal weight for a male who is 28 and five feet nine inches tall?,high,,,exact
+3,6ae359af,topic,primary,T3,Tell me about stomach cramps,high,,,exact
+3,6ae359af,request,request,R2,Tell me about stomach cramps,medium,"unclear because the person may have the symptom themselves (R1), but no personal case is described",,exact
+3,6a10664c,topic,primary,T3,Could it be gastritis? Tell me what causes gastritis and how long it can last.,high,,,exact
+3,6a10664c,request,request,R1,I get this time time. Could it be gastritis?,high,,,exact
+3,6a10664c,request,request,R2,Tell me what causes gastritis and how long it can last.,high,,,exact
+3,6ac2aee8,topic,primary,T3,right side of belly button hurts when using the bathroom,high,,,exact
+3,6ac2aee8,request,request,R4,right side of belly button hurts when using the bathroom,high,,,exact
+3,6a638cf5,topic,primary,NONE,,medium,unclear because the kidney/urinary system has no topic code; T3 considered only for the liver finding,"kidney ultrasound report (kidney stone, kidney cysts)",n/a (no code)
+3,6a638cf5,request,request,R4,0.6 cm shadowing stone in the inferior pole of the right kidney.,high,,,exact
+3,695be8c6,topic,primary,T5,Im feeling very bleh could it be that or flu?,medium,"unclear because the visit was for tennis elbow (T1), but the question centres on feeling unwell / flu",,exact
+3,695be8c6,topic,secondary,T1,went to doctor today with tennis elbow,medium,unclear because the tennis elbow is the reason for the visit but not the subject of the question,,exact
+3,695be8c6,request,request,R1,Im feeling very bleh could it be that or flu?,high,,,exact
+3,66d8e4c1,topic,primary,T5,can infections of some sort smell like onions,high,,,exact
+3,66d8e4c1,request,request,R2,can infections of some sort smell like onions,high,,,exact
+3,69fd05bd,topic,primary,T9,"I have a headache, what should I take?",high,,,exact
+3,69fd05bd,request,request,R3,"I have a headache, what should I take?",high,,,exact
+3,664639e0,topic,primary,T5,"Today I suddenly started feeling bad, fatigue, body aches, felt hot, later had the chills, nose is congested.",high,,,exact
+3,664639e0,request,request,R1,What did I catch?,high,,,exact
+3,69ab73e1,topic,primary,T3,"chat i have a really bad tummy ache, what can i do to help",high,,,exact
+3,69ab73e1,request,request,R3,"chat i have a really bad tummy ache, what can i do to help",high,,,exact
+3,5d7fd2a5,topic,primary,T3,it's in the crease of her buttocks (like placed exactly where a perianal abscess occurs)!,medium,"unclear because an abscess is also a T5 sign; the message centres on a perianal problem, so T3 primary with T5 secondary",,exact
+3,5d7fd2a5,topic,secondary,T5,so my daughter has an abscess,medium,unclear because the abscess could be the primary subject under T5 rather than T3,,exact
+3,5d7fd2a5,request,request,R1,what do you think is the cause of her abscess...,high,,,exact
+3,6a983ff0,topic,primary,T1,Does metacarpal bossing grow,high,,,exact
+3,6a983ff0,request,request,R2,Does metacarpal bossing grow,medium,"unclear because the person may have the lump themselves (R1), but no personal case is described",,exact
+3,69600cc8,topic,primary,T1,Husband's low back started hurting yesterday,high,,,exact
+3,69600cc8,request,request,R4,Husband's low back started hurting yesterday,high,,,exact
+3,5aeeb490,topic,primary,T1,i developed a sharp pain in my neck that raidates to my shoulders suddenly,high,,,exact
+3,5aeeb490,request,request,R1,can this be a symptom of anything else or did I just get some isolated issue,high,,,exact
+3,66ec5904,topic,primary,T6,72 yo woman with 6.0 a1c,high,,,exact
+3,66ec5904,request,request,R4,72 yo woman with 6.0 a1c,high,,,exact
+3,66aafcc3,topic,primary,T10,So about 2 more hours and a half that I can call,medium,unclear because the message names no topic itself; the AI context shows it is about labor and induction,,exact
+3,66aafcc3,request,request,R5,So about 2 more hours and a half that I can call,medium,unclear because the message is a short follow-up; it matches the R5 sign 'checking when they can call the care team',,exact
+3,6658d49a,topic,primary,T3,please list every disease where fistula-in-anu is a symptom,high,,,exact
+3,6658d49a,request,request,R2,please list every disease where fistula-in-anu is a symptom,high,,,exact
+3,671a8337,topic,primary,NONE,,high,,chest pain,n/a (no code)
+3,671a8337,request,request,R4,CHEST PAIN WHEN RUNNING,high,,,exact
+3,6144ea17,topic,primary,T7,he's been waking a lot in the night and he never used to do that.,high,,,exact
+3,6144ea17,request,request,R1,Is that typical of the medicine or could it be related to the fact that he no longer takes melatonin?,high,,,exact
+3,6144ea17,request,request,R3,"If it is the meds, would switching to giving it to him in the morning help instead of taking it at night?",high,,,exact
+3,6ad69d36,topic,primary,T6,what diabetes,high,,,exact
+3,6ad69d36,request,request,R2,what diabetes,medium,"unclear because the very short message may be a personal question, but no personal case is described",,exact
+3,69fe1811,topic,primary,T4,baby hair coming in after 3 months on zepbound,high,,,exact
+3,69fe1811,topic,secondary,T2,baby hair coming in after 3 months on zepbound,high,,,exact
+3,69fe1811,request,request,R4,"baby hair coming in after 3 months on zepbound October 16, 2026",high,,,exact
+3,6785ddfb,topic,primary,T4,How ndo I know if i have Hives or not,high,,,exact
+3,6785ddfb,request,request,R1,How ndo I know if i have Hives or not,high,,,exact

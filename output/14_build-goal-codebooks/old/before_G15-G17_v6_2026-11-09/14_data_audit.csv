@@ -1,0 +1,7 @@
+group,question,rows,answered,blank,junk
+Raw survey export (all rows),Goal,61,60,0,1
+Raw survey export (all rows),Goal met,61,60,1,0
+Kept participants (step 05),Goal,60,60,0,0
+Kept participants (step 05),Goal met,60,60,0,0
+Analysis sample (52 chats),Goal,52,52,0,0
+Analysis sample (52 chats),Goal met,52,52,0,0

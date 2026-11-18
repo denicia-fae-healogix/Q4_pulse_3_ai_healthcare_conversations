@@ -1,0 +1,44 @@
+﻿chat_id,what,coder,code,note
+5d7fd2a5,rung,1,L1,unclear because the AI repeats the surgeon's sitz-bath advice (stays L1) and only mentions preventive measures as questions to ask the surgeon; L2 was considered.
+5d7fd2a5,rung,2,L1,"unclear because the AI repeats the surgeon's sitz bath plan and lists 'avoiding prolonged pressure' only as a question to ask the surgeon; I treated these as not new self-care tips (L1), but L2 was close."
+5d7fd2a5,rung,3,L1,"unclear because the AI repeats the surgeon's sitz-bath advice and lists questions to ask about prevention (hygiene, avoiding prolonged pressure); repeating a doctor's advice stays L1, but L2 was considered."
+5eec8774,rung,3,L4,"unclear because ai_5 lists bisphosphonates with how often they are taken ('weekly or daily', 'usually once a year'); I read these as descriptions of how the drug is usually given (L4 close call), not instructions to the person, but L5 was considered."
+6144ea17,F-supplement,2,yes,"unclear because 'sleep aid' most likely refers to the melatonin he stopped (supplement), but it is only listed as something the prescriber can advise and could mean a medicine class (L3)."
+6144ea17,F-supplement,3,yes,"unclear because the sleep aid is not named; in context it likely means the melatonin he stopped (a supplement), offered as an option the prescriber could advise, but it could be read as a medicine type (L3)."
+6144ea17,S-warning,1,yes,unclear because the warning concerns the child's own medicine (timing change) rather than a suggested medicine; the S-warning definition says 'warned about a medicine' without restricting to suggested ones.
+6144ea17,S-warning,2,yes,unclear because this is a caution about changing the child's own medicine rather than a side-effect/interaction warning about a suggested medicine.
+6144ea17,S-warning,3,yes,unclear because these are side effects of the child's own medicine; S-warning does not say whether warnings about an own medicine count.
+6144ea17,rung,1,L2,"unclear because the AI says the prescriber may advise to 'Reintroduce a sleep aid if appropriate', which could be L3 (a type of medicine offered as an option); since the earlier sleep aid was melatonin (a supplement) and guanfacine is the child's own medicine, I kept L2."
+6144ea17,rung,2,L2,"unclear because tracking/waiting is a mild home step (L2 vs L1), and 'Reintroduce a sleep aid if appropriate' could be read as a medicine type (L3); I read it as melatonin, a supplement."
+6144ea17,rung,3,L2,"unclear because the only actions are monitoring and waiting on the son's own medicine (guanfacine is 'own', not a suggestion); tracking may be L1 rather than self-care, and 'Reintroduce a sleep aid if appropriate' as a prescriber option was considered for L3."
+664639e0,F-Rx,1,yes,unclear because it is borderline whether Tamiflu is suggested or only named as information; F-Rx depends on counting it as suggested.
+664639e0,F-Rx,2,yes,unclear because it is not certain Tamiflu was suggested rather than named as information; considered F-Rx false.
+664639e0,F-Rx,3,yes,"unclear because Tamiflu is offered conditionally (if it is flu and symptoms worsen, see a doctor), so it is close between 'suggested' and 'information'."
+664639e0,F-brand,1,yes,unclear because Tamiflu is framed partly as information about timing tied to 'see a doctor soon'; I treated it as an option offered for this person (suggested) rather than information.
+664639e0,F-brand,2,yes,"unclear because Tamiflu is framed as information about timing linked to seeing a doctor; I read it as offered as an option (suggested), but 'information' was close."
+664639e0,F-brand,3,yes,"unclear because Tamiflu is offered conditionally (if it is flu and symptoms worsen, see a doctor), so it is close between 'suggested' and 'information'."
+664639e0,S-warning,1,yes,"unclear because 'I'm not a doctor' is close to, but not exactly, the stock 'not medical advice / cannot diagnose' line; the codebook does not say whether this disclaimer alone counts as S-warning."
+664639e0,S-warning,2,yes,"unclear because 'I'm not a doctor' is close to, but not exactly, the stock 'not medical advice / cannot diagnose' line."
+66d8e4c1,rung,1,L2,"unclear because the AI also says to use clotrimazole per package directions; I treated that as the person's own medicine (not a suggestion), otherwise it would be L4."
+66d8e4c1,rung,2,L2,"unclear because the AI also said to use the clotrimazole according to its package directions; this is the person's own medicine (keep using it), so it does not count, but L4 was close."
+66d8e4c1,rung,3,L2,"unclear because the AI also told her to keep using clotrimazole per package directions; that is her own medicine (not a suggestion, so not L4), but L4 was considered."
+66fd6acd,rung,1,L2,unclear because the AI adds an exercise tool to the person's wellness 'project' framework rather than directly telling them to do it; L1 (information about a study) was considered.
+66fd6acd,rung,2,L2,"unclear because the AI is summarising research for the person's own wellness project; it frames the workout as a tool for them (L2), but it could be read as general information (L1)."
+66fd6acd,rung,3,L2,unclear because the AI summarises a research article into the person's own wellness project rather than directly advising them; L1 (information) was considered.
+6785ddfb,S-warning,1,yes,unclear because 'whether ... is safe for you' is a light caveat (like 'if you can safely take it') rather than an explicit warning.
+6785ddfb,S-warning,2,yes,unclear because 'whether it is safe for you' is close to the 'if you can safely take it' example but is phrased as a referral (S-doctor).
+6785ddfb,S-warning,3,yes,unclear because 'whether ... is safe for you' is close to the 'if you can safely take it' caveat but is mainly a referral (S-doctor).
+6929d658,rung,2,L0,"unclear because the AI briefly comments on the person's experience (silence turning into being unable to speak) while editing an email to a psychologist; I treated this as writing help, not health information (L1 considered)."
+695be8c6,S-warning,1,yes,"unclear because these are side effects of the person's own injected medicines given as possible causes (information), not a warning about a suggested medicine; the S-warning definition ('side effects') seems to include it."
+695be8c6,S-warning,2,yes,"unclear because these are side effects of the medicines the person already received (own medicine), described to explain symptoms rather than to warn; considered false."
+695be8c6,S-warning,3,yes,"unclear because the side effects described are of the person's own injections (an 'own' medicine), and S-warning does not say whether side-effect information about an own medicine counts; I considered coding false."
+69f4ca1a,S-warning,1,yes,"unclear because S-warning is defined as a warning about a medicine, and berberine is a supplement; I counted the side-effect/interaction warning, but 'no warning' was also considered."
+69f4ca1a,S-warning,2,yes,"unclear because S-warning is defined as a warning about a medicine, and berberine is a supplement; the codebook does not say whether supplement side-effect/interaction warnings count. Considered coding false."
+69f4ca1a,S-warning,3,yes,"unclear because the warning is about berberine, a supplement, not a medicine, and S-warning is defined for medicines; coded true because it names side effects and interactions."
+69fcf529,rung,1,L2,"unclear because the AI only agrees with the person's own plan to skip whey protein; the codebook says agreeing with the person's plan counts if it gives a reason, so L2, but L1 was considered."
+69fcf529,rung,2,L2,"unclear because the AI only agrees with the person's own whole-food plan; the close-call rule says agreeing counts if it gives a reason to keep doing it, which it does, but L1 was close."
+69fcf529,rung,3,L2,"unclear because the AI only agrees with the person's own diet plan; it gives a reason (whole foods better), which the L2 close-call rule counts, but L1 was considered."
+6a0206ae,rung,1,L2,unclear because the advice is mainly relationship/household coping for stress; the codebook counts coping steps for stress as L2.
+6a983ff0,S-doctor,1,yes,"unclear because the AI mostly lists 'when to get it checked' signs and says a doctor 'might' confirm it, rather than directly telling the person to see one; I read it as seeking care if warning signs appear."
+6a983ff0,S-doctor,2,yes,"unclear because the AI lists 'When to get it checked' and says a doctor might confirm it, which is softer than a direct instruction to see a doctor."
+6a983ff0,S-doctor,3,yes,"unclear because the AI lists 'When to get it checked' signs and says a doctor might confirm it, rather than directly telling the person to see a doctor."

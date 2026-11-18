@@ -1,0 +1,5 @@
+name,role,chat_id,where_found,note
+Doreen,self (participant's own first name),5eec8774,AI text,AI addresses the participant by name
+Jamey,partner,5eec8774,participant text,participant's partner
+Claire,child (girlfriend's 9-year-old daughter),6a0206ae,participant and AI text,also written lowercase 'claire' by the participant
+Rob,partner (husband),69600cc8,AI text,AI names the participant's husband

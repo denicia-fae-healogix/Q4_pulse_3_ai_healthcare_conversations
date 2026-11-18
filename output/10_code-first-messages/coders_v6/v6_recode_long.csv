@@ -1,0 +1,31 @@
+﻿chat_id,coder,code,evidence,stated_or_implied,confidence,unclear,quote_exact,quote_spacing
+66ec5904,1,R7,72 yo woman with 6.0 a1c,implied,high,,True,True
+671a8337,1,R1,CHEST PAIN WHEN RUNNING,implied,high,,True,True
+69600cc8,1,R1,Husband's low back started hurting yesterday,implied,high,,True,True
+6929d658,1,R4,email 3 draft I connected doing something for myself and my ability to speak to my family,none,low,"unclear because the message is a pasted email draft with no stated request (R4 'text pasted for another purpose'), but it describes the writer's own ongoing difficulty speaking to family for a week, which could be read as a personal health change under the implied-request rule (R1); the codebook does not say whether personal behavioural/emotional accounts count as a symptom",True,True
+69fe1811,1,R1,baby hair coming in after 3 months on zepbound,implied,medium,"unclear because it is a bare personal health change (R1 implied), but it may be a positive observation rather than a problem; R3 not applicable as no handling is asked",True,True
+6a0206ae,1,R1,what's stressing me out and why I'm anxious,stated,medium,"unclear because 'why I'm anxious' asks about the cause of a personal state (R1), though no specific symptoms are described; R2 not considered applicable",True,True
+6a0206ae,1,R3,what I can do to give myself a better quality of life,stated,high,,True,True
+6a638cf5,1,R7,0.6 cm shadowing stone in the inferior pole of the right kidney.,implied,high,,True,True
+67d5d3b7,1,R1,Sometimes it feel like it radiates to my neck Pain that wakes you up at night,implied,medium,"unclear because the message continues an exchange where the AI offered to judge how concerning the back pain is (possible R5), but the message itself only states symptoms, so R1 implied was applied",True,True
+6ac2aee8,1,R1,right side of belly button hurts when using the bathroom,implied,high,,True,True
+66ec5904,2,R7,72 yo woman with 6.0 a1c,implied,high,,True,True
+67d5d3b7,2,R1,Sometimes it feel like it radiates to my neck Pain that wakes you up at night,implied,high,,True,True
+6a638cf5,2,R7,0.6 cm shadowing stone in the inferior pole of the right kidney.,implied,high,,True,True
+6a0206ae,2,R1,what's stressing me out and why I'm anxious,stated,medium,unclear because it is not clear whether anxiety/stress counts as a personal symptom whose cause is asked (R1) or a non-specific wish to talk; R2 was not considered fitting as the question is personal,True,True
+6a0206ae,2,R3,what I can do to give myself a better quality of life,stated,medium,"unclear because the problem-vs-goal rule does not fully decide whether 'better quality of life' is handling a current problem (anxiety, R3) or a wellbeing goal (R6); chose R3 as it starts from existing stress and anxiety",True,True
+6929d658,2,R4,email 3 draft I connected doing something for myself and my ability to speak to my family,none,low,"unclear because the message is a pasted email draft with no request, but it describes the writer's own difficulty speaking to family for a week; the codebook does not decide whether such psychosocial/behavioural struggles count as a personal symptom or health change for an implied R1",True,True
+69600cc8,2,R1,Husband's low back started hurting yesterday,implied,high,,True,True
+671a8337,2,R1,CHEST PAIN WHEN RUNNING,implied,high,,True,True
+6ac2aee8,2,R1,right side of belly button hurts when using the bathroom,implied,high,,True,True
+69fe1811,2,R1,baby hair coming in after 3 months on zepbound,implied,medium,unclear because the bare health change on a medicine could imply 'what is causing this' (R1) or a general question about the medicine's effects (R2); the implied-request rule points to R1,True,True
+6a638cf5,3,R7,FINDINGS: The right kidney is measured at 12.2 x 6.1 x 5.0 cm.,implied,high,,True,True
+6ac2aee8,3,R1,right side of belly button hurts when using the bathroom,implied,high,,True,True
+6a0206ae,3,R3,what I can do to give myself a better quality of life,stated,medium,,True,True
+6a0206ae,3,R1,what's stressing me out and why I'm anxious,stated,medium,"unclear because R1 needs a personal symptom and a question about its cause; 'why I'm anxious' fits, but it is framed as wanting to talk rather than a diagnosis question. Considered R3 only.",True,True
+671a8337,3,R1,CHEST PAIN WHEN RUNNING,implied,high,,True,True
+69600cc8,3,R1,Husband's low back started hurting yesterday,implied,high,,True,True
+66ec5904,3,R7,72 yo woman with 6.0 a1c,implied,high,,True,True
+69fe1811,3,R1,baby hair coming in after 3 months on zepbound,implied,medium,unclear because the health change (hair regrowth on a medicine) may be shared as good news rather than a symptom to explain; implied-request rule points to R1. Considered R4.,True,True
+67d5d3b7,3,R1,Sometimes it feel like it radiates to my neck Pain that wakes you up at night,implied,high,,True,True
+6929d658,3,R4,email 3 draft I connected doing something for myself and my ability to speak to my family,none,low,"unclear because this is a text pasted for another purpose (an email draft) with no request, but it describes own struggles such as 'a feeling that speaking is impossible', which could count as a personal health change under the implied R1 rule. Considered R1.",True,True

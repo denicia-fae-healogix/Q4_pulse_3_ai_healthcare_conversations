@@ -1,0 +1,16 @@
+﻿what,code,name,times_used,high,medium,low,unclear_notes
+Main goal,A1,Find out what might be wrong,19,13,6,0,6
+Main goal,A2,Decide whether to get medical care,2,0,1,1,2
+Main goal,A3,Find out what to do about it,6,3,3,0,3
+Main goal,A4,"Learn about a condition, medicine or test",9,2,7,0,7
+Main goal,A5,"Get a diet, exercise or weight plan",3,0,3,0,3
+Main goal,A6,Prepare for an appointment or a care decision,3,0,3,0,3
+Main goal,A7,Get reassurance or emotional support,3,3,0,0,0
+Main goal,A8,No clear goal stated,3,3,0,0,0
+Goal met,B1,Yes,27,25,2,0,2
+Goal met,B2,Partly,15,15,0,0,0
+Goal met,B3,No,3,3,0,0,0
+Goal met,B4,Unclear,3,3,0,0,0
+Tag,T-doctor,Told to see a doctor,6,3,3,0,3
+Tag,T-other,Asked on behalf of someone else,12,12,0,0,0
+Tag,T-whyAI,Said why they used AI,9,9,0,0,0

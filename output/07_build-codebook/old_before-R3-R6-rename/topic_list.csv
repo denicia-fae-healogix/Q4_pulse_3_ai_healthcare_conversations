@@ -1,0 +1,14 @@
+﻿code,topic,n_messages,n_analysed,pct_messages,chat_ids,grouped_from
+T1,"Bones, joints and muscles",9,52,0.1731,,
+T2,"Diet, weight and fitness",6,52,0.1154,,
+T3,Stomach and digestion,6,52,0.1154,,
+T4,"Skin, hair and allergies",6,52,0.1154,,
+T5,Infections and acute illness,4,52,0.0769,,
+T6,Diabetes and hormones,4,52,0.0769,,
+T7,Sleep and fatigue,3,52,0.0577,,
+T8,Eyes and vision,3,52,0.0577,,
+T9,Headaches and nerve pain,3,52,0.0577,,
+T10,Pregnancy and reproductive health,2,52,0.0385,,
+T11,Mental health and stress,2,52,0.0385,,
+,Other health subject,2,52,0.0385,671a8337; 6a638cf5,"Chest pain; Kidney, liver and blood"
+,No health subject,2,52,0.0385,6a9bb385; 6ae359af,

@@ -1,0 +1,8 @@
+﻿code,name,plain_label,n_final,coder1_n,coder2_n,coder3_n,n_messages_3of3,n_split,pct_messages_unanimous,fleiss_kappa,n_medium_conf,n_low_conf,n_unclear_notes
+R1,Ask what is causing symptoms,Why is this happening to me?,15,15,15,15,15,0,1.0,1.0,4,3,7
+R2,General health facts,General facts about health,15,15,15,15,15,0,1.0,1.0,8,0,8
+R3,"How do I handle this problem, or is it safe?","How do I handle this problem, or is it safe?",10,10,10,10,10,0,1.0,1.0,4,0,4
+R4,Information shared without a question,"Shared information, no question asked",8,8,8,8,8,0,1.0,1.0,3,3,6
+R5,Whether to seek medical care,Should I see a doctor or get care?,4,4,4,4,4,0,1.0,1.0,3,0,3
+R6,Help me reach a health goal,Help me reach a health goal,4,4,4,4,4,0,1.0,1.0,6,0,6
+R7,Explain my test results,Explain my test results,1,1,1,1,1,0,1.0,1.0,0,0,0

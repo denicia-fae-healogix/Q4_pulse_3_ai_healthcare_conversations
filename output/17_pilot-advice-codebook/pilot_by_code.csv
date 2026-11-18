@@ -1,0 +1,13 @@
+﻿what,code,name,times_used,high,medium,low,unclear_notes
+Advice rung,L0,No health advice,3,2,1,0,1
+Advice rung,L1,General health information,9,6,3,0,3
+Advice rung,L2,Self-care or lifestyle tips,21,8,13,0,13
+Advice rung,L3,Suggested a type of medicine,3,3,0,0,0
+Advice rung,L4,Suggested a specific medicine,6,5,1,0,1
+Advice rung,L5,Gave a dose or how often to use it,6,6,0,0,0
+Flag/tag,F-brand,Named a brand,12,9,3,0,3
+Flag/tag,F-Rx,Suggested a prescription-only medicine,6,3,3,0,3
+Flag/tag,F-supplement,Supplement tag,5,3,0,2,2
+Flag/tag,F-vaccine,Vaccine tag,3,3,0,0,0
+Safety,S-doctor,Said to see a doctor or professional,39,36,3,0,3
+Safety,S-warning,Gave a warning or caveat,27,13,14,0,14

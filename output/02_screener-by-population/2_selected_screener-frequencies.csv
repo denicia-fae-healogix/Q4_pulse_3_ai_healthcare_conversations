@@ -1,0 +1,7 @@
+question,response,n,pct
+screen_used_ai_health,Yes,64,94.1
+screen_used_ai_health,No,4,5.9
+screen_can_find_chat,No,33,51.6
+screen_can_find_chat,Yes,31,48.4
+screen_willing_share,"No, I would prefer not to share",33,51.6
+screen_willing_share,"Yes, I am willing to share a conversation",31,48.4

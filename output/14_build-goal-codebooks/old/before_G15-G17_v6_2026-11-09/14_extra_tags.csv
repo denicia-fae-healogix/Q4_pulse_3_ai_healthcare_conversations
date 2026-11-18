@@ -1,0 +1,4 @@
+tag,definition,n_from_goal_answer,n_only_in_goal_met_answer,chat_ids,n_total,status,n_within_goal_met_yes
+T-other,"Asked on behalf of someone else (child, partner, parent, friend)",8,3,663b8ae0;69600cc8;6a637176;69d51123;5d7fd2a5;66ec5904;69f441ce;66d9e5be;671a8337;6144ea17;6a638cf5,11,kept (G13),10
+T-whyAI,"Said why they used AI instead of searching or a doctor (faster, cheaper, less embarrassing)",6,0,66d8e4c1;6144ea17;5f47f200;6658d49a;616f347d;6acb95ac,6,kept (G13),4
+T-doctor,"Told to see a doctor: the person's survey answers say the AI advised them to see a doctor or seek medical care (now, or if things got worse). Only the survey answers are used, not the chat text. Their own plan or view (""I needed to see a real doctor"", ""I still planned to speak with his doctor"") does not count.",1,5,6a9f047c;6ac2aee8;697cba85;67d5d3b7;5f491a49;6a21a961,6,added (G11),5

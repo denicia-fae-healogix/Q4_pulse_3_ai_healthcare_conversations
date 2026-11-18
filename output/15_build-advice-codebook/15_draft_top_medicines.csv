@@ -1,0 +1,33 @@
+medicine,n_chats,brand_used,brands,access,n_chats_any_context,kind
+ibuprofen,7,True,"Advil, Motrin",OTC or Rx,9,Named by a brand too
+acetaminophen,6,True,Tylenol,OTC,6,Named by a brand too
+alendronate,1,True,Fosamax,Rx,1,Named by a brand too
+berberine,1,False,,supplement,1,"Supplement (tag, not on the ladder)"
+coal tar,1,False,,OTC,1,Generic name only
+denosumab,1,True,Prolia,Rx,1,Named by a brand too
+diclofenac,1,True,Voltaren,OTC,1,Named by a brand too
+diphenhydramine,1,True,Benadryl,OTC,2,Named by a brand too
+duloxetine,1,False,,Rx,1,Generic name only
+flu vaccine,1,False,,vaccine,1,"Vaccine (tag, not on the ladder)"
+folate,1,False,,supplement,2,"Supplement (tag, not on the ladder)"
+gabapentin,1,False,,Rx,1,Generic name only
+ibandronate,1,True,Boniva,Rx,1,Named by a brand too
+inositol,1,False,,supplement,1,"Supplement (tag, not on the ladder)"
+iron,1,False,,supplement,1,"Supplement (tag, not on the ladder)"
+ketoconazole,1,True,Nizoral,OTC or Rx,2,Named by a brand too
+lidocaine,1,False,,OTC or Rx,1,Generic name only
+loratadine,1,True,Claritin,OTC,1,Named by a brand too
+magnesium,1,False,,supplement,1,"Supplement (tag, not on the ladder)"
+naproxen,1,False,,OTC or Rx,3,Generic name only
+omega-3 / fish oil,1,False,,supplement,2,"Supplement (tag, not on the ladder)"
+oseltamivir,1,True,Tamiflu,Rx,1,Named by a brand too
+pamidronate,1,False,,Rx,1,Generic name only
+pregabalin,1,False,,Rx,1,Generic name only
+risedronate,1,True,"Actonel, Atelvia",Rx,1,Named by a brand too
+selenium sulfide,1,False,,OTC,1,Generic name only
+simethicone,1,True,Gas-X,OTC,1,Named by a brand too
+vitamin B12,1,False,,supplement,4,"Supplement (tag, not on the ladder)"
+vitamin C,1,False,,supplement,2,"Supplement (tag, not on the ladder)"
+vitamin D,1,False,,supplement,4,"Supplement (tag, not on the ladder)"
+zinc pyrithione,1,False,,OTC,1,Generic name only
+zoledronic acid,1,True,Reclast,Rx,1,Named by a brand too

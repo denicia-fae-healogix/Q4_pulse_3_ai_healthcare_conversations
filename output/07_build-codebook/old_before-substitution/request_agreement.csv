@@ -1,0 +1,7 @@
+﻿code,name,n_passes_found,chats_pass1,chats_pass2,chats_pass3,n_chats_majority_vote,n_chats,chats_any_pass,chats_all_3,pct_chats_unanimous,fleiss_kappa,meets_min_chats,analyst_revised
+R1,Ask what is causing symptoms,3,13,14,14,14,14,14,13,0.981,0.97,True,True
+R2,General health facts,3,13,14,14,14,14,14,13,0.981,0.97,True,False
+R3,"How do I handle this problem, or is it safe?",3,8,8,9,8,8,9,8,0.981,0.95,True,True
+R4,Information shared without a question,3,5,7,7,7,8,7,5,0.962,0.88,True,True
+R5,Whether to seek medical care,3,5,5,4,4,4,6,4,0.962,0.84,True,True
+R6,Help me reach a health goal,3,3,3,4,3,4,4,3,0.981,0.89,True,True

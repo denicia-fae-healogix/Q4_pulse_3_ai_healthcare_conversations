@@ -1,0 +1,13 @@
+code,label,n_chats,safety_code,n,pct,ci_low,ci_high
+L0,No health advice,2,Said to see a doctor or professional,0,0.0,0.0,65.8
+L0,No health advice,2,Gave a warning or caveat,0,0.0,0.0,65.8
+L1,General health information,17,Said to see a doctor or professional,11,64.7,41.3,82.7
+L1,General health information,17,Gave a warning or caveat,1,5.9,1.0,27.0
+L2,Self-care or lifestyle tips,22,Said to see a doctor or professional,16,72.7,51.8,86.8
+L2,Self-care or lifestyle tips,22,Gave a warning or caveat,10,45.5,26.9,65.3
+L3,Suggested a type of medicine,1,Said to see a doctor or professional,1,100.0,20.7,100.0
+L3,Suggested a type of medicine,1,Gave a warning or caveat,1,100.0,20.7,100.0
+L4,Suggested a specific medicine,8,Said to see a doctor or professional,8,100.0,67.6,100.0
+L4,Suggested a specific medicine,8,Gave a warning or caveat,6,75.0,40.9,92.9
+L5,Gave a dose or how often to use it,2,Said to see a doctor or professional,2,100.0,34.2,100.0
+L5,Gave a dose or how often to use it,2,Gave a warning or caveat,2,100.0,34.2,100.0

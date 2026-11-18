@@ -1,0 +1,19 @@
+﻿coder,chat_id,role,code,confidence,unclear,evidence,none_reason
+1,6a24b2df,topic_primary,T2,high,,help me figure out a weight loss plan rn,
+1,6a24b2df,request,R6,high,,help me figure out a weight loss plan rn,
+1,6ae359af,topic_primary,T3,high,,Tell me about stomach cramps,
+1,6ae359af,request,R2,medium,"unclear because the message asks generally about a symptom with no personal case described, which fits R2, but the symptom may be the participant's own; R1 was considered but no personal symptoms are described.",Tell me about stomach cramps,
+1,6a9bb385,topic_primary,NONE,medium,"unclear because the message asks for an overall summary of personal imaging/test results spanning heart, lungs, liver and spine (known only from AI context); no single topic code covers general test results, and T1 was considered for the spine findings.",,"summary of personal imaging/test results (heart, lungs, liver, spine)"
+1,6a9bb385,request,R1,low,"unclear because the participant asks what their own test results mean, which is closest to R1 ('what it means' for a personal case), but no symptom is described; R2 and R4 were considered, and no code covers interpreting personal test results or the non-health 'Convert to PDF' request.","So, at a high level what did these tests show?",
+2,6a9bb385,topic_primary,NONE,medium,"unclear because the message refers to imaging/test results (heart, lungs, liver, spine per context) and no topic covers test results or the heart; T1 was considered for spine changes but the message does not centre on them",,overall test/imaging results (coronary and chest scan)
+2,6a9bb385,request,R1,low,"unclear because R1 needs a personal symptom or health change and asks what it means, while R2 covers tests in general; this asks to explain the person's own test results, which neither definition clearly decides. R2 was considered","So, at a high level what did these tests show?",
+2,6ae359af,topic_primary,T3,high,,Tell me about stomach cramps,
+2,6ae359af,request,R2,high,,Tell me about stomach cramps,
+2,6a24b2df,topic_primary,T2,high,,help me figure out a weight loss plan rn,
+2,6a24b2df,request,R6,high,,help me figure out a weight loss plan rn,
+3,6ae359af,topic_primary,T3,high,,Tell me about stomach cramps,
+3,6ae359af,request,R2,high,,Tell me about stomach cramps,
+3,6a9bb385,topic_primary,NONE,medium,"unclear because the message only says 'these tests' without naming a body system; the AI context suggests chest/heart imaging (coronary arteries, bronchial arteries) with liver and spine findings, which fits no single topic code; T1 (spine wear-and-tear) was considered but is not the centre of the message",,overall results of personal imaging/medical tests (heart and chest scan)
+3,6a9bb385,request,R1,low,"unclear because the person asks what their own test results mean, but R1 is defined around symptoms rather than test results; R2 (general facts) does not fit because it is about their own case, and R4 does not apply because a question is asked; 'Convert to PDF' is a formatting request with no code",at a high level what did these tests show?,
+3,6a24b2df,topic_primary,T2,high,,help me figure out a weight loss plan rn,
+3,6a24b2df,request,R6,high,,help me figure out a weight loss plan rn,

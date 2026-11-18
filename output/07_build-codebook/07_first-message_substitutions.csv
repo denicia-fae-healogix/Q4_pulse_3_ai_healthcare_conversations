@@ -1,0 +1,4 @@
+chat_id,original_turn,used_turn,original_text_summary,reason,decided_by,date
+6a24b2df,human_1,human_2,"Greeting and a joke (""hi we're getting skinny"" with laughing emojis)","First message is a greeting and a joke with no question; the next message is the first real health request.","analyst (Denicia Aragon Espinosa)",2026-11-05
+6a9bb385,human_1,human_2,"Bare one-word reply (""nope"")","First message is a one-word reply with no health content; the next message is the first real health question.","analyst (Denicia Aragon Espinosa)",2026-11-05
+6ae359af,human_1,human_2,"Greeting only (""Hi meta"")","First message is a greeting with no health content; the next message is the first real health question.","analyst (Denicia Aragon Espinosa)",2026-11-05

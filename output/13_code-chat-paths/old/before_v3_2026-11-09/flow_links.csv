@@ -1,0 +1,25 @@
+﻿stage,group,src,dst,n,s_top,d_top,link_id,src_label,dst_label
+1-2,Asking to understand,Asking to understand,M1,6,0.0,0.0,1,Asking to understand,Kept asking to understand
+1-2,Asking to understand,Asking to understand,M2,2,6.0,13.0,2,Asking to understand,Then asked what to do
+1-2,Asking to understand,Asking to understand,M3,10,8.0,22.0,3,Asking to understand,Shared more about themselves
+1-2,Asking to understand,Asking to understand,M5,8,18.0,57.0,4,Asking to understand,Stopped after one message
+1-2,Asking what to do,Asking what to do,M1,2,31.0,6.0,5,Asking what to do,Kept asking to understand
+1-2,Asking what to do,Asking what to do,M2,1,33.0,15.0,6,Asking what to do,Then asked what to do
+1-2,Asking what to do,Asking what to do,M3,5,34.0,32.0,7,Asking what to do,Shared more about themselves
+1-2,Asking what to do,Asking what to do,M4,1,39.0,45.0,8,Asking what to do,Pushed back or questioned the AI
+1-2,Asking what to do,Asking what to do,M5,8,40.0,65.0,9,Asking what to do,Stopped after one message
+1-2,Just sharing information,Just sharing information,M2,1,53.0,16.0,10,Just sharing information,Then asked what to do
+1-2,Just sharing information,Just sharing information,M3,3,54.0,37.0,11,Just sharing information,Shared more about themselves
+1-2,Just sharing information,Just sharing information,M6,1,57.0,51.0,12,Just sharing information,Continued a task
+1-2,Just sharing information,Just sharing information,M5,4,58.0,73.0,13,Just sharing information,Stopped after one message
+2-3,Asking to understand,M2,D2,1,13.0,26.0,14,Then asked what to do,After the AI asked
+2-3,Asking to understand,M2,D4,1,14.0,39.0,15,Then asked what to do,Never shared
+2-3,Asking what to do,M2,D4,1,15.0,40.0,16,Then asked what to do,Never shared
+2-3,Just sharing information,M2,D4,1,16.0,41.0,17,Then asked what to do,Never shared
+2-3,Asking to understand,M3,D1,3,22.0,13.0,18,Shared more about themselves,With the first message
+2-3,Asking what to do,M3,D1,3,25.0,16.0,19,Shared more about themselves,With the first message
+2-3,Just sharing information,M3,D1,2,28.0,19.0,20,Shared more about themselves,With the first message
+2-3,Asking to understand,M3,D2,4,30.0,27.0,21,Shared more about themselves,After the AI asked
+2-3,Asking what to do,M3,D2,2,34.0,31.0,22,Shared more about themselves,After the AI asked
+2-3,Just sharing information,M3,D2,1,36.0,33.0,23,Shared more about themselves,After the AI asked
+2-3,Asking to understand,M3,D4,3,37.0,42.0,24,Shared more about themselves,Never shared

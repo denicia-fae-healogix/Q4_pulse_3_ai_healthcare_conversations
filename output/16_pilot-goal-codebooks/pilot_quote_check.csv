@@ -1,0 +1,124 @@
+﻿chat_id,coder,what,source_named,quote,in_named_answer,in_either_answer
+6a0206ae,1,main goal,goal,I was trying to make sure my feelings and opinions were valid,True,True
+6a0206ae,1,goal met,goal_met,It's a continuing conversation.,True,True
+5eec8774,1,main goal,goal,I am trying to get an idea for what my alternative osteoporosis medication options are,True,True
+5eec8774,1,goal met,goal_met,"Yes, as Claude gave me a list of medications",True,True
+69a1ae3c,1,main goal,goal,I also wanted a structured plan that'll help me make eating a little easier and healthier,True,True
+69a1ae3c,1,goal met,goal_met,My goal was mostly achieved.,True,True
+69fcf529,1,main goal,goal,I wanted to get feedback.,True,True
+69fcf529,1,goal met,goal_met,"Yes, the goal was achieved.",True,True
+5f491a49,1,main goal,goal,primarily see if it was something I might be suffering myself,True,True
+5f491a49,1,goal met,goal_met,Yes I think the goal was definitely achieved.,True,True
+5f491a49,1,T-doctor,goal_met,It also gave me further tips as to scheduling an appointment with a medical professional.,True,True
+697cba85,1,main goal,goal,I wanted to find out from the AI if it could tell me why I have stomach aches/pains,True,True
+697cba85,1,goal met,goal_met,Not really. There was still uncertainty,True,True
+697cba85,1,T-doctor,goal_met,I was just directed to a medical professional,True,True
+6658d49a,1,main goal,goal,I wanted to cut down on the leg work required to find answers about the particular medical condition.,True,True
+6658d49a,1,goal met,goal_met,I think it was less fulfilling than I had hoped.,True,True
+6658d49a,1,T-whyAI,goal,I was hoping this would be easier than scanning many different medical sites.,True,True
+663b8ae0,1,main goal,goal,The initial goal was to confirm a possible condition my mom has.,True,True
+663b8ae0,1,goal met,goal_met,The goal was achieved in a sense,True,True
+663b8ae0,1,T-other,goal,to confirm a possible condition my mom has.,True,True
+6785ddfb,1,main goal,goal,Wanted to get an ideal before i go see a Doctor,True,True
+6785ddfb,1,goal met,goal_met,"Yes I do because i got the same answer from A,I",True,True
+6144ea17,1,main goal,goal_met,When I had asked what the possible reason was for my son's issue with sleeping,True,True
+6144ea17,1,goal met,goal_met,Yes I do.,True,True
+6144ea17,1,T-other,goal_met,the possible reason was for my son's issue with sleeping,True,True
+6144ea17,1,T-whyAI,goal,it was faster to search it using ai instead.,True,True
+66fd6acd,1,main goal,goal,I wanted to see how exercise would help improve the quality of my sleep.,True,True
+66fd6acd,1,goal met,goal_met,I believe I was able to find the right information,True,True
+69ab73e1,1,main goal,goal,I was searching for relief with pain.,True,True
+69ab73e1,1,goal met,goal_met,I definitely feel like I was helped.,True,True
+66aafcc3,1,main goal,goal,I wanted to understand why my contractions had stopped,True,True
+66aafcc3,1,goal met,goal_met,"Yes, I feel like my goal was mostly achieved",True,True
+6acb95ac,1,main goal,goal,To understand I health concern I've had without having to go to the doctor,True,True
+6acb95ac,1,goal met,goal_met,I would say the goal was achieved partially.,True,True
+6acb95ac,1,T-whyAI,goal,without having to go to the doctor which can be expensive,True,True
+66ec5904,1,main goal,goal,I wanted to find out more about the condition to prepare her for her appointment,True,True
+66ec5904,1,goal met,goal_met,"Yes, I do feel that I achieved the intended goal.",True,True
+66ec5904,1,T-other,goal,to prepare her for her appointment,True,True
+671a8337,1,main goal,goal,I was looking at the signs and symptoms of chest pain and when to seek medical attention from the doctor.,True,True
+671a8337,1,goal met,goal_met,i was able to figure out what was wrong with my friend,True,True
+671a8337,1,T-other,goal_met,figure out what was wrong with my friend,True,True
+671a8337,2,main goal,goal,hoped for the AI to at least diagnoses or give me a rough idea of what it really was,True,True
+671a8337,2,goal met,goal_met,i was able to figure out what was wrong with my friend,True,True
+671a8337,2,T-other,goal_met,i was able to figure out what was wrong with my friend,True,True
+69fcf529,2,main goal,goal,I wanted to get feedback.,True,True
+69fcf529,2,goal met,goal_met,"Yes, the goal was achieved.",True,True
+69ab73e1,2,main goal,goal,I personally was trying to achieve a relief of a tummy ache.,True,True
+69ab73e1,2,goal met,goal_met,The suggestions given worked and I really enjoyed the conversation.,True,True
+6a0206ae,2,main goal,goal,I was trying to make sure my feelings and opinions were valid,True,True
+6a0206ae,2,goal met,goal_met,It's a continuing conversation.,True,True
+6658d49a,2,main goal,goal,I wanted to cut down on the leg work required to find answers about the particular medical condition.,True,True
+6658d49a,2,goal met,goal_met,I think it was less fulfilling than I had hoped.,True,True
+6658d49a,2,T-whyAI,goal,I was hoping this would be easier than scanning many different medical sites.,True,True
+6144ea17,2,main goal,goal_met,When I had asked what the possible reason was for my son's issue with sleeping,True,True
+6144ea17,2,goal met,goal_met,Yes I do.,True,True
+6144ea17,2,T-other,goal_met,what the possible reason was for my son's issue with sleeping,True,True
+6144ea17,2,T-whyAI,goal,it was faster to search it using ai instead.,True,True
+5eec8774,2,main goal,goal,I am trying to get an idea for what my alternative osteoporosis medication options are,True,True
+5eec8774,2,goal met,goal_met,"Yes, as Claude gave me a list of medications",True,True
+69a1ae3c,2,main goal,goal,I also wanted a structured plan that'll help me make eating a little easier and healthier,True,True
+69a1ae3c,2,goal met,goal_met,My goal was mostly achieved.,True,True
+6785ddfb,2,main goal,goal,Wanted to get an ideal before i go see a Doctor,True,True
+6785ddfb,2,goal met,goal_met,"Yes I do because i got the same answer from A,I that I got from a medical Professionl.",True,True
+66fd6acd,2,main goal,goal,I wanted to see how exercise would help improve the quality of my sleep.,True,True
+66fd6acd,2,goal met,goal_met,I believe I was able to find the right information,True,True
+663b8ae0,2,main goal,goal,The initial goal was to confirm a possible condition my mom has.,True,True
+663b8ae0,2,goal met,goal_met,The goal was achieved in a sense,True,True
+663b8ae0,2,T-other,goal,confirm a possible condition my mom has.,True,True
+66aafcc3,2,main goal,goal,I wanted to understand why my contractions had stopped,True,True
+66aafcc3,2,goal met,goal_met,"Yes, I feel like my goal was mostly achieved",True,True
+6acb95ac,2,main goal,goal,To understand I health concern I've had,True,True
+6acb95ac,2,goal met,goal_met,I would say the goal was achieved partially.,True,True
+6acb95ac,2,T-whyAI,goal,without having to go to the doctor which can be expensive,True,True
+5f491a49,2,main goal,goal,primarily see if it was something I might be suffering myself.,True,True
+5f491a49,2,goal met,goal_met,Yes I think the goal was definitely achieved.,True,True
+5f491a49,2,T-doctor,goal_met,It also gave me further tips as to scheduling an appointment with a medical professional.,True,True
+66ec5904,2,main goal,goal,I wanted to find out more about the condition to prepare her for her appointment,True,True
+66ec5904,2,goal met,goal_met,"Yes, I do feel that I achieved the intended goal.",True,True
+66ec5904,2,T-other,goal,to prepare her for her appointment,True,True
+697cba85,2,main goal,goal,I wanted to find out from the AI if it could tell me why I have stomach aches/pains,True,True
+697cba85,2,goal met,goal_met,Not really.,True,True
+697cba85,2,T-doctor,goal_met,I was just directed to a medical professional,True,True
+69a1ae3c,3,main goal,goal,I also wanted a structured plan that'll help me make eating a little easier and healthier,True,True
+69a1ae3c,3,goal met,goal_met,My goal was mostly achieved.,True,True
+5f491a49,3,main goal,goal,primarily see if it was something I might be suffering myself,True,True
+5f491a49,3,goal met,goal_met,Yes I think the goal was definitely achieved.,True,True
+5f491a49,3,T-doctor,goal_met,It also gave me further tips as to scheduling an appointment with a medical professional.,True,True
+69fcf529,3,main goal,goal,I wanted to get feedback.,True,True
+69fcf529,3,goal met,goal_met,"Yes, the goal was achieved.",True,True
+66fd6acd,3,main goal,goal,I wanted to see how exercise would help improve the quality of my sleep.,True,True
+66fd6acd,3,goal met,goal_met,I believe I was able to find the right information,True,True
+69ab73e1,3,main goal,goal,I was searching for relief with pain.,True,True
+69ab73e1,3,goal met,goal_met,I definitely feel like I was helped. The suggestions given worked,True,True
+6658d49a,3,main goal,goal,find answers about the particular medical condition,True,True
+6658d49a,3,goal met,goal_met,I think it was less fulfilling than I had hoped.,True,True
+6658d49a,3,T-whyAI,goal,I was hoping this would be easier than scanning many different medical sites.,True,True
+5eec8774,3,main goal,goal,I am trying to get an idea for what my alternative osteoporosis medication options are,True,True
+5eec8774,3,goal met,goal_met,"Yes, as Claude gave me a list of medications",True,True
+671a8337,3,main goal,goal,when to seek medical attention from the doctor,True,True
+671a8337,3,goal met,goal_met,I believe the goal i set when starting the conversation for health advice was achieved,True,True
+671a8337,3,T-other,goal_met,i was able to figure out what was wrong with my friend,True,True
+66ec5904,3,main goal,goal,I wanted to find out more about the condition to prepare her for her appointment,True,True
+66ec5904,3,goal met,goal_met,"Yes, I do feel that I achieved the intended goal.",True,True
+66ec5904,3,T-other,goal,to prepare her for her appointment,True,True
+6acb95ac,3,main goal,goal,To understand I health concern I've had,True,True
+6acb95ac,3,goal met,goal_met,I would say the goal was achieved partially.,True,True
+6acb95ac,3,T-whyAI,goal,without having to go to the doctor which can be expensive,True,True
+6144ea17,3,main goal,goal_met,When I had asked what the possible reason was for my son's issue with sleeping,True,True
+6144ea17,3,goal met,goal_met,Yes I do.,True,True
+6144ea17,3,T-other,goal_met,the possible reason was for my son's issue with sleeping,True,True
+6144ea17,3,T-whyAI,goal,it was faster to search it using ai instead.,True,True
+663b8ae0,3,main goal,goal,The initial goal was to confirm a possible condition my mom has.,True,True
+663b8ae0,3,goal met,goal_met,The goal was achieved in a sense,True,True
+663b8ae0,3,T-other,goal,confirm a possible condition my mom has.,True,True
+66aafcc3,3,main goal,goal,I wanted to understand why my contractions had stopped,True,True
+66aafcc3,3,goal met,goal_met,"Yes, I feel like my goal was mostly achieved",True,True
+6785ddfb,3,main goal,goal,Wanted to get an ideal before i go see a Doctor,True,True
+6785ddfb,3,goal met,goal_met,Yes I do,True,True
+6a0206ae,3,main goal,goal,I was trying to make sure my feelings and opinions were valid,True,True
+6a0206ae,3,goal met,goal_met,It's a continuing conversation.,True,True
+697cba85,3,main goal,goal,I wanted to find out from the AI if it could tell me why I have stomach aches/pains,True,True
+697cba85,3,goal met,goal_met,Not really. There was still uncertainty,True,True
+697cba85,3,T-doctor,goal_met,I was just directed to a medical professional,True,True

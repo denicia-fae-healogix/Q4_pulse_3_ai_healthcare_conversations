@@ -1,0 +1,64 @@
+﻿check,response_id,sheet_row,detail
+A_id_type,,,284 of 288 filled IDs match Prolific IDs; codebook says response_id is the Alchemer Response ID. Update the codebook text or the IDs.
+B_blank_id,671a833709bfed135c1c9dac,184.0,speaker=ai; recovered ID by text match: 671a833709bfed135c1c9dac
+B_blank_id,671a833709bfed135c1c9dac,185.0,speaker=human; recovered ID by text match: 671a833709bfed135c1c9dac
+B_blank_id,671a833709bfed135c1c9dac,186.0,speaker=ai; recovered ID by text match: 671a833709bfed135c1c9dac
+B_blank_id,69fd05bd74fde4da7ae547a7,188.0,speaker=ai; recovered ID by text match: 69fd05bd74fde4da7ae547a7
+B_blank_id,6a983ff0e4cfd6cc333dbdc9,191.0,speaker=ai; recovered ID by text match: 6a983ff0e4cfd6cc333dbdc9
+B_blank_id,69fb8bf75f06a7590c8ed0cc,193.0,speaker=ai; recovered ID by text match: 69fb8bf75f06a7590c8ed0cc
+B_blank_id,69fb8bf75f06a7590c8ed0cc,194.0,speaker=human; recovered ID by text match: 69fb8bf75f06a7590c8ed0cc
+B_blank_id,69fb8bf75f06a7590c8ed0cc,195.0,speaker=ai; recovered ID by text match: 69fb8bf75f06a7590c8ed0cc
+B_blank_id,69fb8bf75f06a7590c8ed0cc,196.0,speaker=human; recovered ID by text match: 69fb8bf75f06a7590c8ed0cc
+B_blank_id,69fb8bf75f06a7590c8ed0cc,197.0,speaker=ai; recovered ID by text match: 69fb8bf75f06a7590c8ed0cc
+B_blank_id,6ac2aee8cdc2b94a7b290430,213.0,speaker=ai; recovered ID by text match: 6ac2aee8cdc2b94a7b290430
+B_blank_id,6658d49af0f0787f8c8132b9,266.0,speaker=ai; recovered ID by text match: 6658d49af0f0787f8c8132b9
+J_wrong_id,6720084598df3cb5ac3ac3f2,63.0,rows' text belongs to 6712af54b9c073fb6f726116's paste; sheet rows 63-68
+J_wrong_id,6ae4fe1ed707d958ebe2747d,162.0,rows' text belongs to 63e55f08844f6fb08115851f's paste (the sheet ID is that person's URL Variable: session_id); sheet rows 162-165
+D_not_coded,6720084598df3cb5ac3ac3f2,,paste of 335 chars has no coded rows
+D_not_coded,6a0497c25c04f83a27e1f07a,,paste of 1744 chars has no coded rows
+E_truncated,6a0206ae4926b3707e0947b5,,paste is 32767 chars = Excel cell limit; the end of the conversation is missing
+F_missing_label,6a9bb3853ad2e1bb2ba3e139,29.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_ai_before_human,5fd63cb585f88c4eb1933661,36.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,54.0,ai_8: 'That context completes the entire puzzle. You aren't just dealing with...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,55.0,human_9: 'This last weekend they were gone and me and my gf had no stress. They ...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,56.0,ai_9: 'That sequence—going from a completely peaceful zero-stress weekend tog...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,57.0,human_10: 'I had a talk with my gf. I told her I loved her but I just can't do th...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,58.0,ai_10: 'That reaction is heavy but it is also a classic self-defense mechanism...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,59.0,human_11: 'I talked to a friend that said she was being manipulative. Do you see ...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,60.0,ai_11: 'Yes your friend made an astute observation. Her reaction has classic e...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,61.0,human_12: 'This week has been tough. I started a new medicine and have had certai...' not found verbatim in raw paste
+H_text_not_in_paste,6a0206ae4926b3707e0947b5,62.0,ai_12: 'It sounds like you have hit a wall and honestly reading through your d...' not found verbatim in raw paste
+F_ai_before_human,66aafcc3d4f933f032778877,83.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,66aafcc3d4f933f032778877,85.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,66aafcc3d4f933f032778877,86.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,672c1bfa1ae605ad8e6fd726,88.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,672c1bfa1ae605ad8e6fd726,89.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_ai_before_human,62e7357284e65421d8f8b10f,112.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,6929d6581f54fd39c4c59891,123.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,6929d6581f54fd39c4c59891,124.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,6929d6581f54fd39c4c59891,127.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_ai_before_human,67d5d3b719258bd5eeaef834,153.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,671a833709bfed135c1c9dac,184.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,671a833709bfed135c1c9dac,185.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,671a833709bfed135c1c9dac,186.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,69fd05bd74fde4da7ae547a7,188.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_ai_before_human,6a0e579710108dbe9059ee97,189.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,6a983ff0e4cfd6cc333dbdc9,191.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,69fb8bf75f06a7590c8ed0cc,193.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,69fb8bf75f06a7590c8ed0cc,194.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,69fb8bf75f06a7590c8ed0cc,195.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,69fb8bf75f06a7590c8ed0cc,196.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,69fb8bf75f06a7590c8ed0cc,197.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,6ac2aee8cdc2b94a7b290430,213.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_ai_before_human,62c4dbae8fb1ff9cd93a3150,218.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,5aeeb4903c80f200013af2ed,244.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,5aeeb4903c80f200013af2ed,245.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,69ab73e18d186d5aefe45bd3,263.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,69ab73e18d186d5aefe45bd3,264.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_missing_label,6658d49af0f0787f8c8132b9,266.0,speaker=ai; turn_label blank (usually because response_id is blank)
+F_ai_before_human,6ade720aea28ccfc1c990fee,273.0,ai_0: an AI turn comes before any human turn (opening prompt missing?)
+F_missing_label,69c41892ffbcb7d0ac0aa8a8,288.0,speaker=human; turn_label blank (usually because response_id is blank)
+F_missing_label,69c41892ffbcb7d0ac0aa8a8,289.0,speaker=ai; turn_label blank (usually because response_id is blank)
+I_low_coverage,66d8e4c119fbcd2677d4eeba,,"39% of paste coded; uncoded text e.g.: That makes sense to ask about, especially since you've been dealing with this ra | What you're describing—bright redness, persistent moisture, a white crust, and a"
+I_low_coverage,69fb8bf75f06a7590c8ed0cc,,61% of paste coded; uncoded text e.g.: Dealing with knee pain after a trip filled with heavy walking and stair climbing
+I_low_coverage,66c0f464e0ff62798027b486,,94% of paste coded; uncoded text e.g.: 

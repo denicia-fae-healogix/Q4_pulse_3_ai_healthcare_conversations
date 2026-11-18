@@ -1,0 +1,77 @@
+source,code,chat_id,quote,found_verbatim
+codebook,L0,6929d658,I think this draft has several important things for your psychologist to understand,True
+codebook,L1,663b8ae0,Osteoarthritis (OA) is the most common type of arthritis.,True
+codebook,L2,66aafcc3,Rest and drink some fluids,True
+codebook,L3,6785ddfb,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True
+codebook,L4,69ab73e1,an over-the-counter medication containing simethicone (Gas-X) may help,True
+codebook,L5,69fd05bd,"Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",True
+flags,F-brand,5aeeb490,Consider Tylenol (acetaminophen),True
+flags,F-Rx,66d9e5be,"Prescription options such as gabapentin, pregabalin, duloxetine, or certain topical treatments may be considered by a clinician.",True
+flags,F-supplement,69f4ca1a,B12 + folate,True
+flags,F-vaccine,695be8c6,I would recommend getting your flu shot this season,True
+flags,S-doctor,671a8337,Chest pain that happens during running/exertion needs medical evaluation before you keep training.,True
+flags,S-warning,69ab73e1,But I wouldn't take laxatives or strong pain medications until we have a better idea of what's causing the cramps.,True
+context,suggested,6a637176,Over-the-counter pain relievers like ibuprofen or acetaminophen can also reduce throat pain enough to allow drinking.,True
+context,information,6a10664c,"Regular use of ibuprofen (Advil), naproxen (Aleve), or aspirin can damage the stomach's protective lining.",True
+context,warning,6acb95ac,Avoid applying hydrocortisone or other steroid creams to your face without medical guidance,True
+context,own,6abae4ea,make sure the endocrinologist knows you're using estradiol 0.0375 mg and progesterone 100 mg nightly,True
+draft dose_quote,L5,672c1bfa,Use an anti-dandruff shampoo 2–3 times a week.,True
+draft dose_quote,L5,69fd05bd,"Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",True
+draft doctor_quote,L4,5aeeb490,"When I would be more concerned Emergency warning signs Seek emergency care or call 911 if the neck pain occurs with any of the following: Chest pressure or pain, shortness of breath, cold sweats, nausea or lightheadedness.",True
+draft doctor_quote,L1,5d7fd2a5,"At the follow-up, it would be reasonable to ask the surgeon directly: Does he now think this is a perianal abscess, a pilonidal cyst, or something else?",True
+draft doctor_quote,L4,5eec8774,"It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better, or whether restarting Prolia at the $55.43 price makes more sense.",True
+draft doctor_quote,L2,5f47f200,"Self-Care & When to See a Doctor Initial Rest & Relief: If there's no severe injury, resting the foot, applying ice wrapped in a towel for 15–20 minutes at a time, loosening your shoe laces, and avoiding hard impact can help reduce strain.",True
+draft doctor_quote,L2,5f491a49,"If you develop difficulty breathing while awake, chest pain, or severe shortness of breath, seek emergency care.",True
+draft doctor_quote,L3,6144ea17,"Maybe, but I would not change the timing without checking with his prescriber first.",True
+draft doctor_quote,L1,616f347d,"If the double vision is still changing or worsening, contact the specialist's office and let them know.",True
+draft doctor_quote,L1,663b8ae0,When should you see a doctor?,True
+draft doctor_quote,L4,664639e0,"A few things to do now: Rest and hydrate aggressively Take a COVID test to rule it out OTC options like acetaminophen or ibuprofen can help with the fever and aches If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours — so if symptoms worsen, see a doctor soon Hope you feel better quickly, [NAME REDACTED].",True
+draft doctor_quote,L2,66d8e4c1,"If the redness is spreading, the skin is becoming very painful or swollen, you see pus, or you develop a fever, seek urgent care.",True
+draft doctor_quote,L4,66d9e5be,Ask his doctor about actual nerve-pain treatment.,True
+draft doctor_quote,L2,66ec5904,"For medical advice or diagnosis, consult a professional.",True
+draft doctor_quote,L1,6712af54,"However, severe blistering rashes, skin peeling, swelling of the face or throat, wheezing, or difficulty breathing require immediate medical attention.",True
+draft doctor_quote,L2,671a8337,Chest pain that happens during running/exertion needs medical evaluation before you keep training.,True
+draft doctor_quote,L5,672c1bfa,"You should see a healthcare provider if: The scabs are painful, oozing, or have yellow crusting.",True
+draft doctor_quote,L3,6785ddfb,"Important If you have trouble breathing, throat or tongue swelling, feel faint, or have difficulty swallowing, call 911 immediately.",True
+draft doctor_quote,L1,67d5d3b7,"few things I want you to know Because you're describing pain that is becoming harder to deal with and sometimes travels toward your neck, I would recommend an in-person medical evaluation soon, particularly if this has been going on for a while or is worsening.",True
+draft doctor_quote,L2,695be8c6,"However, seek emergency care for trouble breathing, facial or throat swelling, fainting, or severe weakness.",True
+draft doctor_quote,L2,69600cc8,"Still, if [NAME]'s pain becomes severe, spreads down the leg, or doesn't improve, it's important to consult a qualified healthcare professional.",True
+draft doctor_quote,L1,697cba85,"Stomach pain that persists for several weeks deserves medical evaluation, even if it comes and goes.",True
+draft doctor_quote,L4,69ab73e1,"Important: If the pain is severe, sudden, getting worse, or accompanied by fever, repeated vomiting, a hard or very tender belly, fainting, or blood in your stool, please seek urgent medical care.",True
+draft doctor_quote,L2,69f4ca1a,"Given that you're trying to address several things at once, I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.",True
+draft doctor_quote,L4,69fb8bf7,(Be sure to check with your pharmacist or doctor if you take other medications or have underlying health considerations.) 2.,True
+draft doctor_quote,L5,69fd05bd,Avoid it or check with a clinician first if you have liver disease or regularly drink heavily.,True
+draft doctor_quote,L2,69fe1811,"• Check Key Nutrients: Support follicle health by maintaining healthy levels of iron, zinc, and vitamin D (consider asking your doctor for a simple blood test if you suspect a deficiency).",True
+draft doctor_quote,L2,69fff128,"If you develop new calf swelling, significant warmth/redness, marked swelling behind the knee, or shortness of breath, that's different and warrants prompt medical evaluation because a blood clot can also produce posterior knee/calf symptoms.",True
+draft doctor_quote,L2,6a0206ae,"For medical advice or diagnosis, consult a professional.",True
+draft doctor_quote,L2,6a10664c,"Seek urgent care for severe or worsening pain, bloody or black stools, vomiting blood, or inability to keep fluids down.",True
+draft doctor_quote,L4,6a21a961,"Note: If you are experiencing difficulty breathing, swelling of the tongue or throat, or a rapid drop in blood pressure, seek emergency medical attention immediately, as these are signs of a severe reaction regardless of how quickly they started.",True
+draft doctor_quote,L4,6a637176,Contact a healthcare provider immediately if you or your child show signs of dehydration,True
+draft doctor_quote,L1,6a638cf5,"Overall, this ultrasound is mostly reassuring, with a few findings worth discussing with your doctor.",True
+draft doctor_quote,L2,6a9bb385,"Ask your doctor: ""Does this look like a normal anatomical variation, or does it need any follow-up?"" The possible tiny liver cysts and spine wear-and-tear changes also appear suitable for routine review.",True
+draft doctor_quote,L1,6a9f047c,"Headache with eye pain can have sevaral problems including tension,sinus issues,lack of sleep and dehyration if you have fever you should talk to ahealthcare provider",True
+draft doctor_quote,L1,6abae4ea,"In fact, I think seeing an endocrinologist would be a very reasonable next step for you.",True
+draft doctor_quote,L1,6ac2aee8,Seek urgent medical care today if: The pain is severe or getting worse.,True
+draft doctor_quote,L2,6acb95ac,Consider seeing a dermatologist if they keep recurring.,True
+draft doctor_quote,L2,6ae359af,"*What helps for mild cramps:* - Rest, sip water slowly, avoid greasy, spicy, alcohol, and carbonated drinks for a bit - Light, bland foods if you can eat - rice, banana, toast - Gentle heat on the belly for 15-20 mins - Don't hold in stool, and try gentle movement/walking to help gas pass *Get checked quickly if you have:* - Severe, sudden pain that doesn't ease - Fever, vomiting that won't stop, blood in stool or vomit - Belly that's hard and tender to touch - Pain lasting more than a day, getting worse, or with weight loss, persistent diarrhea, or you feel faint If yours keep coming back, it's a good idea to talk to a doctor or pharmacist - they can check for things like infections, ulcers, or food intolerances and suggest the right treatment.",True
+draft warning_quote,L4,5aeeb490,"Consider Tylenol (acetaminophen), or ibuprofen if you can safely take it, following the package directions.",True
+draft warning_quote,L4,5eec8774,"Humana suggested alendronate, but the pills can irritate the esophagus, which matters with your GERD and your tricky levothyroxine timing.",True
+draft warning_quote,L2,5f47f200,This is for informational purposes only.,True
+draft warning_quote,L3,6144ea17,One thing I would not do without talking to his doctor is immediately switch the dose to morning.,True
+draft warning_quote,L4,664639e0,"Note: I'm not a doctor — if you develop difficulty breathing, a very high fever, or symptoms that worsen rapidly, seek medical attention.",True
+draft warning_quote,L2,66d8e4c1,use the clotrimazole according to its package directions,True
+draft warning_quote,L2,66ec5904,This is for informational purposes only.,True
+draft warning_quote,L1,6712af54,if someone has ever had a suspected severe reaction to Bactrim,True
+draft warning_quote,L5,672c1bfa,Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).,True
+draft warning_quote,L3,6785ddfb,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True
+draft warning_quote,L2,695be8c6,"A combination of medications: Depending on what you received, you might experience temporary side effects.",True
+draft warning_quote,L4,69ab73e1,But I wouldn't take laxatives or strong pain medications until we have a better idea of what's causing the cramps.,True
+draft warning_quote,L2,69d51123,"At three weeks post-laparoscopy or excision surgery, your internal pelvic tissues are still actively healing, and combining alcohol with an upcoming menstrual period introduces several risks: Medication Interactions: If you are taking any prescription pain medications, muscle relaxants, or over-the-counter anti-inflammatories (such as high-dose ibuprofen or naproxen) to manage premenstrual or surgical pain, combining them with alcohol can cause severe stomach irritation, internal bleeding, or liver stress.",True
+draft warning_quote,L2,69f4ca1a,"If your anemia is iron-deficiency anemia, then iron becomes much more important—but I wouldn't use a large-dose iron supplement blindly.",True
+draft warning_quote,L4,69fb8bf7,Be sure to check with your pharmacist or doctor if you take other medications or have underlying health considerations.,True
+draft warning_quote,L5,69fd05bd,"Do not exceed 1,200 mg in 24 hours without medical direction.",True
+draft warning_quote,L2,69fe1811,This is for informational purposes only.,True
+draft warning_quote,L2,6a0206ae,This is for informational purposes only.,True
+draft warning_quote,L2,6a10664c,"Anti-inflammatory painkillers Regular use of ibuprofen (Advil), naproxen (Aleve), or aspirin can damage the stomach's protective lining.",True
+draft warning_quote,L4,6a21a961,Distinguishing between a standard side effect and a true allergic reaction is important for deciding whether to continue the medication.,True
+draft warning_quote,L2,6acb95ac,"Avoid applying hydrocortisone or other steroid creams to your face without medical guidance, particularly around your eyes.",True

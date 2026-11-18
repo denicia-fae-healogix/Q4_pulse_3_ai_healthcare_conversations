@@ -1,0 +1,53 @@
+﻿chat_id,col1,coded_turn,skipped_acknowledgements,sent_to_coders
+5aeeb490,Asking to understand,human_1,,True
+5d7fd2a5,Asking to understand,human_1,,False
+5eec8774,Asking what to do,human_1,,True
+5f47f200,Asking to understand,human_1,,True
+5f491a49,Asking to understand,human_1,,True
+6144ea17,Asking what to do,human_1,,False
+616f347d,Asking to understand,human_1,,True
+63e55f08,Asking to understand,human_1,,True
+663b8ae0,Asking to understand,human_1,,False
+664639e0,Asking to understand,human_1,,True
+6658d49a,Asking to understand,human_1,,False
+66aafcc3,Asking what to do,human_1,,True
+66c0f464,Asking to understand,human_1,,True
+66d8e4c1,Asking to understand,human_1,,True
+66d9e5be,Asking what to do,human_1,,True
+66ec5904,Just sharing information,human_1,,False
+66fd6acd,Asking what to do,human_1,,False
+6712af54,Asking to understand,human_1,,True
+671a8337,Just sharing information,human_1,,True
+672c1bfa,Asking what to do,human_1,,True
+6785ddfb,Asking to understand,human_1,,True
+67d5d3b7,Just sharing information,human_1,,False
+6929d658,Just sharing information,human_1,,True
+6952e59d,Asking to understand,human_1,,False
+695be8c6,Asking to understand,human_1,,True
+69600cc8,Just sharing information,human_1,,True
+697cba85,Asking what to do,human_1,,True
+69a1ae3c,Asking what to do,human_1,,False
+69ab73e1,Asking what to do,human_1,,True
+69d51123,Asking what to do,human_1,,False
+69f441ce,Asking what to do,human_1,,False
+69f4ca1a,Asking what to do,human_1,,True
+69fb8bf7,Asking what to do,human_1,,True
+69fcf529,Asking what to do,human_1,,False
+69fd05bd,Asking what to do,human_1,,False
+69fe1811,Just sharing information,human_1,,True
+69fff128,Asking to understand,human_1,,True
+6a0206ae,Just sharing information,human_1,,True
+6a106089,Asking to understand,human_1,,True
+6a10664c,Asking to understand,human_1,,True
+6a21a961,Asking to understand,human_1,,True
+6a24b2df,Asking what to do,human_2,,True
+6a637176,Asking to understand,human_1,,False
+6a638cf5,Just sharing information,human_1,,False
+6a983ff0,Asking to understand,human_1,,False
+6a9bb385,Asking to understand,human_2,,True
+6a9f047c,Asking to understand,human_1,,False
+6abae4ea,Asking what to do,human_1,,False
+6ac2aee8,Just sharing information,human_1,,False
+6acb95ac,Asking to understand,human_1,,True
+6ad69d36,Asking to understand,human_1,,False
+6ae359af,Asking to understand,human_2,human_3,True

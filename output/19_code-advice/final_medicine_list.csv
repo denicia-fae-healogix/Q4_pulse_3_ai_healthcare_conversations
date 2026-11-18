@@ -1,0 +1,45 @@
+﻿chat_id,medicine,kind,brands,access
+5aeeb490,acetaminophen,medicine,Tylenol,OTC
+5aeeb490,ibuprofen,medicine,,OTC or Rx
+5eec8774,alendronate,medicine,Fosamax,Rx
+5eec8774,denosumab,medicine,Prolia,Rx
+5eec8774,ibandronate,medicine,Boniva,Rx
+5eec8774,pamidronate,medicine,,Rx
+5eec8774,risedronate,medicine,"Actonel, Atelvia",Rx
+5eec8774,zoledronic acid,medicine,Reclast,Rx
+6144ea17,sleep aid (the melatonin he used before),supplement,,supplement
+664639e0,acetaminophen,medicine,,OTC
+664639e0,ibuprofen,medicine,,OTC or Rx
+664639e0,oseltamivir,medicine,Tamiflu,Rx
+66d9e5be,acetaminophen,medicine,,OTC
+66d9e5be,duloxetine,medicine,,Rx
+66d9e5be,gabapentin,medicine,,Rx
+66d9e5be,ibuprofen,medicine,,OTC or Rx
+66d9e5be,lidocaine,medicine,,OTC or Rx
+66d9e5be,pregabalin,medicine,,Rx
+672c1bfa,acetaminophen,medicine,,OTC
+672c1bfa,coal tar,medicine,,OTC
+672c1bfa,ibuprofen,medicine,,OTC or Rx
+672c1bfa,ketoconazole,medicine,Nizoral,OTC or Rx
+672c1bfa,selenium sulfide,medicine,,OTC
+672c1bfa,zinc pyrithione,medicine,,OTC
+695be8c6,flu vaccine,vaccine,,vaccine
+69ab73e1,simethicone,medicine,Gas-X,OTC
+69f4ca1a,berberine,supplement,,supplement
+69f4ca1a,folate,supplement,,supplement
+69f4ca1a,inositol,supplement,,supplement
+69f4ca1a,iron,supplement,,supplement
+69f4ca1a,magnesium,supplement,,supplement
+69f4ca1a,omega-3 / fish oil,supplement,,supplement
+69f4ca1a,vitamin B12,supplement,,supplement
+69f4ca1a,vitamin C,supplement,,supplement
+69f4ca1a,vitamin D,supplement,,supplement
+69fb8bf7,diclofenac,medicine,Voltaren,OTC
+69fb8bf7,ibuprofen,medicine,,OTC or Rx
+69fb8bf7,naproxen,medicine,,OTC or Rx
+69fd05bd,acetaminophen,medicine,Tylenol,OTC
+69fd05bd,ibuprofen,medicine,"Advil, Motrin",OTC or Rx
+6a21a961,diphenhydramine,medicine,Benadryl,OTC
+6a21a961,loratadine,medicine,Claritin,OTC
+6a637176,acetaminophen,medicine,,OTC
+6a637176,ibuprofen,medicine,,OTC or Rx

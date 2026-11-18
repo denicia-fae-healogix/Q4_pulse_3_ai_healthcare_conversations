@@ -1,0 +1,12 @@
+﻿measure,value
+"Topic: primary topic, Fleiss' kappa among 3 pilot coders",1.0
+Topic: messages where all 3 coders chose the same primary topic,12 of 12
+Topic: messages where 2+ coders chose the same primary topic,12 of 12
+Topic: pilot majority primary topic = draft primary topic,11 of 12
+Request: pooled Fleiss' kappa (every message x code yes/no decision),0.97
+Request: message x code decisions where all 3 coders agreed,71 of 72
+Request: messages where all 3 coders gave exactly the same set of types,11 of 12
+Request: pilot majority set of types = draft set,9 of 12
+Quote check: evidence quotes found word for word,82 of 82
+Codes given with medium or low confidence,29 of 82
+'Unclear because...' notes written,29

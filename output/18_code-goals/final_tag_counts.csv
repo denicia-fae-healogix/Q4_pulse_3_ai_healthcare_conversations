@@ -1,0 +1,4 @@
+﻿tag,label,n,pct_of_52,ci_low,ci_high,n_within_yes,base_yes,pct_within_yes,confirmed
+T-doctor,Told to see a doctor,6,0.11538461538461539,0.05396969171559292,0.22971664454167973,5,40,0.125,True
+T-other,Asked on behalf of someone else,11,0.21153846153846154,0.12244370478965938,0.3403210474032951,10,40,0.25,True
+T-whyAI,Said why they used AI,6,0.11538461538461539,0.05396969171559292,0.22971664454167973,4,40,0.1,True

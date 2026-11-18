@@ -1,0 +1,12 @@
+﻿measure,value
+Type of request: pooled Fleiss' kappa (each message x type yes/no decision),1.0
+Type of request: median Fleiss' kappa across the 7 types,1.0
+Type of request: message x type decisions where all 3 coders agreed,364 of 364 (100%)
+Type of request: messages where all 3 coders gave exactly the same set of types,52 of 52 (100%)
+"Topic: primary topic, Fleiss' kappa among 3 coders",1.0
+Topic: messages where all 3 coders chose the same primary topic,52 of 52 (100%)
+Topic: messages with a majority (2+ coders) primary topic,52 of 52
+Quote check: evidence quotes found character for character,335 of 335
+Quote check: found once spacing and capitals are ignored,335 of 335
+Codes given with medium or low confidence,67 of 335
+Messages flagged for analyst review,2 of 52

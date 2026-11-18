@@ -1,0 +1,7 @@
+what,count
+Participants,60
+Turns (all),302
+Participant messages (human turns),147
+AI turns (all),155
+AI turns before the first message (ai_0),9
+Participants with no messages (AI-only pastes),7

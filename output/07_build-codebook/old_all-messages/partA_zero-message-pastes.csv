@@ -1,0 +1,8 @@
+prolific_pid,verdict,evidence
+5fd63cb585f88c4eb1933661,AI-only,"One AI reply about a cold medicine and diabetes; refers to the participant's images (""the drug facts label in your second image""); no participant text. Ends mid-list (""3. Blood Glucose Monitor Interference"")."
+62c4dbae8fb1ff9cd93a3150,"AI-only (several AI replies, participant's side missing)","Three or four AI replies run together. The AI answers messages that were not pasted, e.g. ""Since it started just **yesterday**..."" and ""Loss of appetite along with nausea and tiredness for one day..."". No participant wording appears."
+62e7357284e65421d8f8b10f,AI-only,"One AI reply about mucus in the throat, ending with the AI's own questions (""Could you tell me: 1. How long has this been going on?""). No participant text."
+6720084598df3cb5ac3ac3f2,AI-only,"One AI sentence, partly repeated by the copy (""A doctor will assess your medical history... to A doctor will assess...""). Already noted in step 05."
+6a0497c25c04f83a27e1f07a,AI-only,"One AI reply in Italian (""S<U+00EC>, questo <U+00E8> utile, ma non <U+00E8> un referto del tumore ovarico""). Already noted in step 05."
+6a0e579710108dbe9059ee97,AI-only,"One AI reply about a Baker's cyst (""Since your Baker's cyst is being driven by cartilage wear...""). No participant text."
+6ade720aea28ccfc1c990fee,AI-only,"One short AI reply about high blood pressure (""High blood pressure (hypertension) treatment depends on...""). No participant text."

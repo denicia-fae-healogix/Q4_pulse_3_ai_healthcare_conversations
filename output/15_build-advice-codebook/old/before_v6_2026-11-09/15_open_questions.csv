@@ -1,0 +1,10 @@
+id,question,suggested_answer,why_it_matters,her_answer
+Q1,"Is it OK that brand name is a flag (not a rung), and that giving a dose or how often is the top rung?",Yes (recommended),2 chats reach the dose rung; 8 named a brand.,Yes (V17)
+Q2,Do vitamins and supplements count as medicines?,"Yes, with a supplement flag (recommended)",69f4ca1a was L5 only because of a supplement amount.,"'Label as supplements': a Supplement tag, not a rung. 69f4ca1a L5 to L2 (V18)"
+Q3,Does recommending a vaccine (flu shot) count as suggesting a specific medicine?,"Yes, with a vaccine flag",695be8c6 was L4 only because of the flu shot.,"No: a Vaccine tag, not a rung. 695be8c6 L4 to L2 (V19)"
+Q4,"Should medicines named only as information (a cause, an allergy list, the person's own medicine) stay OFF the ladder?",Yes (recommended),e.g. 6712af54 names about 25 antibiotics but suggests none.,Yes (V20)
+Q5,Does 'ask your doctor about X' count as suggesting X?,Yes (recommended),Affects 5eec8774 and the prescription options in 66d9e5be.,Yes (V21)
+Q6,Does telling someone to keep using their own medicine count as suggesting it?,Yes,Affected 66d8e4c1 (was L4).,No. 66d8e4c1 L4 to L2 (V22)
+Q7,Should prescription-only medicines be a flag rather than a separate rung?,Flag (recommended),3 chats suggested a prescription-only medicine.,Flag (V23)
+Q8,"After coding, compare with the survey question where people said whether the AI mentioned a medicine?","Yes, as a check",Survey self-report vs what the AI actually said.,"Yes, as a later step (V24)"
+Q9,Do stress and relationship coping steps count as self-care (L2)?,Yes,Affects 6a0206ae; if No it becomes L1.,Yes (V25)

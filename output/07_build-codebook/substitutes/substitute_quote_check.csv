@@ -1,0 +1,16 @@
+﻿coder,chat_id,code,evidence,found_verbatim
+1,6a24b2df,T2,help me figure out a weight loss plan rn,True
+1,6a24b2df,R6,help me figure out a weight loss plan rn,True
+1,6ae359af,T3,Tell me about stomach cramps,True
+1,6ae359af,R2,Tell me about stomach cramps,True
+1,6a9bb385,R1,"So, at a high level what did these tests show?",True
+2,6a9bb385,R1,"So, at a high level what did these tests show?",True
+2,6ae359af,T3,Tell me about stomach cramps,True
+2,6ae359af,R2,Tell me about stomach cramps,True
+2,6a24b2df,T2,help me figure out a weight loss plan rn,True
+2,6a24b2df,R6,help me figure out a weight loss plan rn,True
+3,6ae359af,T3,Tell me about stomach cramps,True
+3,6ae359af,R2,Tell me about stomach cramps,True
+3,6a9bb385,R1,at a high level what did these tests show?,True
+3,6a24b2df,T2,help me figure out a weight loss plan rn,True
+3,6a24b2df,R6,help me figure out a weight loss plan rn,True

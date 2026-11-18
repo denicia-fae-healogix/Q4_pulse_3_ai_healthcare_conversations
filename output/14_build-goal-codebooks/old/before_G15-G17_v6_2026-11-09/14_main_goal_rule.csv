@@ -1,0 +1,2 @@
+rule,text
+main goal,"Code every goal the answer mentions (multi-label). Then pick ONE main goal: (1) the goal the person marks as main (""mainly"", ""primarily""); otherwise (2) the first goal they state, skipping sentences that only give context. (3) In ""I wanted X so that Y"", X is the main goal and Y is an extra goal if it is an A code. (4) Reassurance (A7) follows the same first-stated rule: if it is written first, it is the main goal. (5) If the goal answer is vague, the goal-met answer may be used to find the goal."

@@ -1,0 +1,5 @@
+﻿chat_id,what,plain_explanation,suggested_fix
+6a983ff0,S-doctor Said to see a doctor or professional,All 3 coders said yes: the AI gave a 'When to get it checked' list and said a doctor might confirm it with an X-ray. The codebook already counts 'seek care if warning signs appear'. The draft word rules missed this softer wording. The coders are right.,P2
+66d8e4c1,S-warning Gave a warning or caveat,"The draft counted 'use the clotrimazole according to its package directions' as a warning. All 3 coders said no: it is an instruction to keep using her own cream, not a caution. The coders are right.",P3
+6144ea17,Advice rung,"The draft said L3 because the AI listed 'Reintroduce a sleep aid if appropriate' as something the prescriber could advise. All 3 coders said L2: the earlier sleep aid in this chat was melatonin, a supplement, so it is not a medicine type. The codebook does not say what to do with an unnamed product that is probably a supplement.",P1
+6144ea17,F-supplement Supplement tag,2 of 3 coders gave the Supplement tag for the same 'sleep aid' (melatonin earlier in the chat); 1 gave no tag. Same issue as the rung.,P1

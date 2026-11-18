@@ -1,0 +1,8 @@
+﻿code,name,plain_label,n_messages,n_analysed,pct_messages
+R1,Ask what is causing symptoms,Why is this happening to me?,14,52,0.2692
+R2,General health facts,General facts about health,14,52,0.2692
+R3,Ask what to do for relief,What can I do to feel better?,8,52,0.1538
+R4,Information shared without a question,"Shared information, no question asked",8,52,0.1538
+R5,Whether to seek medical care,Should I see a doctor or get care?,4,52,0.0769
+R6,Personal plan or recommendations,A plan or recommendation for me,4,52,0.0769
+NONE,No type of request,"No request (greeting, one word, unclear)",4,52,0.0769

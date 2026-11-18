@@ -1,0 +1,17 @@
+﻿pilot_order,chat_id,opening_request,why_chosen,rung_draft,medicines_suggested,rung_pilot,rung_votes,rung_matches_draft,F-brand_draft,F-brand_pilot,F-brand_votes,F-Rx_draft,F-Rx_pilot,F-Rx_votes,F-supplement_draft,F-supplement_pilot,F-supplement_votes,F-vaccine_draft,F-vaccine_pilot,F-vaccine_votes,S-doctor_draft,S-doctor_pilot,S-doctor_votes,S-warning_draft,S-warning_pilot,S-warning_votes,medicines_pilot
+1,664639e0,Asking to understand,"covers Asking to understand, F-Rx:yes, F-brand:yes, L4, S-doctor:yes, S-warning:yes",L4,acetaminophen; ibuprofen; oseltamivir,L4,L4 x3,True,yes,yes,yes x3,yes,yes,yes x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,acetaminophen; ibuprofen; oseltamivir
+2,6929d658,Just sharing information,"covers Just sharing information, L0, S-doctor:no, S-warning:no",L0,,L0,L0 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,
+3,69f4ca1a,Asking what to do,"covers Asking what to do, F-supplement:yes, L2",L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,yes,yes,yes x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,
+4,6a983ff0,Asking to understand,covers L1,L1,,L1,L1 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,yes,yes x3,no,no,no x3,
+5,69fd05bd,Asking what to do,covers L5,L5,acetaminophen; ibuprofen,L5,L5 x3,True,yes,yes,yes x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,acetaminophen; ibuprofen
+6,6785ddfb,Asking to understand,covers L3,L3,,L3,L3 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,
+7,695be8c6,Asking to understand,covers F-vaccine:yes,L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,yes,yes,yes x3,
+8,6abae4ea,Asking what to do,close call,L1,,L1,L1 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,no,no,no x3,
+9,66fd6acd,Asking what to do,close call,L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,
+10,5d7fd2a5,Asking to understand,close call,L1,,L1,L1 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,no,no,no x3,
+11,69fcf529,Asking what to do,close call,L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,
+12,66d8e4c1,Asking to understand,close call,L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,no,no x3,
+13,6a0206ae,Just sharing information,close call,L2,,L2,L2 x3,True,no,no,no x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,
+14,6144ea17,Asking what to do,close call,L3,,L2,L2 x3,False,no,no,no x3,no,no,no x3,no,yes,yes x2; no x1,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,
+15,5eec8774,Asking what to do,close call,L4,alendronate; denosumab; ibandronate; pamidronate; risedronate; zoledronic acid,L4,L4 x3,True,yes,yes,yes x3,yes,yes,yes x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,alendronate; denosumab; ibandronate; pamidronate; risedronate; zoledronic acid
+16,672c1bfa,Asking what to do,names medicines,L5,acetaminophen; coal tar; ibuprofen; ketoconazole; selenium sulfide; zinc pyrithione,L5,L5 x3,True,yes,yes,yes x3,no,no,no x3,no,no,no x3,no,no,no x3,yes,yes,yes x3,yes,yes,yes x3,acetaminophen; coal tar; ibuprofen; ketoconazole; selenium sulfide; zinc pyrithione

@@ -1,0 +1,13 @@
+﻿pilot_order,chat_id,col1,why_chosen,m_draft,d_draft,turn_pilot,turn_pilot_votes,m_pilot,m_pilot_votes,d_pilot,d_pilot_votes,turn_draft,col2_matches_draft,col3_matches_draft,col2_name_pilot,col3_name_pilot
+1,69ab73e1,Asking what to do,"covers Asking what to do, D4, M2",M2,D4,human_2,human_2 x3,M2,M2 x3,D4,D4 x3,human_2,True,True,Then asked what to do,Never shared
+2,6a106089,Asking to understand,"covers Asking to understand, D1, M3",M3,D1,human_2,human_2 x3,M3,M3 x3,D1,D1 x3,human_2,True,True,Shared more about themselves,With the first message
+3,6929d658,Just sharing information,"covers Just sharing information, M6",M6,,human_2,human_2 x3,M6,M6 x3,,none x3,human_2,True,True,Continued a task,
+4,66c0f464,Asking to understand,covers M1,M1,,human_2,human_2 x3,M1,M1 x3,,none x3,human_2,True,True,Kept asking to understand,
+5,6a24b2df,Asking what to do,covers D3,M3,D3,human_3,human_3 x3,M3,M3 x3,D2,D2 x3,human_3,True,False,Shared more about themselves,After the AI asked
+6,5f47f200,Asking to understand,covers D2,M3,D2,human_2,human_2 x3,M3,M3 x3,D2,D2 x3,human_2,True,True,Shared more about themselves,After the AI asked
+7,5eec8774,Asking what to do,covers M4,M4,,human_2,human_2 x3,M4,M4 x3,,none x3,human_2,True,True,Pushed back or questioned the AI,
+8,6ae359af,Asking to understand,close call,M1,,human_4,human_4 x3,M1,M1 x3,,none x3,human_4,True,True,Kept asking to understand,
+9,5aeeb490,Asking to understand,close call,M3,D2,human_2,human_2 x3,M3,M3 x3,D2,D2 x3,human_2,True,True,Shared more about themselves,After the AI asked
+10,6acb95ac,Asking to understand,close call,M3,D4,human_2,human_2 x3,M3,M3 x3,D4,D4 x3,human_2,True,True,Shared more about themselves,Never shared
+11,671a8337,Just sharing information,close call,M2,D4,human_2,human_2 x3,M2,M2 x3,D3,D3 x3,human_2,True,False,Then asked what to do,On their own later
+12,6785ddfb,Asking to understand,close call,M3,D4,human_2,human_2 x3,M3,M3 x3,D4,D4 x3,human_2,True,True,Shared more about themselves,Never shared

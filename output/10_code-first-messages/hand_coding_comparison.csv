@@ -1,0 +1,13 @@
+﻿pilot_order,chat_id,your_primary_topic,final_primary_topic,topic_match,your_request_types,final_request_types,request_match,note
+1,6144ea17,T7,T7,True,R3,R1;R3,False,
+2,69f4ca1a,T10,T10,True,R6,R3,False,
+3,69f441ce,T8,T8,True,R3,R2;R5,False,
+4,69fe1811,T4,T4,True,R4,R1,False,
+5,695be8c6,T1,T5,False,R1,R1,True,
+6,6a9bb385,NONE,NONE,,NONE,R7,,"Not compared: the sheet shows the original first message, but the final label codes the first REAL message (substitution rule)."
+7,6a0206ae,T11,T11,True,R4,R3,False,
+8,6a9f047c,(blank),T9,,(blank),R1,,
+9,6658d49a,(blank),T3,,R2,R2,True,
+10,6a638cf5,T3,NONE,False,R4,R7,False,
+11,69d51123,T10,T10,True,R3,R3,True,
+12,66ec5904,(blank),T6,,(blank),R7,,

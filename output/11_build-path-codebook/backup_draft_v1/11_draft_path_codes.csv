@@ -1,0 +1,33 @@
+﻿chat_id,second_turn,m_draft,m_evidence,first_detail_turn,d_draft,d_evidence,flag_note
+5aeeb490,human_2,M3,"Back of neck, closer to shoulders",human_1,D1,i developed a sharp pain in my neck,
+5eec8774,human_2,M4,"Claude, you are missing a conversation.",,,,
+5f47f200,human_2,M3,There is no swelling but I do run daily,human_1,D1,Why is the top of my foot hurting,Column 3: the first message names only the main complaint. D1 under rule L8; it would be D2 if the main complaint alone did not count.
+5f491a49,human_2,M2,Should I schedule an appointment with a specialist?,human_1,D1,I find myself not breathing for periods in the middle of the night,
+616f347d,human_2,M3,The double reappears if I don't blink a lot,human_1,D1,Sometimes I'm not seeing double with my glasses on but sometimes I am.,
+63e55f08,human_2,M3,more like physical exhaustion,human_1,D1,"I've been feeling unusually tired lately, even after getting a full night's sleep.",
+664639e0,human_2,M1,How long does the flu last,,,,
+66aafcc3,human_2,M1,Now how likely will they have a bed at 12,,,,"Column 2: asks about hospital bed availability (logistics, not health). Drafted as M1 (asking how likely); could be argued as M2."
+66c0f464,human_2,M1,What impact (if any) has taking a GLP-1A medication had on your mental health?,,,,"Column 2: the person questions the AI about the AI's own experience, as in the first message. Drafted as M1."
+66d8e4c1,human_2,M3,"Okay, so under my breast I have like yeast on the skin.",human_2,D2,"Okay, so under my breast I have like yeast on the skin.",
+66d9e5be,human_2,M3,"For husband, he also had type 2 diabetes and smokes",human_2,D3,"For husband, he also had type 2 diabetes and smokes",
+6712af54,human_2,M1,What is the Stevens-Johnson syndrome?,,,,
+671a8337,human_2,M1,what if i am spitting blood,,,,Column 2: adds a possible new symptom as a 'what if' question. Drafted as M1 (asks what it would mean) under the question-wins rule; could be M2 or M3.
+672c1bfa,human_2,M1,Can we tell me what causes dandruff,,,,
+6785ddfb,human_2,M3,yes I have itching and bumps all over,human_2,D2,yes I have itching and bumps all over,Column 3: first message asks 'how do I know if I have hives' with no detail; drafted D2.
+6929d658,human_2,M3,I just went a whole week without saying anything to my family.,human_1,D1,I just went a whole week without saying anything to my family.,"Does not fit: the 2nd message is a re-pasted, edited version of the same email draft. Drafted as M3 (personal sharing); no new code proposed for 1 chat."
+695be8c6,human_2,M3,yes it was for pain for the tendinitis,human_1,D1,went to doctor today with tennis elbow,
+69600cc8,human_2,M3,"Center left and right, but worse on one side",human_1,D1,Husband's low back started hurting yesterday,
+697cba85,human_2,M3,I would rate it at 7.,human_1,D1,I've been dealing with some bad stomach aches for the past few weeks.,
+69ab73e1,human_2,M2,What should I do?,human_1,D1,i have a really bad tummy ache,
+69f4ca1a,human_2,M3,My anemia is from b12/folate deficiency,human_1,D1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",
+69fb8bf7,human_2,M3,"Dull ache, feel weak when trying to stand up from sitting.",human_1,D1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,
+69fe1811,human_2,M3,I just started shedding but have 3/4 inch baby hair,human_1,D1,baby hair coming in after 3 months on zepbound,
+69fff128,human_2,M3,i've had it for four weeks or maybe more.,human_1,D1,hurts to bend especially in deep squat.,
+6a0206ae,human_2,M3,I have been with my gf for 2.5 years.,human_2,D2,Right now the biggest stressors is my gf's family,"Column 3: the first message names stress and anxiety but no facts. Drafted D2 (facts came after the AI asked), in line with your step-10 decision that it only sets up the conversation."
+6a106089,human_2,M3,the middle letters from top to bottom are blurry,human_1,D1,My eye doctor is sending me to a retina specialist,
+6a10664c,human_2,M2,what medical assessment is appropriate,human_2,D2,location: lower abdomen below belly button; pain pattern: cramping in waves,Column 2: asks both 'help me understand what causes' and 'what medical assessment is appropriate'; M2 under action-wins (L7). Column 3: first message says only 'I get this'; drafted D2.
+6a21a961,human_2,M1,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,,,,
+6a24b2df,human_3,M3,im at 350 to start,human_3,D3,im at 350 to start,
+6a9bb385,human_3,M1,What are the small findings? What do they mean,,,,
+6acb95ac,human_2,M3,"Yes they are dry and flaky and are fairly small, usually on my face",human_1,D1,I have eczema dry spots on my skin,
+6ae359af,human_4,M1,How do I tell i have cramps,,,,Column 2: the next message ('Nice') is only an acknowledgement and was skipped (L5).

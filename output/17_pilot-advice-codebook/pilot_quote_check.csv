@@ -1,0 +1,138 @@
+﻿chat_id,coder,what,turn_named,quote,in_named_turn,in_any_ai_turn,found_in
+664639e0,1,rung,ai_1,OTC options like acetaminophen or ibuprofen can help with the fever and aches,True,True,ai_1
+664639e0,1,F-brand,ai_1,"If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",True,True,ai_1
+664639e0,1,F-Rx,ai_1,"If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",True,True,ai_1
+664639e0,1,S-doctor,ai_1,"if you develop difficulty breathing, a very high fever, or symptoms that worsen rapidly, seek medical attention.",True,True,ai_1
+664639e0,1,S-warning,ai_1,Note: I'm not a doctor,True,True,ai_1
+69fd05bd,1,rung,ai_1,"Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed. Stay below 3,000 mg in 24 hours.",True,True,ai_1
+69fd05bd,1,F-brand,ai_1,"For a typical headache, acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",True,True,ai_1
+69fd05bd,1,S-doctor,ai_1,Get urgent medical help if the headache is sudden and extremely severe,True,True,ai_1
+69fd05bd,1,S-warning,ai_1,"Avoid it if you have kidney disease, stomach ulcers or bleeding, take blood thinners, or are pregnant unless your clinician says it is safe.",True,True,ai_1
+69f4ca1a,1,rung,ai_1,"For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",True,True,ai_1
+69f4ca1a,1,F-supplement,ai_2,I would absolutely make B12 and folate part of the core plan,True,True,ai_2
+69f4ca1a,1,S-doctor,ai_1,I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.,True,True,ai_1
+69f4ca1a,1,S-warning,ai_1,"it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",True,True,ai_1
+6a983ff0,1,rung,ai_1,It's a bony bump that forms at the base of the 2nd or 3rd metacarpal (back of the hand).,True,True,ai_1
+6a983ff0,1,S-doctor,ai_1,"If you're noticing changes, a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",True,True,ai_1
+6144ea17,1,rung,ai_1,Tracking wake-ups for the next 1-2 weeks Noting what time he wakes,True,True,ai_1
+6144ea17,1,S-doctor,ai_1,that's usually a good time to check in with the prescriber.,True,True,ai_1
+6144ea17,1,S-warning,ai_1,One thing I would not do without talking to his doctor is immediately switch the dose to morning.,True,True,ai_1
+5d7fd2a5,1,rung,ai_1,"In many people, this happens spontaneously. It doesn't necessarily mean someone did anything wrong.",True,True,ai_1
+5d7fd2a5,1,S-doctor,ai_1,"At the follow-up, it would be reasonable to ask the surgeon directly:",True,True,ai_1
+672c1bfa,1,rung,ai_4,Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.,True,True,ai_4
+672c1bfa,1,F-brand,ai_4,Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral),True,True,ai_4
+672c1bfa,1,S-doctor,ai_1,You should see a healthcare provider if:,True,True,ai_1
+672c1bfa,1,S-warning,ai_3,Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).,True,True,ai_3
+6785ddfb,1,rung,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+6785ddfb,1,S-doctor,ai_2,"I'd recommend getting medical advice today, particularly if this is new or getting worse.",True,True,ai_2
+6785ddfb,1,S-warning,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+69fcf529,1,rung,ai_1,means whey protein is indeed unnecessary for you. Whole food sources provide better micronutrient profiles and satiety anyway.,True,True,ai_1
+6a0206ae,1,rung,ai_3,"Pick a set 20-minute window each week to discuss schedules, ex-husband issues, and household logistics.",True,True,ai_3
+6a0206ae,1,S-doctor,ai_1,"For medical advice or diagnosis, consult a professional.",True,True,ai_1
+6a0206ae,1,S-warning,ai_1,This is for informational purposes only.,True,True,ai_1
+66fd6acd,1,rung,ai_1,20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss,True,True,ai_1
+695be8c6,1,rung,ai_3,"For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",True,True,ai_3
+695be8c6,1,F-vaccine,ai_4,I would recommend getting your flu shot this season,True,True,ai_4
+695be8c6,1,S-doctor,ai_1,"Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",True,True,ai_1
+695be8c6,1,S-warning,ai_2,"Steroids can cause temporary changes in energy, mood, or sleep, while Toradol can sometimes cause dizziness or drowsiness.",True,True,ai_2
+5eec8774,1,rung,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,1,F-brand,ai_5,"Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",True,True,ai_5
+5eec8774,1,F-Rx,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,1,S-doctor,ai_1,"Please check these with your doctor, since I can't know what's safe for you.",True,True,ai_1
+5eec8774,1,S-warning,ai_1,Benadryl is sedating and can raise fall risk and affect memory.,True,True,ai_1
+6abae4ea,1,rung,ai_1,"An endocrinologist specializes in the hormone-producing glands throughout your body, not just reproductive hormones.",True,True,ai_1
+6abae4ea,1,S-doctor,ai_1,I think seeing an endocrinologist would be a very reasonable next step for you.,True,True,ai_1
+66d8e4c1,1,rung,ai_3,"keep the area gently clean and dry, pat rather than rub, and avoid picking at the crust",True,True,ai_3
+66d8e4c1,1,S-doctor,ai_3,it would be worth getting assessed rather than relying on antifungal cream alone. A low-cost community health center may be able to help.,True,True,ai_3
+69f4ca1a,2,rung,ai_1,"For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",True,True,ai_1
+69f4ca1a,2,F-supplement,ai_1,"For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",True,True,ai_1
+69f4ca1a,2,S-doctor,ai_1,I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.,True,True,ai_1
+69f4ca1a,2,S-warning,ai_1,"But it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",True,True,ai_1
+66d8e4c1,2,rung,ai_2,"For now, continue gently cleaning and thoroughly drying the area",True,True,ai_2
+66d8e4c1,2,S-doctor,ai_2,it really does need reassessment when you can access care. Seek more urgent care if you develop spreading redness,True,True,ai_2
+664639e0,2,rung,ai_1,OTC options like acetaminophen or ibuprofen can help with the fever and aches,True,True,ai_1
+664639e0,2,F-brand,ai_1,antiviral medications like Tamiflu are most effective within the first 48 hours,True,True,ai_1
+664639e0,2,F-Rx,ai_1,antiviral medications like Tamiflu are most effective within the first 48 hours,True,True,ai_1
+664639e0,2,S-doctor,ai_1,"if you develop difficulty breathing, a very high fever, or symptoms that worsen rapidly, seek medical attention.",True,True,ai_1
+664639e0,2,S-warning,ai_1,Note: I'm not a doctor,True,True,ai_1
+695be8c6,2,rung,ai_3,"For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",True,True,ai_3
+695be8c6,2,F-vaccine,ai_4,I would recommend getting your flu shot this season,True,True,ai_4
+695be8c6,2,S-doctor,ai_1,"Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",True,True,ai_1
+695be8c6,2,S-warning,ai_1,"Toradol (ketorolac): An anti-inflammatory pain medication that can occasionally cause dizziness, drowsiness, or fatigue.",True,True,ai_1
+6a0206ae,2,rung,ai_4,"you also need micro-escapes during the week—gym time, solitary errands, or a dedicated quiet space in the home",True,True,ai_4
+6a0206ae,2,S-doctor,ai_1,"For medical advice or diagnosis, consult a professional.",True,True,ai_1
+6a0206ae,2,S-warning,ai_1,This is for informational purposes only.,True,True,ai_1
+5d7fd2a5,2,rung,ai_1,it's usually not possible to know exactly what caused an abscess like this,True,True,ai_1
+5d7fd2a5,2,S-doctor,ai_1,"At the follow-up, it would be reasonable to ask the surgeon directly",True,True,ai_1
+69fd05bd,2,rung,ai_1,"Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",True,True,ai_1
+69fd05bd,2,F-brand,ai_1,"For a typical headache, acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",True,True,ai_1
+69fd05bd,2,S-doctor,ai_1,Get urgent medical help if the headache is sudden and extremely severe,True,True,ai_1
+69fd05bd,2,S-warning,ai_1,"Stay below 3,000 mg in 24 hours. Avoid it or check with a clinician first if you have liver disease",True,True,ai_1
+66fd6acd,2,rung,ai_1,20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss,True,True,ai_1
+6a983ff0,2,rung,ai_1,It's a bony bump that forms at the base of the 2nd or 3rd metacarpal,True,True,ai_1
+6a983ff0,2,S-doctor,ai_1,"If you're noticing changes, a doctor might confirm it with an X-ray",True,True,ai_1
+6abae4ea,2,rung,ai_1,Thyroid imbalances can cause: - Heart palpitations.,True,True,ai_1
+6abae4ea,2,S-doctor,ai_1,"Keep your gynecologist involved in managing HRT, but consider an endocrinologist for a broader evaluation.",True,True,ai_1
+672c1bfa,2,rung,ai_1,Use an anti-dandruff shampoo 2–3 times a week. Look for one containing: Ketoconazole 1%,True,True,ai_1
+672c1bfa,2,F-brand,ai_4,Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral),True,True,ai_4
+672c1bfa,2,S-doctor,ai_1,You should see a healthcare provider if:,True,True,ai_1
+672c1bfa,2,S-warning,ai_3,Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).,True,True,ai_3
+5eec8774,2,rung,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,2,F-brand,ai_5,"Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",True,True,ai_5
+5eec8774,2,F-Rx,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,2,S-doctor,ai_1,"Please check these with your doctor, since I can't know what's safe for you.",True,True,ai_1
+5eec8774,2,S-warning,ai_1,Benadryl is sedating and can raise fall risk and affect memory.,True,True,ai_1
+69fcf529,2,rung,ai_1,Whole food sources provide better micronutrient profiles and satiety anyway.,True,True,ai_1
+6144ea17,2,rung,ai_1,Tracking wake-ups for the next 1-2 weeks Noting what time he wakes,True,True,ai_1
+6144ea17,2,F-supplement,ai_1,Reintroduce a sleep aid if appropriate.,True,True,ai_1
+6144ea17,2,S-doctor,ai_1,I would not change the timing without checking with his prescriber first.,True,True,ai_1
+6144ea17,2,S-warning,ai_1,One thing I would not do without talking to his doctor is immediately switch the dose to morning.,True,True,ai_1
+6785ddfb,2,rung,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+6785ddfb,2,S-doctor,ai_2,"I'd recommend getting medical advice today, particularly if this is new or getting worse.",True,True,ai_2
+6785ddfb,2,S-warning,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+5eec8774,3,rung,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,3,F-brand,ai_5,"Alendronate (brand Fosamax), weekly or daily. This is the one Humana suggested.",True,True,ai_5
+5eec8774,3,F-Rx,ai_1,It's worth asking whether a once-a-year IV version (zoledronic acid) would suit you better,True,True,ai_1
+5eec8774,3,S-doctor,ai_1,"Please check these with your doctor, since I can't know what's safe for you.",True,True,ai_1
+5eec8774,3,S-warning,ai_1,"Humana suggested alendronate, but the pills can irritate the esophagus, which matters with your GERD and your tricky levothyroxine timing.",True,True,ai_1
+695be8c6,3,rung,ai_3,"For tonight, try drinking plenty of fluids, gargling warm salt water, and getting some rest.",True,True,ai_3
+695be8c6,3,F-vaccine,ai_4,I would recommend getting your flu shot this season,True,True,ai_4
+695be8c6,3,S-doctor,ai_1,"Contact your doctor's office promptly if you're getting worse or developing significant dizziness, vomiting, or a fever.",True,True,ai_1
+695be8c6,3,S-warning,ai_1,"Steroid injection (such as Decadron or Kenalog): Sometimes causes fatigue, mood changes, flushing, or a generally off feeling.",True,True,ai_1
+66fd6acd,3,rung,ai_1,20-Minute Post-Sleep-Loss Memory Buffer: potentially useful after substantial sleep loss,True,True,ai_1
+6a0206ae,3,rung,ai_13,When 5:00 PM hits you need a strict non-negotiable 30 to 45 minutes to decompress,True,True,ai_13
+6a0206ae,3,S-doctor,ai_1,"For medical advice or diagnosis, consult a professional.",True,True,ai_1
+6a0206ae,3,S-warning,ai_1,This is for informational purposes only.,True,True,ai_1
+664639e0,3,rung,ai_1,OTC options like acetaminophen or ibuprofen can help with the fever and aches,True,True,ai_1
+664639e0,3,F-brand,ai_1,"If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",True,True,ai_1
+664639e0,3,F-Rx,ai_1,"If it is flu, antiviral medications like Tamiflu are most effective within the first 48 hours",True,True,ai_1
+664639e0,3,S-doctor,ai_1,"so if symptoms worsen, see a doctor soon",True,True,ai_1
+664639e0,3,S-warning,ai_1,Note: I'm not a doctor,True,True,ai_1
+5d7fd2a5,3,rung,ai_1,it's usually not possible to know exactly what caused an abscess like this,True,True,ai_1
+5d7fd2a5,3,S-doctor,ai_1,"At the follow-up, it would be reasonable to ask the surgeon directly:",True,True,ai_1
+69f4ca1a,3,rung,ai_1,"Myo-inositol Vitamin D3 Omega-3 Possibly a B-complex, depending on your labs",True,True,ai_1
+69f4ca1a,3,F-supplement,ai_1,"For your goals, I'd think about it as 2–4 targeted supplements, rather than one mega-supplement.",True,True,ai_1
+69f4ca1a,3,S-doctor,ai_1,I would not throw berberine into a giant PCOS multivitamin without checking with your doctor/pharmacist first.,True,True,ai_1
+69f4ca1a,3,S-warning,ai_1,"it can also cause GI symptoms, including constipation, diarrhea, abdominal pain and nausea, and it can interact with medications.",True,True,ai_1
+66d8e4c1,3,rung,ai_3,"keep the area gently clean and dry, pat rather than rub, and avoid picking at the crust",True,True,ai_3
+66d8e4c1,3,S-doctor,ai_3,it would be worth getting assessed rather than relying on antifungal cream alone. A low-cost community health center may be able to help.,True,True,ai_3
+6785ddfb,3,rung,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+6785ddfb,3,S-doctor,ai_2,"I'd recommend getting medical advice today, particularly if this is new or getting worse.",True,True,ai_2
+6785ddfb,3,S-warning,ai_2,Ask a pharmacist whether a non-drowsy antihistamine is safe for you.,True,True,ai_2
+69fcf529,3,rung,ai_1,Whole food sources provide better micronutrient profiles and satiety anyway.,True,True,ai_1
+6a983ff0,3,rung,ai_1,It's a bony bump that forms at the base of the 2nd or 3rd metacarpal (back of the hand).,True,True,ai_1
+6a983ff0,3,S-doctor,ai_1,"If you're noticing changes, a doctor might confirm it with an X-ray and rule out things like a ganglion cyst.",True,True,ai_1
+6144ea17,3,rung,ai_1,Tracking wake-ups for the next 1-2 weeks Noting what time he wakes,True,True,ai_1
+6144ea17,3,F-supplement,ai_1,Reintroduce a sleep aid if appropriate.,True,True,ai_1
+6144ea17,3,S-doctor,ai_1,I would not change the timing without checking with his prescriber first.,True,True,ai_1
+6144ea17,3,S-warning,ai_1,"Looking for other changes from the dose increase (more tired, irritable, emotional, dizzy, headaches)",True,True,ai_1
+69fd05bd,3,rung,ai_1,"Tylenol (acetaminophen): 500–1,000 mg every 6 hours as needed.",True,True,ai_1
+69fd05bd,3,F-brand,ai_1,"For a typical headache, acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) may help.",True,True,ai_1
+69fd05bd,3,S-doctor,ai_1,Get urgent medical help if the headache is sudden and extremely severe,True,True,ai_1
+69fd05bd,3,S-warning,ai_1,"Stay below 3,000 mg in 24 hours.",True,True,ai_1
+672c1bfa,3,rung,ai_4,Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.,True,True,ai_4
+672c1bfa,3,F-brand,ai_4,Switch to a medicated dandruff shampoo containing ketoconazole 1% (such as Nizoral) or selenium sulfide 2–3 times a week.,True,True,ai_4
+672c1bfa,3,S-doctor,ai_1,You should see a healthcare provider if:,True,True,ai_1
+672c1bfa,3,S-warning,ai_3,Take an over-the-counter pain reliever like Ibuprofen or Acetaminophen if needed (provided they're safe for you).,True,True,ai_3
+6abae4ea,3,rung,ai_1,"An endocrinologist specializes in the hormone-producing glands throughout your body, not just reproductive hormones.",True,True,ai_1
+6abae4ea,3,S-doctor,ai_1,I think seeing an endocrinologist would be a very reasonable next step for you.,True,True,ai_1

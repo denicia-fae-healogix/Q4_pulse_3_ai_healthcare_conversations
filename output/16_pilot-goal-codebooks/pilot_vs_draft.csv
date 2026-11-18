@@ -1,0 +1,17 @@
+﻿pilot_order,chat_id,opening_request,why_chosen,main_goal_draft,met_draft,goals_draft,why_not_draft,tag_draft_T-doctor,tag_draft_T-other,tag_draft_T-whyAI,main_pilot,main_votes,met_pilot,met_votes,goals_pilot,why_not_pilot,T-doctor_pilot,T-other_pilot,T-whyAI_pilot,main_matches_draft,met_matches_draft,goals_match_draft,why_not_matches_draft,T-doctor_matches_draft,T-other_matches_draft,T-whyAI_matches_draft
+1,697cba85,Asking what to do,"covers A1, Asking what to do, B3, T-doctor, W1, W2",A1,B3,A1;A2,W1;W2,yes,,,A1,A1 x3,B3,B3 x3,A1;A2,W1;W2,yes,,,True,True,True,True,True,True,True
+2,6658d49a,Asking to understand,"covers A4, Asking to understand, B2, T-whyAI, W3",A4,B2,A4,W3,,,yes,A4,A4 x3,B2,B2 x3,A4,W3,,,yes,True,True,True,True,True,True,True
+3,671a8337,Just sharing information,"covers A2, B1, Just sharing information, T-other",A2,B1,A2;A1,,,yes,,A2,A2 x2; A1 x1,B1,B1 x3,A1;A2;A4,,,yes,,True,True,False,True,True,True,True
+4,6a0206ae,Just sharing information,"covers A7, B4, W4",A7,B4,A7;A3,W4,,,,A7,A7 x3,B4,B4 x3,A3;A7,W4,,,,True,True,True,True,True,True,True
+5,69a1ae3c,Asking what to do,"covers A5, W6",A5,B2,A5,W6,,,,A5,A5 x3,B2,B2 x3,A5,W6,,,,True,True,True,True,True,True,True
+6,66aafcc3,Asking what to do,covers W5,A1,B2,A1;A2,W5,,,,A1,A1 x3,B2,B2 x3,A1;A2;A6,W5,,,,True,True,False,True,True,True,True
+7,6785ddfb,Asking to understand,covers A6,A6,B1,A6,,,,,A6,A6 x3,B1,B1 x3,A6,,,,,True,True,True,True,True,True,True
+8,69ab73e1,Asking what to do,covers A3,A3,B1,A3,,,,,A3,A3 x3,B1,B1 x3,A3,,,,,True,True,True,True,True,True,True
+9,69fcf529,Asking what to do,covers A8,A8,B1,A8,,,,,A8,A8 x3,B1,B1 x3,A8,,,,,True,True,True,True,True,True,True
+10,5f491a49,Asking to understand,close call,A1,B1,A1;A4,,yes,,,A1,A1 x3,B1,B1 x3,A1;A4,,yes,,,True,True,True,True,True,True,True
+11,6acb95ac,Asking to understand,close call,A1,B2,A1;A7;A3,W1,,,yes,A1,A1 x3,B2,B2 x3,A1;A3;A7,W1,,,yes,True,True,True,True,True,True,True
+12,66fd6acd,Asking what to do,close call,A4,B1,A4,,,,,A4,A4 x3,B1,B1 x3,A4,,,,,True,True,True,True,True,True,True
+13,6144ea17,Asking what to do,close call,A1,B1,A1,,,yes,yes,A1,A1 x3,B1,B1 x3,A1,,,yes,yes,True,True,True,True,True,True,True
+14,5eec8774,Asking what to do,close call,A3,B1,A3;A6,,,,,A3,A3 x3,B1,B1 x3,A3;A6,,,,,True,True,True,True,True,True,True
+15,66ec5904,Just sharing information,close call,A4,B1,A4;A6;A7,,,yes,,A4,A4 x3,B1,B1 x3,A4;A6;A7,,,yes,,True,True,True,True,True,True,True
+16,663b8ae0,Asking to understand,close call,A1,B2,A1;A3;A6,W5,,yes,,A1,A1 x3,B2,B2 x3,A1;A3,W5,,yes,,True,True,False,True,True,True,True

@@ -1,0 +1,2 @@
+n_messages,median_words,q1_words,q3_words,pct_20_or_fewer,pct_lowercase_start,pct_question_mark
+147,14,7,31,0.6462585034013606,0.20408163265306123,0.2789115646258503

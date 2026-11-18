@@ -1,0 +1,53 @@
+﻿chat_id,col1,coded_turn,second_turn,col2,col3,col3_turn,col2_votes,col3_votes,unanimous_col2,unanimous_col3,col2_quote,col3_quote,col2_coders,col3_coders,analyst_recode,col2_name,col3_name
+5aeeb490,Asking to understand,human_1,human_2,M3,D2,human_4,M3 x3,D2 x3,True,True,"Back of neck, closer to shoulders",After sleeping,M3,D2,,Shared more about themselves,After the AI asked
+5d7fd2a5,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+5eec8774,Asking what to do,human_1,human_2,M4,,,M4 x3,none x3,True,True,"Claude, you are missing a conversation.",,M4,,,Pushed back or questioned the AI,
+5f47f200,Asking to understand,human_1,human_2,M3,D2,human_2,M3 x3,D2 x2; D3 x1,True,False,There is no swelling but I do run daily,I do run daily,M3,D2,,Shared more about themselves,After the AI asked
+5f491a49,Asking to understand,human_1,human_2,M2,D4,,M2 x3,D4 x3,True,True,Should I schedule an appointment with a specialist?,,M2,D4,,Then asked what to do,Never shared
+6144ea17,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+616f347d,Asking to understand,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,The double reappears if I don't blink a lot,My eyes seem to be working harder to make the prism glasses work.,M3,D1,,Shared more about themselves,With the first message
+63e55f08,Asking to understand,human_1,human_2,M3,D4,,M3 x3,D4 x3,True,True,more like physical exhaustion,,M3,D4,,Shared more about themselves,Never shared
+663b8ae0,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+664639e0,Asking to understand,human_1,human_2,M1,,,M1 x3,none x3,True,True,--- How long does the flu last,,M1,,,Kept asking to understand,
+6658d49a,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+66aafcc3,Asking what to do,human_1,human_2,M1,,,M1 x3,none x3,True,True,Now how likely will they have a bed at 12,,M1,,,Kept asking to understand,
+66c0f464,Asking to understand,human_1,human_2,M1,,,M1 x3,none x3,True,True,What impact (if any) has taking a GLP-1A medication had on your mental health?,,M1,,,Kept asking to understand,
+66d8e4c1,Asking to understand,human_1,human_2,M3,D2,human_2,M3 x3,D2 x3,True,True,so under my breast I have like yeast on the skin,And I've been to the doctor before and they gave me like a cream to put on it.,M3,D2,,Shared more about themselves,After the AI asked
+66d9e5be,Asking what to do,human_1,human_2,M3,D2,human_2,M3 x3,D3 x3,True,True,"For husband, he also had type 2 diabetes and smokes","For husband, he also had type 2 diabetes and smokes",M3,D3,"col3 D3 -> D2 (L26): The AI turn just before ended 'If you tell me where exactly the pain is ... I can help you narrow down ...'; an invitation counts as the AI asking, because the person was primed to give that information.",Shared more about themselves,After the AI asked
+66ec5904,Just sharing information,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+66fd6acd,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6712af54,Asking to understand,human_1,human_2,M1,,,M1 x3,none x3,True,True,What is the Stevens-Johnson syndrome?,,M1,,,Kept asking to understand,
+671a8337,Just sharing information,human_1,human_2,M2,D4,,M2 x3,D4 x3,True,True,what if i am spitting blood,,M2,D4,,Then asked what to do,Never shared
+672c1bfa,Asking what to do,human_1,human_2,M1,,,M1 x3,none x3,True,True,Can we tell me what causes dandruff,,M1,,,Kept asking to understand,
+6785ddfb,Asking to understand,human_1,human_2,M3,D4,,M3 x3,D4 x3,True,True,yes I have itching and bumps all over,,M3,D4,,Shared more about themselves,Never shared
+67d5d3b7,Just sharing information,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6929d658,Just sharing information,human_1,human_2,M6,,,M6 x3,none x3,True,True,I just went a whole week without saying anything to my family.,,M6,,,Continued a task,
+6952e59d,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+695be8c6,Asking to understand,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,yes it was for pain for the tendinitis,"went to doctor today with tennis elbow, injected two shots in my butt",M3,D1,,Shared more about themselves,With the first message
+69600cc8,Just sharing information,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,"Center left and right, but worse on one side",Husband's low back started hurting yesterday,M3,D1,,Shared more about themselves,With the first message
+697cba85,Asking what to do,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,I would rate it at 7.,I've been dealing with some bad stomach aches for the past few weeks.,M3,D1,,Shared more about themselves,With the first message
+69a1ae3c,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+69ab73e1,Asking what to do,human_1,human_2,M2,D4,,M2 x3,D4 x3,True,True,What should I do?,,M2,D4,,Then asked what to do,Never shared
+69d51123,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+69f441ce,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+69f4ca1a,Asking what to do,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,My anemia is from b12/folate deficiency,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",M3,D1,,Shared more about themselves,With the first message
+69fb8bf7,Asking what to do,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,"Dull ache, feel weak when trying to stand up from sitting.",Dealing with knee pain after challenging travel with lots of walking and stair climbing,M3,D1,,Shared more about themselves,With the first message
+69fcf529,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+69fd05bd,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+69fe1811,Just sharing information,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,I just started shedding but have 3/4 inch baby hair,baby hair coming in after 3 months on zepbound,M3,D1,,Shared more about themselves,With the first message
+69fff128,Asking to understand,human_1,human_2,M3,D2,human_2,M3 x3,D3 x3,True,True,i've had it for four weeks or maybe more. it hasn't gotten better or worse,i've had it for four weeks or maybe more.,M3,D3,"col3 D3 -> D2 (L26): The AI turn just before ended 'If you tell me exactly where the pain is ... I can narrow the differential considerably'; an invitation counts as the AI asking, because the person was primed to give that information.",Shared more about themselves,After the AI asked
+6a0206ae,Just sharing information,human_1,human_2,M3,D2,human_2,M3 x3,D2 x3,True,True,Right now the biggest stressors is my gf's family primarily her disrespectful kids,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,M3,D2,,Shared more about themselves,After the AI asked
+6a106089,Asking to understand,human_1,human_2,M3,D1,human_1,M3 x3,D1 x3,True,True,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,My eye doctor is sending me to a retina specialist,M3,D1,,Shared more about themselves,With the first message
+6a10664c,Asking to understand,human_1,human_2,M2,D2,human_3,M2 x3,D2 x3,True,True,Help me understand what causes are most consistent and what medical assessment is appropriate,I do have a lot of cramping and gas between episodes.,M2,D2,,Then asked what to do,After the AI asked
+6a21a961,Asking to understand,human_1,human_2,M1,,,M1 x3,none x3,True,True,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,,M1,,,Kept asking to understand,
+6a24b2df,Asking what to do,human_2,human_3,M3,D2,human_3,M3 x3,D2 x3,True,True,im at 350 to start,im at 350 to start,M3,D2,,Shared more about themselves,After the AI asked
+6a637176,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6a638cf5,Just sharing information,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6a983ff0,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6a9bb385,Asking to understand,human_2,human_3,M1,,,M1 x3,none x3,True,True,What are the small findings? What do they mean,,M1,,,Kept asking to understand,
+6a9f047c,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6abae4ea,Asking what to do,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6ac2aee8,Just sharing information,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6acb95ac,Asking to understand,human_1,human_2,M3,D4,,M3 x3,D4 x3,True,True,"Yes they are dry and flaky and are fairly small, usually on my face",,M3,D4,,Shared more about themselves,Never shared
+6ad69d36,Asking to understand,human_1,,M5,,,automatic (no 2nd message),,True,True,,,M5,,,Stopped after one message,
+6ae359af,Asking to understand,human_2,human_4,M1,,,M1 x3,none x3,True,True,How do I tell i have cramps,,M1,,,Kept asking to understand,

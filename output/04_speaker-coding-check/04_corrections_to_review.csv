@@ -1,0 +1,15 @@
+﻿priority,sheet_row,response_id_in_sheet,correct_response_id,issue,suggested_fix
+1,63-68,6720084598df3cb5ac3ac3f2,6712af54b9c073fb6f726116,Wrong ID: the antibiotics / Stevens-Johnson text belongs to 6712af54,Change response_id to 6712af54b9c073fb6f726116
+1,162-165,6ae4fe1ed707d958ebe2747d,63e55f08844f6fb08115851f,"Wrong ID: 6ae4fe1e... is this person's URL session_id, not their Prolific ID",Change response_id to 63e55f08844f6fb08115851f
+1,(none),6720084598df3cb5ac3ac3f2,6720084598df3cb5ac3ac3f2,"Paste never coded (short liver question, ~335 chars)",Add rows for this paste
+1,(none),6a0497c25c04f83a27e1f07a,6a0497c25c04f83a27e1f07a,Paste never coded (~1700 chars),Add rows for this paste
+1,184-186; 188; 191; 193-197; 213; 266,(blank),see 01_recovered_ids.csv,12 rows have no response_id,Fill in IDs (recovered by text match)
+2,50,6a0206ae4926b3707e0947b5,,Missed participant turn inside ai_6: 'Should I move out? This is the stuff I deal with on a regular basis. Is there a way to move out without ruining the relationship with my gf',Split row 50 into ai / human / ai and renumber later turns
+2,49,6a0206ae4926b3707e0947b5,,Boundary: human_6 ends with the AI's first sentence 'That is a complete unacceptable violation of your privacy and basic human dignity.',Move that sentence to the start of ai_6 (row 50)
+2,276-277,6a638cf578610d0220d258b7,,Boundary: the pasted ultrasound report continues into row 277 ('Images of the urinary bladder demonstrate no abnormalities. The visualized liver is increased in echogenicity.'); the AI starts at 'Overall this ultrasound is mostly reassuring',Move those two report sentences into human_1 (row 276)
+2,233,5aeeb4903c80f200013af2ed,,Probably not participant text: 'For example it happened while I was watching TV lasted a few minutes and now...' is the AI's example/placeholder under its question 'Anything else about how the pain started?',Recode as AI (end of ai_1) or flag as UI text; the participant may have skipped this question
+3,174,695be8c64cd9b03864442eaf,,Ambiguous boundary: 'LOL 😂' after the participant's 'lol' sits on its own line and matches this bot's emoji style,Probably the start of ai_5; low stakes
+3,154,67d5d3b719258bd5eeaef834,,'Pain that wakes you up at night' is capitalised like a quick-reply button the AI offered,Keep as human (the participant chose it) but note it as a button click in notes
+3,29; 85-86; 88-89; 123-124; 127; 244-245; 263-264; 288-289,various,,turn_label is blank although speaker and ID are filled,Fill the turn_label formula down
+3,36; 83; 112; 153; 189; 218; 273,various,,ai_0 rows (AI text before any participant turn),Correct as coded: these pastes start with the AI's answer. Keep the ai_0 convention and mention it in the codebook
+3,codebook,,,Codebook says IDs are the 'Alchemer Response ID' but the sheet uses Prolific PIDs,Update the codebook wording

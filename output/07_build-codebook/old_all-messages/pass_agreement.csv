@@ -1,0 +1,12 @@
+﻿code,name,n_passes_found,chats_pass1,chats_pass2,chats_pass3,chats_majority,chats_any_pass,chats_all_3,pct_chats_unanimous,fleiss_kappa
+A1,Answering the AI's clarifying questions,3,26,22,18,22,27,17,0.811,0.74
+A3,Describing symptoms to ask the cause,3,16,20,13,17,20,12,0.849,0.76
+A4,Asking general health facts,3,13,16,14,14,16,13,0.943,0.9
+A2,Asking what to do or take,3,11,13,17,11,21,9,0.774,0.61
+A5,Testing own suspected cause,3,11,10,10,9,15,7,0.849,0.68
+A6,Volunteering updates on the situation,2,0,6,15,6,15,0,0.717,0.18
+A7,Front-loading personal context,3,6,7,8,6,10,5,0.906,0.73
+A8,Navigating professional care,2,7,7,0,6,8,0,0.849,0.37
+A10,Enlisting AI for a task or plan,3,4,7,6,6,7,4,0.943,0.8
+A9,Pushing back on the AI's answer,2,5,6,0,4,7,0,0.868,0.32
+A11,Sharing results or documents to interpret,3,6,4,4,4,6,4,0.962,0.84

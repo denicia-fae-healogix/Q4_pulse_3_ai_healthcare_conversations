@@ -1,0 +1,4 @@
+﻿dropped_by,pass,name,reason,worth_review
+merge (found in only 1 pass),1,Check if normal or safe,"Only pass 1 had this code (3 chats). Passes 2 and 3 coded the same messages as Ask what is causing symptoms (616f347d, 6144ea17) or as a medical-care/relief decision (69d51123).",False
+merge (found in only 1 pass),1,Interpret results or numbers,Only pass 1 had this code (3 chats). Passes 2 and 3 coded bare results as Information shared without a question; 5eec8774 (DEXA) was coded as relief in all passes. Interpreting one's own test results is a distinct request type that may grow in a larger sample.,True
+analyst,merged code,Help with a text task,"After excluding the homework chat (69c41892) only 2 chats remained, below the 3-chat minimum. The researcher agreed it is too small, and judged that 66fd6acd (adding an article to a project) is not a writing task.",False

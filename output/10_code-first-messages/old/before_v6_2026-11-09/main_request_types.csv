@@ -1,0 +1,9 @@
+﻿code,name,plain_label,n_messages,pct_messages,ci95_low,ci95_high
+R2,General health facts,General facts about health,15,0.2885,0.1833,0.4227
+R1,Ask what is causing symptoms,Why is this happening to me?,14,0.2692,0.1677,0.4025
+R3,"How do I handle this problem, or is it safe?","How do I handle this problem, or is it safe?",9,0.1731,0.0938,0.2973
+R4,Information shared without a question,"Shared information, no question asked",9,0.1731,0.0938,0.2973
+R5,Whether to seek medical care,Should I see a doctor or get care?,4,0.0769,0.0303,0.1817
+R6,Help me reach a health goal,Help me reach a health goal,4,0.0769,0.0303,0.1817
+R7,Explain my test results,Explain my test results,1,0.0192,0.0034,0.1012
+NONE,No request type,No request type given,0,0.0,0.0,0.0688

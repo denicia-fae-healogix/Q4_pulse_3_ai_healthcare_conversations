@@ -1,0 +1,16 @@
+﻿chat_id,col1,second_turn,col2_draft,col3_draft,flag_note
+5aeeb490,Asking to understand,human_2,Shared more about themselves,After the AI asked,"Column 3: 'After sleeping' (answering the AI's 'How did it start?') is something that happened before the problem began, so it is background (L18/P3); still After the AI asked."
+616f347d,Asking to understand,human_2,Shared more about themselves,With the first message,Column 3: wearing prism glasses counted as health history (rule L14).
+63e55f08,Asking to understand,human_2,Shared more about themselves,Never shared,Column 3: only describes the tiredness itself; Never shared under L8 (rule L15).
+66c0f464,Asking to understand,human_2,Kept asking to understand,,"Column 2: the person questions the AI about the AI's own experience, as in the first message. Drafted as M1."
+671a8337,Just sharing information,human_2,Then asked what to do,Never shared,"Column 3: 'what if' names a possible symptom, not one they said they have; drafted Never shared. Confirmed by L17/P2."
+6785ddfb,Asking to understand,human_2,Shared more about themselves,Never shared,Column 3: itching and bumps are the hives question itself (main complaint); Never shared under L8 (rule L15).
+6929d658,Just sharing information,human_2,Continued a task,,"Column 2: re-pasted, edited version of the same email draft; new label Continued a task (n = 1)."
+69600cc8,Just sharing information,human_2,Shared more about themselves,With the first message,Column 3: 'started yesterday' counted as how long it has been going on.
+69ab73e1,Asking what to do,human_2,Then asked what to do,Never shared,"Column 3: gives location and 'other symptoms are none'; only the main problem, so Never shared."
+69fb8bf7,Asking what to do,human_2,Shared more about themselves,With the first message,Column 3: the travel that led up to the knee pain counted as background (rule L14).
+6a106089,Asking to understand,human_2,Shared more about themselves,With the first message,Column 3: the referral counted as recent care (rule L14).
+6a10664c,Asking to understand,human_2,Then asked what to do,After the AI asked,"Column 2: asks both to understand causes and what assessment is needed; M2 under action wins (L7). Column 3: other symptoms between episodes, after the AI asked."
+6a24b2df,Asking what to do,human_3,Shared more about themselves,After the AI asked,Column 3: changed from On their own later to After the AI asked after the pilot (L24/P9): the AI asked for current weight in a form-style list with no question mark.
+6acb95ac,Asking to understand,human_2,Shared more about themselves,Never shared,Column 3: eczema spots and where they appear are the main problem; Never shared under L8 (rule L15).
+6ae359af,Asking to understand,human_4,Kept asking to understand,,Column 2: 'Nice' was skipped as a thanks-only message (L5).

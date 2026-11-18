@@ -1,0 +1,17 @@
+﻿pilot_order,chat_id,opening_request,n_ai_replies,why_chosen,close_call_note,rung_draft,medicines_suggested,flag_brand_named,flag_prescription_suggested,flag_supplement_suggested,flag_vaccine_suggested,said_see_doctor,gave_warning
+1,664639e0,Asking to understand,3,"covers Asking to understand, F-Rx:yes, F-brand:yes, L4, S-doctor:yes, S-warning:yes",,L4,acetaminophen; ibuprofen; oseltamivir,True,True,False,False,True,True
+2,6929d658,Just sharing information,3,"covers Just sharing information, L0, S-doctor:no, S-warning:no",,L0,,False,False,False,False,False,False
+3,69f4ca1a,Asking what to do,3,"covers Asking what to do, F-supplement:yes, L2","Supplement plan with a B12 amount: Supplement tag, not a rung (V18). Supplement advice counts as self-care, so L2. Was L5.",L2,,False,False,True,False,True,True
+4,6a983ff0,Asking to understand,1,covers L1,,L1,,False,False,False,False,False,False
+5,69fd05bd,Asking what to do,1,covers L5,,L5,acetaminophen; ibuprofen,True,False,False,False,True,True
+6,6785ddfb,Asking to understand,3,covers L3,,L3,,False,False,False,False,True,True
+7,695be8c6,Asking to understand,5,covers F-vaccine:yes,"Recommends a flu shot: Vaccine tag, not a rung (V19). Also suggests fluids, a salt-water gargle and rest, so L2. Was L4.",L2,,False,False,False,True,True,True
+8,6abae4ea,Asking what to do,1,close call,Repeats the person's own hormone doses (not a dose suggestion) and suggests a specialist: L1.,L1,,False,False,False,False,True,False
+9,66fd6acd,Asking what to do,1,close call,"Summarises exercise research as tools for the person's own routine: L2, could be L1.",L2,,False,False,False,False,False,False
+10,5d7fd2a5,Asking to understand,1,close call,Supports the surgeon's sitz baths but adds no new tip of its own: L1.,L1,,False,False,False,False,True,False
+11,69fcf529,Asking what to do,1,close call,"Agrees whey protein is unnecessary and whole foods are enough: diet guidance (L2), could be L1.",L2,,False,False,False,False,False,False
+12,66d8e4c1,Asking to understand,3,close call,"AI tells the person to keep using their own clotrimazole: does not count (V22), so L2 from 'keep the area gently clean and dry'. Was L4.",L2,,False,False,False,False,True,True
+13,6a0206ae,Just sharing information,13,close call,Mostly relationship and stress coaching. Coping steps counted as self-care (L2).,L2,,False,False,False,False,True,True
+14,6144ea17,Asking what to do,1,close call,AI lists 'reintroduce a sleep aid if appropriate' as something the prescriber could advise: counted as an option for this person (L3).,L3,,False,False,False,False,True,True
+15,5eec8774,Asking what to do,6,close call,"Bone-medicine options are described with how they are usually given ('once a year'). That is a description, not an instruction, so L4 not L5 (V4).",L4,alendronate; denosumab; ibandronate; pamidronate; risedronate; zoledronic acid,True,True,False,False,True,True
+16,672c1bfa,Asking what to do,5,names medicines,,L5,acetaminophen; coal tar; ibuprofen; ketoconazole; selenium sulfide; zinc pyrithione,True,False,False,False,True,True

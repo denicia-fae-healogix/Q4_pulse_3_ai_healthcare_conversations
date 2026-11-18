@@ -1,0 +1,8 @@
+check,n
+Missing study ID,0
+Study ID not in study_labels,0
+Missing Prolific ID,0
+Prolific ID appears more than once (within or across studies),0
+Prolific ID appears in both studies,0
+Status is not Complete,0
+Alchemer preview response,0

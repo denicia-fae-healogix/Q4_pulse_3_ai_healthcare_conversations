@@ -1,0 +1,30 @@
+﻿chat_id,what,coder,code,note
+5eec8774,main goal,1,A3,unclear because choosing a medication after the doctor stopped one could be read as A6 (care decision); applied the 'X so that prepare' rule making A3 main and A6 extra.
+5eec8774,main goal,2,A3,"unclear because this is 'X so that I can prepare' (A3 main, A6 extra), but it could also be read as deciding about a treatment with the clinician (A6)"
+5eec8774,main goal,3,A3,"unclear because the answer is framed around preparing for a doctor visit (A6); per the 'X so that Y' rule X (medication options, A3) is main"
+5f491a49,T-doctor,1,yes,unclear because 'tips as to scheduling an appointment' implies but does not plainly state the AI advised seeing a doctor.
+5f491a49,T-doctor,2,yes,unclear because tips on scheduling an appointment imply but do not explicitly state advice to see a doctor
+5f491a49,T-doctor,3,yes,unclear because tips on scheduling an appointment imply but do not explicitly state advice to see a doctor
+6144ea17,main goal,2,A1,unclear because the goal answer is vague (A8 considered); the goal was taken from the goal-met answer under G9
+6144ea17,main goal,3,A1,unclear because the goal answer is vague (A8 considered); goal named from goal-met answer per G9
+6658d49a,main goal,1,A4,"unclear because the answer mostly explains why AI was used; the condition is known so A4 rather than A1, but it is close to A8."
+6658d49a,main goal,2,A4,"unclear because the goal is mostly about effort saved; the topic is a known 'particular medical condition' so A4 fits, A8 was considered"
+6658d49a,main goal,3,A4,unclear because the goal is mainly about convenience of finding information; A8 considered but a known condition is named
+66ec5904,main goal,1,A4,unclear because A6 is close; applied the 'X so that prepare' rule making A4 main.
+66fd6acd,goal met,1,B1,unclear because there is no explicit yes; read as a clear result (B1) rather than B4.
+66fd6acd,goal met,3,B1,"unclear because there is no explicit yes; describes a clear result, so B1 over B4"
+66fd6acd,main goal,1,A4,"unclear because general facts about exercise/sleep are A4, but applying exercise to feel refreshed could be A3 self-care."
+66fd6acd,main goal,2,A4,"unclear because general facts about exercise and sleep are A4, but using exercise to feel refreshed could be practical self-care advice (A3)"
+66fd6acd,main goal,3,A4,"unclear because general facts about exercise/sleep are A4, but the goal-met answer frames it as how they can use exercise (A3 considered)"
+671a8337,main goal,1,A2,"unclear because the first sentence mixes general symptom info (A4) with when to seek care (A2), and the later diagnosis request (A1) may be the real aim; picked A2 as first clear goal."
+671a8337,main goal,2,A1,"unclear because the first clause mixes 'signs and symptoms of chest pain' (A1/A4) with 'when to seek medical attention' (A2); the first-stated rule does not clearly separate them, A2 was considered"
+671a8337,main goal,3,A2,unclear because the first clause 'signs and symptoms of chest pain' could be read as A4 general knowledge stated first; A1 (diagnosis) also considered
+6785ddfb,main goal,1,A6,"unclear because the goal is vague; 'before I see the doctor' is listed under A6, but A8 was considered since no health question is named."
+6785ddfb,main goal,2,A6,"unclear because 'before I see the doctor' points to A6, but getting 'an idea' could mean finding out what is wrong (A1)"
+6785ddfb,main goal,3,A6,unclear because 'get an idea' is vague and could mean A1 (what might be wrong); 'before I see the doctor' is listed under A6
+69a1ae3c,main goal,1,A5,"unclear because the first-stated goal 'find credible information quickly' is vague and matches no A code, so the main-goal rule skipped it; considered A8 for that part."
+69a1ae3c,main goal,2,A5,"unclear because the first-stated goal 'find credible information quickly' is vague and fits no A code (A8 considered), so the first codable goal A5 was used"
+69a1ae3c,main goal,3,A5,"unclear because the first-stated goal (find credible information quickly) is vague and fits no A code, so the first codable goal (A5) was chosen; A8 considered for the first sentence"
+6acb95ac,main goal,1,A1,"unclear because 'understand a health concern' could be A4, but the goal-met answer shows they wanted to confirm a suspected condition (A1)."
+6acb95ac,main goal,2,A1,"unclear because 'understand a health concern' could be A4, but the goal-met answer shows they wanted to confirm a suspected condition (A1)"
+6acb95ac,main goal,3,A1,unclear because 'understand a health concern' could be A4; goal-met answer ('confirmed my suspision of what the condition was') points to A1

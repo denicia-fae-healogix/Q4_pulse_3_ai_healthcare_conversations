@@ -1,0 +1,3 @@
+﻿chat_id,column,from_code,to_code,reason,decided_by,log_id
+66d9e5be,col3,D3,D2,"The AI turn just before ended 'If you tell me where exactly the pain is ... I can help you narrow down ...'; an invitation counts as the AI asking, because the person was primed to give that information.",decided by: analyst,L26
+69fff128,col3,D3,D2,"The AI turn just before ended 'If you tell me exactly where the pain is ... I can narrow the differential considerably'; an invitation counts as the AI asking, because the person was primed to give that information.",decided by: analyst,L26

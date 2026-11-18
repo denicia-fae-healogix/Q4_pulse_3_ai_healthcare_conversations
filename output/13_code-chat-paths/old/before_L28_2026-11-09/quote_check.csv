@@ -1,0 +1,145 @@
+﻿chat_id,coder,column,turn_named,quote,in_named_turn,in_any_participant_turn,found_in
+69f4ca1a,1,column 2,human_2,My anemia is from b12/folate deficiency,True,True,human_2
+69f4ca1a,1,column 3,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",True,True,human_1
+66c0f464,1,column 2,human_2,What impact (if any) has taking a GLP-1A medication had on your mental health?,True,True,human_2
+5aeeb490,1,column 2,human_2,"Back of neck, closer to shoulders",True,True,human_2
+5aeeb490,1,column 3,human_4,After sleeping,True,True,human_4
+5f47f200,1,column 2,human_2,There is no swelling but I do run daily,True,True,human_2
+5f47f200,1,column 3,human_2,I do run daily,True,True,human_2
+66aafcc3,1,column 2,human_2,Now how likely will they have a bed at 12,True,True,human_2
+6a10664c,1,column 2,human_2,Help me understand what causes are most consistent and what medical assessment is appropriate,True,True,human_2
+6a10664c,1,column 3,human_3,I do have a lot of cramping and gas between episodes.,True,True,human_3
+695be8c6,1,column 2,human_2,yes it was for pain for the tendinitis,True,True,human_2
+695be8c6,1,column 3,human_1,"went to doctor today with tennis elbow, injected two shots in my butt",True,True,human_1
+5eec8774,1,column 2,human_2,"Claude, you are missing a conversation.",True,True,human_2
+5f491a49,1,column 2,human_2,Should I schedule an appointment with a specialist?,True,True,human_2
+6785ddfb,1,column 2,human_2,yes I have itching and bumps all over,True,True,human_2
+69ab73e1,1,column 2,human_2,What should I do?,True,True,human_2
+671a8337,1,column 2,human_2,what if i am spitting blood,True,True,human_2
+6a0206ae,1,column 2,human_2,Right now the biggest stressors is my gf's family primarily her disrespectful kids,True,True,human_2
+6a0206ae,1,column 3,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,True,True,human_2
+63e55f08,1,column 2,human_2,more like physical exhaustion,True,True,human_2
+69600cc8,1,column 2,human_2,"Center left and right, but worse on one side",True,True,human_2
+69600cc8,1,column 3,human_1,Husband's low back started hurting yesterday,True,True,human_1
+6ae359af,1,column 2,human_4,How do I tell i have cramps,True,True,human_4
+69fe1811,1,column 2,human_2,I just started shedding but have 3/4 inch baby hair,True,True,human_2
+69fe1811,1,column 3,human_1,baby hair coming in after 3 months on zepbound,True,True,human_1
+664639e0,1,column 2,human_2,--- How long does the flu last,True,True,human_2
+6a24b2df,1,column 2,human_3,im at 350 to start,True,True,human_3
+6a24b2df,1,column 3,human_3,im at 350 to start,True,True,human_3
+6929d658,1,column 2,human_2,I just went a whole week without saying anything to my family.,True,True,human_1;human_2;human_3
+6712af54,1,column 2,human_2,What is the Stevens-Johnson syndrome?,True,True,human_2
+69fb8bf7,1,column 2,human_2,"Dull ache, feel weak when trying to stand up from sitting.",True,True,human_2
+69fb8bf7,1,column 3,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,True,True,human_1
+697cba85,1,column 2,human_2,I would rate it at 7.,True,True,human_2
+697cba85,1,column 3,human_1,I've been dealing with some bad stomach aches for the past few weeks.,True,True,human_1
+6acb95ac,1,column 2,human_2,"Yes they are dry and flaky and are fairly small, usually on my face",True,True,human_2
+69fff128,1,column 2,human_2,i've had it for four weeks or maybe more. it hasn't gotten better or worse,True,True,human_2
+69fff128,1,column 3,human_2,i've had it for four weeks or maybe more.,True,True,human_2
+616f347d,1,column 2,human_2,The double reappears if I don't blink a lot,True,True,human_2
+616f347d,1,column 3,human_1,My eyes seem to be working harder to make the prism glasses work.,True,True,human_1
+6a21a961,1,column 2,human_2,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,True,True,human_2
+672c1bfa,1,column 2,human_2,Can we tell me what causes dandruff,True,True,human_2
+66d8e4c1,1,column 2,human_2,so under my breast I have like yeast on the skin,True,True,human_2
+66d8e4c1,1,column 3,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,True,True,human_2
+66d9e5be,1,column 2,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+66d9e5be,1,column 3,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+6a106089,1,column 2,human_2,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,True,True,human_2
+6a106089,1,column 3,human_1,My eye doctor is sending me to a retina specialist,True,True,human_1
+6a9bb385,1,column 2,human_3,What are the small findings? What do they mean,True,True,human_3
+6a106089,2,column 2,human_2,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,True,True,human_2
+6a106089,2,column 3,human_1,My eye doctor is sending me to a retina specialist,True,True,human_1
+672c1bfa,2,column 2,human_2,Can we tell me what causes dandruff,True,True,human_2
+66aafcc3,2,column 2,human_2,Now how likely will they have a bed at 12,True,True,human_2
+697cba85,2,column 2,human_2,I would rate it at 7.,True,True,human_2
+697cba85,2,column 3,human_1,I've been dealing with some bad stomach aches for the past few weeks.,True,True,human_1
+671a8337,2,column 2,human_2,what if i am spitting blood,True,True,human_2
+66d8e4c1,2,column 2,human_2,under my breast I have like yeast on the skin. And I've been to the doctor before and they gave me like a cream to put on it.,True,True,human_2
+66d8e4c1,2,column 3,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,True,True,human_2
+6929d658,2,column 2,human_2,I just went a whole week without saying anything to my family.,True,True,human_1;human_2;human_3
+66c0f464,2,column 2,human_2,What impact (if any) has taking a GLP-1A medication had on your mental health?,True,True,human_2
+69f4ca1a,2,column 2,human_2,My anemia is from b12/folate deficiency,True,True,human_2
+69f4ca1a,2,column 3,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",True,True,human_1
+66d9e5be,2,column 2,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+66d9e5be,2,column 3,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+69ab73e1,2,column 2,human_2,What should I do?,True,True,human_2
+6a21a961,2,column 2,human_2,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,True,True,human_2
+69fff128,2,column 2,human_2,i've had it for four weeks or maybe more. it hasn't gotten better or worse,True,True,human_2
+69fff128,2,column 3,human_2,i've had it for four weeks or maybe more.,True,True,human_2
+6acb95ac,2,column 2,human_2,"Yes they are dry and flaky and are fairly small, usually on my face",True,True,human_2
+6ae359af,2,column 2,human_4,How do I tell i have cramps,True,True,human_4
+6712af54,2,column 2,human_2,What is the Stevens-Johnson syndrome?,True,True,human_2
+6785ddfb,2,column 2,human_2,yes I have itching and bumps all over,True,True,human_2
+5f47f200,2,column 2,human_2,There is no swelling but I do run daily,True,True,human_2
+5f47f200,2,column 3,human_2,I do run daily,True,True,human_2
+6a9bb385,2,column 2,human_3,What are the small findings? What do they mean,True,True,human_3
+5aeeb490,2,column 2,human_2,"Back of neck, closer to shoulders",True,True,human_2
+5aeeb490,2,column 3,human_4,After sleeping,True,True,human_4
+5eec8774,2,column 2,human_2,"Claude, you are missing a conversation.",True,True,human_2
+6a24b2df,2,column 2,human_3,im at 350 to start,True,True,human_3
+6a24b2df,2,column 3,human_3,im at 350 to start,True,True,human_3
+5f491a49,2,column 2,human_2,Should I schedule an appointment with a specialist?,True,True,human_2
+69600cc8,2,column 2,human_2,"Center left and right, but worse on one side",True,True,human_2
+69600cc8,2,column 3,human_1,Husband's low back started hurting yesterday,True,True,human_1
+664639e0,2,column 2,human_2,How long does the flu last,True,True,human_2
+6a10664c,2,column 2,human_2,Help me understand what causes are most consistent and what medical assessment is appropriate,True,True,human_2
+6a10664c,2,column 3,human_3,I do have a lot of cramping and gas between episodes.,True,True,human_3
+69fb8bf7,2,column 2,human_2,"Dull ache, feel weak when trying to stand up from sitting.",True,True,human_2
+69fb8bf7,2,column 3,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,True,True,human_1
+63e55f08,2,column 2,human_2,more like physical exhaustion,True,True,human_2
+616f347d,2,column 2,human_2,The double reappears if I don't blink a lot,True,True,human_2
+616f347d,2,column 3,human_1,My eyes seem to be working harder to make the prism glasses work.,True,True,human_1
+6a0206ae,2,column 2,human_2,Right now the biggest stressors is my gf's family primarily her disrespectful kids,True,True,human_2
+6a0206ae,2,column 3,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,True,True,human_2
+69fe1811,2,column 2,human_2,I just started shedding but have 3/4 inch baby hair,True,True,human_2
+69fe1811,2,column 3,human_1,baby hair coming in after 3 months on zepbound,True,True,human_1
+695be8c6,2,column 2,human_2,yes it was for pain for the tendinitis,True,True,human_2
+695be8c6,2,column 3,human_1,"went to doctor today with tennis elbow, injected two shots in my butt.",True,True,human_1
+69600cc8,3,column 2,human_2,"Center left and right, but worse on one side",True,True,human_2
+69600cc8,3,column 3,human_1,Husband's low back started hurting yesterday,True,True,human_1
+69fb8bf7,3,column 2,human_2,"Dull ache, feel weak when trying to stand up from sitting.",True,True,human_2
+69fb8bf7,3,column 3,human_1,Dealing with knee pain after challenging travel with lots of walking and stair climbing,True,True,human_1
+69fff128,3,column 2,human_2,i've had it for four weeks or maybe more. it hasn't gotten better or worse,True,True,human_2
+69fff128,3,column 3,human_2,i've had it for four weeks or maybe more.,True,True,human_2
+66d9e5be,3,column 2,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+66d9e5be,3,column 3,human_2,"For husband, he also had type 2 diabetes and smokes",True,True,human_2
+616f347d,3,column 2,human_2,The double reappears if I don't blink a lot,True,True,human_2
+616f347d,3,column 3,human_1,My eyes seem to be working harder to make the prism glasses work.,True,True,human_1
+6929d658,3,column 2,human_2,I just went a whole week without saying anything to my family.,True,True,human_1;human_2;human_3
+695be8c6,3,column 2,human_2,yes it was for pain for the tendinitis,True,True,human_2
+695be8c6,3,column 3,human_1,"went to doctor today with tennis elbow, injected two shots in my butt.",True,True,human_1
+664639e0,3,column 2,human_2,--- How long does the flu last,True,True,human_2
+5f47f200,3,column 2,human_2,There is no swelling but I do run daily,True,True,human_2
+5f47f200,3,column 3,human_2,There is no swelling but I do run daily,True,True,human_2
+69fe1811,3,column 2,human_2,I just started shedding but have 3/4 inch baby hair,True,True,human_2
+69fe1811,3,column 3,human_1,baby hair coming in after 3 months on zepbound,True,True,human_1
+6ae359af,3,column 2,human_4,How do I tell i have cramps,True,True,human_4
+6712af54,3,column 2,human_2,What is the Stevens-Johnson syndrome?,True,True,human_2
+66aafcc3,3,column 2,human_2,Now how likely will they have a bed at 12,True,True,human_2
+6a9bb385,3,column 2,human_3,What are the small findings? What do they mean,True,True,human_3
+63e55f08,3,column 2,human_2,more like physical exhaustion,True,True,human_2
+5eec8774,3,column 2,human_2,"Claude, you are missing a conversation.",True,True,human_2
+5aeeb490,3,column 2,human_2,"Back of neck, closer to shoulders",True,True,human_2
+5aeeb490,3,column 3,human_4,After sleeping,True,True,human_4
+69f4ca1a,3,column 2,human_2,My anemia is from b12/folate deficiency,True,True,human_2
+69f4ca1a,3,column 3,human_1,"I want to deal with my pcos, anemia, pmdd, and high cholesterol",True,True,human_1
+69ab73e1,3,column 2,human_2,What should I do?,True,True,human_2
+5f491a49,3,column 2,human_2,Should I schedule an appointment with a specialist?,True,True,human_2
+66d8e4c1,3,column 2,human_2,under my breast I have like yeast on the skin. And I've been to the doctor before and they gave me like a cream to put on it.,True,True,human_2
+66d8e4c1,3,column 3,human_2,And I've been to the doctor before and they gave me like a cream to put on it.,True,True,human_2
+6a10664c,3,column 2,human_2,Help me understand what causes are most consistent and what medical assessment is appropriate,True,True,human_2
+6a10664c,3,column 3,human_3,I do have a lot of cramping and gas between episodes.,True,True,human_3
+6a21a961,3,column 2,human_2,How can I tell if I'm having an allergic reaction to antibiotics I started yesterday,True,True,human_2
+671a8337,3,column 2,human_2,what if i am spitting blood,True,True,human_2
+672c1bfa,3,column 2,human_2,Can we tell me what causes dandruff,True,True,human_2
+6a0206ae,3,column 2,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,True,True,human_2
+6a0206ae,3,column 3,human_2,I have been with my gf for 2.5 years. I have been dealing with this for most of that.,True,True,human_2
+66c0f464,3,column 2,human_2,What impact (if any) has taking a GLP-1A medication had on your mental health?,True,True,human_2
+6785ddfb,3,column 2,human_2,yes I have itching and bumps all over,True,True,human_2
+6acb95ac,3,column 2,human_2,"Yes they are dry and flaky and are fairly small, usually on my face",True,True,human_2
+6a24b2df,3,column 2,human_3,im at 350 to start,True,True,human_3
+6a24b2df,3,column 3,human_3,im at 350 to start,True,True,human_3
+697cba85,3,column 2,human_2,I would rate it at 7.,True,True,human_2
+697cba85,3,column 3,human_1,I've been dealing with some bad stomach aches for the past few weeks.,True,True,human_1
+6a106089,3,column 2,human_2,he said he didnt see any problems on my pictures and scans but wanted me to go get checked otu,True,True,human_2
+6a106089,3,column 3,human_1,My eye doctor is sending me to a retina specialist,True,True,human_1

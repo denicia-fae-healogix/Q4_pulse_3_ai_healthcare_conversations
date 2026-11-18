@@ -1,0 +1,4 @@
+﻿chat_id,reason
+69d51123,"Expected. The step-07 draft passes gave no request type. Pilot edit E7 (applied, frozen) added 'is it safe right now, given my condition' to R3, and all 3 coders gave R3."
+69f4ca1a,"Request: expected. Pilot edit E6 (applied) moved supplements for named conditions from a goal (R6) to handling a problem (R3); all 3 coders gave R3. Topic: all 3 coders chose T10; the analyst reviewed it and accepted T10 because PCOS and PMDD are reproductive, replacing the earlier decision to leave it under T6."
+6a0206ae,"All 3 coders gave R1 + R3 (each marked unclear). The analyst reviewed it and set R4 only: the message sets up what they want to talk about, with no cause question; emotion goes to sentiment (see 10_review_decisions.csv)."

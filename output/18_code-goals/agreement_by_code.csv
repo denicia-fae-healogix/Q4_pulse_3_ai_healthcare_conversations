@@ -1,0 +1,20 @@
+﻿what,type,chats,all_3_agree,pct_all_3,times_coded_yes,fleiss_kappa,kappa_in_words,confirmed,kappa_note
+Main goal,single,52,51,98.1,,0.98,almost perfect,yes,
+Goal met,single,52,52,100.0,,1.0,almost perfect,yes,
+Goal A1 Find out what might be wrong,yes/no,52,52,100.0,75,1.0,almost perfect,yes,
+Goal A2 Decide whether to get medical care,yes/no,52,51,98.1,31,0.96,almost perfect,yes,
+Goal A3 Find out what to do about it,yes/no,52,50,96.2,57,0.94,almost perfect,yes,
+"Goal A4 Learn about a condition, medicine or test",yes/no,52,49,94.2,31,0.88,almost perfect,yes,
+"Goal A5 Get a diet, exercise or weight plan",yes/no,52,52,100.0,9,1.0,almost perfect,yes,
+Goal A6 Prepare for an appointment or a care decision,yes/no,52,52,100.0,24,1.0,almost perfect,yes,
+Goal A7 Get reassurance or emotional support,yes/no,52,52,100.0,15,1.0,almost perfect,yes,
+Goal A8 No clear goal stated,yes/no,52,51,98.1,5,0.79,substantial,yes,rare code: kappa unstable
+Why not W1 No clear answer or still unsure,yes/no,52,52,100.0,12,1.0,almost perfect,yes,
+Why not W2 Needed a real doctor,yes/no,52,52,100.0,6,1.0,almost perfect,yes,rare code: kappa unstable
+Why not W3 Too much or hard-to-read information,yes/no,52,52,100.0,3,1.0,almost perfect,yes,rare code: kappa unstable
+Why not W4 Still in progress,yes/no,52,52,100.0,3,1.0,almost perfect,yes,rare code: kappa unstable
+"Why not W5 Hedged, nothing named as missing",yes/no,52,52,100.0,12,1.0,almost perfect,yes,
+Why not W6 AI could not do an extra task,yes/no,52,52,100.0,3,1.0,almost perfect,yes,rare code: kappa unstable
+Tag T-doctor Told to see a doctor,yes/no,52,52,100.0,18,1.0,almost perfect,yes,
+Tag T-other Asked on behalf of someone else,yes/no,52,52,100.0,33,1.0,almost perfect,yes,
+Tag T-whyAI Said why they used AI,yes/no,52,51,98.1,19,0.94,almost perfect,yes,

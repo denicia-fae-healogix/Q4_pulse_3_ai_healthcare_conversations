@@ -1,0 +1,10 @@
+﻿column,code,name,times_used,chats,high,medium,low,unclear_notes
+column 2,M1,Kept asking to understand,6,2,3,3,0,3
+column 2,M2,Then asked what to do,6,2,6,0,0,0
+column 2,M3,Shared more about themselves,18,6,18,0,0,2
+column 2,M4,Pushed back or questioned the AI,3,1,3,0,0,0
+column 2,M6,Continued a task,3,1,3,0,0,0
+column 3,D1,With the first message,3,1,3,0,0,0
+column 3,D2,After the AI asked,9,3,0,9,0,9
+column 3,D3,On their own later,3,1,0,1,2,3
+column 3,D4,Never shared,9,3,0,8,1,9

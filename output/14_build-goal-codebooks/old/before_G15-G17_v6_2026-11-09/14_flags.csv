@@ -1,0 +1,27 @@
+chat_id,main_goal_draft,met_draft,close_call_note,type
+5eec8774,A3,B1,X-so-that-Y rule: options (A3) is main; preparing for the doctor (A6) is extra.,close call
+5f491a49,A1,B1,"Marked as main (""primarily""), although learning about sleep apnea is stated first.",close call
+6144ea17,A1,B1,Goal answer only says why AI was used; the goal is taken from the goal-met answer (G9). Was A8 before.,close call
+63e55f08,A1,B2,"Hedge ""mostly achieved"": Partly (G10).",close call
+663b8ae0,A1,B2,"Hedge ""in a sense"": Partly (G10).",close call
+664639e0,A2,B1,"""I think so"" is unsure wording, not a hedge about how much was met: stays Yes (G10).",close call
+66aafcc3,A1,B2,"Hedge ""mostly achieved"": Partly (G10).",close call
+66c0f464,A4,B1,A4 (learn about a medicine) vs A1 (are my changes normal).,close call
+66d9e5be,A3,B1,"A3 (next step) vs A6 (care decision): no clinician recommendation mentioned, so A3.",close call
+66ec5904,A4,B1,"X-so-that-Y rule: learn about the condition (A4) is main; reassurance comes later in the answer, so not main (G8).",close call
+66fd6acd,A4,B1,A4 (general facts about exercise and sleep) vs A3 (a way to sleep better).,close call
+6712af54,A4,B2,"Hedge ""for the most part"": Partly (G10).",close call
+6952e59d,A1,B1,"Opening sentence is vague (""find out an answer to my question""), so the first specific goal is used.",close call
+695be8c6,A3,B1,"Vaccine question coded A3 (should I do X), not A2.",close call
+69a1ae3c,A5,B2,"Hedge ""mostly achieved"" (the AI could not make a PDF): Partly (G10).",close call
+69ab73e1,A3,B1,"No yes/no word; a clear result is described, so B1.",close call
+69fcf529,A8,B1,No health goal named.,close call
+69fe1811,A1,B1,A1 (why is this happening to me) vs A4 (learn about a medicine).,close call
+6a0206ae,A7,B4,Ongoing conversation: Unclear (G12).,close call
+6a106089,A6,B1,"Learning what an upcoming appointment involves: A6, not A4.",close call
+6a637176,A2,B1,Grammar makes the goal hard to read; main goal is whether treatment is needed.,close call
+6a9bb385,A4,B1,"Goal is implied, not stated (they only say they had test results).",close call
+6a9f047c,A7,B1,"Reassurance is written first, so A7 is main (G8); ""is it serious"" (A2) comes next. Goal met + told to see a doctor: Yes plus the tag (G11).",close call
+6abae4ea,A2,B1,"Says yes but doubts the AI; nothing named as unmet, so B1.",close call
+6ac2aee8,A1,B1,"Reassurance is the reason for the request, not written as a goal of its own first, so A1 stays main (G8). Goal met + told to see a doctor: Yes plus the tag (G11).",close call
+6acb95ac,A1,B2,"Understanding is written first and ""calm down"" comes later, so A1 stays main (G8).",close call
