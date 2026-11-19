@@ -48,6 +48,8 @@ def referral(mask):
     return [int((g.ai_refers_professional == 1).sum()), int(len(g))]
 
 pp = pp.copy()
+# Nov 2026 review: slide 9's cause group is "what is causing it or is it serious" (test-result questions stay separate)
+pp["human_asks_cause_serious"] = pp[["human_asks_what_cause", "human_asks_serious"]].max(axis=1, skipna=False)
 pp["topic_skin_rash_allergy"] = pp[["topic_skin_hair", "topic_allergy_rash"]].max(axis=1, skipna=False)
 
 out = {
@@ -63,8 +65,8 @@ out = {
     "n_two_plus_areas": int((pp[TOPICS10].sum(axis=1) > 1).sum()),
     "n_everyday": int((pp[EVERYDAY].sum(axis=1) > 0).sum()),
     "followup": {c: cnt(c, multi) for c in FOLLOW},
-    "referral_by_asked_cause": {"asked": referral(pp.human_asks_cause == 1),
-                                "did_not_ask": referral(pp.human_asks_cause == 0)},
+    "referral_by_asked_cause": {"asked": referral(pp.human_asks_cause_serious == 1),
+                                "did_not_ask": referral(pp.human_asks_cause_serious == 0)},
     # How the AI answered, on the same 50 people (Part 3A slide 9 and takeaways)
     "ai": {c: cnt(c, pp) for c in ["ai_refers_professional", "ai_urgent_care", "ai_followup_question",
                                     "ai_recommends_med", "ai_disclaimer"]},

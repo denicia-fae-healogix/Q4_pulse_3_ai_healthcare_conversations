@@ -70,9 +70,11 @@ NA_ITEMS <- c("distressed", "upset", "guilty", "scared", "hostile",
               "irritable", "ashamed", "nervous", "jittery", "afraid")
 
 # Labels for the participant codes (see sections 4 and 5 of Q4_3_conversation_codebook.md)
-# The five v2 question types. human_asks_cause is the combined measure (what is causing it, is it serious, or what a
-# test result means); slide 9 (referral) uses it, and the slide 9 tests run across these five types (20 pairings).
-ASK_LABELS <- c(human_asks_cause = "What is causing it, or is it serious",
+# The five question types tested on slide 9 (20 pairings). Nov 2026 review: test results stay a separate type on every
+# slide, so the cause group is human_asks_cause_serious = asked what was causing it OR whether it was serious (24 people,
+# 48%; made in the load chunk). The older combined code human_asks_cause (26) also counted 2 people who asked only what
+# a test result meant; it is kept in the data but no longer used on the slides.
+ASK_LABELS <- c(human_asks_cause_serious = "What is causing it, or is it serious",
                 human_asks_treatment = "How to treat or manage it",
                 human_asks_condition_info = "General facts about a condition",
                 human_asks_care = "Whether or where to get care",
@@ -175,7 +177,7 @@ if (!"coding_source_v3" %in% names(codes)) stop("The codes file has no v3 codes 
 
 CODE_BIN <- c("convo_usable", "human_mentions_disease", "human_shares_personal", "human_asks_med", "human_multi_turn",
               "ai_recommends_med", "ai_refers_professional", "ai_urgent_care", "ai_followup_question", "ai_disclaimer",
-              names(ASK_LABELS), names(ASK6_LABELS), names(TOPIC_LABELS), "topic_skin_hair", "topic_allergy_rash", "human_pushback", "human_followup_adds_detail", "human_followup_new_question",
+              names(ASK_LABELS), "human_asks_cause", names(ASK6_LABELS), names(TOPIC_LABELS), "topic_skin_hair", "topic_allergy_rash", "human_pushback", "human_followup_adds_detail", "human_followup_new_question",
               "human_expresses_worry")
 CODE_NUM <- c("n_human_turns", "ai_n_meds")
 codes <- codes |> mutate(across(any_of(unique(c(CODE_BIN, CODE_NUM))), as.numeric))
@@ -209,7 +211,8 @@ dat <- codes |>
 
 # The participant base for this deck: usable conversations with at least one participant message (v2 coded)
 pp <- dat |> filter(!is.na(coding_source_v2)) |>
-  mutate(topic_skin_rash_allergy = pmax(topic_skin_hair, topic_allergy_rash))   # merged area (Nov 2026 review)
+  mutate(topic_skin_rash_allergy = pmax(topic_skin_hair, topic_allergy_rash),   # merged area (Nov 2026 review)
+         human_asks_cause_serious = pmax(human_asks_what_cause, human_asks_serious))  # cause group, test results not included
 multi <- pp |> filter(n_human_turns > 1)
 
 CALMER_OF <- function(x) factor(case_when(x <= -CALMER_CUT ~ "Calmer", x >= CALMER_CUT ~ "More distressed",
@@ -276,6 +279,7 @@ wrap_html <- function(x, w = 60) vapply(x, function(s) paste(strwrap(htmltools::
 # Words that point to the passage behind each code. Used only to pick which sentence or message to show.
 PAT <- list(
   human_asks_cause          = "why|what (is|could|might|would)|caus|normal|serious|worr|concern|is (this|it|that) ",
+  human_asks_cause_serious  = "why|what (is|could|might|would)|caus|normal|serious|worr|concern|is (this|it|that) ",
   human_asks_what_cause     = "why|what (is|could|might|would)|caus|could (it|this) be",
   human_asks_serious        = "normal|serious|worr|concern|dangerous|should i be",
   human_asks_test_result    = "result|a1c|report|scan|x-?ray|mri|level|blood work|lab",
@@ -469,7 +473,10 @@ check("5", "Asked both what was causing it and whether it was serious (footer)",
       paste0(round(100 * mean(pp$human_asks_what_cause == 1 & pp$human_asks_serious == 1, na.rm = TRUE)), "%"))
 # The three split codes together equal the combined measure used on slide 9
 split_ok <- all(as.numeric((pp$human_asks_what_cause + pp$human_asks_serious + pp$human_asks_test_result) > 0) == pp$human_asks_cause, na.rm = TRUE)
-check("5", "Cause + serious + test result = combined measure used on slide 9 (26 of 50)", "52%",
+check("5", "Cause or serious: the group on slides 6, 9 and 11 (46% + 12% - 10%)", "48%", paste0(round(100 * mean(pp$human_asks_cause_serious == 1, na.rm = TRUE)), "%"))
+check("5", "Asked only what a test result meant (not in that group; footnote)", "2",
+      as.character(sum(pp$human_asks_test_result == 1 & pp$human_asks_cause_serious == 0, na.rm = TRUE)))
+check("5", "For reference: cause, serious or test result (old combined code)", "(not on slide)",
       paste0(round(100 * mean((pp$human_asks_what_cause + pp$human_asks_serious + pp$human_asks_test_result) > 0)), "%", if (split_ok) "" else " (codes disagree)"))
 
 FILL6 <- ifelse(s6q$code == "human_asks_what_cause", DARK, LIGHT)
@@ -555,14 +562,14 @@ xt <- bind_rows(Map(pair_test, grid8$ask, grid8$resp)) |>
          `Did not ask` = paste0(round(100 * resp_no / n_no), "% (", resp_no, " of ", n_no, ")"))
 
 g <- function(a, r) xt[xt$ask == a & xt$resp == r, ]
-c_ref <- g("human_asks_cause", "ai_refers_professional"); t_med <- g("human_asks_treatment", "ai_recommends_med")
+c_ref <- g("human_asks_cause_serious", "ai_refers_professional"); t_med <- g("human_asks_treatment", "ai_recommends_med")
 t_ref <- g("human_asks_treatment", "ai_refers_professional")
-check("9", "Referred: asked what was causing it", "100%", paste0(round(100 * c_ref$resp_yes / c_ref$n_yes), "%"))
-check("9", "Referred: did not ask (headline: about 6 in 10)", "58%", paste0(round(100 * c_ref$resp_no / c_ref$n_no), "%"))
-check("9", "Group sizes", "n = 26 / 24", paste0("n = ", c_ref$n_yes, " / ", c_ref$n_no))
-check("9", "Fisher's exact p (BH across 20 pairings)", "< .001 (.004)", paste0(fmtp(c_ref$p), " (", fmtp(c_ref$p_bh), ")"))
+check("9", "Referred: asked what was causing it or whether it was serious", "100%", paste0(round(100 * c_ref$resp_yes / c_ref$n_yes), "%"))
+check("9", "Referred: did not ask (headline: about 6 in 10)", "62%", paste0(round(100 * c_ref$resp_no / c_ref$n_no), "%"))
+check("9", "Group sizes", "n = 24 / 26", paste0("n = ", c_ref$n_yes, " / ", c_ref$n_no))
+check("9", "Fisher's exact p (BH across 20 pairings)", "< .001 (.014)", paste0(fmtp(c_ref$p), " (", fmtp(c_ref$p_bh), ")"))
 
-d8 <- tibble(group = c(paste0("Asked what was causing it\n(n = ", c_ref$n_yes, ")"), paste0("Did not ask\n(n = ", c_ref$n_no, ")")),
+d8 <- tibble(group = c(paste0("Asked what was causing it\nor whether it was serious (n = ", c_ref$n_yes, ")"), paste0("Did not ask\n(n = ", c_ref$n_no, ")")),
              yes = c(c_ref$resp_yes, c_ref$resp_no), N = c(c_ref$n_yes, c_ref$n_no)) |>
   mutate(no = N - yes) |> pivot_longer(c(yes, no), names_to = "cat", values_to = "n") |>
   mutate(pct = 100 * n / N, cat = factor(cat, c("no", "yes"), c("AI did not refer", "AI referred to a professional")),
@@ -580,13 +587,13 @@ p8 <- ggplot(d8, aes(x = pct, y = group, fill = cat)) +
        x = "% of conversations", y = NULL) +
   theme_hx() + theme(panel.grid.major.y = element_blank())
 invisible(save_fig(p8, "slide09_asked-vs-referral", h = 5.5))
-grp8 <- list(asked = pp$human_asks_cause == 1, not = pp$human_asks_cause == 0)
+grp8 <- list(asked = pp$human_asks_cause_serious == 1, not = pp$human_asks_cause_serious == 0)
 d8h <- bind_rows(lapply(names(grp8), function(g) {
   inn <- !is.na(grp8[[g]]) & grp8[[g]]; N <- sum(inn)
   bind_rows(lapply(c(1, 0), function(v) { k <- inn & pp$ai_refers_professional == v; k[is.na(k)] <- FALSE
     cat <- if (v == 1) "AI referred to a professional" else "AI did not refer"
-    grp <- if (g == "asked") paste0("Asked what was causing it (n = ", N, ")") else paste0("Did not ask (n = ", N, ")")
-    funs <- if (v == 1) list(Participant = if (g == "asked") ask_msg("human_asks_cause") else first_msg, AI = ai_msg("ai_refers_professional"))
+    grp <- if (g == "asked") paste0("Asked what was causing it or whether it was serious (n = ", N, ")") else paste0("Did not ask (n = ", N, ")")
+    funs <- if (v == 1) list(Participant = if (g == "asked") ask_msg("human_asks_cause_serious") else first_msg, AI = ai_msg("ai_refers_professional"))
             else list(Participant = first_msg, AI = ai_msg())
     tibble(group = grp, cat = cat, n = sum(k), N = N, pct = 100 * sum(k) / N,
            hover = hover_share(paste0(grp, ": ", cat), 100 * sum(k) / N, sum(k), N, examples(pp$pid[k], funs))) }))

@@ -71,18 +71,23 @@ NEG  <- "#E3A26F"; BAR  <- "#BDBDBD"; GRID <- "#E6E9EE"; INK <- "#1c2430"; MUTED
 PA_ITEMS <- c("interested", "excited", "strong", "enthusiastic", "proud", "alert", "inspired", "determined", "attentive", "active")
 NA_ITEMS <- c("distressed", "upset", "guilty", "scared", "hostile", "irritable", "ashamed", "nervous", "jittery", "afraid")
 
-# The seven goal types (multi-label: one person can have several). See section 7 of Q4_3_conversation_codebook.md
-GOAL_LABELS <- c(goal_cause          = "Find out what is wrong, or whether it is serious",
-                 goal_treatment      = "Find out how to treat or manage it",
-                 goal_care           = "Decide whether or where to get care",
-                 goal_condition_info = "Learn about a condition in general",
-                 goal_med            = "Ask about a specific medication",
-                 goal_prepare_visit  = "Prepare for a visit or a talk with a provider",
-                 goal_reassurance    = "Get reassurance or validation")
+# The nine goal types (multi-label: one person can have several). See section 7 of Q4_3_conversation_codebook.md
+# Nov 2026 review: the old goal_cause was split into goal_what_cause, goal_serious and goal_test_result so the goal
+# types line up one to one with the question types on deck slide 5. Listed in the slide 5 order, then the two goals
+# with no matching question type.
+GOAL_LABELS <- c(goal_what_cause     = "What is causing it",
+                 goal_treatment      = "How to treat or manage it",
+                 goal_condition_info = "General facts about a condition",
+                 goal_care           = "Whether or where to get care",
+                 goal_serious        = "Is it normal or serious",
+                 goal_med            = "About a specific medication",
+                 goal_test_result    = "What a test result means",
+                 goal_reassurance    = "Reassurance",
+                 goal_prepare_visit  = "Prepare for a visit")
 EXTRA_LABELS <- c(goal_for_other = "The goal was about someone else",
                   goal_ai_easier = "Said AI was quicker, cheaper or easier than the alternative",
                   goal_worry     = "Said they were worried or concerned")
-PRIMARY_LABELS <- c(cause = "Find out what is wrong", treatment = "Treat or manage it", care = "Decide about care",
+PRIMARY_LABELS <- c(what_cause = "Find out what is causing it", serious = "Is it normal or serious", test_result = "What a test result means", treatment = "Treat or manage it", care = "Decide about care",
                     medication = "A specific medication", condition_info = "Learn about a condition",
                     reassurance = "Reassurance", prepare_visit = "Prepare for a visit", other = "Other or unclear")
 # Was the goal met? (D2, convo_goal_met_oe), coded Yes / Partly / No, plus four flags. Codebook section 7
@@ -94,8 +99,11 @@ MET_FLAGS <- c(goal_met_reassured = "Felt reassured, relieved or more confident"
                goal_met_doubt = "Noted a limit of the AI (unclear answer, too much, always agrees, not enough on its own)")
 MET_FLAGS_ALL <- names(MET_FLAGS)
 # Goal type -> the matching code for what the person asked in the chat (3A)
-GOAL_TO_ASK <- c(goal_cause = "human_asks_cause", goal_treatment = "human_asks_treatment", goal_care = "human_asks_care",
-                 goal_condition_info = "human_asks_condition_info", goal_med = "human_asks_med")
+# Each goal type matches the question type of the same name on deck slide 5 (v3 codes). Reassurance and preparing for
+# a visit have no matching question type, so they show a goal bar only.
+GOAL_TO_ASK <- c(goal_what_cause = "human_asks_what_cause", goal_treatment = "human_asks_treatment",
+                 goal_condition_info = "human_asks_condition_info", goal_care = "human_asks_care",
+                 goal_serious = "human_asks_serious", goal_med = "human_asks_med", goal_test_result = "human_asks_test_result")
 ```
 
 ```{r load, include = FALSE}
@@ -145,9 +153,11 @@ gtext <- if (HAS_TEXT) read_chr(in_goal_text) |> add_ids("the goal text file") |
 if (!"convo_goal_met_oe" %in% names(gtext)) gtext$convo_goal_met_oe <- NA_character_
 
 codes <- read_chr(in_codes) |> add_ids("the conversation codes file")
-CONVO_NUM <- c("convo_usable", unname(GOAL_TO_ASK), "ai_refers_professional", "ai_urgent_care", "ai_recommends_med",
+CONVO_NUM <- c("convo_usable", unname(GOAL_TO_ASK), "human_asks_what_cause", "human_asks_serious", "ai_refers_professional", "ai_urgent_care", "ai_recommends_med",
                "ai_followup_question", "ai_n_meds", "n_human_turns")
-codes <- codes |> mutate(across(any_of(CONVO_NUM), as.numeric)) |> select(pid, any_of(CONVO_NUM), any_of(c("human_about", "coding_source_v2")))
+codes <- codes |> mutate(across(any_of(CONVO_NUM), as.numeric)) |>
+  mutate(human_asks_cause_serious = pmax(human_asks_what_cause, human_asks_serious)) |>
+  select(pid, any_of(CONVO_NUM), any_of(c("human_about", "coding_source_v2")))
 
 d05 <- read_chr(in_05) |> add_ids("the survey file (05)")
 PANAS_LABELS <- c("very slightly or not at all" = 1, "a little" = 2, "moderately" = 3, "quite a bit" = 4, "extremely" = 5)
@@ -243,7 +253,7 @@ keep_result <- function(section, measure, value, n = NA) RESULTS[[length(RESULTS
 $(document).on("shown.bs.tab", function() { window.dispatchEvent(new Event("resize")); });
 ```
 
-**What this covers.** Every participant answered C3: "When starting the conversation you just provided, what was your goal?" and later D2, whether that goal was achieved. C3 was coded into seven goal types plus three extra flags; D2 into Yes, Partly or No plus four flags (codebook section 7). One person can have several goal types. Hover over any bar to see the numbers and a few real goal answers. **This report holds real answers, so keep it internal.**
+**What this covers.** Every participant answered C3: "When starting the conversation you just provided, what was your goal?" and later D2, whether that goal was achieved. C3 was coded into nine goal types plus three extra flags; D2 into Yes, Partly or No plus four flags (codebook section 7). One person can have several goal types. Hover over any bar to see the numbers and a few real goal answers. **This report holds real answers, so keep it internal.**
 
 **Bases.** `r N_ALL` people wrote a goal; `r N` wrote a health goal (one described a school essay) and are the base for the goal charts. Comparisons with what people typed use the `r nrow(hgv)` of those with a usable chat and their own messages (the Part 3A base). Comparisons with how the AI answered use the `r nrow(hgu)` with a usable chat. Comparisons with feelings use the `r nrow(hgp)` with complete PANAS before and after.
 
@@ -260,8 +270,8 @@ gt$hover <- vapply(seq_len(nrow(gt)), function(i) paste0("<b>", htmltools::htmlE
   examples(hg$pid[hg[[gt$code[i]]] %in% 1])), character(1))
 for (i in seq_len(nrow(gt))) keep_result("Goal types", gt$label[i], paste0(round(gt$pct[i]), "% (", gt$n[i], " of ", gt$N[i], ")"), gt$N[i])
 top <- gt[1, ]
-t1 <- paste0("Half went to AI to find out what was wrong; ", round(gt$pct[gt$code == "goal_treatment"]), "% wanted to know how to treat it")
-if (abs(top$pct - 50) > 8) t1 <- paste0(round(top$pct), "% went to AI to ", tolower(sub("^Find out", "find out", top$label)))
+t1 <- paste0(round(gt$pct[gt$code == "goal_what_cause"]), "% went to AI to find out what was causing a problem, and ",
+             round(gt$pct[gt$code == "goal_treatment"]), "% to find out how to treat it")
 s1 <- paste0("Share of the ", N, " people who wrote a health goal. People could have more than one goal type, so the bars add to more than 100%.")
 pl_bars(gt, t1, s1)
 save_fig(share_bars(gt, t1, s1), "01_goal_types")
@@ -275,7 +285,7 @@ pm <- hg |> count(goal_primary) |> mutate(pct = 100 * n / sum(n), label = unname
 pm$hover <- vapply(seq_len(nrow(pm)), function(i) paste0("<b>", pm$label[i], "</b><br>", round(pm$pct[i]), "% (", pm$n[i], " of ", N, ")",
   examples(hg$pid[hg$goal_primary == pm$goal_primary[i]])), character(1))
 for (i in seq_len(nrow(pm))) keep_result("Main goal", pm$label[i], paste0(round(pm$pct[i]), "% (", pm$n[i], " of ", N, ")"), N)
-t2 <- paste0("For most people the main goal was to find out what was wrong (", round(pm$pct[pm$goal_primary == "cause"]),
+t2 <- paste0("For most people the main goal was to find out what was wrong (", round(pm$pct[pm$goal_primary == "what_cause"]),
              "%) or how to treat it (", round(pm$pct[pm$goal_primary == "treatment"]), "%)")
 s2 <- paste0("One main goal per person (the one they led with), ", N, " people. Adds to 100%.")
 pl_bars(pm |> select(label, pct, hover), t2, s2)
@@ -285,14 +295,14 @@ save_fig(share_bars(pm, t2, s2), "02_main_goal")
 ### 3. How many goals
 
 ```{r goal-count}
-nt <- hg |> mutate(k = factor(pmin(goal_n_types, 3), levels = 0:3, labels = c("None of the seven (other or unclear)", "One goal type", "Two", "Three or more"))) |>
+nt <- hg |> mutate(k = factor(pmin(goal_n_types, 3), levels = 0:3, labels = c("None of the nine (other or unclear)", "One goal type", "Two", "Three or more"))) |>
   count(k, .drop = FALSE) |> mutate(pct = 100 * n / sum(n), label = as.character(k))
 nt$hover <- paste0("<b>", nt$label, "</b><br>", round(nt$pct), "% (", nt$n, " of ", N, ")")
 multi <- share(as.numeric(hg$goal_n_types >= 2))
 keep_result("How many goals", "Two or more goal types", paste0(round(multi[["pct"]]), "% (", multi[["n"]], " of ", N, ")"), N)
 keep_result("How many goals", "Mean goal types per person", fmt(mean(hg$goal_n_types), 2), N)
 pl_bars(nt |> select(label, pct, hover), paste0(round(multi[["pct"]]), "% brought more than one goal to the same chat"),
-        paste0("Number of the seven goal types in each person's answer, ", N, " people. Mean ", fmt(mean(hg$goal_n_types), 1), " goal types per person."))
+        paste0("Number of the nine goal types in each person's answer, ", N, " people. Mean ", fmt(mean(hg$goal_n_types), 1), " goal types per person."))
 ```
 
 ### 4. Who for, and why AI
@@ -312,22 +322,23 @@ These three flags were not asked about. They only count people who brought them 
 ### 5. Goal vs. what they asked
 
 ```{r goal-vs-ask}
-ga <- bind_rows(lapply(names(GOAL_TO_ASK), function(g) {
-  a <- GOAL_TO_ASK[[g]]; d <- hgv |> filter(!is.na(.data[[g]]), !is.na(.data[[a]]))
-  gl <- d[[g]] == 1; al <- d[[a]] == 1
+ga <- bind_rows(lapply(names(GOAL_LABELS), function(g) {
+  a <- unname(GOAL_TO_ASK[g]); d <- hgv |> filter(!is.na(.data[[g]]))
+  gl <- d[[g]] == 1; al <- if (is.na(a)) rep(NA, nrow(d)) else d[[a]] == 1
   tibble(code = g, label = GOAL_LABELS[[g]], N = nrow(d), n_goal = sum(gl), n_ask = sum(al), n_both = sum(gl & al),
          pct_goal = 100 * mean(gl), pct_ask = 100 * mean(al),
          goal_not_asked = sum(gl & !al), asked_not_goal = sum(!gl & al),
          ids_gap = list(d$pid[gl & !al]), ids_both = list(d$pid[gl & al]))
 }))
-ga <- ga |> arrange(desc(pct_goal))
+# kept in the slide 5 order (not sorted), so the two slides line up row for row
 ga$hover_a <- paste0("<b>", ga$label, "</b><br>Said it was their goal: ", round(ga$pct_goal), "% (", ga$n_goal, " of ", ga$N, ")",
                      vapply(ga$ids_gap, function(x) examples(x, "Said it was a goal, did not ask it outright"), character(1)))
-ga$hover_b <- paste0("<b>", ga$label, "</b><br>Asked it in the chat: ", round(ga$pct_ask), "% (", ga$n_ask, " of ", ga$N, ")<br>",
-                     "Both: ", ga$n_both, "; goal only: ", ga$goal_not_asked, "; asked only: ", ga$asked_not_goal)
+ga$hover_b <- ifelse(is.na(ga$pct_ask), paste0("<b>", ga$label, "</b><br>No matching question type in the chat codes"),
+  paste0("<b>", ga$label, "</b><br>Asked it in the chat: ", round(ga$pct_ask), "% (", ga$n_ask, " of ", ga$N, ")<br>",
+         "Both: ", ga$n_both, "; goal only: ", ga$goal_not_asked, "; asked only: ", ga$asked_not_goal))
 for (i in seq_len(nrow(ga))) {
   keep_result("Goal vs. asked", paste0(ga$label[i], ": said it was a goal"), paste0(round(ga$pct_goal[i]), "% (", ga$n_goal[i], " of ", ga$N[i], ")"), ga$N[i])
-  keep_result("Goal vs. asked", paste0(ga$label[i], ": asked it in the chat"), paste0(round(ga$pct_ask[i]), "% (", ga$n_ask[i], " of ", ga$N[i], ")"), ga$N[i])
+  if (!is.na(ga$pct_ask[i])) keep_result("Goal vs. asked", paste0(ga$label[i], ": asked it in the chat"), paste0(round(ga$pct_ask[i]), "% (", ga$n_ask[i], " of ", ga$N[i], ")"), ga$N[i])
 }
 care <- ga[ga$code == "goal_care", ]
 t5 <- paste0("Their goals ran ahead of their questions: ", round(care$pct_goal), "% wanted help deciding about care, yet only ", round(care$pct_ask), "% asked for it")
@@ -357,7 +368,7 @@ PAIRS <- tribble(~goal, ~ai, ~ai_label,
   "goal_care", "ai_urgent_care", "AI pointed to urgent care, the ER or 911",
   "goal_med", "ai_recommends_med", "AI suggested a specific medication",
   "goal_treatment", "ai_recommends_med", "AI suggested a specific medication",
-  "goal_cause", "ai_followup_question", "AI asked a follow-up question",
+  "goal_what_cause", "ai_followup_question", "AI asked a follow-up question",
   "goal_reassurance", "ai_refers_professional", "AI said to see a provider")
 gai <- bind_rows(lapply(seq_len(nrow(PAIRS)), function(i) {
   g <- PAIRS$goal[i]; a <- PAIRS$ai[i]; d <- hgu |> filter(!is.na(.data[[g]]), !is.na(.data[[a]]))
@@ -442,7 +453,9 @@ if (!HAS_MET) {
   cat("No goal-met codes found (goal_met in 09_Q4_3_goals_coded.csv), so this tab is empty.")
   met_by <- met_ai <- met_feel <- NULL
 } else {
-hm <- hg |> filter(!is.na(goal_met)) |> mutate(goal_met = factor(goal_met, levels = MET_LEVELS), met_yes = as.integer(goal_met == "Yes"))
+# Nov 2026 review: goal-met results use the Part 3A base (the 50 with a health goal AND a usable chat with their own
+# messages), so every deck slide uses the same people. The 9 with a goal but no such chat are left out here.
+hm <- hgv |> filter(!is.na(goal_met)) |> mutate(goal_met = factor(goal_met, levels = MET_LEVELS), met_yes = as.integer(goal_met == "Yes"))
 NM <- nrow(hm)
 met_ex <- function(ids, label = "In their words (D2)") examples(ids, label, col = "convo_goal_met_oe")
 
@@ -453,7 +466,7 @@ mo$hover <- vapply(seq_len(nrow(mo)), function(i) paste0("<b>Goal met? ", mo$lab
 for (i in seq_len(nrow(mo))) keep_result("Goal met", paste0("Goal met: ", mo$label[i]), paste0(round(mo$pct[i]), "% (", mo$n[i], " of ", NM, ")"), NM)
 tm <- paste0(round(mo$pct[mo$label == "Yes"]), "% said the chat met their goal; ", round(mo$pct[mo$label == "Partly"]), "% said partly and ",
              round(mo$pct[mo$label == "No"]), "% said no")
-sm <- paste0(NM, " people with a health goal. D2 asked whether the goal they set was achieved; answers coded Yes, Partly or No. Adds to 100%.")
+sm <- paste0(NM, " people with a health goal and a usable chat with their own messages (the Part 3A base). D2 asked whether the goal they set was achieved; answers coded Yes, Partly or No. Adds to 100%.")
 mo$y <- "All"
 pm_met <- plot_ly(height = 300, width = PLOT_W)
 for (lv in MET_LEVELS) { r <- mo[mo$label == lv, ]
@@ -537,7 +550,7 @@ w4 <- plot_ly(dd, height = 380, width = PLOT_W) |>
 # ---- e. Goal met by what happened in the chat ----
 hmu <- hm |> filter(convo_usable == 1)
 # Did they ask about their main goal in the chat? (main goal type -> matching ask code; 3A base only)
-main_to_ask <- c(cause = "human_asks_cause", treatment = "human_asks_treatment", care = "human_asks_care", condition_info = "human_asks_condition_info", medication = "human_asks_med")
+main_to_ask <- c(what_cause = "human_asks_what_cause", serious = "human_asks_serious", test_result = "human_asks_test_result", treatment = "human_asks_treatment", care = "human_asks_care", condition_info = "human_asks_condition_info", medication = "human_asks_med")
 hmu$asked_own_goal <- vapply(seq_len(nrow(hmu)), function(i) { a <- main_to_ask[hmu$goal_primary[i]]
   if (is.na(a) || is.na(hmu$coding_source_v2[i])) NA_real_ else as.numeric(hmu[[a]][i]) }, numeric(1))
 hmu$multi_turn <- ifelse(is.na(hmu$coding_source_v2), NA, as.numeric(hmu$n_human_turns > 1))
@@ -592,7 +605,9 @@ if (HAS_MET && !file.exists(goal_file_07)) {
 # A rule-based second look: does a simple word list flag the same goals the coder did?
 # Low agreement points to goals worth rereading. Word lists are editable here.
 KEYWORDS <- c(
-  goal_cause          = "\\bwhy\\b|caus|what (is|was|'s) wrong|what (it|this) (is|was|could|might)|diagnos|serious|normal|figure out|results|what i (possibly )?(could )?have|what could",
+  goal_what_cause     = "\\bwhy\\b|caus|what (is|was|'s) wrong|what (it|this) (is|was|could|might)|diagnos|figure out|what i (possibly )?(could )?have|what could",
+  goal_serious        = "serious|normal|concerned|health scare|healthy or not|checked out",
+  goal_test_result    = "result|scan|ultrasound|blood ?work|lab",
   goal_treatment      = "treat|remed|relie|what (i|to) (can |could |should )?(do|take)|plan\\b|manage|ease|improve|fix|get rid|lessen|stretch|feel better|next step",
   goal_care           = "doctor|\\bdr\\b|physician|hospital|\\ber\\b|urgent care|specialist|seek medical|medical attention|surgery|vaccine|endocrinolog|appointment|appt|call my|professional|checked out",
   goal_condition_info = "learn|general|information about|knowledge|more about|how (it|common)|probabilit",

@@ -45,12 +45,12 @@
  },
  "referral_by_asked_cause": {
   "asked": [
-   26,
-   26
+   24,
+   24
   ],
   "did_not_ask": [
-   14,
-   24
+   16,
+   26
   ]
  },
  "ai": {
@@ -90,90 +90,130 @@
  "goals": {
   "N": 59,
   "types": {
-   "goal_cause": 31,
+   "goal_what_cause": 26,
    "goal_treatment": 26,
-   "goal_care": 17,
    "goal_condition_info": 11,
+   "goal_care": 17,
+   "goal_serious": 8,
    "goal_med": 8,
-   "goal_prepare_visit": 6,
-   "goal_reassurance": 5
+   "goal_test_result": 2,
+   "goal_reassurance": 5,
+   "goal_prepare_visit": 6
   },
   "two_plus": 34,
   "for_other": 9,
   "ai_easier": 8,
   "met": {
-   "Yes": 50,
+   "Yes": 42,
    "Partly": 5,
-   "No": 4
+   "No": 3
   },
   "met_flags": {
-   "goal_met_reassured": 17,
-   "goal_met_professional": 17,
-   "goal_met_acted": 13,
-   "goal_met_doubt": 8
+   "goal_met_reassured": 16,
+   "goal_met_professional": 16,
+   "goal_met_acted": 10,
+   "goal_met_doubt": 7
   },
   "met_by_type": {
-   "goal_cause": [
-    25,
-    31
+   "goal_what_cause": [
+    20,
+    26
    ],
    "goal_treatment": [
     24,
     26
    ],
+   "goal_condition_info": [
+    9,
+    11
+   ],
    "goal_care": [
     14,
     17
    ],
-   "goal_condition_info": [
-    9,
-    11
+   "goal_serious": [
+    7,
+    8
    ],
    "goal_med": [
     6,
     8
    ],
-   "goal_prepare_visit": [
-    5,
-    6
+   "goal_test_result": [
+    2,
+    2
    ],
    "goal_reassurance": [
     3,
     5
+   ],
+   "goal_prepare_visit": [
+    5,
+    6
    ]
   },
   "N_asked": 50,
+  "met_base": "N_asked",
   "goal_vs_asked": {
-   "goal_cause": [
-    27,
-    26
+   "goal_what_cause": [
+    23,
+    23
    ],
    "goal_treatment": [
     21,
     16
    ],
-   "goal_care": [
-    14,
-    8
-   ],
    "goal_condition_info": [
     9,
     13
    ],
+   "goal_care": [
+    14,
+    8
+   ],
+   "goal_serious": [
+    6,
+    6
+   ],
    "goal_med": [
     6,
     6
+   ],
+   "goal_test_result": [
+    2,
+    3
    ]
+  },
+  "goal_only": {
+   "goal_reassurance": 5,
+   "goal_prepare_visit": 5
   },
   "met_by_asked_own": {
    "asked": [
-    29,
-    32
+    28,
+    31
    ],
    "did_not_ask": [
-    7,
-    11
+    8,
+    12
    ]
+  },
+  "met_by_group": {
+   "asked": {
+    "Yes": 28,
+    "Partly": 2,
+    "No": 1
+   },
+   "did_not_ask": {
+    "Yes": 8,
+    "Partly": 2,
+    "No": 2
+   },
+   "no_match": {
+    "Yes": 6,
+    "Partly": 1,
+    "No": 0
+   }
   }
  },
  "med_pairs": {

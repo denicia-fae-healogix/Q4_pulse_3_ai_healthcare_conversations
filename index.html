@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI and Trust, Part 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap">
+<style>
+  :root { --navy:#0b3373; --dark:#0b3d68; --cyan:#00a4e4; --ink:#1c2430; --muted:#5f6b7a; --page:#e9edf2; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: "Open Sans", "Segoe UI", Arial, sans-serif; line-height: 1.45; }
+  header { background: var(--navy); color: #fff; padding: 56px 16px 48px; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .brand { letter-spacing: .25em; font-weight: 800; font-size: 14px; margin: 0 0 24px; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 12px; }
+  .lede { font-size: 18px; opacity: .9; margin: 0; max-width: 680px; }
+  .context { font-size: 16.5px; line-height: 1.6; max-width: 680px; margin: 0 0 14px; opacity: .95; }
+  .howto { font-size: 15px; margin: 18px 0 0; color: #9DC3E6; font-weight: 600; }
+  main { padding: 32px 16px 56px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  a.card { display: block; background: #fff; border-radius: 14px; padding: 24px; text-decoration: none; color: inherit;
+           border-top: 6px solid var(--cyan); box-shadow: 0 2px 10px rgba(11,51,115,.08); transition: transform .15s, box-shadow .15s; }
+  a.card:hover, a.card:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(11,51,115,.16); outline: none; }
+  a.card.b { border-top-color: var(--dark); }
+  .tag { font-size: 13px; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 6px; }
+  a.card.b .tag { color: var(--dark); }
+  .card h2 { font-size: 22px; margin: 0 0 8px; color: var(--navy); }
+  .card p { margin: 0; color: var(--muted); }
+  .go { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--navy); }
+  .note { margin-top: 32px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <p class="brand">HEALOGIX</p>
+  <p class="lede" style="margin-bottom:10px">Q4 &middot; November 2026 &middot; Pulse</p>
+  <h1>AI and Trust, Part 3: Inside real AI health conversations</h1>
+  <p class="context">This is the third pulse in our series on AI and trust in health. In Part 1 (August 2026), 65% of the U.S. adults we surveyed had used AI to look up health information, most often about symptoms and possible diagnoses. In Part 2 (October 2026), 39% said AI would be their first stop with a worrying health question, and 61% had used AI for emotional support.</p>
+  <p class="context">Part 3 moves from what people say about AI to what actually happens in the chat. Participants pasted a real AI health conversation, and we coded both sides of it: Part 3A looks at what people asked, and Part 3B at what the AI said back and how people felt afterward.</p>
+  <p class="howto">Hover over or tap any chart to see the numbers and examples from the conversations behind it.</p>
+</div></header>
+<main><div class="wrap">
+  <div class="cards">
+    <a class="card" href="part3a/">
+      <p class="tag">Part 3A</p>
+      <h2>What did people ask AI?</h2>
+      <p>Who the question was about, which health concerns came up, what people did in their follow-up messages, and how the AI answered.</p>
+      <span class="go">Open the interactive slides &rarr;</span>
+    </a>
+    <a class="card b" href="part3b/">
+      <p class="tag">Part 3B</p>
+      <h2>What did AI say back to people?</h2>
+      <p>Referrals, medications and urgent-care advice, and how people felt and what they remembered after the chat.</p>
+      <span class="go">Open the interactive slides &rarr;</span>
+    </a>
+  </div>
+  <p class="note">Online survey via Prolific. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out. Behavioral Science Team at Healogix: Denicia Aragon Espinosa &amp; James Dunlea, Ph.D.</p>
+</div></main>
+</body>
+</html>
