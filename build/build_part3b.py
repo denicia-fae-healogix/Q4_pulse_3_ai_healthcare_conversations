@@ -84,14 +84,15 @@ slides.append(("prior", prior_slide("s1b", "Part 3A looked at what people asked 
 pills = [("#a5306d", "Distress dropped after the chat, most after a referral to a professional", "s4"),
          ("#9b4c96", "No one felt calmer after the AI recommended a medication", "s5"),
          ("#8467b6", "Longer conversations ended with more positive feelings", "s7"),
-         ("#627fcc", "People remember when the AI tells them to see someone", "s8")]
+         ("#627fcc", "People remember when the AI tells them to see someone", "s8"),
+         ("#4a8fd0", "Half saw or planned to see a professional after the chat", "s8b")]
 slides.append(("overview", f"""
 <section class="slide" id="s2">
   <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
-  <h2 class="ov-title">What the AI says in the chat shapes how people feel afterward</h2>
+  <h2 class="ov-title">What the AI says shapes how people feel and what they do next</h2>
   <p class="ov-sub">Overview of findings</p>
   <div class="pills">{''.join(f'<a class="pill" style="--pill:{c}" href="#{h}">{E(t)}</a>' for c, t, h in pills)}</div>
-  <p class="foot">Online survey via Prolific &middot; Pulse 3 fielded November 2, 2026 &middot; n = 57 U.S. adults who shared an AI health conversation and rated their feelings before and after</p>
+  <p class="foot">Online survey via Prolific &middot; Pulse 3 fielded November 2, 2026 &middot; n = 57 U.S. adults who shared an AI health conversation and rated their feelings before and after (after-chat slides: n = 50)</p>
 </section>"""))
 
 # ---------- 3 big numbers (only this document's findings, in the order of slides 4, 5 and 8) ----------
@@ -276,20 +277,134 @@ slides.append(("recall", f"""
   <p class="foot">Referral coded from the AI's own text; recall is the participant's report after the chat. Fisher's exact test p = .005.</p>
 </section>"""))
 
+
+# ---------- 8b and 8c: what people did after the chat (codebook section 9; base = the Part 3A 50) ----------
+AC = D["after_chat"]; NA = AC["N"]; MA = AC["main"]; MN = AC["mentions"]
+care_n = MA["done"] + MA["planned"]
+cards = [("done", "Saw a professional", "#0b3373", "I went ahead with my appointment with the retina specialist... It was actually pretty helpful to know ahead of time.",
+          [("Saw a professional (any mention)", MN["care_done"])]),
+         ("planned", "Planned to see a professional", "#2f6db5", "I decided to ask my doctor to refer me at my next appointment.",
+          [("Planned to, or will if it gets worse (any mention)", MN["care_planned"])]),
+         ("own", "Handled it on their own", "#00a4e4", "I tried some of the suggestions like heat... and the pain started to lessen until it was gone.",
+          [("Self-care (any mention)", MN["self_care"]), ("Took or changed a medication", MN["med"]), ("Watched the symptom", MN["monitored"]), ("Avoided a trigger", MN["avoided"])]),
+         ("info_or_no_care", "Looked into it more or decided against care", "#9DC3E6", "I looked further into the conditions and what to do for each.",
+          [("Looked for more information (any mention)", MN["more_info"]), ("Talked it over with someone", MN["shared"]), ("Decided against seeing a professional", MN["decided_no_care"])]),
+         ("nothing", "Nothing yet", "#cfd4da", "Nothing changed day to day. I kept the same routine.",
+          [("Said nothing yet or nothing different (any mention)", MN["nothing"])])]
+MX = max(MA.values()); cd = ""
+for key, lab, col, quote, extra in cards:
+    n = MA[key]
+    k = tip(f"t8b_{key}", f"{lab}: {n} of {NA} ({round(100*n/NA)}%)",
+            [("Main action (counted once)", f"{n} of {NA}")] + [(a, f"{b_} of {NA}") for a, b_ in extra],
+            [("Participant", quote)], "Each person is counted once, by the biggest step they took. The rows below the first count every mention, so one person can appear in more than one.")
+    cd += (f'<div class="acard" {attrs(k)}><div class="abar" style="height:{150*n/MX:.0f}px;background:{col}"></div>'
+           f'<p class="anum">{n} <span>({round(100*n/NA)}%)</span></p><p class="alab">{E(lab)}</p><p class="aq">&ldquo;{E(quote)}&rdquo;</p></div>')
+slides.append(("actions", f"""
+<style>
+.acards {{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; align-items:start; }}
+.acard {{ border:1.5px solid #d5dbe3; border-radius:14px; overflow:hidden; background:#fff; min-height:420px; }}
+.abar {{ border-radius:12px 12px 0 0; }}
+.anum {{ font-size:2.2rem; font-weight:700; margin:10px 14px 0; color:#1c2430; }} .anum span {{ font-size:1rem; font-weight:400; color:#5f6b7a; }}
+.alab {{ font-weight:700; margin:4px 14px 10px; color:#1c2430; min-height:2.6em; }}
+.aq {{ font-style:italic; margin:0 14px 14px; padding-top:10px; border-top:1.5px solid #e6e9ee; color:#1c2430; font-size:.95rem; }}
+.abrk {{ width:calc(40% + 5px); border:2px solid #0b3373; border-bottom:none; height:10px; margin:0 0 6px; }}
+.abrk-t {{ color:#0b3373; font-weight:700; margin:0 0 4px; }}
+@media (max-width:720px) {{ .acards {{ grid-template-columns:1fr 1fr; }} .abrk,.abrk-t {{ display:none; }} }}
+</style>
+<section class="slide" id="s8b">
+  <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
+  <h2>Half of people saw or planned to see a professional after the chat</h2>
+  <p class="chart-title">What people did after their AI chat</p>
+  <p class="abrk-t">{care_n} of {NA} ({round(100*care_n/NA)}%) saw or planned to see a professional</p><div class="abrk"></div>
+  <div class="acards">{cd}</div>
+  <p class="foot">Open-ended survey question: what people did after the chat. n = {NA} with a usable chat and their own messages (the Part 3A base). Each person is counted once, by the biggest step they took: saw a professional, then planned to, then handled it on their own, then looked into it or decided against care, then nothing yet. Quotes are trimmed excerpts.</p>
+</section>"""))
+
+# decision tree
+TR = AC["tree"]; NT = AC["tree_N"]
+NAVY, CY, MG, LT, GR, INK, MUT = "#0b3373", "#00a4e4", "#a5306d", "#29abe2", "#bdbdbd", "#1c2430", "#5f6b7a"
+FC = {"followed": NAVY, "partly": CY, "did_not_follow": MG}
+FL = {"followed": "Followed", "partly": "Partly", "did_not_follow": "Did not follow"}
+ACT = [("care", "Saw or planned to see", "a professional", NAVY, "#fff"), ("own", "Handled it on their own", "", LT, INK), ("nothing_or_other", "Nothing yet or other", "", GR, INK)]
+cnt = lambda r=None, f=None, x=None: sum(v for kk, v in TR.items() if all(p is None or p == q_ for p, q_ in zip((r, f, x), kk.split("|"))))
+S = []
+def diamond(cx, cy, w, h, l1, l2):
+    S.append(f'<polygon points="{cx},{cy-h/2} {cx+w/2},{cy} {cx},{cy+h/2} {cx-w/2},{cy}" fill="#e9edf2" stroke="{NAVY}" stroke-width="2"/>'
+             f'<text x="{cx}" y="{cy-4}" text-anchor="middle" font-size="18" font-weight="700" fill="{NAVY}">{E(l1)}</text>'
+             f'<text x="{cx}" y="{cy+19}" text-anchor="middle" font-size="18" font-weight="700" fill="{NAVY}">{E(l2)}</text>')
+def elbow(x1, y1, x2, y2):
+    ym = (y1 + y2) / 2
+    S.insert(0, f'<path d="M{x1},{y1} V{ym} H{x2} V{y2}" fill="none" stroke="{INK}" stroke-width="2"/>')
+def pill(cx, cy, label, n, fill, txt, key, sub="", fade=False):
+    w = max(120, (len(label) + len(str(n)) + 2) * 9.5 + 30); op = ' opacity=".35"' if fade else ""
+    S.append(f'<g {attrs(key)}{op}><rect x="{cx-w/2}" y="{cy-25}" width="{w}" height="50" rx="25" fill="{fill}"/>'
+             f'<text x="{cx}" y="{cy+7}" text-anchor="middle" font-size="19" font-weight="700" fill="{txt}">{n}  {E(label)}</text></g>')
+    if sub: S.append(f'<text x="{cx}" y="{cy+50}" text-anchor="middle" font-size="16" fill="{MUT}"{op}>{E(sub)}</text>')
+RX, NX = 330, 880
+nr, nn = cnt("referred"), cnt("not_referred")
+elbow(600, 130, RX, 215); elbow(600, 130, NX, 215)
+for cx in (RX, NX): elbow(cx, 265, cx, 325)
+FX = {"referred": [RX-200, RX, RX+190], "not_referred": [NX-160, NX, NX+160]}
+PY = 530
+for r in FX:
+    for x in FX[r]: elbow(RX if r == "referred" else NX, 435, x, PY-25)
+BX = {"care": 200, "own": 575, "nothing_or_other": 950}; BY, BW, BH, K, GAP = 800, 320, 150, 3.2, 18
+flows = [(r, f, FX[r][i], x, cnt(r, f, x)) for r in FX for i, f in enumerate(FC) for x in BX if cnt(r, f, x)]
+so, to = {}, {}
+for r in FX:
+    for i, f in enumerate(FC):
+        fl = sorted([z for z in flows if z[0] == r and z[1] == f], key=lambda z: BX[z[3]]); tot = sum(z[4]*K for z in fl) + GAP*(len(fl)-1); cur = FX[r][i] - tot/2
+        for z in fl: so[z] = cur + z[4]*K/2; cur += z[4]*K + GAP
+for x in BX:
+    fl = sorted([z for z in flows if z[3] == x], key=lambda z: z[2]); tot = sum(z[4]*K for z in fl) + GAP*(len(fl)-1); cur = BX[x] - tot/2
+    for z in fl: to[z] = cur + z[4]*K/2; cur += z[4]*K + GAP
+AL = {a[0]: (a[1] + " " + a[2]).strip() for a in ACT}
+for z in flows:
+    r, f, _, x, m_ = z; x1, x2, y1, y2, w = so[z], to[z], PY+64, BY-2, m_*K; ym = (y1+y2)/2
+    kk = tip(f"t8c_{r}_{f}_{x}", f"{'Referred' if r == 'referred' else 'Not referred'}, {FL[f].lower()} the AI's advice, then {AL[x].lower()}", [("People", f"{m_} of {NT}")])
+    S.insert(len([s_ for s_ in S if s_.startswith('<path d="M') and 'V' in s_]), f'<path {attrs(kk)} d="M{x1-w/2},{y1} C{x1-w/2},{ym} {x2-w/2},{ym} {x2-w/2},{y2} L{x2+w/2},{y2} C{x2+w/2},{ym} {x1+w/2},{ym} {x1+w/2},{y1} Z" fill="{FC[f]}" fill-opacity=".5"/>')
+    S.append(f'<text x="{x2}" y="{BY-10}" text-anchor="middle" font-size="15" font-weight="700" fill="{INK}">{m_}</text>')
+diamond(600, 70, 360, 120, "Did the AI refer them", "to a professional?")
+pill(RX, 240, f"Referred ({round(100*nr/NT)}%)", nr, "#0b3d68", "#fff", tip("t8c_ref", "AI referred them to a professional", [("People", f"{nr} of {NT}")]))
+pill(NX, 240, f"Not referred ({round(100*nn/NT)}%)", nn, "#9DC3E6", INK, tip("t8c_noref", "AI did not refer them", [("People", f"{nn} of {NT}")]))
+for cx in (RX, NX): diamond(cx, 380, 310, 110, "Did they follow", "the AI's advice?")
+for r, rl in [("referred", "referred"), ("not_referred", "not referred")]:
+    rn = cnt(r)
+    for i, f in enumerate(FC):
+        n = cnt(r, f)
+        kk = tip(f"t8c_{r}_{f}", f"{'Referred' if r == 'referred' else 'Not referred'}: {FL[f].lower()} the AI's advice", [("People", f"{n} of {rn} ({round(100*n/rn)}%)")],
+                 note="Coded by comparing what the person said they did with the AI's main recommendation. A firm plan counts as following; a vague 'maybe if it gets worse' does not.")
+        pill(FX[r][i], PY, FL[f], n, FC[f], "#fff", kk, f"{round(100*n/rn)}% of {rl}", fade=(n == 0))
+for x, l1, l2, fill, txt in ACT:
+    n = cnt(x=x)
+    kk = tip(f"t8c_b_{x}", f"{AL[x]}: {n} of {NT}", [("Followed", str(cnt(f='followed', x=x))), ("Partly", str(cnt(f='partly', x=x))), ("Did not follow", str(cnt(f='did_not_follow', x=x)))])
+    S.append(f'<g {attrs(kk)}><rect x="{BX[x]-BW/2}" y="{BY}" width="{BW}" height="{BH}" rx="20" fill="{fill}"/>'
+             f'<text x="{BX[x]}" y="{BY+58}" text-anchor="middle" font-size="40" font-weight="700" fill="{txt}">{n}</text>'
+             f'<text x="{BX[x]}" y="{BY+95}" text-anchor="middle" font-size="19" fill="{txt}">{E(l1)}</text>'
+             f'<text x="{BX[x]}" y="{BY+119}" text-anchor="middle" font-size="19" fill="{txt}">{E(l2)}</text></g>')
+tree_svg = f'<svg viewBox="0 0 1150 960" width="100%" role="img" aria-label="Decision tree: AI referral, whether people followed the AI\'s advice, and what they did" font-family="inherit">{"".join(S)}</svg>'
+slides.append(("tree", f"""
+<section class="slide" id="s8c">
+  <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
+  <h2>Most people followed the AI's advice; the ones who fell short had been told to see a professional</h2>
+  <div style="width:100%;max-width:820px;margin:0 auto">{tree_svg}</div>
+  <p class="foot">Coded by comparing what each person did with the AI's main recommendation. n = {NT} of the {NA} in the Part 3A base; {AC['tree_left_out']} left out because the AI gave no clear advice or there was not enough to judge. Branch width shows the number of people. Main action: any professional care first, then self-care or medication, then nothing or other.</p>
+</section>"""))
+
 # ---------- 9 takeaways ----------
 take = [("For research", "#a5306d", [("Code what the AI said, not just what people asked.", " Referral, urgent-care and medication advice each lined up with different emotional outcomes."),
-                                       ("Measure feelings before and after the chat;", " distress fell on average (18.5 to 15.2), while positive feelings stayed flat.")]),
+                                       ("Measure feelings and ask what people did next;", " distress fell (18.5 to 15.2) and half moved toward a professional.")]),
         ("For healthcare & pharma", "#627fcc", [("An AI referral may calm people, and it sticks.", " Referred participants felt less distressed afterward, and 58% recalled a clear recommendation (vs. 9%)."),
-                                                 ("Medication suggestions did not reassure.", " No one who got a medication recommendation felt calmer, so expect these patients to arrive with questions.")]),
+                                                 ("Medication suggestions did not reassure.", " No one who got a medication recommendation felt calmer, and only 2 of 11 took one, so expect these patients to arrive with questions.")]),
         ("Where the risk sits", "#8467b6", [("AI referrals reached the most distressed.", " People the AI referred started out more distressed (19.7 vs. 14.4) and dropped further by the end of the chat."),
-                                            ("Short chats left people no better off.", " One to three messages ended less positive; four or more ended about 3 points more positive.")])]
+                                            ("Follow-through slipped at the referral.", " Everyone who only partly followed or did not follow the AI's advice had been told to see a professional.")])]
 tk = "".join(f'<div class="tk"><p class="tk-lab" style="background:{c}">{E(h)}</p><ul>' + "".join(f'<li><b style="color:{c}">{E(a)}</b>{E(b)}</li>' for a, b in items) + "</ul></div>" for h, c, items in take)
 slides.append(("take", f"""
 <section class="slide" id="s9">
   <p class="eyebrow">Healogix &middot; Q4 &middot; November 2026 &middot; Pulse</p>
   <h2 class="cyan">Now what does that mean?</h2>
   <div class="tks">{tk}</div>
-  <p class="foot small">Notes: exploratory pulse; 57 participants with complete before and after PANAS scores. Group sizes are small, so group differences are directional. BH-adjusted p-values are shown where tests were run. Conversation codes (referral, urgent care, medication, personal details) were coded from the participant and AI text. Group sizes differ by slide: 57 with before and after scores, 54 with a usable, coded conversation, and 48 who also wrote at least one message of their own. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out.</p>
+  <p class="foot small">Notes: exploratory pulse; 57 participants with complete before and after PANAS scores. Group sizes are small, so group differences are directional. BH-adjusted p-values are shown where tests were run. Conversation codes (referral, urgent care, medication, personal details) were coded from the participant and AI text. Group sizes differ by slide: 57 with before and after scores, 54 with a usable, coded conversation, and 48 who also wrote at least one message of their own. After-chat slides: 50 with a usable chat and their own messages (the Part 3A base); 42 of them for following the AI's advice. Chat excerpts are trimmed, with spelling lightly corrected and identifying details left out.</p>
 </section>"""))
 
 # ---------- 10 contact ----------

@@ -11,6 +11,7 @@ One row per participant (`pid`). This codebook covers every variable that was co
 | `05_Q4_3_conversations_wide_deid_coded_v2.csv` | v1 codes plus v2 participant codes (section 4) | LLM-assisted coding, `coding_source_v2 = claude_llm_v2` (12 Nov 2026) |
 | `05_Q4_3_conversations_wide_deid_coded_v3.csv` | v2 file plus v3 codes (section 4b). Only adds columns, so it replaces v2 in every script | LLM-assisted coding, `coding_source_v3 = claude_llm_v3` (13 Nov 2026) |
 | `06_Q4_3_binary-categories` output | Word-list binary codes (section 5) | 06 script |
+| `11_Q4_3_actions_coded.csv` | What people did after the chat and whether they followed the AI's advice (section 9) | LLM-assisted coding, reviewed by Denicia (24 Nov 2026) |
 
 **Value conventions.** Binary codes use 1 = yes and 0 = no. A blank (NA) means the code does not apply to that person (see each code), never "no".
 
@@ -100,8 +101,7 @@ Coded only for the 50 usable conversations with at least one participant turn; b
 |---|---|---|
 | `human_about` | category | Who the question is about: `self`; `other_person` (a named or described other person, such as a husband, son or daughter); `general` (no specific person, for example "what is diabetes"). Third-person descriptions with no other person named are coded `self` (see `coder_note_v2`) |
 | `human_health_area` | category | (Kept for reference; the slides now use the v3 `topic_*` codes in section 4b.) Main health area, one per conversation: `pain_muscles_bones`, `digestive`, `skin_allergy` (skin, hair, allergic reactions), `cold_flu_infection`, `diet_fitness_weight` (including supplements), `mental_health_sleep`, `diabetes_hormones`, `eyes`, `other` (chest pain, headache, fatigue, kidney or test reports, surgery recovery) |
-| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result). This combined measure equals 1 when any of the three v3 codes `human_asks_what_cause`, `human_asks_serious` or `human_asks_test_result` is 1 (52%). Kept for reference; since the Nov 2026 review the deck uses `human_asks_cause_serious` instead (below) |
-| `human_asks_cause_serious` | 0/1 | Derived (Nov 2026 review): 1 when `human_asks_what_cause` or `human_asks_serious` is 1 (24 of 50, 48%). Questions about a test result are kept separate, matching deck slide 5; 2 people asked only about a test result and are not in this group. Used on 3A slides 6, 9 and 11 and in the goals comparisons |
+| `human_asks_cause` | 0/1 | Asks what is causing something, what it could be, or whether it is normal or serious (including asking the AI to interpret a test result). This combined measure equals 1 when any of the three v3 codes `human_asks_what_cause`, `human_asks_serious` or `human_asks_test_result` is 1 (52%). Used on 3A slide 9 and in the goals comparisons |
 | `human_asks_treatment` | 0/1 | Asks what to do, take, eat or change to treat or manage something |
 | `human_asks_care` | 0/1 | Asks whether or where to get care, which specialist or test, or what a visit involves |
 | `human_asks_condition_info` | 0/1 | Asks for general information about a condition ("what is X", "does X grow"). Medication questions stay in `human_asks_med` |
@@ -177,7 +177,7 @@ These are built in the 07 and 08a/08b scripts from the codes and survey answers 
 |---|---|---|
 | Asked more than one kind of question | 2+ of `human_asks_what_cause`, `_treatment`, `_condition_info`, `_care`, `_serious`, `human_asks_med`, `_test_result` | 3A slide 5 footer (28%) |
 | Asked both cause and serious | `human_asks_what_cause = 1` and `human_asks_serious = 1` | 3A slide 5 footer (10%) |
-| Asked what was causing it, or whether it was serious | `human_asks_cause_serious = 1` (`human_asks_what_cause` or `human_asks_serious`; test results not included) | 3A slide 9, the referral comparison (48%). Slides 6 and 11 use the separate question types instead (see section 7) |
+| Asked what was causing it, or whether it was serious (combined) | `human_asks_cause = 1` (any of the three v3 cause codes) | 3A slide 9 (52%) |
 | Everyday complaints | Any of `topic_muscles_bones_joints`, `topic_skin_rash_allergy`, `topic_diet_fitness_weight`, `topic_digestive`, `topic_cold_flu_infection` | 3A slide 4 footer (64%) |
 | Asked about two or more areas | 2+ of the 10 areas shown | 3A slide 4 footer (8%) |
 | Drug class (cut slide) | Word match in `human_meds_asked` and `ai_recommended_meds` (section 8): OTC pain relievers, antibiotics, osteoporosis drugs, antifungal creams, weight-loss drug, ADHD drug, antihistamines, gas relief | Cut in the Nov 2026 review; still in 08a |
@@ -207,10 +207,7 @@ Coded from the survey question C3 (`convo_goal_oe`): "When starting the conversa
 
 | Variable | Type | Definition |
 |---|---|---|
-| `goal_cause` | 0/1 | Original combined code (v1): wanted to find out what is wrong, what is causing it, whether it is normal or serious, or what a test result means. Kept for reference; equals 1 when any of the three split codes below is 1 (33 of 59). Not used on the slides since the Nov 2026 review |
-| `goal_what_cause` | 0/1 | Split from `goal_cause` (v2, Nov 2026): wanted to know what is causing a symptom or what the condition is (a diagnosis, "what's wrong with my wrist", "why I have stomach aches"). Matches `human_asks_what_cause`. 26 of 59 |
-| `goal_serious` | 0/1 | Split from `goal_cause` (v2): wanted to know whether something is normal, serious, or worth being concerned about ("find out if it is serious or not", "so I know it isn't a health scare"). Matches `human_asks_serious`. 8 of 59; 4 of them also have `goal_what_cause` (pids 14, 28, 39, 46), and pid 40 has both as well |
-| `goal_test_result` | 0/1 | Split from `goal_cause` (v2): wanted help understanding a test result (pid 3, a coronary artery scan; pid 56, ultrasound results). Matches `human_asks_test_result`. 2 of 59 |
+| `goal_cause` | 0/1 | Wanted to find out what is wrong, what is causing it, whether it is normal or serious, or what a test result means |
 | `goal_treatment` | 0/1 | Wanted to know how to treat, relieve, manage or improve something (home remedies, a plan, what to take when no drug is named, supplements) |
 | `goal_care` | 0/1 | Wanted to decide whether, when or where to get care (doctor, ER, urgent care, specialist, a surgery decision, where to get a vaccine) or what a visit involves |
 | `goal_condition_info` | 0/1 | Wanted general knowledge about a condition or topic (how common, who it affects, outlook), not about their own symptoms specifically |
@@ -221,11 +218,10 @@ Coded from the survey question C3 (`convo_goal_oe`): "When starting the conversa
 | `goal_ai_easier` | 0/1 | Said, unprompted, that AI was quicker, cheaper, easier or less embarrassing than a search or a doctor |
 | `goal_worry` | 0/1 | States worry or concern in their own words |
 | `goal_health` | 0/1 | 1 = a health goal. 0 = not health related (pid 57, a school essay). Every goal chart uses `goal_health = 1` (n = 59) |
-| `goal_primary` | category | The one goal the person led with: `what_cause`, `test_result` (both were `cause` in v1; no one led with serious), `treatment`, `care`, `medication`, `condition_info`, `reassurance`, `prepare_visit`, `other` (vague or not a health goal) |
-| `goal_n_types` | count | How many of the nine goal types apply (0 to 9): the three split cause codes plus treatment, care, condition info, medication, preparing for a visit and reassurance. Recounted after the split (pids 14, 28, 39, 40 and 46 went up by one) |
-| `goal_split_note` | text | Note on borderline split calls. Pid 22 ("if I am healthy or not", about weight) was read as is it normal, a close call that Denicia reviewed and kept; pid 40 coded as both cause and serious |
+| `goal_primary` | category | The one goal the person led with: `cause`, `treatment`, `care`, `medication`, `condition_info`, `reassurance`, `prepare_visit`, `other` (vague or not a health goal) |
+| `goal_n_types` | count | How many of the first seven goal types apply (0 to 7) |
 | `goal_coder_confidence`, `goal_coder_note` | text | high / medium / low, and a short note on borderline calls (no quotes) |
-| `goal_coding_source` | text | `claude_llm_goals_v1`; rows also carry `split claude_llm_goals_v2` for the Nov 2026 cause split |
+| `goal_coding_source` | text | `claude_llm_goals_v1` |
 
 **Was the goal met?** Coded from D2 (`convo_goal_met_oe`), asked after the chat, for all 60.
 
@@ -240,13 +236,11 @@ Coded from the survey question C3 (`convo_goal_oe`): "When starting the conversa
 
 The four flags only count what people volunteered, so they are floors. 09b writes `07_Q4_3_goal-met_coding.xlsx` from `goal_met` if that workbook does not exist yet, so the 07 report can use it.
 
-**Nov 2026 split.** To make deck slide 6 (goal vs. what they asked) line up row for row with slide 5 (question types), `goal_cause` was split into `goal_what_cause`, `goal_serious` and `goal_test_result`, coded from the goal text only, and reviewed by Denicia on 18 Nov 2026. Slide 6 now shows nine rows in the slide 5 order: the seven question types with a goal bar and an asked bar, then reassurance and preparing for a visit with a goal bar only (no matching question type). On the 50 people with both a goal and a chat: what is causing it 46% vs. 46%, treatment 42% vs. 32%, condition info 18% vs. 26%, care 28% vs. 16%, serious 12% vs. 12%, medication 12% vs. 12%, test result 4% vs. 6%, reassurance 10%, preparing for a visit 10%. For slide 11 ("asked about their main goal"), each main goal is matched to its own question type; the result is unchanged (90% vs. 67%, n = 31 and 12).
-
 **Check.** The 09b report runs a word-list cross-check on each code and lists the pids where the word list and the coder disagree. After the first review, three codes were changed (pid 17 care, pids 29 and 59 worry).
 
-**Goal met counts.** On the deck base (the 50 with a health goal and a usable chat with their own messages; Nov 2026 review): Yes 42 (84%), Partly 5 (10%), No 3 (6%); reassured 32%, brought a doctor in 32%, did something the AI suggested 20%, noted a limit 14%. On all 59 health goals: Yes 50 (85%), Partly 5 (8%), No 4 (7%). The 9 left out had no chat with their own messages (6 pasted only AI text, 3 nothing usable). Deck slide 11 splits the 50 three ways so the groups add back to the 50: asked the AI about their main goal 31 (Yes 28, Partly 2, No 1), did not ask 12 (8, 2, 2), main goal had no matching question type 7 (6, 1, 0). The four unprompted flags (reassured, doctor, acted, noted a limit) were moved off slide 11 to Part 3B.
+**Goal met counts (59 health goals).** Yes 50 (85%), Partly 5 (8%), No 4 (7%).
 
-**Bases in 09b.** 59 health goals (goal types, main goal); the goal-met tab and every deck slide use the 50 of them with a usable chat and their own messages; 50 of them with a usable chat and their own messages (goal vs. what they asked); 56 with a usable chat (goal vs. how the AI answered); those with complete PANAS (goals and feelings).
+**Bases in 09b.** 59 health goals; 50 of them with a usable chat and their own messages (goal vs. what they asked); 56 with a usable chat (goal vs. how the AI answered); those with complete PANAS (goals and feelings).
 
 ---
 
@@ -263,3 +257,56 @@ File: `10_Q4_3_med_asked_vs_recommended.csv` (pid plus the columns below, no con
 | `med_coding_source` | text | `claude_llm_meds_v1` |
 
 10 of the 11 recommendations were over-the-counter (the exception: zoledronic acid, suggested as a question for the doctor).
+
+---
+
+## 9. What people did after the chat (`claude_llm_actions_v1`, `claude_llm_followed_ai_v1`)
+
+**Source.** Survey question E1, open-ended: what the person did after the conversation, for themselves (`action_taken_self_oe`) or for the person they asked about (`action_taken_other_oe`). The 11a script combines the two into one answer (`action_taken_oe`, with `action_for` = self or other) and writes `11_Q4_3_actions_deid_pid_only.csv` (pid and answer only). Codes were drafted with LLM assistance and reviewed by Denicia on 24 Nov 2026. The coded file, `11_Q4_3_actions_coded.csv`, holds pid plus the codes and short coder notes, and stays private in `data/processed`.
+
+There are two separate code sets. The action codes describe what the person said they did, read from E1 alone. The followed-the-AI's-advice code compares that answer with what the AI actually recommended in the pasted chat, so it needs the conversation and is coded only for usable chats.
+
+### 9a. Action codes (one or more per person)
+
+Base: 59 health answers (`act_health = 1`; pid 57, an essay, is 0 and has no codes). A person can have more than one code, so the percentages add to more than 100.
+
+| Variable | Type | Definition | n (of 59) |
+|---|---|---|---|
+| `action_for` | category | `self` or `other` (who the E1 answer was about) | 45 self, 15 other (of 60) |
+| `act_care_done` | 0/1 | Saw or contacted a doctor, nurse, pharmacist, PT or other professional, or got a test | 10 (17%) |
+| `act_care_planned` | 0/1 | Booked or firmly plans to see a professional, or says they will go if it gets worse | 19 (32%) |
+| `act_decided_no_care` | 0/1 | Decided not to see a professional (for example, the chat reassured them, or cost) | 6 (10%) |
+| `act_med` | 0/1 | Took, started, stopped or changed a medication | 6 (10%) |
+| `act_self_care` | 0/1 | Rest, heat or ice, diet, exercise, stretching, supplements, skincare and other home care | 19 (32%) |
+| `act_avoided` | 0/1 | Stopped or avoided something (a food, an activity, a trigger) | 3 (5%) |
+| `act_more_info` | 0/1 | Looked for more information (more searching, reading, another AI chat) | 5 (8%) |
+| `act_shared` | 0/1 | Talked it over with or passed the information to a family member, partner or friend | 4 (7%) |
+| `act_monitored` | 0/1 | Is watching the symptom or tracking it | 5 (8%) |
+| `act_nothing` | 0/1 | Did nothing yet or nothing different | 17 (29%) |
+| `act_any_care` | 0/1 | Derived: `act_care_done` or `act_care_planned` | 29 (49%) |
+| `act_health` | 0/1 | 1 = a health answer included in the base; 0 = pid 57 | 59 |
+| `act_coder_note` | text | Short note on close calls | |
+| `act_coding_source` | text | `claude_llm_actions_v1` | |
+
+**Decisions.** "Will go if it gets worse" counts as `act_care_planned` (pids 26, 41, 44, 53); pids 26 and 44 also have the code that fits what they did now (`act_nothing`, `act_decided_no_care`). "Followed the AI's advice" is not an action and is coded separately (9b). An earlier "problem went away" code was dropped because it is an outcome, not an action. Pid 1 (plans to call her insurer about her medication) is coded `act_care_planned` as the closest fit. Pid 32 said only that they listened to the AI and its advice worked; the AI's main advice was to take acetaminophen or ibuprofen for a headache, so pid 32 is coded `act_med` (inferred from their statement that they followed the advice, the one action code not read from E1 alone).
+
+**Early results (on the 50 base, usable chat with their own messages).** People the AI referred to a professional were much more likely to see or plan to see one: 24 of 40 vs. 1 of 10 not referred (Fisher p = .011). Of the 11 people the AI recommended a medication to, 2 took one (pids 32 and 35).
+
+### 9b. Followed the AI's advice (one per person)
+
+Base: 56 usable chats (`convo_usable = 1`); blank for pids 7, 20, 40, 57. Coded by comparing E1 with the AI's main recommendation. A firm plan (for example, an appointment already booked) counts as following the advice; a vague "maybe if it gets worse" does not.
+
+| Variable | Type | Values | n (of 56) |
+|---|---|---|---|
+| `act_followed_ai` | category | `followed`: did what the AI mainly recommended | 36 |
+| | | `partly`: did some of it but not the main step (often the lighter advice without the referral) | 9 |
+| | | `did_not_follow`: did not do what the AI recommended | 2 |
+| | | `no_clear_advice`: the AI mainly listened or explained and gave nothing to act on | 6 |
+| | | `cant_tell`: E1 or the available AI text is not enough to judge | 3 |
+| `act_followed_ai_note` | text | Note on close calls (pids 1, 6, 8, 9, 23, 26, 28, 29, 30, 31, 33, 36, 46, 47, 58, 59) | |
+| `act_followed_ai_source` | text | `claude_llm_followed_ai_v1` | |
+| `act_reviewed` | text | Reviewer and date for both code sets | |
+
+Of the 47 people who could be compared, 77% followed the AI's advice, 19% partly followed it and 4% did not. Everyone who partly followed or did not follow had been referred to a professional (referred 39: 28 followed, 9 partly, 2 did not; not referred 8: all followed).
+
+**Close calls (reviewed and kept).** Pid 1 partly (plans to call her insurer, not yet the doctor); pid 9 partly (rested, but still in pain at 4 weeks without the sports doctor or PT visit the AI advised); pid 26 did not follow (the AI advised an in-person evaluation soon; she will go only if needed); pid 31 partly (the AI said go to the ER now; the friend made an appointment); pid 46 partly (used heat, but assumed it was from sleeping wrong, which the AI warned against); pid 58 followed (the AI said a second cataract surgery is not automatically needed, and she cancelled); pid 29 can't tell (the available AI text covers shot side effects, not whether it advised the flu shot); pid 6 partly and pid 8 no clear advice (the AI mainly listened or explained).
