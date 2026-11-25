@@ -1,0 +1,136 @@
+---
+title: "Q4 Pulse 3: Extract What People Did After the Chat (E1) for Coding"
+subtitle: "Writes pid plus the E1 open end to one small file, with no other IDs or survey answers"
+author: "Denicia Aragon Espinosa"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+params:
+  project_root: "C:/Users/DeniciaAragon/OneDrive - Healogix/Q4_3_Pulse"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+**What this script does.** It takes survey question E1, "After this conversation, what did you do with the information?", and writes it next to `pid` only. E1 was shown in two versions:
+
+- `action_taken_self_oe`: the chat was about the person's own health (C2 = 1 or 7)
+- `action_taken_other_oe`: the chat was about someone else (C2 = 2-6 or 98)
+
+Each person saw one version, so the script combines them into one column, `action_taken_oe`, and adds `action_for` (`self` or `other`) so the coding knows whose next step it was.
+
+The output, `11_Q4_3_actions_deid_pid_only.csv`, is the only file shared for coding. It holds no response_id, Prolific ID, demographics or PANAS answers. This report shows counts only, never the answers themselves.
+
+```{r packages, include = FALSE}
+pkgs <- c("dplyr", "readr", "stringr", "knitr")
+to_install <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+if (length(to_install) > 0) install.packages(to_install, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+```
+
+```{r paths, include = FALSE}
+project_root <- params$project_root
+proj <- function(...) file.path(project_root, ...)
+if (!dir.exists(project_root)) stop("Project folder not found: ", project_root)
+
+# ---- Find an input file anywhere inside the project folder ----
+# Looks in data/processed first, then searches every subfolder for the same file name,
+# so the script still runs if the data sit in a different folder.
+find_in <- function(name) {
+  first <- proj("data", "processed", name)
+  if (file.exists(first)) return(first)
+  hits <- list.files(project_root, pattern = paste0("^", gsub(".", "\\.", name, fixed = TRUE), "$"),
+                     recursive = TRUE, full.names = TRUE)
+  hits <- hits[!grepl("/output/", hits)]
+  if (length(hits) > 0) return(hits[1])
+  first
+}
+
+in_05   <- find_in("05_Q4_3_conversations_wide_deid.csv")           # survey answers, including E1
+in_link <- find_in("05_Q4_3_conversations_pid_and_prolific_id.csv")  # pid -> Prolific ID (read in memory only)
+in_ids  <- find_in("00_Q4_3_renamed.csv")                            # response_id + Prolific ID
+# Write the output next to the 05 survey file, so it lands in the folder that already holds your data
+out_file <- file.path(dirname(in_05), "11_Q4_3_actions_deid_pid_only.csv")
+if (!file.exists(in_05)) stop("Input not found: ", basename(in_05), " (looked in every folder inside ", project_root, ")")
+```
+
+```{r ids, include = FALSE}
+# ---- Same ID matching as 07, 08a and 08b: every row gets a pid, in memory only ----
+ID_COLS <- c("pid", "response_id", "prolific_id")
+clean_ids <- function(d) {
+  names(d) <- trimws(gsub("^\ufeff", "", names(d)))
+  low <- tolower(names(d))
+  rename_first <- function(d, idx, new) { if (length(idx) && !(new %in% names(d))) names(d)[idx[1]] <- new; d }
+  d <- rename_first(d, which(low == "pid"), "pid")
+  d <- rename_first(d, which(low %in% c("response_id", "response id", "responseid")), "response_id")
+  d <- rename_first(d, which(low %in% c("prolific_id", "prolific_pid", "prolificid", "url variable: prolific_pid")), "prolific_id")
+  d |> mutate(across(any_of(ID_COLS), \(x) trimws(as.character(x))))
+}
+read_chr <- function(f) read_csv(f, col_types = cols(.default = col_character()), na = c("", "NA")) |> clean_ids()
+
+ids <- if (file.exists(in_link)) read_chr(in_link) |> select(any_of(ID_COLS)) |> distinct() else tibble(pid = character())
+for (col in ID_COLS) if (!col %in% names(ids)) ids[[col]] <- NA_character_
+if (file.exists(in_ids)) {
+  rn <- read_chr(in_ids) |> select(any_of(c("response_id", "prolific_id")))
+  if (all(c("response_id", "prolific_id") %in% names(rn))) {
+    rn <- rn |> filter(!is.na(prolific_id), !duplicated(prolific_id))
+    ids$response_id <- coalesce(ids$response_id, rn$response_id[match(ids$prolific_id, rn$prolific_id)])
+  }
+}
+ids <- ids |> select(all_of(ID_COLS))
+
+d05 <- read_chr(in_05)
+for (col in ID_COLS) if (!col %in% names(d05)) d05[[col]] <- NA_character_
+for (key in ID_COLS) {
+  lk <- ids[!is.na(ids[[key]]) & !duplicated(ids[[key]]), ]
+  m <- match(d05[[key]], lk[[key]])
+  for (other in setdiff(ID_COLS, key)) d05[[other]] <- coalesce(d05[[other]], lk[[other]][m])
+}
+n_rows <- nrow(d05); n_pid <- sum(!is.na(d05$pid))
+if (n_pid == 0) stop("No row could be matched to a pid. Check that ", basename(in_link), " and ", basename(in_ids), " are in data/processed.")
+```
+
+```{r extract, include = FALSE}
+E1_COLS <- c("action_taken_self_oe", "action_taken_other_oe")
+missing <- setdiff(E1_COLS, names(d05))
+if (length(missing)) stop("These columns are not in the 05 file: ", paste(missing, collapse = ", "),
+                          ". Check the names in variable-dictionary-Q4_3.R (rows 83 and 84).")
+
+blank_to_na <- function(x) { x <- str_squish(x); ifelse(is.na(x) | x == "", NA_character_, x) }
+both <- d05 |> filter(!is.na(pid)) |>
+  mutate(self = blank_to_na(action_taken_self_oe), other = blank_to_na(action_taken_other_oe))
+n_both_versions <- sum(!is.na(both$self) & !is.na(both$other))   # should be 0: each person saw one version
+
+actions <- both |>
+  transmute(pid,
+            action_for = case_when(!is.na(self) ~ "self", !is.na(other) ~ "other", TRUE ~ NA_character_),
+            action_taken_oe = coalesce(self, other)) |>
+  filter(!duplicated(pid)) |>
+  arrange(as.numeric(pid))
+
+# pid + whose next step it was + the open end only. No response_id, no Prolific ID.
+stopifnot(identical(names(actions), c("pid", "action_for", "action_taken_oe")))
+if (file.exists(out_file) && !file.remove(out_file))
+  stop("An older copy of ", basename(out_file), " is open or locked. Close it in Excel (or wait for OneDrive to finish syncing) and knit again.")
+write_csv(actions, out_file, na = "")
+```
+
+## Check
+
+```{r check}
+words <- function(x) ifelse(is.na(x), NA, str_count(x, "\\S+"))
+tibble(
+  Check = c("Rows in the 05 survey file", "Rows matched to a pid", "People in the actions file",
+            "Wrote what they did (E1)", "... about their own health", "... about someone else",
+            "Answered both versions (should be 0)", "Median words (E1)"),
+  Value = c(n_rows, n_pid, nrow(actions),
+            sum(!is.na(actions$action_taken_oe)), sum(actions$action_for %in% "self"), sum(actions$action_for %in% "other"),
+            n_both_versions, median(words(actions$action_taken_oe), na.rm = TRUE))
+) |> kable()
+```
+
+Written to: `r out_file`
+
+**Next step.** Upload `11_Q4_3_actions_deid_pid_only.csv` to the chat for coding. Keep it out of the public repo (the `.gitignore` already excludes `data/`).

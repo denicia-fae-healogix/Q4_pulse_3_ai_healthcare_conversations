@@ -1,0 +1,364 @@
+{
+ "ref_na": [
+  [
+   "Referred to a professional (n = 43)",
+   [
+    19.744186,
+    15.627907
+   ]
+  ],
+  [
+   "No referral (n = 11)",
+   [
+    14.363636,
+    13.727273
+   ]
+  ]
+ ],
+ "urg_na": [
+  [
+   "Mentioned urgent or emergency care (n = 19)",
+   [
+    20.210526,
+    15
+   ]
+  ],
+  [
+   "Did not (n = 35)",
+   [
+    17.8,
+    15.371429
+   ]
+  ]
+ ],
+ "pers_na": [
+  [
+   "Shared personal details (n = 41)",
+   [
+    18.707317,
+    14.390244
+   ]
+  ],
+  [
+   "General questions only (n = 7)",
+   [
+    20.714286,
+    20
+   ]
+  ]
+ ],
+ "ref_items": [
+  [
+   "Referred to a professional",
+   [
+    -0.55814,
+    -0.209302,
+    -0.744186,
+    -0.186047,
+    -0.116279,
+    -0.418605,
+    -0.232558,
+    -0.674419,
+    -0.534884,
+    -0.44186
+   ],
+   [
+    "afraid",
+    "ashamed",
+    "distressed",
+    "guilty",
+    "hostile",
+    "irritable",
+    "jittery",
+    "nervous",
+    "scared",
+    "upset"
+   ]
+  ],
+  [
+   "No referral",
+   [
+    -0.090909,
+    -0.090909,
+    0.090909,
+    -0.090909,
+    0.272727,
+    0.181818,
+    -0.545455,
+    -0.363636,
+    0,
+    0
+   ],
+   [
+    "afraid",
+    "ashamed",
+    "distressed",
+    "guilty",
+    "hostile",
+    "irritable",
+    "jittery",
+    "nervous",
+    "scared",
+    "upset"
+   ]
+  ]
+ ],
+ "ref_items_n": {
+  "ref": 43,
+  "nor": 11
+ },
+ "msg_buckets": [
+  {
+   "bucket": "1",
+   "n": 20,
+   "mean": -0.65,
+   "n_more_positive": 6
+  },
+  {
+   "bucket": "2",
+   "n": 8,
+   "mean": -2.625,
+   "n_more_positive": 2
+  },
+  {
+   "bucket": "3",
+   "n": 9,
+   "mean": -0.333333,
+   "n_more_positive": 4
+  },
+  {
+   "bucket": "4 or more",
+   "n": 11,
+   "mean": 3.272727,
+   "n_more_positive": 9
+  }
+ ],
+ "msg_test": {
+  "rho": 0.308749,
+  "p": 0.032748,
+  "n": 48
+ },
+ "recall": [
+  {
+   "1|Clear or strong recommendation": 25,
+   "1|Gentle suggestion or options": 14,
+   "1|No action or wait it out": 4,
+   "2|Clear or strong recommendation": 1,
+   "2|Gentle suggestion or options": 8,
+   "2|No action or wait it out": 2
+  },
+  [
+   "AI referred to a professional",
+   "No referral"
+  ]
+ ],
+ "calm_med": [
+  {
+   "1|About the same": 11,
+   "2|Calmer": 15,
+   "2|About the same": 27,
+   "2|More distressed": 1
+  },
+  [
+   "AI recommended a medication",
+   "Did not recommend one"
+  ]
+ ],
+ "na_all_means": {
+  "pre": 18.473684,
+  "post": 15.22807,
+  "n": 57
+ },
+ "pa_all_means": {
+  "pre": 26.736842,
+  "post": 26.824561,
+  "n": 57
+ },
+ "after_chat": {
+  "N": 50,
+  "main": {
+   "done": 9,
+   "planned": 16,
+   "own": 16,
+   "info_or_no_care": 4,
+   "nothing": 5
+  },
+  "mentions": {
+   "care_done": 9,
+   "care_planned": 16,
+   "decided_no_care": 6,
+   "self_care": 17,
+   "med": 4,
+   "monitored": 4,
+   "avoided": 3,
+   "more_info": 4,
+   "shared": 4,
+   "nothing": 14
+  },
+  "med_rec_took": [
+   2,
+   11
+  ],
+  "tree_N": 42,
+  "tree_left_out": 8,
+  "tree": {
+   "not_referred|followed|nothing_or_other": 1,
+   "not_referred|followed|own": 5,
+   "referred|did_not_follow|care": 1,
+   "referred|did_not_follow|nothing_or_other": 1,
+   "referred|followed|care": 18,
+   "referred|followed|nothing_or_other": 2,
+   "referred|followed|own": 6,
+   "referred|partly|care": 4,
+   "referred|partly|nothing_or_other": 1,
+   "referred|partly|own": 3
+  }
+ },
+ "ask_vs_ai": {
+  "N": 50,
+  "cols": [
+   "Gave possible causes",
+   "Explained the condition",
+   "Said whether it was serious",
+   "Suggested self-care steps",
+   "Recommended a medication",
+   "Referred to a professional",
+   "Flagged urgent or ER care",
+   "Interpreted a test result"
+  ],
+  "match": {
+   "0": [
+    0
+   ],
+   "1": [
+    3,
+    4
+   ],
+   "2": [
+    1
+   ],
+   "3": [
+    5
+   ],
+   "4": [
+    2
+   ],
+   "5": [
+    4
+   ],
+   "6": [
+    7
+   ]
+  },
+  "rows": [
+   {
+    "label": "What is causing it",
+    "n": 23,
+    "cells": [
+     21,
+     11,
+     12,
+     14,
+     5,
+     23,
+     10,
+     1
+    ]
+   },
+   {
+    "label": "How to treat it",
+    "n": 16,
+    "cells": [
+     3,
+     8,
+     4,
+     15,
+     6,
+     10,
+     4,
+     2
+    ]
+   },
+   {
+    "label": "About a condition",
+    "n": 13,
+    "cells": [
+     6,
+     12,
+     5,
+     7,
+     3,
+     10,
+     5,
+     1
+    ]
+   },
+   {
+    "label": "Whether or where to get care",
+    "n": 8,
+    "cells": [
+     4,
+     6,
+     5,
+     4,
+     0,
+     7,
+     4,
+     0
+    ]
+   },
+   {
+    "label": "Whether it is serious",
+    "n": 6,
+    "cells": [
+     6,
+     3,
+     6,
+     2,
+     3,
+     6,
+     5,
+     0
+    ]
+   },
+   {
+    "label": "About a medication",
+    "n": 6,
+    "cells": [
+     5,
+     5,
+     4,
+     4,
+     3,
+     6,
+     3,
+     1
+    ]
+   },
+   {
+    "label": "What a test result means",
+    "n": 3,
+    "cells": [
+     0,
+     3,
+     3,
+     2,
+     0,
+     3,
+     1,
+     3
+    ]
+   }
+  ],
+  "all": [
+   26,
+   30,
+   22,
+   30,
+   11,
+   40,
+   18,
+   4
+  ]
+ }
+}
